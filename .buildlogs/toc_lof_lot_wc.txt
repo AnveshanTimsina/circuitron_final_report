@@ -1,0 +1,4 @@
+     138 main.toc
+      51 main.lof
+      14 main.lot
+     203 total

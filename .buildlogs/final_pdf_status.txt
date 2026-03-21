@@ -1,0 +1,7 @@
+-rw-r--r--  1 anveshantimsina  staff    11M Mar 21 15:12 main.pdf
+2026-03-21 15:12:48 11637897
+     139 main.toc
+      52 main.lof
+      15 main.lot
+      90 main.bbl
+     296 total

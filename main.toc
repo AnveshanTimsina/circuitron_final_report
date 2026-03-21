@@ -1,8 +1,8 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{ACKNOWLEDGEMENT}{i}{section*.2}%
 \contentsline {chapter}{ABSTRACT}{ii}{section*.4}%
-\contentsline {chapter}{\nonumberline LIST OF FIGURES}{v}{chapter*.6}%
-\contentsline {chapter}{\nonumberline LIST OF TABLES}{vii}{chapter*.7}%
+\contentsline {chapter}{\nonumberline LIST OF FIGURES}{iv}{chapter*.6}%
+\contentsline {chapter}{\nonumberline LIST OF TABLES}{v}{chapter*.7}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Background Information}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Motivation}{2}{section.1.2}%
@@ -90,12 +90,12 @@
 \contentsline {subsection}{\numberline {6.1.1}Experimental Setup}{58}{subsection.6.1.1}%
 \contentsline {subsection}{\numberline {6.1.2}Training Progress and Loss Curves}{58}{subsection.6.1.2}%
 \contentsline {subsection}{\numberline {6.1.3}Performance Metrics}{59}{subsection.6.1.3}%
-\contentsline {subsubsection}{\nonumberline mAP vs Number of Epochs}{59}{subsubsection*.24}%
-\contentsline {subsubsection}{\nonumberline Precision, Recall, and F1 Score vs Confidence}{60}{subsubsection*.28}%
-\contentsline {paragraph}{\nonumberline Precision vs Confidence}{61}{paragraph*.30}%
-\contentsline {paragraph}{\nonumberline Recall vs Confidence}{62}{paragraph*.34}%
-\contentsline {paragraph}{\nonumberline F1 Score vs Confidence}{64}{paragraph*.38}%
-\contentsline {paragraph}{\nonumberline Precision-Recall Curve}{65}{paragraph*.42}%
+\contentsline {subsubsection}{\nonumberline mAP vs Number of Epochs}{59}{subsubsection*.23}%
+\contentsline {subsubsection}{\nonumberline Precision, Recall, and F1 Score vs Confidence}{60}{subsubsection*.26}%
+\contentsline {paragraph}{\nonumberline Precision vs Confidence}{61}{paragraph*.27}%
+\contentsline {paragraph}{\nonumberline Recall vs Confidence}{62}{paragraph*.30}%
+\contentsline {paragraph}{\nonumberline F1 Score vs Confidence}{64}{paragraph*.33}%
+\contentsline {paragraph}{\nonumberline Precision-Recall Curve}{65}{paragraph*.36}%
 \contentsline {subsection}{\numberline {6.1.4}Confusion Matrix}{66}{subsection.6.1.4}%
 \contentsline {subsection}{\numberline {6.1.5}Quantitative Results Comparison}{68}{subsection.6.1.5}%
 \contentsline {section}{\numberline {6.2}\gls {ocr} Results}{68}{section.6.2}%
@@ -133,7 +133,7 @@
 \contentsline {chapter}{\numberline {7}REMAINING TASKS}{96}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Summary of Remaining Tasks}{96}{section.7.1}%
 \contentsline {chapter}{\numberline {8}APPENDICES}{97}{chapter.8}%
-\contentsline {section}{Appendix A: Budget Estimation}{97}{section*.83}%
-\contentsline {section}{Appendix B: Gantt Chart}{98}{section*.86}%
-\contentsline {chapter}{\nonumberline REFERENCES}{99}{chapter*.88}%
+\contentsline {section}{Appendix A: Budget Estimation}{97}{chapter.8}%
+\contentsline {section}{Appendix B: Gantt Chart}{98}{table.caption.77}%
+\contentsline {chapter}{\nonumberline REFERENCES}{99}{chapter*.79}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

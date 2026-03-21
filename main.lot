@@ -4,12 +4,12 @@
 \contentsline {table}{\numberline {4-3}{\ignorespaces Frequency of Each Class with its Code in the CGHD Dataset}}{43}{table.caption.17}%
 \contentsline {table}{\numberline {5-1}{\ignorespaces Time complexity breakdown for Multi-Head BFS algorithm}}{54}{table.caption.18}%
 \contentsline {table}{\numberline {5-2}{\ignorespaces Space complexity breakdown for Multi-Head BFS algorithm}}{55}{table.caption.19}%
-\contentsline {table}{\numberline {6-1}{\ignorespaces Comparison of Performance Metrics for YOLOv5 and YOLOv7}}{68}{table.caption.47}%
-\contentsline {table}{\numberline {6-2}{\ignorespaces Performance comparison of four \gls {yolo} architectures on the 15-class dataset (final epoch)}}{75}{table.caption.56}%
-\contentsline {table}{\numberline {6-3}{\ignorespaces Impact of class taxonomy consolidation on YOLOv7 performance}}{76}{table.caption.58}%
-\contentsline {table}{\numberline {6-4}{\ignorespaces Unified comparison of all object detection configurations}}{77}{table.caption.60}%
-\contentsline {table}{\numberline {6-5}{\ignorespaces Performance comparison of \gls {ocr} models}}{81}{table.caption.64}%
-\contentsline {table}{\numberline {7-1}{\ignorespaces Summary of Remaining Tasks}}{96}{table.caption.82}%
-\contentsline {table}{\numberline {8-1}{\ignorespaces Project Budget Breakdown}}{97}{table.caption.85}%
-\contentsline {table}{\numberline {8-2}{\ignorespaces Project Gantt Chart}}{98}{table.caption.87}%
+\contentsline {table}{\numberline {6-1}{\ignorespaces Comparison of Performance Metrics for YOLOv5 and YOLOv7}}{68}{table.caption.41}%
+\contentsline {table}{\numberline {6-2}{\ignorespaces Performance comparison of four \gls {yolo} architectures on the 15-class dataset (final epoch)}}{75}{table.caption.50}%
+\contentsline {table}{\numberline {6-3}{\ignorespaces Impact of class taxonomy consolidation on YOLOv7 performance}}{76}{table.caption.52}%
+\contentsline {table}{\numberline {6-4}{\ignorespaces Unified comparison of all object detection configurations}}{77}{table.caption.54}%
+\contentsline {table}{\numberline {6-5}{\ignorespaces Performance comparison of \gls {ocr} models}}{81}{table.caption.58}%
+\contentsline {table}{\numberline {7-1}{\ignorespaces Summary of Remaining Tasks}}{96}{table.caption.76}%
+\contentsline {table}{\numberline {8-1}{\ignorespaces Project Budget Breakdown}}{97}{table.caption.77}%
+\contentsline {table}{\numberline {8-2}{\ignorespaces Project Gantt Chart}}{98}{table.caption.78}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -1,0 +1,6 @@
+-rwx------@ 1 anveshantimsina  staff    11K Mar 21 15:00 main.acr
+-rwx------@ 1 anveshantimsina  staff   3.8K Mar 21 15:05 main.bbl
+-rw-r--r--  1 anveshantimsina  staff   6.5K Mar 21 15:07 main.lof
+-rw-r--r--  1 anveshantimsina  staff   1.7K Mar 21 15:07 main.lot
+-rw-r--r--  1 anveshantimsina  staff    11M Mar 21 15:07 main.pdf
+-rw-r--r--  1 anveshantimsina  staff    13K Mar 21 15:07 main.toc

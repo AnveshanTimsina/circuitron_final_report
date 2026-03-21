@@ -1,0 +1,97 @@
+BIB-LINES
+33:\citation{reddy2021handdrawn,sertdemir2022img2sim}
+34:\citation{chen2011efficacy}
+49:\citation{adnan2021cnnbased}
+50:\citation{edwards2000machine}
+51:\citation{kelly2024digitizing}
+52:\citation{yamakaji2023circuit2graph}
+53:\citation{bayer2023instance}
+54:\citation{abhinav2020electric}
+55:\citation{reddy2021handdrawn}
+56:\citation{hemker2024schematics}
+58:\citation{kicad2024spice}
+59:\citation{sertdemir2022img2sim}
+60:\citation{vungarala2024spicepilot}
+536:\bibstyle{IEEEtran}
+537:\bibdata{references}
+TAIL
+\newlabel{fig:skeletonization@cref}{{[figure][30][6]6-30}{[1][83][]84}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.3}Component Removal and Junction Isolation}{84}{subsection.6.6.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-31}{\ignorespaces Component Removal}}{85}{figure.caption.62}\protected@file@percent }
+\newlabel{fig:component-removal}{{6-31}{85}{Component Removal}{figure.caption.62}{}}
+\newlabel{fig:component-removal@cref}{{[figure][31][6]6-31}{[1][84][]85}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.4}Junction Extraction and Wire Classification}{85}{subsection.6.6.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-32}{\ignorespaces Wire Classification}}{86}{figure.caption.63}\protected@file@percent }
+\newlabel{fig:wire-classification}{{6-32}{86}{Wire Classification}{figure.caption.63}{}}
+\newlabel{fig:wire-classification@cref}{{[figure][32][6]6-32}{[1][85][]86}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.5}Segment Consolidation Through Merging}{86}{subsection.6.6.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-33}{\ignorespaces Segment Consolidation Through Merging}}{87}{figure.caption.64}\protected@file@percent }
+\newlabel{fig:segment-consolidation}{{6-33}{87}{Segment Consolidation Through Merging}{figure.caption.64}{}}
+\newlabel{fig:segment-consolidation@cref}{{[figure][33][6]6-33}{[1][86][]87}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.6}Component Bounding Box Overlay}{87}{subsection.6.6.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-34}{\ignorespaces Bounding Box Overlay}}{88}{figure.caption.65}\protected@file@percent }
+\newlabel{fig:bbox-overlay}{{6-34}{88}{Bounding Box Overlay}{figure.caption.65}{}}
+\newlabel{fig:bbox-overlay@cref}{{[figure][34][6]6-34}{[1][87][]88}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.7}Wire-Component Intersection Detection}{88}{subsection.6.6.7}\protected@file@percent }
+\BKM@entry{id=37,dest={73656374696F6E2E362E37},srcline={551}}{5C3337365C3337375C303030365C3030302E5C303030375C3030305C3034305C3030304C5C303030695C3030306E5C303030655C3030305C3034305C303030445C303030655C303030745C303030655C303030635C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030765C303030695C303030615C3030305C3034305C303030505C303030615C303030745C303030685C3030305C3034305C303030465C303030695C3030306E5C303030645C303030695C3030306E5C303030675C3030305C3034305C303030565C303030695C303030735C303030755C303030615C3030306C5C303030695C3030307A5C303030615C303030745C303030695C3030306F5C3030306E}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-35}{\ignorespaces Wire-Component Intersection Detection}}{89}{figure.caption.66}\protected@file@percent }
+\newlabel{fig:wire-component-intersection}{{6-35}{89}{Wire-Component Intersection Detection}{figure.caption.66}{}}
+\newlabel{fig:wire-component-intersection@cref}{{[figure][35][6]6-35}{[1][88][]89}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.7}Line Detection via Path Finding Visualization}{89}{section.6.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.1}Skeletonized Image with Detected Endpoints}{89}{subsection.6.7.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-36}{\ignorespaces Skeletonized image with detected endpoints}}{90}{figure.caption.67}\protected@file@percent }
+\newlabel{fig:skeleton_endpoints}{{6-36}{90}{Skeletonized image with detected endpoints}{figure.caption.67}{}}
+\newlabel{fig:skeleton_endpoints@cref}{{[figure][36][6]6-36}{[1][89][]90}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.2}Adjacency Graph Visualization}{90}{subsection.6.7.2}\protected@file@percent }
+\BKM@entry{id=38,dest={73656374696F6E2E362E38},srcline={577}}{5C3337365C3337375C303030365C3030302E5C303030385C3030305C3034305C303030465C303030725C3030306F5C3030306E5C303030745C303030655C3030306E5C303030645C3030305C3034305C303030565C303030695C303030735C303030755C303030615C3030306C5C303030695C3030307A5C303030615C303030745C303030695C3030306F5C3030306E}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-37}{\ignorespaces Adjacency graph constructed using Multi-Head BFS algorithm}}{91}{figure.caption.68}\protected@file@percent }
+\newlabel{fig:adjacency_graph}{{6-37}{91}{Adjacency graph constructed using Multi-Head BFS algorithm}{figure.caption.68}{}}
+\newlabel{fig:adjacency_graph@cref}{{[figure][37][6]6-37}{[1][90][]91}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.8}Frontend Visualization}{91}{section.6.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-38}{\ignorespaces Digitally Drawn Circuit}}{92}{figure.caption.69}\protected@file@percent }
+\newlabel{fig:digital-circuit-editor}{{6-38}{92}{Digitally Drawn Circuit}{figure.caption.69}{}}
+\newlabel{fig:digital-circuit-editor@cref}{{[figure][38][6]6-38}{[1][91][]92}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-39}{\ignorespaces Example Circuit Simulation Result}}{92}{figure.caption.70}\protected@file@percent }
+\newlabel{fig:simulation-result}{{6-39}{92}{Example Circuit Simulation Result}{figure.caption.70}{}}
+\newlabel{fig:simulation-result@cref}{{[figure][39][6]6-39}{[1][92][]92}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.1}End-to-End Pipeline Demonstration: Voltage Divider Circuit}{92}{subsection.6.8.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-40}{\ignorespaces Skeletonized Image of the Voltage Divider Circuit}}{93}{figure.caption.71}\protected@file@percent }
+\newlabel{fig:vdivider-skeleton}{{6-40}{93}{Skeletonized Image of the Voltage Divider Circuit}{figure.caption.71}{}}
+\newlabel{fig:vdivider-skeleton@cref}{{[figure][40][6]6-40}{[1][92][]93}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-41}{\ignorespaces Skeleton with Detected Endpoints for the Voltage Divider}}{93}{figure.caption.72}\protected@file@percent }
+\newlabel{fig:vdivider-skeleton-endpoints}{{6-41}{93}{Skeleton with Detected Endpoints for the Voltage Divider}{figure.caption.72}{}}
+\newlabel{fig:vdivider-skeleton-endpoints@cref}{{[figure][41][6]6-41}{[1][93][]93}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-42}{\ignorespaces Adjacency Graph of the Voltage Divider Circuit}}{94}{figure.caption.73}\protected@file@percent }
+\newlabel{fig:vdivider-adjacency}{{6-42}{94}{Adjacency Graph of the Voltage Divider Circuit}{figure.caption.73}{}}
+\newlabel{fig:vdivider-adjacency@cref}{{[figure][42][6]6-42}{[1][93][]94}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-43}{\ignorespaces Frontend with All Components Mapped for the Voltage Divider}}{94}{figure.caption.74}\protected@file@percent }
+\newlabel{fig:vdivider-frontend-mapped}{{6-43}{94}{Frontend with All Components Mapped for the Voltage Divider}{figure.caption.74}{}}
+\newlabel{fig:vdivider-frontend-mapped@cref}{{[figure][43][6]6-43}{[1][94][]94}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-44}{\ignorespaces Simulation Result of the Reconstructed Voltage Divider Circuit}}{95}{figure.caption.75}\protected@file@percent }
+\newlabel{fig:vdivider-simulation}{{6-44}{95}{Simulation Result of the Reconstructed Voltage Divider Circuit}{figure.caption.75}{}}
+\newlabel{fig:vdivider-simulation@cref}{{[figure][44][6]6-44}{[1][94][]95}{}{}{}}
+\BKM@entry{id=39,dest={636861707465722E37},srcline={1}}{5C3337365C3337375C303030375C3030305C3034305C303030525C303030455C3030304D5C303030415C303030495C3030304E5C303030495C3030304E5C303030475C3030305C3034305C303030545C303030415C303030535C3030304B5C30303053}
+\BKM@entry{id=40,dest={73656374696F6E2E372E31},srcline={5}}{5C3337365C3337375C303030375C3030302E5C303030315C3030305C3034305C303030535C303030755C3030306D5C3030306D5C303030615C303030725C303030795C3030305C3034305C3030306F5C303030665C3030305C3034305C303030525C303030655C3030306D5C303030615C303030695C3030306E5C303030695C3030306E5C303030675C3030305C3034305C303030545C303030615C303030735C3030306B5C30303073}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}REMAINING TASKS}{96}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Summary of Remaining Tasks}{96}{section.7.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7-1}{\ignorespaces Summary of Remaining Tasks}}{96}{table.caption.76}\protected@file@percent }
+\newlabel{tab:remaining-tasks-summary}{{7-1}{96}{Summary of Remaining Tasks}{table.caption.76}{}}
+\newlabel{tab:remaining-tasks-summary@cref}{{[table][1][7]7-1}{[1][96][]96}{}{}{}}
+\BKM@entry{id=41,dest={636861707465722E38},srcline={62}}{5C3337365C3337375C303030385C3030305C3034305C303030415C303030505C303030505C303030455C3030304E5C303030445C303030495C303030435C303030455C30303053}
+\BKM@entry{id=42,dest={636861707465722E38},srcline={15}}{5C3337365C3337375C303030415C303030705C303030705C303030655C3030306E5C303030645C303030695C303030785C3030305C3034305C303030415C3030303A5C3030305C3034305C303030425C303030755C303030645C303030675C303030655C303030745C3030305C3034305C303030455C303030735C303030745C303030695C3030306D5C303030615C303030745C303030695C3030306F5C3030306E}
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}APPENDICES}{97}{chapter.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{Appendix A: Budget Estimation}{97}{chapter.8}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8-1}{\ignorespaces Project Budget Breakdown}}{97}{table.caption.77}\protected@file@percent }
+\newlabel{tab:project_budget}{{8-1}{97}{Project Budget Breakdown}{table.caption.77}{}}
+\newlabel{tab:project_budget@cref}{{[table][1][8]8-1}{[1][97][]97}{}{}{}}
+\BKM@entry{id=43,dest={7461626C652E63617074696F6E2E3737},srcline={128}}{5C3337365C3337375C303030415C303030705C303030705C303030655C3030306E5C303030645C303030695C303030785C3030305C3034305C303030425C3030303A5C3030305C3034305C303030475C303030615C3030306E5C303030745C303030745C3030305C3034305C303030435C303030685C303030615C303030725C30303074}
+\bibstyle{IEEEtran}
+\bibdata{references}
+\@writefile{toc}{\contentsline {section}{Appendix B: Gantt Chart}{98}{table.caption.77}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8-2}{\ignorespaces Project Gantt Chart}}{98}{table.caption.78}\protected@file@percent }
+\newlabel{tab:gantt_chart}{{8-2}{98}{Project Gantt Chart}{table.caption.78}{}}
+\newlabel{tab:gantt_chart@cref}{{[table][2][8]8-2}{[1][98][]98}{}{}{}}
+\@writefile{toc}{\providecommand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
+\@writefile{lof}{\providecommand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
+\@writefile{lot}{\providecommand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
+\gdef \@abspage@last{107}

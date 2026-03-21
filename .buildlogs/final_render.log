@@ -1,0 +1,2555 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-11-06>
+(thapathaliece.cls
+Document Class: thapathaliece 2025/12/15 Thapathali CE report Class
+
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/koma-script/scrreprt.cls
+Document Class: scrreprt 2025/12/01 v3.49 KOMA-Script document class (report)
+
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/koma-script/scrkbase.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/koma-script/scrbase.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/koma-script/scrlfile.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/koma-script/scrlfile-hook.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/koma-script/scrlogo.sty)))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/graphics/keyval.sty)))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/koma-script/tocbasic.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/koma-script/scrsize12pt.clo)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/koma-script/typearea.sty))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/babel/babel.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/babel/txtbabel.def)
+*************************************
+* Local config file bblopts.cfg used
+*
+
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/arabi/bblopts.cfg)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/babel/locale/en/babel-english.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/babel-english/english.ldf))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/base/fontenc.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/base/inputenc.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/amsmath/amstext.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/amsmath/amsgen.sty))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/amsmath/amsbsy.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/amsmath/amsopn.sty))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/amsfonts/amssymb.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/amsfonts/amsfonts.sty))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/amscls/amsthm.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/xpatch/xpatch.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/l3kernel/expl3.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/l3backend/l3backend-pdftex.def))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/l3packages/xparse/xparse.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/etoolbox/etoolbox.sty))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/psnfss/times.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/base/ifthen.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/iftex/iftex.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/xkeyval/xkeyval.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/xkeyval/xkeyval.tex
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/xkeyval/xkvutils.tex)))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/oberdiek/centernot.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/binhex/binhex.tex)
+amsthm NOT loaded
+)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/microtype/microtype.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/microtype/microtype-pdftex.def)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/microtype/microtype.cfg))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/hyphenat/hyphenat.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/tools/xspace.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/geometry/geometry.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/iftex/ifvtex.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/geometry/geometry.cfg))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/xcolor/xcolor.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/graphics-cfg/color.cfg)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/graphics-def/pdftex.def)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/graphics/mathcolor.ltx))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/graphics/graphicx.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/graphics/graphics.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/graphics/trig.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/graphics-cfg/graphics.cfg)))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/cite/cite.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/caption/caption.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/caption/caption3.sty))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/caption/subcaption.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/booktabs/booktabs.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/tools/array.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/tools/tabularx.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/multirow/multirow.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/listings/listings.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/listings/lstpatch.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/listings/lstmisc.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/listings/listings.cfg))
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/siunitx/siunitx.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/translations/translations.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pdftexcmds/pdftexcmds.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/infwarerr/infwarerr.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/ltxcmds/ltxcmds.sty))))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/float/float.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/pdfpages/pdfpages.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/tools/calc.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/eso-pic/eso-pic.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/pdfpages/pppdftex.def))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/graphics/lscape.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/adjustbox/adjustbox.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/adjustbox/adjcalc.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/adjustbox/trimclip.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/collectbox/collectbox.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/adjustbox/tc-pdftex.def))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/ifoddpage/ifoddpage.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/varwidth/varwidth.sty)
+==> First Aid for varwidth.sty applied!
+)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/graphics/rotating.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/lipsum/lipsum.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/l3packages/l3keys2e/l3keys2e.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/lipsum/lipsum.ltd.tex))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/csvsimple/csvsimple.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/csvsimple/csvsimple-legacy.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/pgf/utilities/pgfrcs.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/utilities/pgfutil-common.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/utilities/pgfutil-latex.def)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/utilities/pgfrcs.code.tex
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/pgf.revision.tex)))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/pgf/utilities/pgfkeys.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/utilities/pgfkeys.code.tex
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/utilities/pgfkeyslibraryfiltered.code.tex)))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/tools/shellesc.sty))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/datetime2/datetime2.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/tracklang/tracklang.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/tracklang/tracklang.tex))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/datetime2-english/datetime2-english.ldf
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/datetime2-english/datetime2-english-base.ldf)))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/textcase/textcase.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/tools/multicol.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/enumitem/enumitem.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/koma-script/scrlayer-scrpage.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/koma-script/scrlayer.sty))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/algorithms/algorithm.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/algorithmicx/algpseudocode.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/algorithmicx/algorithmicx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/scrhack/scrhack.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/floatbytocbasic/floatbytocbasic.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/lscapeenhanced/lscapeenhanced.sty))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/setspace/setspace.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/setspaceenhanced/setspaceenhanced.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/glossaries/base/glossaries.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/mfirstuc/mfirstuc.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/xfor/xfor.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/datatool/datatool-base.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/datatool/datatool-l3fp.def)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/datatool/datatool-utf8.ldf)
+
+Package tracklang Warning: No `datatool' support for dialect `english'  on inpu
+t line 9924.
+
+)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/glossaries/styles/glossary-hypernav.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/glossaries/styles/glossary-list.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/glossaries/styles/glossary-long.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/tools/longtable.sty))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/glossaries/styles/glossary-super.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/supertabular/supertabular.sty))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/glossaries/styles/glossary-tree.sty))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/url/url.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/hyperref/hyperref.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/kvsetkeys/kvsetkeys.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/kvdefinekeys/kvdefinekeys.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pdfescape/pdfescape.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/hycolor/hycolor.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/hyperref/nameref.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/refcount/refcount.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/gettitlestring/gettitlestring.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/kvoptions/kvoptions.sty)))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/stringenc/stringenc.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/hyperref/pd1enc.def)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/intcalc/intcalc.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/hyperref/puenc.def)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/bitset/bitset.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/bigintcalc/bigintcalc.sty)))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/hyperref/hpdftex.def
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/rerunfilecheck/rerunfilecheck.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/uniquecounter/uniquecounter.sty)))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/cleveref/cleveref.sty)
+==> First Aid for cleveref.sty applied!
+
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/listings/lstlang1.sty)) (vars.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/tcolorbox/tcolorbox.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/pgf/frontendlayer/tikz.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/pgf/basiclayer/pgf.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/pgf/basiclayer/pgfcore.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/pgf/systemlayer/pgfsys.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/systemlayer/pgfsys.code.tex
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/systemlayer/pgf.cfg)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/systemlayer/pgfsys-pdftex.def
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/systemlayer/pgfsys-common-pdf.def)))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/systemlayer/pgfsyssoftpath.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/systemlayer/pgfsysprotocol.code.tex))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/basiclayer/pgfcore.code.tex
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/math/pgfmath.code.tex
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/math/pgfmathutil.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/math/pgfmathparser.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/math/pgfmathfunctions.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/math/pgfmathfunctions.basic.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/math/pgfmathfunctions.trigonometric.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/math/pgfmathfunctions.random.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/math/pgfmathfunctions.comparison.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/math/pgfmathfunctions.base.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/math/pgfmathfunctions.round.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/math/pgfmathfunctions.misc.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/math/pgfmathfunctions.integerarithmetics.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/math/pgfmathcalc.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/math/pgfmathfloat.code.tex))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/math/pgfint.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/basiclayer/pgfcorepoints.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/basiclayer/pgfcorepathconstruct.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/basiclayer/pgfcorepathusage.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/basiclayer/pgfcorescopes.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/basiclayer/pgfcoregraphicstate.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/basiclayer/pgfcoretransformations.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/basiclayer/pgfcorequick.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/basiclayer/pgfcoreobjects.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/basiclayer/pgfcorepathprocessing.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/basiclayer/pgfcorearrows.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/basiclayer/pgfcoreshade.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/basiclayer/pgfcoreimage.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/basiclayer/pgfcoreexternal.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/basiclayer/pgfcorelayers.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/basiclayer/pgfcoretransparency.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/basiclayer/pgfcorepatterns.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/basiclayer/pgfcorerdf.code.tex)))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/modules/pgfmoduleshapes.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/modules/pgfmoduleplot.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/pgf/compatibility/pgfcomp-version-0-65.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/pgf/compatibility/pgfcomp-version-1-18.sty))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/pgf/utilities/pgffor.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/pgf/math/pgfmath.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/math/pgfmath.code.tex))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/utilities/pgffor.code.tex))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/frontendlayer/tikz/tikz.code.tex
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/libraries/pgflibraryplothandlers.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/modules/pgfmodulematrix.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex)))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/tools/verbatim.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/environ/environ.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/trimspaces/trimspaces.sty)))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex)))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
+eneric/pgf/libraries/pgflibraryarrows.code.tex))
+(src/frontmatter/abbreviations.tex)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/bookmark/bookmark.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/bookmark/bkm-pdftex.def))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/psnfss/t1ptm.fd) (main.aux)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/newtx/omlntxmi.fd)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/newtx/untxexa.fd)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/newtx/lmsntxsy.fd)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/newtx/lmxntxexx.fd)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/microtype/mt-ptm.cfg)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/c
+ontext/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/epstopdf-pkg/epstopdf-base.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/00miktex/epstopdf-sys.cfg))
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/caption/ltcaption.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/translations/dicts/translations-basic-dictionary-english.trsl)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/pdflscape/pdflscape.sty
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/pdflscape/pdflscape-nometadata.sty)) (src/frontmatter/_coverBase.tex
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/newtx/ot1minntx.fd)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/amsfonts/umsa.fd)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/microtype/mt-msa.cfg)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/amsfonts/umsb.fd)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/microtype/mt-msb.cfg)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/newtx/untxmia.fd)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/newtx/untxsym.fd)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/newtx/untxsyc.fd)
+[1{/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/data/fonts/
+map/pdftex/pdftex.map} <./src/images/logo.png>])
+(src/frontmatter/_coverWithSupervisors.tex
+[2]) (src/frontmatter/acknow.tex
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/psnfss/t1phv.fd)) (src/frontmatter/abstract.tex
+[1]) (src/frontmatter/toc.tex
+[2] (main.toc
+[3])
+[4] (main.lof
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 50.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 1.
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 50.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 2.
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 50.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 3.
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 50.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 4.
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 50.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 5.
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 50.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 6.
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 50.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 7.
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 50.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 8.
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 50.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 9.
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 50.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 10.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 50.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 11.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 50.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 12.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 50.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 13.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 50.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 14.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 50.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 15.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 16.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 17.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 18.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 19.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 20.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 21.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 22.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 23.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 24.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 25.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 26.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 27.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 28.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 29.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 30.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 31.
+
+
+
+[5]
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 32.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 33.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 34.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 35.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 36.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 37.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 38.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 39.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 40.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 41.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 42.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 43.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 44.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 45.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 46.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 47.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 48.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 49.
+
+
+
+Package tocbasic Warning: number width of figure toc entries should be increase
+d!
+(tocbasic)                Currently used number width = 56.32764pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 50.
+
+
+)
+[6] (main.lot
+
+Package tocbasic Warning: number width of table toc entries should be increased
+!
+(tocbasic)                Currently used number width = 45.35974pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 1.
+
+
+Package tocbasic Warning: number width of table toc entries should be increased
+!
+(tocbasic)                Currently used number width = 45.35974pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 2.
+
+
+Package tocbasic Warning: number width of table toc entries should be increased
+!
+(tocbasic)                Currently used number width = 45.35974pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 3.
+
+
+Package tocbasic Warning: number width of table toc entries should be increased
+!
+(tocbasic)                Currently used number width = 45.35974pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 4.
+
+
+Package tocbasic Warning: number width of table toc entries should be increased
+!
+(tocbasic)                Currently used number width = 45.35974pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 5.
+
+
+Package tocbasic Warning: number width of table toc entries should be increased
+!
+(tocbasic)                Currently used number width = 45.35974pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 6.
+
+
+Package tocbasic Warning: number width of table toc entries should be increased
+!
+(tocbasic)                Currently used number width = 45.35974pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 7.
+
+
+Package tocbasic Warning: number width of table toc entries should be increased
+!
+(tocbasic)                Currently used number width = 45.35974pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 8.
+
+
+Package tocbasic Warning: number width of table toc entries should be increased
+!
+(tocbasic)                Currently used number width = 45.35974pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 9.
+
+
+Package tocbasic Warning: number width of table toc entries should be increased
+!
+(tocbasic)                Currently used number width = 45.35974pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 10.
+
+
+
+Package tocbasic Warning: number width of table toc entries should be increased
+!
+(tocbasic)                Currently used number width = 45.35974pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 11.
+
+
+
+Package tocbasic Warning: number width of table toc entries should be increased
+!
+(tocbasic)                Currently used number width = 45.35974pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 12.
+
+
+
+Package tocbasic Warning: number width of table toc entries should be increased
+!
+(tocbasic)                Currently used number width = 45.35974pt,
+(tocbasic)                Wanted number separation    = 4.79993pt,
+(tocbasic)                Reserved number width       = 0.0pt on input line 13.
+
+
+)
+[7] (main.acr
+Overfull \hbox (8.86247pt too wide) in paragraph at lines 32--32
+[]|\T1/ptm/m/n/12 (-20) CIRCUITRON| 
+
+[8])
+[9]) (src/chapters/intro.tex
+chapter 1.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14 
+      [1]
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/psnfss/ts1ptm.fd)
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.27     \item T
+                o visualize the circuit in an editable schematic in addition...
+[2]) (src/chapters/literatureReview.tex
+[3]
+[4]
+chapter 2.
+
+[5]
+[6]) (src/chapters/requirements.tex
+[7]
+chapter 3.
+
+[8]
+[9]
+[10]
+[11]
+[12]
+[13]) (src/chapters/systemArchitectureAndMethodology.tex
+[14]
+chapter 4.
+
+[15 <./src/images/figures/block_diagram.png>]
+[16]
+[17 <./src/images/figures/yolov7_architecture.png>]
+[18]
+[19 <./src/images/figures/easyocr_architecture.png>]
+[20]
+[21]
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/psnfss/t1pcr.fd)
+[22]
+[23]
+[24]
+[25]
+[26]
+[27]
+[28]
+[29]
+[30]
+[31]
+[32]
+[33]
+[34 <./src/images/figures/use_case_diagram.png>]
+[35]
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.635 \State
+             Define regular expression patterns for resistance, capacitance,...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.636 \State
+             $V \leftarrow \emptyset$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.637 \For
+          {all text entry $t \in T$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.638     \If
+             {$t.\text{text}$ matches any defined pattern}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.639         \State
+                     Append $t$ to $V$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.640     \EndIf
+                
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.641 \EndFor
+             
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.642 \State
+             \Return $V$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.656 \State
+             $V \leftarrow \emptyset$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.657 \State
+             $U \leftarrow \emptyset$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.658 \For
+          {all item $o \in O$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.659     \If
+             {$o.\text{confidence} \ge \omega \land f(o.\text{value})$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.660         \State
+                     Append $o$ to $V$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.661     \Else
+               
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.662         \State
+                     Append $o$ to $U$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.663     \EndIf
+                
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.664 \EndFor
+             
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.665 \If
+         {$U \ne \emptyset$}
+[36]
+[37]
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.711 \State
+             $S \leftarrow \emptyset$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.712 \For
+          {all pairs $(j_a, j_b) \in \text{Combinations}(J, 2)$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.713     \State
+                 $\Delta x \leftarrow j_b.x - j_a.x$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.714     \State
+                 $\Delta y \leftarrow j_b.y - j_a.y$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.715     \State
+                 $\theta \leftarrow \text{atan2}(\Delta y, \Delta x)$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.716     \If
+             {$|\theta| \le \omega_{\text{tol}} \lor |\theta - 180^\circ| \l...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.717         \State
+                     \textbf{Horizontal alignment check}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.718         \State
+                     $y_{\text{avg}} \leftarrow \frac{j_a.y + j_b.y}{2}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.719         \State
+                     $y_{\text{snap}} \leftarrow \text{Round}\left(\frac{y_{...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.720         \State
+                     $S \leftarrow S \cup \{(H, y_{\text{snap}}, \min(j_a.x,...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.721     \ElsIf
+                {$|\theta - 90^\circ| \le \omega_{\text{tol}} \lor |\theta -...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.722         \State
+                     \textbf{Vertical alignment check}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.723         \State
+                     $x_{\text{avg}} \leftarrow \frac{j_a.x + j_b.x}{2}$
+[38]
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.742 \State
+             Sort $L$ by primary axis, then by starting coordinate
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.743 \State
+             $M \leftarrow \emptyset$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.744 \State
+             $\text{curr} \leftarrow L[0]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.745 \For
+          {all $\text{next} \in L[1 \ldots N]$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.746     \If
+             {$|\text{curr.axis} - \text{next.axis}| \le \omega \land \text{...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.747         \State
+                     $\text{curr.start} \leftarrow \min(\text{curr.start}, \...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.748         \State
+                     $\text{curr.end} \leftarrow \max(\text{curr.end}, \text...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.749         \If
+                 {$\text{Length}(\text{next}) > \text{Length}(\text{curr})$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.750             \State
+                         \textbf{Preserve axis of the longer segment}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.751             \State
+                         $\text{curr.axis} \leftarrow \text{next.axis}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.752         \EndIf
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.753     \Else
+               
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.754         \State
+                     $M \leftarrow M \cup \{\text{curr}\}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.771 \State
+             Parse label file $L$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.772 \State
+             Convert normalized bounding boxes to pixel coordinates
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.773 \State
+             Discard non-component classes
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.774 \State
+             Store component boxes $B$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.775 \State
+             \textbf{Detect intersections between wires and components}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.776 \State
+             $P \leftarrow \emptyset$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.777 \For
+          {all wire $w \in W$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.778     \For
+              {all box $b \in B$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.779         \If
+                 {$w$ is horizontal and crosses left or right edge of $b$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.780             \State
+                         Add intersection point to $P$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.781         \ElsIf
+                    {$w$ is vertical and crosses top or bottom edge of $b$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.782             \State
+                         Add intersection point to $P$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.783         \EndIf
+                    
+[39]
+[40
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.794 \section
+              {System Flowchart}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.794 \section
+              {System Flowchart}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.794 \section
+              {System Flowchart}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.794 \section
+              {System Flowchart}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.794 \section
+              {System Flowchart}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.794 \section
+              {System Flowchart}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.794 \section
+              {System Flowchart}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.794 \section
+              {System Flowchart}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.794 \section
+              {System Flowchart}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.794 \section
+              {System Flowchart}]
+[41 <./src/images/figures/flowchart.png>]
+[42]) (src/chapters/implementationDetails.tex
+[43]
+chapter 5.
+
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/listings/lstlang1.sty)
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/listings/lstmisc.sty)
+[44]
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.57 \State
+            Parse XML file $X$ into tree structure
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.58 \State
+            $Y \leftarrow \emptyset$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.59 \For
+         {all object nodes $o$ in XML root}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.60     \State
+                $\text{clsname} \leftarrow$ class name of $o$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.61     \If
+            {$\text{clsname} \notin C$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.62         \State
+                    \textbf{continue}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.63     \EndIf
+               
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.64     \State
+                $\text{clsid} \leftarrow C[\text{clsname}]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.65     \State
+                Extract bounding box $(x_{\min}, y_{\min}, x_{\max}, y_{\max...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.66     \State
+                Convert VOC coordinates to normalized YOLO format
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.67     \State
+                $x_{\text{center}} \leftarrow \frac{x_{\min} + x_{\max}}{2W}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.68     \State
+                $y_{\text{center}} \leftarrow \frac{y_{\min} + y_{\max}}{2H}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.69     \State
+                $w \leftarrow \frac{x_{\max} - x_{\min}}{W}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.70     \State
+                $h \leftarrow \frac{y_{\max} - y_{\min}}{H}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.71     \State
+                Append formatted string $(x_{\text{center}}, y_{\text{center...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.72 \EndFor
+            
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.73 \State
+            \Return $Y$
+[45]
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.111 \State
+             Load image $I$ into memory
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.112 \State
+             Crop image using coordinates $[y_{\min} : y_{\max}, x_{\min} : ...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.113 \State
+             Resize cropped image to size $(W, H)$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.114 \State
+             Convert cropped image to byte representation
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.115 \State
+             Convert image array to PIL image
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.116 \State
+             Initialize in-memory byte buffer
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.117 \State
+             Save image to buffer in JPEG format
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.118 \State
+             Extract byte stream from buffer
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.119 \State
+             Store image and label in \gls{lmdb}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.120 \State
+             Open \gls{lmdb} environment with predefined map size
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.121 \State
+             Begin write transaction
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.122 \State
+             Store image bytes with key \texttt{image-00001}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.123 \State
+             Store corresponding label with key \texttt{label-00001}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.124 \State
+             Store total sample count with key \texttt{num-samples}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.125 \State
+             Commit transaction
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.126 \State
+             \Return \gls{lmdb} environment
+[46]
+[47]
+[48]
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.215 \State
+             $S \leftarrow \emptyset$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.216 \For
+          {all pairs $(j_a, j_b) \in \text{Combinations}(J, 2)$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.217     \State
+                 $\Delta x \leftarrow j_b.x - j_a.x$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.218     \State
+                 $\Delta y \leftarrow j_b.y - j_a.y$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.219     \State
+                 $\theta \leftarrow \text{atan2}(\Delta y, \Delta x)$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.220     \If
+             {$|\theta| \le \omega_{\text{tol}} \lor |\theta - 180^\circ| \l...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.221         \State
+                     \textbf{Horizontal alignment check}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.222         \State
+                     $y_{\text{avg}} \leftarrow \frac{j_a.y + j_b.y}{2}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.223         \State
+                     $y_{\text{snap}} \leftarrow \text{Round}\left(\frac{y_{...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.224         \State
+                     $S \leftarrow S \cup \{(H, y_{\text{snap}}, \min(j_a.x,...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.225     \ElsIf
+                {$|\theta - 90^\circ| \le \omega_{\text{tol}} \lor |\theta -...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.226         \State
+                     \textbf{Vertical alignment check}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.227         \State
+                     $x_{\text{avg}} \leftarrow \frac{j_a.x + j_b.x}{2}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.228         \State
+                     $x_{\text{snap}} \leftarrow \text{Round}\left(\frac{x_{...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.229         \State
+                     $S \leftarrow S \cup \{(V, x_{\text{snap}}, \min(j_a.y,...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.230     \EndIf
+                
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.231 \EndFor
+             
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.232 \State
+             \Return $S$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.246 \State
+             Sort $L$ by primary axis, then by starting coordinate
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.247 \State
+             $M \leftarrow \emptyset$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.248 \State
+             $\text{curr} \leftarrow L[0]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.249 \For
+          {all $\text{next} \in L[1 \ldots N]$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.250     \If
+             {$|\text{curr.axis} - \text{next.axis}| \le \omega \land \text{...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.251         \State
+                     $\text{curr.start} \leftarrow \min(\text{curr.start}, \...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.252         \State
+                     $\text{curr.end} \leftarrow \max(\text{curr.end}, \text...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.253         \If
+                 {$\text{Length}(\text{next}) > \text{Length}(\text{curr})$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.254             \State
+                         \textbf{Preserve axis of the longer segment}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.255             \State
+                         $\text{curr.axis} \leftarrow \text{next.axis}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.256         \EndIf
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.257     \Else
+               
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.258         \State
+                     $M \leftarrow M \cup \{\text{curr}\}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.259         \State
+                     $\text{curr} \leftarrow \text{next}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.260     \EndIf
+                
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.261 \EndFor
+             
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.262 \State
+             $M \leftarrow M \cup \{\text{curr}\}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.263 \State
+             \Return $M$
+[49]
+[50]
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.275 \State
+             Parse label file $L$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.276 \State
+             Convert normalized bounding boxes to pixel coordinates
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.277 \State
+             Discard non-component classes
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.278 \State
+             Store component boxes $B$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.279 \State
+             \textbf{Detect intersections between wires and components}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.280 \State
+             $P \leftarrow \emptyset$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.281 \For
+          {all wire $w \in W$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.282     \For
+              {all box $b \in B$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.283         \If
+                 {$w$ is horizontal and crosses left or right edge of $b$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.284             \State
+                         Add intersection point to $P$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.285         \ElsIf
+                    {$w$ is vertical and crosses top or bottom edge of $b$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.286             \State
+                         Add intersection point to $P$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.287         \EndIf
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.288     \EndFor
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.289 \EndFor
+             
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.290 \State
+             Draw wires, component boxes, and intersection points on image
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.291 \State
+             Save output visualization
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.292 \State
+             \Return $P$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.309 \State
+             $M \gets$ array of size $H \times W$ initialized to $-1$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.310 \State
+             $\mathcal{D} \gets \text{DiskMask}(r)$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.312 \For
+          {$i \gets 0$ \textbf{to} $n-1$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.313     \State
+                 $(n_x, n_y) \gets \mathcal{N}[i]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.314     \For
+              {each $(dy, dx) \in \mathcal{D}$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.315         \State
+                     $(p_y, p_x) \gets (n_y + dy, n_x + dx)$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.316         \If
+                 {$0 \leq p_y < H$ \textbf{and} $0 \leq p_x < W$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.317             \State
+                         $M[p_y][p_x] \gets i$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.318         \EndIf
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.319     \EndFor
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.320 \EndFor
+             
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.322 \State
+             \Return $M$
+[51]
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.335 \State
+             $(n_x, n_y) \gets \mathcal{N}[i]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.336 \State
+             $\mathcal{A}_i \gets \emptyset$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.337 \State
+             $V \gets$ boolean array of size $H \times W$ initialized to \te...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.338 \State
+             $\mathcal{D} \gets \text{DiskMask}(r)$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.340 \For
+          {each $(dy, dx) \in \mathcal{D}$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.341     \State
+                 $(p_y, p_x) \gets (n_y + dy, n_x + dx)$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.342     \If
+             {$0 \leq p_y < H$ \textbf{and} $0 \leq p_x < W$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.343         \State
+                     $V[p_y][p_x] \gets \texttt{true}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.344     \EndIf
+                
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.345 \EndFor
+             
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.347 \State
+             $Q \gets$ empty queue
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.348 \For
+          {each $(dy, dx) \in \mathcal{D}$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.349     \State
+                 $(p_y, p_x) \gets (n_y + dy, n_x + dx)$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.350     \For
+              {each $(n_y', n_x') \in \text{Neighbors8}(p_y, p_x)$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.351         \If
+                 {$\neg V[n_y'][n_x']$ \textbf{and} $S[n_y'][n_x'] > 0$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.352             \State
+                         $V[n_y'][n_x'] \gets \texttt{true}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.353             \State
+                         $Q.\text{enqueue}((n_y', n_x'))$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.354         \EndIf
+                    
+[52]
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.388 \State
+             $\mathcal{G}' \gets \mathcal{G}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.390 \For
+          {each $(p_1, p_2) \in \mathcal{P}$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.391     \State
+                 $i \gets \text{FindIndex}(p_1, \mathcal{N})$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.392     \State
+                 $j \gets \text{FindIndex}(p_2, \mathcal{N})$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.394     \If
+             {$i \neq -1$ \textbf{and} $j \neq -1$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.395         \State
+                     $\mathcal{G}'[i] \gets \mathcal{G}'[i] \setminus \{j\}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.396         \State
+                     $\mathcal{G}'[j] \gets \mathcal{G}'[j] \setminus \{i\}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.397     \EndIf
+                
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.398 \EndFor
+             
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.400 \State
+             \Return $\mathcal{G}'$
+[53]
+Overfull \hbox (10.83952pt too wide) in paragraph at lines 412--424
+ [][] 
+
+[54]
+[55]
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.530 \State
+             Initialize \gls{spice} circuit named \textit{RC Charging Circuit}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.531 \State
+             Enable logging for simulation diagnostics
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.532 \State
+             \textbf{Define circuit components}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.533 \State
+             Add \gls{dc} voltage source of magnitude $V_s$ between input no...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.534 \State
+             Connect resistor $R$ between input node and node $n1$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.535 \State
+             Connect capacitor $C$ between node $n1$ and ground
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.536 \State
+             Initialize simulator with nominal temperature
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.537 \State
+             Perform transient analysis with step size $\Delta t$ up to time...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.538 \State
+             Extract time vector from transient analysis
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.539 \State
+             Extract voltage waveform at node $n1$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.540 \State
+             Create data table mapping time to voltage
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.541 \State
+             Export data table to \gls{csv} file
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.542 \State
+             \Return Generated \gls{csv} file)
+(src/chapters/resultAndAnalysis.tex
+[56 <./src/images/figures/backend_req_res.png>]
+[57]
+chapter 6.
+
+[58 <./src/images/figures/loss_curve_yolov5.png>]
+[59 <./src/images/figures/loss_curve_yolov7.png> <./src/images/figures/map_vs_e
+pochs.png>]
+[60 <./src/images/figures/map_vs_epochs_0.5to0.95.png>]
+[61 <./src/images/figures/precision_vs_confidence_yolov5.png
+
+pdfTeX warning: pdflatex (file ./src/images/figures/precision_vs_confidence_yol
+ov5.png): large interlaced PNG might cause out of memory (use non-interlaced PN
+G to fix this)
+> <./src/images/figures/precision_vs_confidence_yolov7.png
+
+pdfTeX warning: pdflatex (file ./src/images/figures/precision_vs_confidence_yol
+ov7.png): large interlaced PNG might cause out of memory (use non-interlaced PN
+G to fix this)
+>]
+[62 <./src/images/figures/recall_vs_confidence_yolov5.png
+
+pdfTeX warning: pdflatex (file ./src/images/figures/recall_vs_confidence_yolov5
+.png): large interlaced PNG might cause out of memory (use non-interlaced PNG t
+o fix this)
+>]
+[63 <./src/images/figures/recall_vs_confidence_yolov7.png
+
+pdfTeX warning: pdflatex (file ./src/images/figures/recall_vs_confidence_yolov7
+.png): large interlaced PNG might cause out of memory (use non-interlaced PNG t
+o fix this)
+>]
+[64 <./src/images/figures/f1_vs_confidence_yolov5.png
+
+pdfTeX warning: pdflatex (file ./src/images/figures/f1_vs_confidence_yolov5.png
+): large interlaced PNG might cause out of memory (use non-interlaced PNG to fi
+x this)
+> <./src/images/figures/f1_vs_confidence_yolov7.png
+
+pdfTeX warning: pdflatex (file ./src/images/figures/f1_vs_confidence_yolov7.png
+): large interlaced PNG might cause out of memory (use non-interlaced PNG to fi
+x this)
+>]
+[65 <./src/images/figures/pr_curve_yolov5.png
+
+pdfTeX warning: pdflatex (file ./src/images/figures/pr_curve_yolov5.png): large
+ interlaced PNG might cause out of memory (use non-interlaced PNG to fix this)
+>]
+[66 <./src/images/figures/pr_curve_yolov7.png
+
+pdfTeX warning: pdflatex (file ./src/images/figures/pr_curve_yolov7.png): large
+ interlaced PNG might cause out of memory (use non-interlaced PNG to fix this)
+>]
+[67 <./src/images/figures/confusion_matrix_yolov5.png
+
+pdfTeX warning: pdflatex (file ./src/images/figures/confusion_matrix_yolov5.png
+): large interlaced PNG might cause out of memory (use non-interlaced PNG to fi
+x this)
+> <./src/images/figures/confusion_matrix_yolov7.png
+
+pdfTeX warning: pdflatex (file ./src/images/figures/confusion_matrix_yolov7.png
+): large interlaced PNG might cause out of memory (use non-interlaced PNG to fi
+x this)
+>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gls' on input line 183.
+
+
+[68]
+[69 <./src/images/figures/text_detection_recognition.png> <./src/images/figures
+/text_detection_recognition2.png>]
+[70 <./src/images/figures/OCR_loss_curve.png>]
+[71 <./src/images/figures/ocr_test.png>]
+[72 <./src/images/figures/cer_wer.png>]
+[73]
+[74 <./src/images/figures/yolo_15class_training_curves.png>]
+[75 <./src/images/figures/yolo_15class_train_loss.png> <./src/images/figures/yo
+lo_15class_val_loss.png>]
+[76 <./src/images/figures/yolo_15class_final_bar.png>]
+Overfull \hbox (7.59256pt too wide) in paragraph at lines 351--363
+ [][] 
+
+[77 <./src/images/figures/yolo_class_impact.png>]
+[78 <./src/images/figures/yolo_full_comparison_bar.png>]
+[79 <./src/images/figures/yolo_evolution_timeline.png> <./src/images/figures/yo
+lo_radar_comparison.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gls' on input line 406.
+
+
+[80]
+[81 <./src/images/figures/ocr_model_comparison.png>]
+[82]
+[83 <./src/images/figures/otsu_thresholding.png>]
+[84 <./src/images/figures/skelotonization.png>]
+[85 <./src/images/figures/component_removal.png>]
+[86 <./src/images/figures/wire_classification.png>]
+[87 <./src/images/figures/segment_consolidation.png>]
+[88 <./src/images/figures/bounding_box_overlay.png>]
+[89 <./src/images/figures/wire_component_intersection_detection.png>]
+[90 <./src/images/figures/skeleton_with_endpoints.png>]
+[91 <./src/images/figures/adjacency_graph.png>]
+[92 <./src/images/figures/frontend_circuit.png> <./src/images/figures/frontend_
+simulation.png>]
+[93 <./src/images/figures/skeletonvdivider.png> <./src/images/figures/skeletonw
+ithendpointvdivider.png>]
+[94 <./src/images/figures/adjancyvdivider.png> <./src/images/figures/frontendal
+lcomponentsmappedvdivider.png>]) (src/chapters/remainingTasks.tex
+[95 <./src/images/figures/simulatefrontendvdivider.png>]
+chapter 7.
+
+Overfull \hbox (9.89212pt too wide) in paragraph at lines 11--23
+ [][] 
+)
+[96]
+chapter 8.
+(src/backmatter/back.tex
+[97]) (main.bbl
+[98 <./src/images/figures/gantt.png>]
+chapter without number
+
+[99])
+[100] (main.aux) )
+(see the transcript file for additional information){/Users/anveshantimsina/Lib
+rary/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/newtx/ntx-ot1-tl
+f.enc}{/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install
+/fonts/enc/dvips/base/8r.enc}</Users/anveshantimsina/Library/Application Suppor
+t/MiKTeX/texmfs/install/fonts/type1/public/newtx/NewTXMI.pfb></Users/anveshanti
+msina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/newt
+x/NewTXMI7.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmf
+s/install/fonts/type1/public/newtx/txexs.pfb></Users/anveshantimsina/Library/Ap
+plication Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/txmiaX.pfb></U
+sers/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/ty
+pe1/public/newtx/txsym.pfb></Users/anveshantimsina/Library/Application Support/
+MiKTeX/texmfs/install/fonts/type1/public/newtx/txsys.pfb></Users/anveshantimsin
+a/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/courier/ucr
+r8a.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/insta
+ll/fonts/type1/urw/times/utmb8a.pfb></Users/anveshantimsina/Library/Application
+ Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmr8a.pfb></Users/anvesha
+ntimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/time
+s/utmri8a.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs
+/install/fonts/type1/public/newtx/ztmb.pfb></Users/anveshantimsina/Library/Appl
+ication Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/ztmr.pfb>
+Output written on main.pdf (111 pages, 11637897 bytes).
+Transcript written on main.log.
