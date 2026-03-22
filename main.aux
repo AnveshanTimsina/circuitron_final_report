@@ -123,14 +123,14 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}Wire Detection}{20}{subsection.4.1.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.5}Terminal Point Detection}{21}{subsection.4.1.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.6}Integration Algorithm}{21}{subsection.4.1.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.7}SPICE Netlist Generation}{22}{subsection.4.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.7}CircuitJS-compatible Text File Generation}{22}{subsection.4.1.7}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.8}Digital Schematic Generation}{22}{subsection.4.1.8}\protected@file@percent }
 \@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Frontend Circuit Rendering}}{23}{algorithm.1}\protected@file@percent }
 \newlabel{algo:frontend-rendering}{{1}{23}{Frontend Circuit Rendering}{algorithm.1}{}}
 \newlabel{algo:frontend-rendering@cref}{{[algorithm][1][]1}{[1][22][]23}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.9}Backend Development}{23}{subsection.4.1.9}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.10}LLM Integration}{23}{subsection.4.1.10}\protected@file@percent }
-\BKM@entry{id=20,dest={73656374696F6E2E342E32},srcline={255}}{5C3337365C3337375C303030345C3030302E5C303030325C3030305C3034305C303030575C303030695C303030725C303030655C3030305C3034305C303030445C303030655C303030745C303030655C303030635C303030745C303030695C3030306F5C3030306E5C3030305C3034305C3030304D5C303030655C303030745C303030685C3030306F5C303030645C3030306F5C3030306C5C3030306F5C303030675C30303079}
+\BKM@entry{id=20,dest={73656374696F6E2E342E32},srcline={251}}{5C3337365C3337375C303030345C3030302E5C303030325C3030305C3034305C303030575C303030695C303030725C303030655C3030305C3034305C303030445C303030655C303030745C303030655C303030635C303030745C303030695C3030306F5C3030306E5C3030305C3034305C3030304D5C303030655C303030745C303030685C3030306F5C303030645C3030306F5C3030306C5C3030306F5C303030675C30303079}
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}Wire Detection Methodology}{24}{section.4.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Coordinate Denormalization}{24}{subsection.4.2.1}\protected@file@percent }
 \newlabel{eq:denormalization}{{4-11}{24}{Coordinate Denormalization}{equation.4.11}{}}
@@ -167,7 +167,7 @@
 \newlabel{eq:merge-axis@cref}{{[equation][23][4]4-23}{[1][28][]28}{}{}{}}
 \newlabel{eq:merge-extent}{{4-24}{28}{Wire Segment Consolidation}{equation.4.24}{}}
 \newlabel{eq:merge-extent@cref}{{[equation][24][4]4-24}{[1][28][]28}{}{}{}}
-\BKM@entry{id=21,dest={73656374696F6E2E342E33},srcline={426}}{5C3337365C3337375C303030345C3030302E5C303030335C3030305C3034305C303030545C303030655C303030725C3030306D5C303030695C3030306E5C303030615C3030306C5C3030305C3034305C303030445C303030655C303030745C303030655C303030635C303030745C303030695C3030306F5C3030306E}
+\BKM@entry{id=21,dest={73656374696F6E2E342E33},srcline={422}}{5C3337365C3337375C303030345C3030302E5C303030335C3030305C3034305C303030545C303030655C303030725C3030306D5C303030695C3030306E5C303030615C3030306C5C3030305C3034305C303030445C303030655C303030745C303030655C303030635C303030745C303030695C3030306F5C3030306E}
 \newlabel{eq:merge-monotonicity}{{4-25}{29}{Wire Segment Consolidation}{equation.4.25}{}}
 \newlabel{eq:merge-monotonicity@cref}{{[equation][25][4]4-25}{[1][28][]29}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.3}Terminal Detection}{29}{section.4.3}\protected@file@percent }
@@ -194,25 +194,25 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.5}Complete Intersection Set Construction}{31}{subsection.4.3.5}\protected@file@percent }
 \newlabel{eq:wire-box-intersection-set}{{4-35}{31}{Complete Intersection Set Construction}{equation.4.35}{}}
 \newlabel{eq:wire-box-intersection-set@cref}{{[equation][35][4]4-35}{[1][31][]31}{}{}{}}
-\BKM@entry{id=22,dest={73656374696F6E2E342E34},srcline={539}}{5C3337365C3337375C303030345C3030302E5C303030345C3030305C3034305C3030304C5C303030695C3030306E5C303030655C3030305C3034305C303030445C303030655C303030745C303030655C303030635C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030765C303030695C303030615C3030305C3034305C303030505C303030615C303030745C303030685C3030305C3034305C303030465C303030695C3030306E5C303030645C303030695C3030306E5C30303067}
+\BKM@entry{id=22,dest={73656374696F6E2E342E34},srcline={535}}{5C3337365C3337375C303030345C3030302E5C303030345C3030305C3034305C3030304C5C303030695C3030306E5C303030655C3030305C3034305C303030445C303030655C303030745C303030655C303030635C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030765C303030695C303030615C3030305C3034305C303030505C303030615C303030745C303030685C3030305C3034305C303030465C303030695C3030306E5C303030645C303030695C3030306E5C30303067}
 \newlabel{eq:global-intersection-set}{{4-36}{32}{Complete Intersection Set Construction}{equation.4.36}{}}
 \newlabel{eq:global-intersection-set@cref}{{[equation][36][4]4-36}{[1][32][]32}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.6}Terminal Point Significance}{32}{subsection.4.3.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {4.4}Line Detection via Path Finding}{32}{section.4.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Endpoint Detection}{32}{subsection.4.4.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Graph Construction via Multi-Head BFS}{32}{subsection.4.4.2}\protected@file@percent }
-\BKM@entry{id=23,dest={73656374696F6E2E342E35},srcline={568}}{5C3337365C3337375C303030345C3030302E5C303030355C3030305C3034305C303030555C303030735C303030655C3030302D5C303030435C303030615C303030735C303030655C3030305C3034305C303030445C303030695C303030615C303030675C303030725C303030615C3030306D}
+\BKM@entry{id=23,dest={73656374696F6E2E342E35},srcline={564}}{5C3337365C3337375C303030345C3030302E5C303030355C3030305C3034305C303030555C303030735C303030655C3030302D5C303030435C303030615C303030735C303030655C3030305C3034305C303030445C303030695C303030615C303030675C303030725C303030615C3030306D}
 \@writefile{toc}{\contentsline {section}{\numberline {4.5}Use-Case Diagram}{33}{section.4.5}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4-5}{\ignorespaces Use-Case Diagram for CIRCUITRON System}}{33}{figure.caption.20}\protected@file@percent }
 \newlabel{fig:use-case-diagram}{{4-5}{33}{Use-Case Diagram for CIRCUITRON System}{figure.caption.20}{}}
 \newlabel{fig:use-case-diagram@cref}{{[figure][5][4]4-5}{[1][33][]33}{}{}{}}
-\BKM@entry{id=24,dest={73656374696F6E2E342E36},srcline={585}}{5C3337365C3337375C303030345C3030302E5C303030365C3030305C3034305C303030505C303030655C303030725C303030665C3030306F5C303030725C3030306D5C303030615C3030306E5C303030635C303030655C3030305C3034305C3030304D5C303030655C303030745C303030725C303030695C303030635C303030735C3030305C3034305C303030455C303030785C303030705C303030655C303030635C303030745C303030615C303030745C303030695C3030306F5C3030306E}
+\BKM@entry{id=24,dest={73656374696F6E2E342E36},srcline={581}}{5C3337365C3337375C303030345C3030302E5C303030365C3030305C3034305C303030505C303030655C303030725C303030665C3030306F5C303030725C3030306D5C303030615C3030306E5C303030635C303030655C3030305C3034305C3030304D5C303030655C303030745C303030725C303030695C303030635C303030735C3030305C3034305C303030455C303030785C303030705C303030655C303030635C303030745C303030615C303030745C303030695C3030306F5C3030306E}
 \@writefile{toc}{\contentsline {section}{\numberline {4.6}Performance Metrics Expectation}{34}{section.4.6}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4-1}{\ignorespaces Expected Performance Metric Values for Individual Modules}}{34}{table.caption.21}\protected@file@percent }
 \newlabel{table:performance-metrics}{{4-1}{34}{Expected Performance Metric Values for Individual Modules}{table.caption.21}{}}
 \newlabel{table:performance-metrics@cref}{{[table][1][4]4-1}{[1][34][]34}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Component Detection Metric}{34}{subsection.4.6.1}\protected@file@percent }
-\BKM@entry{id=25,dest={73656374696F6E2E342E37},srcline={641}}{5C3337365C3337375C303030345C3030302E5C303030375C3030305C3034305C303030535C303030795C303030735C303030745C303030655C3030306D5C3030305C3034305C303030465C3030306C5C3030306F5C303030775C303030635C303030685C303030615C303030725C30303074}
+\BKM@entry{id=25,dest={73656374696F6E2E342E37},srcline={637}}{5C3337365C3337375C303030345C3030302E5C303030375C3030305C3034305C303030535C303030795C303030735C303030745C303030655C3030306D5C3030305C3034305C303030465C3030306C5C3030306F5C303030775C303030635C303030685C303030615C303030725C30303074}
 \newlabel{eq:iou-metric}{{4-37}{35}{Component Detection Metric}{equation.4.37}{}}
 \newlabel{eq:iou-metric@cref}{{[equation][37][4]4-37}{[1][35][]35}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.6.2}Text Recognition Metric}{35}{subsection.4.6.2}\protected@file@percent }
@@ -223,318 +223,323 @@
 \newlabel{eq:precision@cref}{{[equation][39][4]4-39}{[1][35][]35}{}{}{}}
 \newlabel{eq:recall}{{4-40}{35}{Terminal and Node Detection Metrics}{equation.4.40}{}}
 \newlabel{eq:recall@cref}{{[equation][40][4]4-40}{[1][35][]35}{}{}{}}
-\BKM@entry{id=26,dest={73656374696F6E2E342E38},srcline={652}}{5C3337365C3337375C303030345C3030302E5C303030385C3030305C3034305C303030445C303030615C303030745C303030615C303030735C303030655C303030745C3030305C3034305C303030415C3030306E5C303030615C3030306C5C303030795C303030735C303030695C30303073}
 \@writefile{toc}{\contentsline {section}{\numberline {4.7}System Flowchart}{36}{section.4.7}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4-6}{\ignorespaces System Flowchart}}{36}{figure.caption.22}\protected@file@percent }
 \newlabel{fig:system-flowchart}{{4-6}{36}{System Flowchart}{figure.caption.22}{}}
 \newlabel{fig:system-flowchart@cref}{{[figure][6][4]4-6}{[1][35][]36}{}{}{}}
+\BKM@entry{id=26,dest={73656374696F6E2E342E38},srcline={648}}{5C3337365C3337375C303030345C3030302E5C303030385C3030305C3034305C303030445C303030615C303030745C303030615C303030735C303030655C303030745C3030305C3034305C303030415C3030306E5C303030615C3030306C5C303030795C303030735C303030695C30303073}
 \@writefile{toc}{\contentsline {section}{\numberline {4.8}Dataset Analysis}{37}{section.4.8}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.8.1}Dataset Overview}{37}{subsection.4.8.1}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4-2}{\ignorespaces Summary of Data in the CGHD Dataset}}{37}{table.caption.23}\protected@file@percent }
 \newlabel{table:cghd-summary}{{4-2}{37}{Summary of Data in the CGHD Dataset}{table.caption.23}{}}
 \newlabel{table:cghd-summary@cref}{{[table][2][4]4-2}{[1][37][]37}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.2}Class-wise Data Statistics}{38}{subsection.4.8.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4-3}{\ignorespaces Frequency of Each Class with its Code in the CGHD Dataset}}{38}{table.caption.24}\protected@file@percent }
-\newlabel{table:cghd-classes}{{4-3}{38}{Frequency of Each Class with its Code in the CGHD Dataset}{table.caption.24}{}}
-\newlabel{table:cghd-classes@cref}{{[table][3][4]4-3}{[1][38][]38}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.2}Class-wise Data Statistics}{39}{subsection.4.8.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4-3}{\ignorespaces Frequency of Each Class with its Code in the CGHD Dataset}}{39}{table.caption.24}\protected@file@percent }
+\newlabel{table:cghd-classes}{{4-3}{39}{Frequency of Each Class with its Code in the CGHD Dataset}{table.caption.24}{}}
+\newlabel{table:cghd-classes@cref}{{[table][3][4]4-3}{[1][38][]39}{}{}{}}
 \BKM@entry{id=27,dest={636861707465722E35},srcline={1}}{5C3337365C3337375C303030355C3030305C3034305C303030495C3030304D5C303030505C3030304C5C303030455C3030304D5C303030455C3030304E5C303030545C303030415C303030545C303030495C3030304F5C3030304E5C3030305C3034305C303030445C303030455C303030545C303030415C303030495C3030304C5C30303053}
 \BKM@entry{id=28,dest={73656374696F6E2E352E31},srcline={5}}{5C3337365C3337375C303030355C3030302E5C303030315C3030305C3034305C303030445C303030615C303030745C303030615C303030735C303030655C303030745C3030305C3034305C3030304D5C303030615C3030306E5C303030695C303030705C303030755C3030306C5C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030505C303030725C303030655C303030705C303030725C3030306F5C303030635C303030655C303030735C303030735C303030695C3030306E5C30303067}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}IMPLEMENTATION DETAILS}{39}{chapter.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Dataset Manipulation and Preprocessing}{39}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Conversion of Annotation Formats}{39}{subsection.5.1.1}\protected@file@percent }
-\newlabel{lst:pascal-voc-example}{{5.1.1}{39}{}{lstlisting.5.-1}{}}
-\newlabel{lst:pascal-voc-example@cref}{{[subsection][1][5,1]5.1.1}{[1][39][]39}{}{}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces VOC to YOLO Annotation Conversion}}{40}{algorithm.2}\protected@file@percent }
-\newlabel{algo:voc-to-yolo}{{2}{40}{VOC to YOLO Annotation Conversion}{algorithm.2}{}}
-\newlabel{algo:voc-to-yolo@cref}{{[algorithm][2][]2}{[1][40][]40}{}{}{}}
-\newlabel{eq:voc-yolo-x}{{5-1}{40}{Conversion of Annotation Formats}{equation.5.1}{}}
-\newlabel{eq:voc-yolo-x@cref}{{[equation][1][5]5-1}{[1][40][]40}{}{}{}}
-\newlabel{eq:voc-yolo-y}{{5-2}{40}{Conversion of Annotation Formats}{equation.5.2}{}}
-\newlabel{eq:voc-yolo-y@cref}{{[equation][2][5]5-2}{[1][40][]40}{}{}{}}
-\newlabel{eq:voc-yolo-w}{{5-3}{40}{Conversion of Annotation Formats}{equation.5.3}{}}
-\newlabel{eq:voc-yolo-w@cref}{{[equation][3][5]5-3}{[1][40][]40}{}{}{}}
-\newlabel{eq:voc-yolo-h}{{5-4}{41}{Conversion of Annotation Formats}{equation.5.4}{}}
-\newlabel{eq:voc-yolo-h@cref}{{[equation][4][5]5-4}{[1][40][]41}{}{}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces Image Cropping and LMDB Dataset Creation}}{41}{algorithm.3}\protected@file@percent }
-\newlabel{algo:image-crop-lmdb}{{3}{41}{Image Cropping and LMDB Dataset Creation}{algorithm.3}{}}
-\newlabel{algo:image-crop-lmdb@cref}{{[algorithm][3][]3}{[1][41][]41}{}{}{}}
-\newlabel{lst:lmdb-example}{{5.1.1}{41}{}{lstlisting.5.-2}{}}
-\newlabel{lst:lmdb-example@cref}{{[subsection][1][5,1]5.1.1}{[1][41][]41}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Image Augmentation}{42}{subsection.5.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Fine-tuning YOLOv5 and YOLOv7 for Component Detection}{42}{subsection.5.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Class Consolidation and Retraining}{42}{subsection.5.1.4}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5-1}{\ignorespaces Consolidation of Original Classes into Unified YOLO Classes}}{43}{table.caption.25}\protected@file@percent }
-\newlabel{tab:class_consolidation}{{5-1}{43}{Consolidation of Original Classes into Unified YOLO Classes}{table.caption.25}{}}
-\newlabel{tab:class_consolidation@cref}{{[table][1][5]5-1}{[1][42][]43}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.5}Implementation of Custom Text Recognition (OCR)}{43}{subsection.5.1.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.6}Fine-tuning TrOCR for Text Recognition}{44}{subsection.5.1.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.7}Line Detection Algorithm Implementation}{44}{subsection.5.1.7}\protected@file@percent }
-\@writefile{loa}{\contentsline {algorithm}{\numberline {4}{\ignorespaces Wire Classification and Alignment}}{45}{algorithm.4}\protected@file@percent }
-\newlabel{algo:wire-classification-impl}{{4}{45}{Wire Classification and Alignment}{algorithm.4}{}}
-\newlabel{algo:wire-classification-impl@cref}{{[algorithm][4][]4}{[1][45][]45}{}{}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}IMPLEMENTATION DETAILS}{40}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Dataset Manipulation and Preprocessing}{40}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Conversion of Annotation Formats}{40}{subsection.5.1.1}\protected@file@percent }
+\newlabel{lst:pascal-voc-example}{{5.1.1}{40}{}{lstlisting.5.-1}{}}
+\newlabel{lst:pascal-voc-example@cref}{{[subsection][1][5,1]5.1.1}{[1][40][]40}{}{}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces VOC to YOLO Annotation Conversion}}{41}{algorithm.2}\protected@file@percent }
+\newlabel{algo:voc-to-yolo}{{2}{41}{VOC to YOLO Annotation Conversion}{algorithm.2}{}}
+\newlabel{algo:voc-to-yolo@cref}{{[algorithm][2][]2}{[1][41][]41}{}{}{}}
+\newlabel{eq:voc-yolo-x}{{5-1}{41}{Conversion of Annotation Formats}{equation.5.1}{}}
+\newlabel{eq:voc-yolo-x@cref}{{[equation][1][5]5-1}{[1][41][]41}{}{}{}}
+\newlabel{eq:voc-yolo-y}{{5-2}{41}{Conversion of Annotation Formats}{equation.5.2}{}}
+\newlabel{eq:voc-yolo-y@cref}{{[equation][2][5]5-2}{[1][41][]41}{}{}{}}
+\newlabel{eq:voc-yolo-w}{{5-3}{41}{Conversion of Annotation Formats}{equation.5.3}{}}
+\newlabel{eq:voc-yolo-w@cref}{{[equation][3][5]5-3}{[1][41][]41}{}{}{}}
+\newlabel{eq:voc-yolo-h}{{5-4}{42}{Conversion of Annotation Formats}{equation.5.4}{}}
+\newlabel{eq:voc-yolo-h@cref}{{[equation][4][5]5-4}{[1][41][]42}{}{}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces Image Cropping and LMDB Dataset Creation}}{42}{algorithm.3}\protected@file@percent }
+\newlabel{algo:image-crop-lmdb}{{3}{42}{Image Cropping and LMDB Dataset Creation}{algorithm.3}{}}
+\newlabel{algo:image-crop-lmdb@cref}{{[algorithm][3][]3}{[1][42][]42}{}{}{}}
+\newlabel{lst:lmdb-example}{{5.1.1}{42}{}{lstlisting.5.-2}{}}
+\newlabel{lst:lmdb-example@cref}{{[subsection][1][5,1]5.1.1}{[1][42][]42}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Image Augmentation}{43}{subsection.5.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Fine-tuning YOLOv5 and YOLOv7 for Component Detection}{43}{subsection.5.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Class Consolidation and Retraining}{43}{subsection.5.1.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5-1}{\ignorespaces Consolidation of Original Classes into Unified YOLO Classes}}{44}{table.caption.25}\protected@file@percent }
+\newlabel{tab:class_consolidation}{{5-1}{44}{Consolidation of Original Classes into Unified YOLO Classes}{table.caption.25}{}}
+\newlabel{tab:class_consolidation@cref}{{[table][1][5]5-1}{[1][43][]44}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.5}Implementation of Custom Text Recognition (OCR)}{44}{subsection.5.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.6}Fine-tuning TrOCR for Text Recognition}{45}{subsection.5.1.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.7}Line Detection Algorithm Implementation}{45}{subsection.5.1.7}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {4}{\ignorespaces Wire Classification and Alignment}}{46}{algorithm.4}\protected@file@percent }
+\newlabel{algo:wire-classification-impl}{{4}{46}{Wire Classification and Alignment}{algorithm.4}{}}
+\newlabel{algo:wire-classification-impl@cref}{{[algorithm][4][]4}{[1][46][]46}{}{}{}}
 \BKM@entry{id=29,dest={73656374696F6E2E352E32},srcline={331}}{5C3337365C3337375C303030355C3030302E5C303030325C3030305C3034305C3030304C5C303030695C3030306E5C303030655C3030305C3034305C303030445C303030655C303030745C303030655C303030635C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030765C303030695C303030615C3030305C3034305C303030505C303030615C303030745C303030685C3030305C3034305C303030465C303030695C3030306E5C303030645C303030695C3030306E5C30303067}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {5}{\ignorespaces Collinear Segment Merging}}{46}{algorithm.5}\protected@file@percent }
-\newlabel{algo:segment-merging-impl}{{5}{46}{Collinear Segment Merging}{algorithm.5}{}}
-\newlabel{algo:segment-merging-impl@cref}{{[algorithm][5][]5}{[1][45][]46}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Line Detection via Path Finding}{46}{section.5.2}\protected@file@percent }
-\@writefile{loa}{\contentsline {algorithm}{\numberline {6}{\ignorespaces Wire^^e2^^80^^93Component Intersection Detection}}{47}{algorithm.6}\protected@file@percent }
-\newlabel{algo:wire-component-intersection-impl}{{6}{47}{Wire^^e2^^80^^93Component Intersection Detection}{algorithm.6}{}}
-\newlabel{algo:wire-component-intersection-impl@cref}{{[algorithm][6][]6}{[1][46][]47}{}{}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {7}{\ignorespaces Build Node ID Map}}{47}{algorithm.7}\protected@file@percent }
-\newlabel{alg:node_id_map}{{7}{47}{Build Node ID Map}{algorithm.7}{}}
-\newlabel{alg:node_id_map@cref}{{[algorithm][7][]7}{[1][46][]47}{}{}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {8}{\ignorespaces BFS Neighbors for Node}}{48}{algorithm.8}\protected@file@percent }
-\newlabel{alg:bfs_node}{{8}{48}{BFS Neighbors for Node}{algorithm.8}{}}
-\newlabel{alg:bfs_node@cref}{{[algorithm][8][]8}{[1][47][]48}{}{}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {9}{\ignorespaces Remove Self-Edges (Same-Object Connections)}}{49}{algorithm.9}\protected@file@percent }
-\newlabel{alg:remove_self}{{9}{49}{Remove Self-Edges (Same-Object Connections)}{algorithm.9}{}}
-\newlabel{alg:remove_self@cref}{{[algorithm][9][]9}{[1][48][]49}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Complexity of Implemented Algorithm}{49}{subsection.5.2.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5-2}{\ignorespaces Time complexity breakdown for Multi-Head BFS algorithm}}{49}{table.caption.26}\protected@file@percent }
-\newlabel{tab:time_complexity}{{5-2}{49}{Time complexity breakdown for Multi-Head BFS algorithm}{table.caption.26}{}}
-\newlabel{tab:time_complexity@cref}{{[table][2][5]5-2}{[1][49][]49}{}{}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5-3}{\ignorespaces Space complexity breakdown for Multi-Head BFS algorithm}}{49}{table.caption.27}\protected@file@percent }
-\newlabel{tab:space_complexity}{{5-3}{49}{Space complexity breakdown for Multi-Head BFS algorithm}{table.caption.27}{}}
-\newlabel{tab:space_complexity@cref}{{[table][3][5]5-3}{[1][49][]49}{}{}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {5}{\ignorespaces Collinear Segment Merging}}{47}{algorithm.5}\protected@file@percent }
+\newlabel{algo:segment-merging-impl}{{5}{47}{Collinear Segment Merging}{algorithm.5}{}}
+\newlabel{algo:segment-merging-impl@cref}{{[algorithm][5][]5}{[1][46][]47}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Line Detection via Path Finding}{47}{section.5.2}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {6}{\ignorespaces Wire^^e2^^80^^93Component Intersection Detection}}{48}{algorithm.6}\protected@file@percent }
+\newlabel{algo:wire-component-intersection-impl}{{6}{48}{Wire^^e2^^80^^93Component Intersection Detection}{algorithm.6}{}}
+\newlabel{algo:wire-component-intersection-impl@cref}{{[algorithm][6][]6}{[1][47][]48}{}{}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {7}{\ignorespaces Build Node ID Map}}{48}{algorithm.7}\protected@file@percent }
+\newlabel{alg:node_id_map}{{7}{48}{Build Node ID Map}{algorithm.7}{}}
+\newlabel{alg:node_id_map@cref}{{[algorithm][7][]7}{[1][47][]48}{}{}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {8}{\ignorespaces BFS Neighbors for Node}}{49}{algorithm.8}\protected@file@percent }
+\newlabel{alg:bfs_node}{{8}{49}{BFS Neighbors for Node}{algorithm.8}{}}
+\newlabel{alg:bfs_node@cref}{{[algorithm][8][]8}{[1][48][]49}{}{}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {9}{\ignorespaces Remove Self-Edges (Same-Object Connections)}}{50}{algorithm.9}\protected@file@percent }
+\newlabel{alg:remove_self}{{9}{50}{Remove Self-Edges (Same-Object Connections)}{algorithm.9}{}}
+\newlabel{alg:remove_self@cref}{{[algorithm][9][]9}{[1][49][]50}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Complexity of Implemented Algorithm}{50}{subsection.5.2.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5-2}{\ignorespaces Time complexity breakdown for Multi-Head BFS algorithm}}{50}{table.caption.26}\protected@file@percent }
+\newlabel{tab:time_complexity}{{5-2}{50}{Time complexity breakdown for Multi-Head BFS algorithm}{table.caption.26}{}}
+\newlabel{tab:time_complexity@cref}{{[table][2][5]5-2}{[1][50][]50}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5-3}{\ignorespaces Space complexity breakdown for Multi-Head BFS algorithm}}{50}{table.caption.27}\protected@file@percent }
+\newlabel{tab:space_complexity}{{5-3}{50}{Space complexity breakdown for Multi-Head BFS algorithm}{table.caption.27}{}}
+\newlabel{tab:space_complexity@cref}{{[table][3][5]5-3}{[1][50][]50}{}{}{}}
 \BKM@entry{id=30,dest={73656374696F6E2E352E33},srcline={492}}{5C3337365C3337375C303030355C3030302E5C303030335C3030305C3034305C303030465C303030725C3030306F5C3030306E5C303030745C303030655C3030306E5C303030645C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030425C303030615C303030635C3030306B5C303030655C3030306E5C303030645C3030305C3034305C303030495C3030306D5C303030705C3030306C5C303030655C3030306D5C303030655C3030306E5C303030745C303030615C303030745C303030695C3030306F5C3030306E}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Frontend and Backend Implementation}{50}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Frontend and Backend Implementation}{51}{section.5.3}\protected@file@percent }
 \BKM@entry{id=31,dest={73656374696F6E2E352E34},srcline={547}}{5C3337365C3337375C303030355C3030302E5C303030345C3030305C3034305C303030435C303030695C303030725C303030635C303030755C303030695C303030745C3030305C3034305C303030535C303030695C3030306D5C303030755C3030306C5C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030755C303030735C303030695C3030306E5C303030675C3030305C3034305C303030435C303030695C303030725C303030635C303030755C303030695C303030745C3030304A5C30303053}
 \BKM@entry{id=32,dest={73656374696F6E2E352E35},srcline={551}}{5C3337365C3337375C303030355C3030302E5C303030355C3030305C3034305C303030455C303030725C303030725C3030306F5C303030725C3030305C3034305C303030485C303030615C3030306E5C303030645C3030306C5C303030695C3030306E5C30303067}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Frontend-Backend Interaction}{51}{subsection.5.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5-1}{\ignorespaces Interaction Diagram for the Web Application}}{51}{figure.caption.28}\protected@file@percent }
-\newlabel{fig:webapp-interaction}{{5-1}{51}{Interaction Diagram for the Web Application}{figure.caption.28}{}}
-\newlabel{fig:webapp-interaction@cref}{{[figure][1][5]5-1}{[1][50][]51}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Circuit Simulation using CircuitJS}{51}{section.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Error Handling}{51}{section.5.5}\protected@file@percent }
-\@writefile{loa}{\contentsline {algorithm}{\numberline {10}{\ignorespaces Validation and Filtering of OCR Component Values}}{52}{algorithm.10}\protected@file@percent }
-\newlabel{algo:ocr-validation}{{10}{52}{Validation and Filtering of OCR Component Values}{algorithm.10}{}}
-\newlabel{algo:ocr-validation@cref}{{[algorithm][10][]10}{[1][52][]52}{}{}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {11}{\ignorespaces Confidence-Based Error Checking and Validation}}{53}{algorithm.11}\protected@file@percent }
-\newlabel{algo:confidence-validation}{{11}{53}{Confidence-Based Error Checking and Validation}{algorithm.11}{}}
-\newlabel{algo:confidence-validation@cref}{{[algorithm][11][]11}{[1][52][]53}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Frontend-Backend Interaction}{52}{subsection.5.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5-1}{\ignorespaces Interaction Diagram for the Web Application}}{52}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:webapp-interaction}{{5-1}{52}{Interaction Diagram for the Web Application}{figure.caption.28}{}}
+\newlabel{fig:webapp-interaction@cref}{{[figure][1][5]5-1}{[1][51][]52}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Circuit Simulation using CircuitJS}{52}{section.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Error Handling}{52}{section.5.5}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {10}{\ignorespaces Validation and Filtering of OCR Component Values}}{53}{algorithm.10}\protected@file@percent }
+\newlabel{algo:ocr-validation}{{10}{53}{Validation and Filtering of OCR Component Values}{algorithm.10}{}}
+\newlabel{algo:ocr-validation@cref}{{[algorithm][10][]10}{[1][53][]53}{}{}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {11}{\ignorespaces Confidence-Based Error Checking and Validation}}{54}{algorithm.11}\protected@file@percent }
+\newlabel{algo:confidence-validation}{{11}{54}{Confidence-Based Error Checking and Validation}{algorithm.11}{}}
+\newlabel{algo:confidence-validation@cref}{{[algorithm][11][]11}{[1][53][]54}{}{}{}}
 \BKM@entry{id=33,dest={636861707465722E36},srcline={1}}{5C3337365C3337375C303030365C3030305C3034305C303030525C303030455C303030535C303030555C3030304C5C303030545C303030535C3030305C3034305C303030415C3030304E5C303030445C3030305C3034305C303030415C3030304E5C303030415C3030304C5C303030595C303030535C303030495C30303053}
 \BKM@entry{id=34,dest={73656374696F6E2E362E31},srcline={18}}{5C3337365C3337375C303030365C3030302E5C303030315C3030305C3034305C303030435C3030306F5C3030306D5C303030705C303030615C303030725C303030615C303030745C303030695C303030765C303030655C3030305C3034305C303030415C3030306E5C303030615C3030306C5C303030795C303030735C303030695C303030735C3030305C3034305C3030306F5C303030665C3030305C3034305C3030304F5C303030625C3030306A5C303030655C303030635C303030745C3030305C3034305C303030445C303030655C303030745C303030655C303030635C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030755C303030735C303030695C3030306E5C303030675C3030305C3034305C303030595C3030304F5C3030304C5C3030304F5C303030765C303030355C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030595C3030304F5C3030304C5C3030304F5C303030765C30303037}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}RESULTS AND ANALYSIS}{54}{chapter.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Comparative Analysis of Object Detection using YOLOv5 and YOLOv7}{54}{section.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Experimental Setup}{54}{subsection.6.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Training Progress and Loss Curves}{54}{subsection.6.1.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-1}{\ignorespaces Loss Curves for YOLOv5}}{54}{figure.caption.29}\protected@file@percent }
-\newlabel{fig:yolov5-loss-curves}{{6-1}{54}{Loss Curves for YOLOv5}{figure.caption.29}{}}
-\newlabel{fig:yolov5-loss-curves@cref}{{[figure][1][6]6-1}{[1][54][]54}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-2}{\ignorespaces Loss Curves for YOLOv7}}{55}{figure.caption.30}\protected@file@percent }
-\newlabel{fig:yolov7-loss-curves}{{6-2}{55}{Loss Curves for YOLOv7}{figure.caption.30}{}}
-\newlabel{fig:yolov7-loss-curves@cref}{{[figure][2][6]6-2}{[1][54][]55}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}Performance Metrics}{55}{subsection.6.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline mAP vs Number of Epochs}{55}{subsubsection*.31}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-3}{\ignorespaces \gls {map}@0.5 vs Epochs for YOLOv5 and YOLOv7}}{55}{figure.caption.32}\protected@file@percent }
-\newlabel{fig:map50-epochs}{{6-3}{55}{\gls {map}@0.5 vs Epochs for YOLOv5 and YOLOv7}{figure.caption.32}{}}
-\newlabel{fig:map50-epochs@cref}{{[figure][3][6]6-3}{[1][55][]55}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-4}{\ignorespaces \gls {map}@0.5:0.95 vs Epochs for YOLOv5 and YOLOv7}}{56}{figure.caption.33}\protected@file@percent }
-\newlabel{fig:map50-95-epochs}{{6-4}{56}{\gls {map}@0.5:0.95 vs Epochs for YOLOv5 and YOLOv7}{figure.caption.33}{}}
-\newlabel{fig:map50-95-epochs@cref}{{[figure][4][6]6-4}{[1][55][]56}{}{}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Precision, Recall, and F1 Score vs Confidence}{56}{subsubsection*.34}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Precision vs Confidence}{57}{paragraph*.35}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-5}{\ignorespaces Precision-Confidence Curve for YOLOv5}}{57}{figure.caption.36}\protected@file@percent }
-\newlabel{fig:precision-conf-v5}{{6-5}{57}{Precision-Confidence Curve for YOLOv5}{figure.caption.36}{}}
-\newlabel{fig:precision-conf-v5@cref}{{[figure][5][6]6-5}{[1][56][]57}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-6}{\ignorespaces Precision-Confidence Curve for YOLOv7}}{57}{figure.caption.37}\protected@file@percent }
-\newlabel{fig:precision-conf-v7}{{6-6}{57}{Precision-Confidence Curve for YOLOv7}{figure.caption.37}{}}
-\newlabel{fig:precision-conf-v7@cref}{{[figure][6][6]6-6}{[1][57][]57}{}{}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Recall vs Confidence}{58}{paragraph*.38}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-7}{\ignorespaces Recall-Confidence Curve for YOLOv5}}{58}{figure.caption.39}\protected@file@percent }
-\newlabel{fig:recall-conf-v5}{{6-7}{58}{Recall-Confidence Curve for YOLOv5}{figure.caption.39}{}}
-\newlabel{fig:recall-conf-v5@cref}{{[figure][7][6]6-7}{[1][58][]58}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-8}{\ignorespaces Recall-Confidence Curve for YOLOv7}}{59}{figure.caption.40}\protected@file@percent }
-\newlabel{fig:recall-conf-v7}{{6-8}{59}{Recall-Confidence Curve for YOLOv7}{figure.caption.40}{}}
-\newlabel{fig:recall-conf-v7@cref}{{[figure][8][6]6-8}{[1][58][]59}{}{}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline F1 Score vs Confidence}{60}{paragraph*.41}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-9}{\ignorespaces F1 Score-Confidence Curve for YOLOv5}}{60}{figure.caption.42}\protected@file@percent }
-\newlabel{fig:f1-conf-v5}{{6-9}{60}{F1 Score-Confidence Curve for YOLOv5}{figure.caption.42}{}}
-\newlabel{fig:f1-conf-v5@cref}{{[figure][9][6]6-9}{[1][59][]60}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-10}{\ignorespaces F1 Score-Confidence Curve for YOLOv7}}{60}{figure.caption.43}\protected@file@percent }
-\newlabel{fig:f1-conf-v7}{{6-10}{60}{F1 Score-Confidence Curve for YOLOv7}{figure.caption.43}{}}
-\newlabel{fig:f1-conf-v7@cref}{{[figure][10][6]6-10}{[1][60][]60}{}{}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Precision-Recall Curve}{61}{paragraph*.44}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-11}{\ignorespaces Precision-Recall Curve for YOLOv5}}{61}{figure.caption.45}\protected@file@percent }
-\newlabel{fig:pr-curve-v5}{{6-11}{61}{Precision-Recall Curve for YOLOv5}{figure.caption.45}{}}
-\newlabel{fig:pr-curve-v5@cref}{{[figure][11][6]6-11}{[1][61][]61}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-12}{\ignorespaces Precision-Recall Curve for YOLOv7}}{62}{figure.caption.46}\protected@file@percent }
-\newlabel{fig:pr-curve-v7}{{6-12}{62}{Precision-Recall Curve for YOLOv7}{figure.caption.46}{}}
-\newlabel{fig:pr-curve-v7@cref}{{[figure][12][6]6-12}{[1][61][]62}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.4}Confusion Matrix}{62}{subsection.6.1.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-13}{\ignorespaces Confusion Matrix for YOLOv5}}{63}{figure.caption.47}\protected@file@percent }
-\newlabel{fig:confusion-matrix-v5}{{6-13}{63}{Confusion Matrix for YOLOv5}{figure.caption.47}{}}
-\newlabel{fig:confusion-matrix-v5@cref}{{[figure][13][6]6-13}{[1][62][]63}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-14}{\ignorespaces Confusion Matrix for YOLOv7}}{63}{figure.caption.48}\protected@file@percent }
-\newlabel{fig:confusion-matrix-v7}{{6-14}{63}{Confusion Matrix for YOLOv7}{figure.caption.48}{}}
-\newlabel{fig:confusion-matrix-v7@cref}{{[figure][14][6]6-14}{[1][63][]63}{}{}{}}
-\BKM@entry{id=35,dest={73656374696F6E2E362E32},srcline={183}}{5C3337365C3337375C303030365C3030302E5C303030325C3030305C3034305C3030306F5C303030635C303030725C3030305C3034305C303030525C303030655C303030735C303030755C3030306C5C303030745C30303073}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.5}Quantitative Results Comparison}{64}{subsection.6.1.5}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6-1}{\ignorespaces Comparison of Performance Metrics for YOLOv5 and YOLOv7}}{64}{table.caption.49}\protected@file@percent }
-\newlabel{table:yolo-comparison}{{6-1}{64}{Comparison of Performance Metrics for YOLOv5 and YOLOv7}{table.caption.49}{}}
-\newlabel{table:yolo-comparison@cref}{{[table][1][6]6-1}{[1][64][]64}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}\gls {ocr} Results}{64}{section.6.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-15}{\ignorespaces Text Detection and Recognition (i)}}{65}{figure.caption.50}\protected@file@percent }
-\newlabel{fig:ocr-result-1}{{6-15}{65}{Text Detection and Recognition (i)}{figure.caption.50}{}}
-\newlabel{fig:ocr-result-1@cref}{{[figure][15][6]6-15}{[1][64][]65}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-16}{\ignorespaces Text Detection and Recognition (ii)}}{65}{figure.caption.51}\protected@file@percent }
-\newlabel{fig:ocr-result-2}{{6-16}{65}{Text Detection and Recognition (ii)}{figure.caption.51}{}}
-\newlabel{fig:ocr-result-2@cref}{{[figure][16][6]6-16}{[1][65][]65}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Training Loss Curve}{66}{subsection.6.2.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-17}{\ignorespaces Training Loss vs Epochs (\gls {ocr})}}{66}{figure.caption.52}\protected@file@percent }
-\newlabel{fig:ocr-training-loss}{{6-17}{66}{Training Loss vs Epochs (\gls {ocr})}{figure.caption.52}{}}
-\newlabel{fig:ocr-training-loss@cref}{{[figure][17][6]6-17}{[1][65][]66}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}OCR Prediction}{66}{subsection.6.2.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-18}{\ignorespaces OCR Model Predictions}}{67}{figure.caption.53}\protected@file@percent }
-\newlabel{fig:ocr-predictions}{{6-18}{67}{OCR Model Predictions}{figure.caption.53}{}}
-\newlabel{fig:ocr-predictions@cref}{{[figure][18][6]6-18}{[1][66][]67}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.3}OCR Performance Analysis}{67}{subsection.6.2.3}\protected@file@percent }
-\BKM@entry{id=36,dest={73656374696F6E2E362E33},srcline={236}}{5C3337365C3337375C303030365C3030302E5C303030335C3030305C3034305C303030455C303030785C303030745C303030655C3030306E5C303030645C303030655C303030645C3030305C3034305C3030304F5C303030625C3030306A5C303030655C303030635C303030745C3030305C3034305C303030445C303030655C303030745C303030655C303030635C303030745C303030695C3030306F5C3030306E5C3030303A5C3030305C3034305C303030315C303030355C3030302D5C303030435C3030306C5C303030615C303030735C303030735C3030305C3034305C303030545C303030615C303030785C3030306F5C3030306E5C3030306F5C3030306D5C303030795C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C3030304D5C303030755C3030306C5C303030745C303030695C3030302D5C303030415C303030725C303030635C303030685C303030695C303030745C303030655C303030635C303030745C303030755C303030725C303030655C3030305C3034305C303030425C303030655C3030306E5C303030635C303030685C3030306D5C303030615C303030725C3030306B}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-19}{\ignorespaces OCR Performance Metrics and their Distributions}}{68}{figure.caption.54}\protected@file@percent }
-\newlabel{fig:ocr-performance-metrics}{{6-19}{68}{OCR Performance Metrics and their Distributions}{figure.caption.54}{}}
-\newlabel{fig:ocr-performance-metrics@cref}{{[figure][19][6]6-19}{[1][67][]68}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Extended Object Detection: 15-Class Taxonomy and Multi-Architecture Benchmark}{68}{section.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Class Taxonomy Consolidation}{68}{subsection.6.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Experimental Setup (15-Class)}{69}{subsection.6.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Training Progress: 15-Class Models}{69}{subsection.6.3.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-20}{\ignorespaces Training curves for four \gls {yolo} architectures on the 15-class dataset: Precision, Recall, \gls {map}@0.5, and \gls {map}@0.5:0.95 vs. epochs}}{70}{figure.caption.55}\protected@file@percent }
-\newlabel{fig:15class-training-curves}{{6-20}{70}{Training curves for four \gls {yolo} architectures on the 15-class dataset: Precision, Recall, \gls {map}@0.5, and \gls {map}@0.5:0.95 vs. epochs}{figure.caption.55}{}}
-\newlabel{fig:15class-training-curves@cref}{{[figure][20][6]6-20}{[1][69][]70}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.4}Training and Validation Loss: 15-Class Models}{70}{subsection.6.3.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-21}{\ignorespaces Training loss comparison (Box, Classification, DFL) across four \gls {yolo} architectures}}{71}{figure.caption.56}\protected@file@percent }
-\newlabel{fig:15class-train-loss}{{6-21}{71}{Training loss comparison (Box, Classification, DFL) across four \gls {yolo} architectures}{figure.caption.56}{}}
-\newlabel{fig:15class-train-loss@cref}{{[figure][21][6]6-21}{[1][70][]71}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-22}{\ignorespaces Validation loss comparison (Box, Classification, DFL) across four \gls {yolo} architectures}}{71}{figure.caption.57}\protected@file@percent }
-\newlabel{fig:15class-val-loss}{{6-22}{71}{Validation loss comparison (Box, Classification, DFL) across four \gls {yolo} architectures}{figure.caption.57}{}}
-\newlabel{fig:15class-val-loss@cref}{{[figure][22][6]6-22}{[1][71][]71}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.5}Final Metrics: 15-Class Comparison}{71}{subsection.6.3.5}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6-2}{\ignorespaces Performance comparison of four \gls {yolo} architectures on the 15-class dataset (final epoch)}}{71}{table.caption.58}\protected@file@percent }
-\newlabel{table:yolo-15class-comparison}{{6-2}{71}{Performance comparison of four \gls {yolo} architectures on the 15-class dataset (final epoch)}{table.caption.58}{}}
-\newlabel{table:yolo-15class-comparison@cref}{{[table][2][6]6-2}{[1][71][]71}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-23}{\ignorespaces Final-epoch performance metrics for four \gls {yolo} architectures on the 15-class dataset}}{72}{figure.caption.59}\protected@file@percent }
-\newlabel{fig:15class-final-bar}{{6-23}{72}{Final-epoch performance metrics for four \gls {yolo} architectures on the 15-class dataset}{figure.caption.59}{}}
-\newlabel{fig:15class-final-bar@cref}{{[figure][23][6]6-23}{[1][71][]72}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.6}Impact of Class Taxonomy Consolidation}{72}{subsection.6.3.6}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6-3}{\ignorespaces Impact of class taxonomy consolidation on YOLOv7 performance}}{72}{table.caption.60}\protected@file@percent }
-\newlabel{table:class-impact}{{6-3}{72}{Impact of class taxonomy consolidation on YOLOv7 performance}{table.caption.60}{}}
-\newlabel{table:class-impact@cref}{{[table][3][6]6-3}{[1][72][]72}{}{}{}}
-\BKM@entry{id=37,dest={73656374696F6E2E362E34},srcline={343}}{5C3337365C3337375C303030365C3030302E5C303030345C3030305C3034305C303030485C3030306F5C3030306C5C303030695C303030735C303030745C303030695C303030635C3030305C3034305C3030304F5C303030625C3030306A5C303030655C303030635C303030745C3030305C3034305C303030445C303030655C303030745C303030655C303030635C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030435C3030306F5C3030306D5C303030705C303030615C303030725C303030695C303030735C3030306F5C3030306E}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-24}{\ignorespaces Effect of class taxonomy consolidation on YOLOv7: 61-class vs. 15-class performance}}{73}{figure.caption.61}\protected@file@percent }
-\newlabel{fig:class-impact}{{6-24}{73}{Effect of class taxonomy consolidation on YOLOv7: 61-class vs. 15-class performance}{figure.caption.61}{}}
-\newlabel{fig:class-impact@cref}{{[figure][24][6]6-24}{[1][72][]73}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Holistic Object Detection Comparison}{73}{section.6.4}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6-4}{\ignorespaces Unified comparison of all object detection configurations}}{73}{table.caption.62}\protected@file@percent }
-\newlabel{table:yolo-full-comparison}{{6-4}{73}{Unified comparison of all object detection configurations}{table.caption.62}{}}
-\newlabel{table:yolo-full-comparison@cref}{{[table][4][6]6-4}{[1][73][]73}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-25}{\ignorespaces Grouped bar chart comparing all six detection configurations across Precision, Recall, \gls {map}@0.5, and \gls {map}@0.5:0.95}}{74}{figure.caption.63}\protected@file@percent }
-\newlabel{fig:yolo-full-bar}{{6-25}{74}{Grouped bar chart comparing all six detection configurations across Precision, Recall, \gls {map}@0.5, and \gls {map}@0.5:0.95}{figure.caption.63}{}}
-\newlabel{fig:yolo-full-bar@cref}{{[figure][25][6]6-25}{[1][73][]74}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Performance Evolution}{74}{subsection.6.4.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-26}{\ignorespaces Performance evolution of object detection across all configurations showing \gls {map}@0.5 and \gls {map}@0.5:0.95}}{75}{figure.caption.64}\protected@file@percent }
-\newlabel{fig:yolo-evolution}{{6-26}{75}{Performance evolution of object detection across all configurations showing \gls {map}@0.5 and \gls {map}@0.5:0.95}{figure.caption.64}{}}
-\newlabel{fig:yolo-evolution@cref}{{[figure][26][6]6-26}{[1][74][]75}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}Radar Visualization of Top Models}{75}{subsection.6.4.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-27}{\ignorespaces Radar chart comparing the three best detection configurations across four performance metrics}}{75}{figure.caption.65}\protected@file@percent }
-\newlabel{fig:yolo-radar}{{6-27}{75}{Radar chart comparing the three best detection configurations across four performance metrics}{figure.caption.65}{}}
-\newlabel{fig:yolo-radar@cref}{{[figure][27][6]6-27}{[1][75][]75}{}{}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}RESULTS AND ANALYSIS}{55}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Comparative Analysis of Object Detection using YOLOv5 and YOLOv7}{55}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Experimental Setup}{55}{subsection.6.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Training Progress and Loss Curves}{55}{subsection.6.1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-1}{\ignorespaces Loss Curves for YOLOv5}}{55}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:yolov5-loss-curves}{{6-1}{55}{Loss Curves for YOLOv5}{figure.caption.29}{}}
+\newlabel{fig:yolov5-loss-curves@cref}{{[figure][1][6]6-1}{[1][55][]55}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-2}{\ignorespaces Loss Curves for YOLOv7}}{56}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:yolov7-loss-curves}{{6-2}{56}{Loss Curves for YOLOv7}{figure.caption.30}{}}
+\newlabel{fig:yolov7-loss-curves@cref}{{[figure][2][6]6-2}{[1][55][]56}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}Performance Metrics}{56}{subsection.6.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline mAP vs Number of Epochs}{56}{subsubsection*.31}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-3}{\ignorespaces \gls {map}@0.5 vs Epochs for YOLOv5 and YOLOv7}}{56}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:map50-epochs}{{6-3}{56}{\gls {map}@0.5 vs Epochs for YOLOv5 and YOLOv7}{figure.caption.32}{}}
+\newlabel{fig:map50-epochs@cref}{{[figure][3][6]6-3}{[1][56][]56}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-4}{\ignorespaces \gls {map}@0.5:0.95 vs Epochs for YOLOv5 and YOLOv7}}{57}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:map50-95-epochs}{{6-4}{57}{\gls {map}@0.5:0.95 vs Epochs for YOLOv5 and YOLOv7}{figure.caption.33}{}}
+\newlabel{fig:map50-95-epochs@cref}{{[figure][4][6]6-4}{[1][56][]57}{}{}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Precision, Recall, and F1 Score vs Confidence}{57}{subsubsection*.34}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Precision vs Confidence}{58}{paragraph*.35}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-5}{\ignorespaces Precision-Confidence Curve for YOLOv5}}{58}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:precision-conf-v5}{{6-5}{58}{Precision-Confidence Curve for YOLOv5}{figure.caption.36}{}}
+\newlabel{fig:precision-conf-v5@cref}{{[figure][5][6]6-5}{[1][57][]58}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-6}{\ignorespaces Precision-Confidence Curve for YOLOv7}}{58}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:precision-conf-v7}{{6-6}{58}{Precision-Confidence Curve for YOLOv7}{figure.caption.37}{}}
+\newlabel{fig:precision-conf-v7@cref}{{[figure][6][6]6-6}{[1][58][]58}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Recall vs Confidence}{59}{paragraph*.38}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-7}{\ignorespaces Recall-Confidence Curve for YOLOv5}}{59}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:recall-conf-v5}{{6-7}{59}{Recall-Confidence Curve for YOLOv5}{figure.caption.39}{}}
+\newlabel{fig:recall-conf-v5@cref}{{[figure][7][6]6-7}{[1][59][]59}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-8}{\ignorespaces Recall-Confidence Curve for YOLOv7}}{60}{figure.caption.40}\protected@file@percent }
+\newlabel{fig:recall-conf-v7}{{6-8}{60}{Recall-Confidence Curve for YOLOv7}{figure.caption.40}{}}
+\newlabel{fig:recall-conf-v7@cref}{{[figure][8][6]6-8}{[1][59][]60}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline F1 Score vs Confidence}{61}{paragraph*.41}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-9}{\ignorespaces F1 Score-Confidence Curve for YOLOv5}}{61}{figure.caption.42}\protected@file@percent }
+\newlabel{fig:f1-conf-v5}{{6-9}{61}{F1 Score-Confidence Curve for YOLOv5}{figure.caption.42}{}}
+\newlabel{fig:f1-conf-v5@cref}{{[figure][9][6]6-9}{[1][60][]61}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-10}{\ignorespaces F1 Score-Confidence Curve for YOLOv7}}{61}{figure.caption.43}\protected@file@percent }
+\newlabel{fig:f1-conf-v7}{{6-10}{61}{F1 Score-Confidence Curve for YOLOv7}{figure.caption.43}{}}
+\newlabel{fig:f1-conf-v7@cref}{{[figure][10][6]6-10}{[1][61][]61}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Precision-Recall Curve}{62}{paragraph*.44}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-11}{\ignorespaces Precision-Recall Curve for YOLOv5}}{62}{figure.caption.45}\protected@file@percent }
+\newlabel{fig:pr-curve-v5}{{6-11}{62}{Precision-Recall Curve for YOLOv5}{figure.caption.45}{}}
+\newlabel{fig:pr-curve-v5@cref}{{[figure][11][6]6-11}{[1][62][]62}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-12}{\ignorespaces Precision-Recall Curve for YOLOv7}}{63}{figure.caption.46}\protected@file@percent }
+\newlabel{fig:pr-curve-v7}{{6-12}{63}{Precision-Recall Curve for YOLOv7}{figure.caption.46}{}}
+\newlabel{fig:pr-curve-v7@cref}{{[figure][12][6]6-12}{[1][62][]63}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.4}Confusion Matrix}{63}{subsection.6.1.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-13}{\ignorespaces Confusion Matrix for YOLOv5}}{64}{figure.caption.47}\protected@file@percent }
+\newlabel{fig:confusion-matrix-v5}{{6-13}{64}{Confusion Matrix for YOLOv5}{figure.caption.47}{}}
+\newlabel{fig:confusion-matrix-v5@cref}{{[figure][13][6]6-13}{[1][63][]64}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-14}{\ignorespaces Confusion Matrix for YOLOv7}}{64}{figure.caption.48}\protected@file@percent }
+\newlabel{fig:confusion-matrix-v7}{{6-14}{64}{Confusion Matrix for YOLOv7}{figure.caption.48}{}}
+\newlabel{fig:confusion-matrix-v7@cref}{{[figure][14][6]6-14}{[1][64][]64}{}{}{}}
+\BKM@entry{id=35,dest={73656374696F6E2E362E32},srcline={183}}{5C3337365C3337375C303030365C3030302E5C303030325C3030305C3034305C303030455C303030785C303030745C303030655C3030306E5C303030645C303030655C303030645C3030305C3034305C3030304F5C303030625C3030306A5C303030655C303030635C303030745C3030305C3034305C303030445C303030655C303030745C303030655C303030635C303030745C303030695C3030306F5C3030306E5C3030303A5C3030305C3034305C303030315C303030355C3030302D5C303030435C3030306C5C303030615C303030735C303030735C3030305C3034305C303030545C303030615C303030785C3030306F5C3030306E5C3030306F5C3030306D5C303030795C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C3030304D5C303030755C3030306C5C303030745C303030695C3030302D5C303030415C303030725C303030635C303030685C303030695C303030745C303030655C303030635C303030745C303030755C303030725C303030655C3030305C3034305C303030425C303030655C3030306E5C303030635C303030685C3030306D5C303030615C303030725C3030306B}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.5}Quantitative Results Comparison}{65}{subsection.6.1.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6-1}{\ignorespaces Comparison of Performance Metrics for YOLOv5 and YOLOv7}}{65}{table.caption.49}\protected@file@percent }
+\newlabel{table:yolo-comparison}{{6-1}{65}{Comparison of Performance Metrics for YOLOv5 and YOLOv7}{table.caption.49}{}}
+\newlabel{table:yolo-comparison@cref}{{[table][1][6]6-1}{[1][65][]65}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Extended Object Detection: 15-Class Taxonomy and Multi-Architecture Benchmark}{65}{section.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Class Taxonomy Consolidation}{65}{subsection.6.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}Experimental Setup (15-Class)}{66}{subsection.6.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.3}Training Progress: 15-Class Models}{66}{subsection.6.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-15}{\ignorespaces Training curves for four \gls {yolo} architectures on the 15-class dataset: Precision, Recall, \gls {map}@0.5, and \gls {map}@0.5:0.95 vs. epochs}}{67}{figure.caption.50}\protected@file@percent }
+\newlabel{fig:15class-training-curves}{{6-15}{67}{Training curves for four \gls {yolo} architectures on the 15-class dataset: Precision, Recall, \gls {map}@0.5, and \gls {map}@0.5:0.95 vs. epochs}{figure.caption.50}{}}
+\newlabel{fig:15class-training-curves@cref}{{[figure][15][6]6-15}{[1][66][]67}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.4}Training and Validation Loss: 15-Class Models}{67}{subsection.6.2.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-16}{\ignorespaces Training loss comparison (Box, Classification, DFL) across four \gls {yolo} architectures}}{68}{figure.caption.51}\protected@file@percent }
+\newlabel{fig:15class-train-loss}{{6-16}{68}{Training loss comparison (Box, Classification, DFL) across four \gls {yolo} architectures}{figure.caption.51}{}}
+\newlabel{fig:15class-train-loss@cref}{{[figure][16][6]6-16}{[1][67][]68}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-17}{\ignorespaces Validation loss comparison (Box, Classification, DFL) across four \gls {yolo} architectures}}{68}{figure.caption.52}\protected@file@percent }
+\newlabel{fig:15class-val-loss}{{6-17}{68}{Validation loss comparison (Box, Classification, DFL) across four \gls {yolo} architectures}{figure.caption.52}{}}
+\newlabel{fig:15class-val-loss@cref}{{[figure][17][6]6-17}{[1][68][]68}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.5}Final Metrics: 15-Class Comparison}{68}{subsection.6.2.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6-2}{\ignorespaces Performance comparison of four \gls {yolo} architectures on the 15-class dataset (final epoch)}}{68}{table.caption.53}\protected@file@percent }
+\newlabel{table:yolo-15class-comparison}{{6-2}{68}{Performance comparison of four \gls {yolo} architectures on the 15-class dataset (final epoch)}{table.caption.53}{}}
+\newlabel{table:yolo-15class-comparison@cref}{{[table][2][6]6-2}{[1][68][]68}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-18}{\ignorespaces Final-epoch performance metrics for four \gls {yolo} architectures on the 15-class dataset}}{69}{figure.caption.54}\protected@file@percent }
+\newlabel{fig:15class-final-bar}{{6-18}{69}{Final-epoch performance metrics for four \gls {yolo} architectures on the 15-class dataset}{figure.caption.54}{}}
+\newlabel{fig:15class-final-bar@cref}{{[figure][18][6]6-18}{[1][68][]69}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.6}Impact of Class Taxonomy Consolidation}{69}{subsection.6.2.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6-3}{\ignorespaces Impact of class taxonomy consolidation on YOLOv7 performance}}{69}{table.caption.55}\protected@file@percent }
+\newlabel{table:class-impact}{{6-3}{69}{Impact of class taxonomy consolidation on YOLOv7 performance}{table.caption.55}{}}
+\newlabel{table:class-impact@cref}{{[table][3][6]6-3}{[1][69][]69}{}{}{}}
+\BKM@entry{id=36,dest={73656374696F6E2E362E33},srcline={290}}{5C3337365C3337375C303030365C3030302E5C303030335C3030305C3034305C303030485C3030306F5C3030306C5C303030695C303030735C303030745C303030695C303030635C3030305C3034305C3030304F5C303030625C3030306A5C303030655C303030635C303030745C3030305C3034305C303030445C303030655C303030745C303030655C303030635C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030435C3030306F5C3030306D5C303030705C303030615C303030725C303030695C303030735C3030306F5C3030306E}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-19}{\ignorespaces Effect of class taxonomy consolidation on YOLOv7: 61-class vs. 15-class performance}}{70}{figure.caption.56}\protected@file@percent }
+\newlabel{fig:class-impact}{{6-19}{70}{Effect of class taxonomy consolidation on YOLOv7: 61-class vs. 15-class performance}{figure.caption.56}{}}
+\newlabel{fig:class-impact@cref}{{[figure][19][6]6-19}{[1][69][]70}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Holistic Object Detection Comparison}{70}{section.6.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6-4}{\ignorespaces Unified comparison of all object detection configurations}}{70}{table.caption.57}\protected@file@percent }
+\newlabel{table:yolo-full-comparison}{{6-4}{70}{Unified comparison of all object detection configurations}{table.caption.57}{}}
+\newlabel{table:yolo-full-comparison@cref}{{[table][4][6]6-4}{[1][70][]70}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-20}{\ignorespaces Grouped bar chart comparing all six detection configurations across Precision, Recall, \gls {map}@0.5, and \gls {map}@0.5:0.95}}{71}{figure.caption.58}\protected@file@percent }
+\newlabel{fig:yolo-full-bar}{{6-20}{71}{Grouped bar chart comparing all six detection configurations across Precision, Recall, \gls {map}@0.5, and \gls {map}@0.5:0.95}{figure.caption.58}{}}
+\newlabel{fig:yolo-full-bar@cref}{{[figure][20][6]6-20}{[1][70][]71}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Performance Evolution}{71}{subsection.6.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-21}{\ignorespaces Performance evolution of object detection across all configurations showing \gls {map}@0.5 and \gls {map}@0.5:0.95}}{72}{figure.caption.59}\protected@file@percent }
+\newlabel{fig:yolo-evolution}{{6-21}{72}{Performance evolution of object detection across all configurations showing \gls {map}@0.5 and \gls {map}@0.5:0.95}{figure.caption.59}{}}
+\newlabel{fig:yolo-evolution@cref}{{[figure][21][6]6-21}{[1][71][]72}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Radar Visualization of Top Models}{72}{subsection.6.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-22}{\ignorespaces Radar chart comparing the three best detection configurations across four performance metrics}}{72}{figure.caption.60}\protected@file@percent }
+\newlabel{fig:yolo-radar}{{6-22}{72}{Radar chart comparing the three best detection configurations across four performance metrics}{figure.caption.60}{}}
+\newlabel{fig:yolo-radar@cref}{{[figure][22][6]6-22}{[1][72][]72}{}{}{}}
+\BKM@entry{id=37,dest={73656374696F6E2E362E34},srcline={353}}{5C3337365C3337375C303030365C3030302E5C303030345C3030305C3034305C3030306F5C303030635C303030725C3030305C3034305C303030525C303030655C303030735C303030755C3030306C5C303030745C30303073}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Key Observations}{73}{subsection.6.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}\gls {ocr} Results}{73}{section.6.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-23}{\ignorespaces Text Detection and Recognition (i)}}{74}{figure.caption.61}\protected@file@percent }
+\newlabel{fig:ocr-result-1}{{6-23}{74}{Text Detection and Recognition (i)}{figure.caption.61}{}}
+\newlabel{fig:ocr-result-1@cref}{{[figure][23][6]6-23}{[1][73][]74}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-24}{\ignorespaces Text Detection and Recognition (ii)}}{74}{figure.caption.62}\protected@file@percent }
+\newlabel{fig:ocr-result-2}{{6-24}{74}{Text Detection and Recognition (ii)}{figure.caption.62}{}}
+\newlabel{fig:ocr-result-2@cref}{{[figure][24][6]6-24}{[1][74][]74}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Training Loss Curve}{75}{subsection.6.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-25}{\ignorespaces Training Loss vs Epochs (\gls {ocr})}}{75}{figure.caption.63}\protected@file@percent }
+\newlabel{fig:ocr-training-loss}{{6-25}{75}{Training Loss vs Epochs (\gls {ocr})}{figure.caption.63}{}}
+\newlabel{fig:ocr-training-loss@cref}{{[figure][25][6]6-25}{[1][74][]75}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}OCR Prediction}{75}{subsection.6.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-26}{\ignorespaces OCR Model Predictions}}{76}{figure.caption.64}\protected@file@percent }
+\newlabel{fig:ocr-predictions}{{6-26}{76}{OCR Model Predictions}{figure.caption.64}{}}
+\newlabel{fig:ocr-predictions@cref}{{[figure][26][6]6-26}{[1][75][]76}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.3}OCR Performance Analysis}{76}{subsection.6.4.3}\protected@file@percent }
 \BKM@entry{id=38,dest={73656374696F6E2E362E35},srcline={406}}{5C3337365C3337375C303030365C3030302E5C303030355C3030305C3034305C303030435C3030306F5C3030306D5C303030705C303030615C303030725C303030615C303030745C303030695C303030765C303030655C3030305C3034305C303030415C3030306E5C303030615C3030306C5C303030795C303030735C303030695C303030735C3030305C3034305C3030306F5C303030665C3030305C3034305C3030306F5C303030635C303030725C3030305C3034305C3030304D5C3030306F5C303030645C303030655C3030306C5C30303073}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.3}Key Observations}{76}{subsection.6.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}Comparative Analysis of \gls {ocr} Models}{76}{section.6.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.1}Architecture Comparison}{76}{subsection.6.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.2}Quantitative Comparison}{77}{subsection.6.5.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6-5}{\ignorespaces Performance comparison of \gls {ocr} models}}{77}{table.caption.66}\protected@file@percent }
-\newlabel{table:ocr-comparison}{{6-5}{77}{Performance comparison of \gls {ocr} models}{table.caption.66}{}}
-\newlabel{table:ocr-comparison@cref}{{[table][5][6]6-5}{[1][76][]77}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-28}{\ignorespaces Comparative analysis of Custom \gls {crnn} and Fine-tuned TrOCR: (left) performance metrics; (right) feature comparison}}{77}{figure.caption.67}\protected@file@percent }
-\newlabel{fig:ocr-comparison}{{6-28}{77}{Comparative analysis of Custom \gls {crnn} and Fine-tuned TrOCR: (left) performance metrics; (right) feature comparison}{figure.caption.67}{}}
-\newlabel{fig:ocr-comparison@cref}{{[figure][28][6]6-28}{[1][77][]77}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.3}Analysis}{77}{subsection.6.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-27}{\ignorespaces OCR Performance Metrics and their Distributions}}{77}{figure.caption.65}\protected@file@percent }
+\newlabel{fig:ocr-performance-metrics}{{6-27}{77}{OCR Performance Metrics and their Distributions}{figure.caption.65}{}}
+\newlabel{fig:ocr-performance-metrics@cref}{{[figure][27][6]6-27}{[1][76][]77}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Comparative Analysis of \gls {ocr} Models}{77}{section.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.1}Architecture Comparison}{77}{subsection.6.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.2}Quantitative Comparison}{78}{subsection.6.5.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6-5}{\ignorespaces Performance comparison of \gls {ocr} models}}{78}{table.caption.66}\protected@file@percent }
+\newlabel{table:ocr-comparison}{{6-5}{78}{Performance comparison of \gls {ocr} models}{table.caption.66}{}}
+\newlabel{table:ocr-comparison@cref}{{[table][5][6]6-5}{[1][77][]78}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-28}{\ignorespaces Comparative analysis of Custom \gls {crnn} and Fine-tuned TrOCR: (left) performance metrics; (right) feature comparison}}{78}{figure.caption.67}\protected@file@percent }
+\newlabel{fig:ocr-comparison}{{6-28}{78}{Comparative analysis of Custom \gls {crnn} and Fine-tuned TrOCR: (left) performance metrics; (right) feature comparison}{figure.caption.67}{}}
+\newlabel{fig:ocr-comparison@cref}{{[figure][28][6]6-28}{[1][78][]78}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.3}Analysis}{78}{subsection.6.5.3}\protected@file@percent }
 \BKM@entry{id=39,dest={73656374696F6E2E362E36},srcline={458}}{5C3337365C3337375C303030365C3030302E5C303030365C3030305C3034305C3030304A5C303030755C3030306E5C303030635C303030745C303030695C3030306F5C3030306E5C3030302D5C303030425C303030615C303030735C303030655C303030645C3030305C3034305C303030575C303030695C303030725C303030655C3030305C3034305C303030445C303030655C303030745C303030655C303030635C303030745C303030695C3030306F5C3030306E}
-\@writefile{toc}{\contentsline {section}{\numberline {6.6}Junction-Based Wire Detection}{78}{section.6.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.1}Input Image and Preprocessing}{78}{subsection.6.6.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-29}{\ignorespaces Otsu's Global Thresholding}}{79}{figure.caption.68}\protected@file@percent }
-\newlabel{fig:otsu-thresholding}{{6-29}{79}{Otsu's Global Thresholding}{figure.caption.68}{}}
-\newlabel{fig:otsu-thresholding@cref}{{[figure][29][6]6-29}{[1][78][]79}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.2}Skeletonization}{79}{subsection.6.6.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-30}{\ignorespaces Skeletonization}}{80}{figure.caption.69}\protected@file@percent }
-\newlabel{fig:skeletonization}{{6-30}{80}{Skeletonization}{figure.caption.69}{}}
-\newlabel{fig:skeletonization@cref}{{[figure][30][6]6-30}{[1][79][]80}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.3}Component Removal and Junction Isolation}{80}{subsection.6.6.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-31}{\ignorespaces Component Removal}}{81}{figure.caption.70}\protected@file@percent }
-\newlabel{fig:component-removal}{{6-31}{81}{Component Removal}{figure.caption.70}{}}
-\newlabel{fig:component-removal@cref}{{[figure][31][6]6-31}{[1][80][]81}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.4}Junction Extraction and Wire Classification}{81}{subsection.6.6.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-32}{\ignorespaces Wire Classification}}{82}{figure.caption.71}\protected@file@percent }
-\newlabel{fig:wire-classification}{{6-32}{82}{Wire Classification}{figure.caption.71}{}}
-\newlabel{fig:wire-classification@cref}{{[figure][32][6]6-32}{[1][81][]82}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.5}Segment Consolidation Through Merging}{82}{subsection.6.6.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-33}{\ignorespaces Segment Consolidation Through Merging}}{83}{figure.caption.72}\protected@file@percent }
-\newlabel{fig:segment-consolidation}{{6-33}{83}{Segment Consolidation Through Merging}{figure.caption.72}{}}
-\newlabel{fig:segment-consolidation@cref}{{[figure][33][6]6-33}{[1][82][]83}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.6}Component Bounding Box Overlay}{83}{subsection.6.6.6}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-34}{\ignorespaces Bounding Box Overlay}}{84}{figure.caption.73}\protected@file@percent }
-\newlabel{fig:bbox-overlay}{{6-34}{84}{Bounding Box Overlay}{figure.caption.73}{}}
-\newlabel{fig:bbox-overlay@cref}{{[figure][34][6]6-34}{[1][83][]84}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.7}Wire-Component Intersection Detection}{84}{subsection.6.6.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}Junction-Based Wire Detection}{79}{section.6.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.1}Input Image and Preprocessing}{79}{subsection.6.6.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-29}{\ignorespaces Otsu's Global Thresholding}}{80}{figure.caption.68}\protected@file@percent }
+\newlabel{fig:otsu-thresholding}{{6-29}{80}{Otsu's Global Thresholding}{figure.caption.68}{}}
+\newlabel{fig:otsu-thresholding@cref}{{[figure][29][6]6-29}{[1][79][]80}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.2}Skeletonization}{80}{subsection.6.6.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-30}{\ignorespaces Skeletonization}}{81}{figure.caption.69}\protected@file@percent }
+\newlabel{fig:skeletonization}{{6-30}{81}{Skeletonization}{figure.caption.69}{}}
+\newlabel{fig:skeletonization@cref}{{[figure][30][6]6-30}{[1][80][]81}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.3}Component Removal and Junction Isolation}{81}{subsection.6.6.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-31}{\ignorespaces Component Removal}}{82}{figure.caption.70}\protected@file@percent }
+\newlabel{fig:component-removal}{{6-31}{82}{Component Removal}{figure.caption.70}{}}
+\newlabel{fig:component-removal@cref}{{[figure][31][6]6-31}{[1][81][]82}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.4}Junction Extraction and Wire Classification}{82}{subsection.6.6.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-32}{\ignorespaces Wire Classification}}{83}{figure.caption.71}\protected@file@percent }
+\newlabel{fig:wire-classification}{{6-32}{83}{Wire Classification}{figure.caption.71}{}}
+\newlabel{fig:wire-classification@cref}{{[figure][32][6]6-32}{[1][82][]83}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.5}Segment Consolidation Through Merging}{83}{subsection.6.6.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-33}{\ignorespaces Segment Consolidation Through Merging}}{84}{figure.caption.72}\protected@file@percent }
+\newlabel{fig:segment-consolidation}{{6-33}{84}{Segment Consolidation Through Merging}{figure.caption.72}{}}
+\newlabel{fig:segment-consolidation@cref}{{[figure][33][6]6-33}{[1][83][]84}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.6}Component Bounding Box Overlay}{84}{subsection.6.6.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-34}{\ignorespaces Bounding Box Overlay}}{85}{figure.caption.73}\protected@file@percent }
+\newlabel{fig:bbox-overlay}{{6-34}{85}{Bounding Box Overlay}{figure.caption.73}{}}
+\newlabel{fig:bbox-overlay@cref}{{[figure][34][6]6-34}{[1][84][]85}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.7}Wire-Component Intersection Detection}{85}{subsection.6.6.7}\protected@file@percent }
 \BKM@entry{id=40,dest={73656374696F6E2E362E37},srcline={551}}{5C3337365C3337375C303030365C3030302E5C303030375C3030305C3034305C3030304C5C303030695C3030306E5C303030655C3030305C3034305C303030445C303030655C303030745C303030655C303030635C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030765C303030695C303030615C3030305C3034305C303030505C303030615C303030745C303030685C3030305C3034305C303030465C303030695C3030306E5C303030645C303030695C3030306E5C303030675C3030305C3034305C303030565C303030695C303030735C303030755C303030615C3030306C5C303030695C3030307A5C303030615C303030745C303030695C3030306F5C3030306E}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-35}{\ignorespaces Wire-Component Intersection Detection}}{85}{figure.caption.74}\protected@file@percent }
-\newlabel{fig:wire-component-intersection}{{6-35}{85}{Wire-Component Intersection Detection}{figure.caption.74}{}}
-\newlabel{fig:wire-component-intersection@cref}{{[figure][35][6]6-35}{[1][84][]85}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.7}Line Detection via Path Finding Visualization}{85}{section.6.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.1}Skeletonized Image with Detected Endpoints}{85}{subsection.6.7.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-36}{\ignorespaces Skeletonized image with detected endpoints}}{86}{figure.caption.75}\protected@file@percent }
-\newlabel{fig:skeleton_endpoints}{{6-36}{86}{Skeletonized image with detected endpoints}{figure.caption.75}{}}
-\newlabel{fig:skeleton_endpoints@cref}{{[figure][36][6]6-36}{[1][85][]86}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.2}Adjacency Graph Visualization}{86}{subsection.6.7.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-35}{\ignorespaces Wire-Component Intersection Detection}}{86}{figure.caption.74}\protected@file@percent }
+\newlabel{fig:wire-component-intersection}{{6-35}{86}{Wire-Component Intersection Detection}{figure.caption.74}{}}
+\newlabel{fig:wire-component-intersection@cref}{{[figure][35][6]6-35}{[1][85][]86}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.7}Line Detection via Path Finding Visualization}{86}{section.6.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.1}Skeletonized Image with Detected Endpoints}{86}{subsection.6.7.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-36}{\ignorespaces Skeletonized image with detected endpoints}}{87}{figure.caption.75}\protected@file@percent }
+\newlabel{fig:skeleton_endpoints}{{6-36}{87}{Skeletonized image with detected endpoints}{figure.caption.75}{}}
+\newlabel{fig:skeleton_endpoints@cref}{{[figure][36][6]6-36}{[1][86][]87}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.2}Adjacency Graph Visualization}{87}{subsection.6.7.2}\protected@file@percent }
 \BKM@entry{id=41,dest={73656374696F6E2E362E38},srcline={577}}{5C3337365C3337375C303030365C3030302E5C303030385C3030305C3034305C303030465C303030725C3030306F5C3030306E5C303030745C303030655C3030306E5C303030645C3030305C3034305C303030565C303030695C303030735C303030755C303030615C3030306C5C303030695C3030307A5C303030615C303030745C303030695C3030306F5C3030306E}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-37}{\ignorespaces Adjacency graph constructed using Multi-Head BFS algorithm}}{87}{figure.caption.76}\protected@file@percent }
-\newlabel{fig:adjacency_graph}{{6-37}{87}{Adjacency graph constructed using Multi-Head BFS algorithm}{figure.caption.76}{}}
-\newlabel{fig:adjacency_graph@cref}{{[figure][37][6]6-37}{[1][86][]87}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.8}Frontend Visualization}{87}{section.6.8}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-38}{\ignorespaces Digitally Drawn Circuit}}{88}{figure.caption.77}\protected@file@percent }
-\newlabel{fig:digital-circuit-editor}{{6-38}{88}{Digitally Drawn Circuit}{figure.caption.77}{}}
-\newlabel{fig:digital-circuit-editor@cref}{{[figure][38][6]6-38}{[1][87][]88}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-39}{\ignorespaces Example Circuit Simulation Result}}{88}{figure.caption.78}\protected@file@percent }
-\newlabel{fig:simulation-result}{{6-39}{88}{Example Circuit Simulation Result}{figure.caption.78}{}}
-\newlabel{fig:simulation-result@cref}{{[figure][39][6]6-39}{[1][88][]88}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.1}End-to-End Pipeline Demonstration: Voltage Divider Circuit}{88}{subsection.6.8.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6-40}{\ignorespaces Skeletonized Image of the Voltage Divider Circuit}}{89}{figure.caption.79}\protected@file@percent }
-\newlabel{fig:vdivider-skeleton}{{6-40}{89}{Skeletonized Image of the Voltage Divider Circuit}{figure.caption.79}{}}
-\newlabel{fig:vdivider-skeleton@cref}{{[figure][40][6]6-40}{[1][88][]89}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-41}{\ignorespaces Skeleton with Detected Endpoints for the Voltage Divider}}{89}{figure.caption.80}\protected@file@percent }
-\newlabel{fig:vdivider-skeleton-endpoints}{{6-41}{89}{Skeleton with Detected Endpoints for the Voltage Divider}{figure.caption.80}{}}
-\newlabel{fig:vdivider-skeleton-endpoints@cref}{{[figure][41][6]6-41}{[1][89][]89}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-42}{\ignorespaces Adjacency Graph of the Voltage Divider Circuit}}{90}{figure.caption.81}\protected@file@percent }
-\newlabel{fig:vdivider-adjacency}{{6-42}{90}{Adjacency Graph of the Voltage Divider Circuit}{figure.caption.81}{}}
-\newlabel{fig:vdivider-adjacency@cref}{{[figure][42][6]6-42}{[1][89][]90}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-43}{\ignorespaces Frontend with All Components Mapped for the Voltage Divider}}{90}{figure.caption.82}\protected@file@percent }
-\newlabel{fig:vdivider-frontend-mapped}{{6-43}{90}{Frontend with All Components Mapped for the Voltage Divider}{figure.caption.82}{}}
-\newlabel{fig:vdivider-frontend-mapped@cref}{{[figure][43][6]6-43}{[1][90][]90}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-44}{\ignorespaces Simulation Result of the Reconstructed Voltage Divider Circuit}}{91}{figure.caption.83}\protected@file@percent }
-\newlabel{fig:vdivider-simulation}{{6-44}{91}{Simulation Result of the Reconstructed Voltage Divider Circuit}{figure.caption.83}{}}
-\newlabel{fig:vdivider-simulation@cref}{{[figure][44][6]6-44}{[1][90][]91}{}{}{}}
-\BKM@entry{id=42,dest={636861707465722E37},srcline={1}}{5C3337365C3337375C303030375C3030305C3034305C303030525C303030455C3030304D5C303030415C303030495C3030304E5C303030495C3030304E5C303030475C3030305C3034305C303030545C303030415C303030535C3030304B5C30303053}
-\BKM@entry{id=43,dest={73656374696F6E2E372E31},srcline={5}}{5C3337365C3337375C303030375C3030302E5C303030315C3030305C3034305C303030535C303030755C3030306D5C3030306D5C303030615C303030725C303030795C3030305C3034305C3030306F5C303030665C3030305C3034305C303030525C303030655C3030306D5C303030615C303030695C3030306E5C303030695C3030306E5C303030675C3030305C3034305C303030545C303030615C303030735C3030306B5C30303073}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}REMAINING TASKS}{92}{chapter.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Summary of Remaining Tasks}{92}{section.7.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {7-1}{\ignorespaces Summary of Remaining Tasks}}{92}{table.caption.84}\protected@file@percent }
-\newlabel{tab:remaining-tasks-summary}{{7-1}{92}{Summary of Remaining Tasks}{table.caption.84}{}}
-\newlabel{tab:remaining-tasks-summary@cref}{{[table][1][7]7-1}{[1][92][]92}{}{}{}}
-\BKM@entry{id=44,dest={636861707465722E38},srcline={65}}{5C3337365C3337375C303030385C3030305C3034305C303030415C303030505C303030505C303030455C3030304E5C303030445C303030495C303030435C303030455C30303053}
-\BKM@entry{id=45,dest={636861707465722E38},srcline={15}}{5C3337365C3337375C303030415C303030705C303030705C303030655C3030306E5C303030645C303030695C303030785C3030305C3034305C303030415C3030303A5C3030305C3034305C303030425C303030755C303030645C303030675C303030655C303030745C3030305C3034305C303030455C303030735C303030745C303030695C3030306D5C303030615C303030745C303030695C3030306F5C3030306E}
-\@writefile{toc}{\contentsline {chapter}{\numberline {8}APPENDICES}{93}{chapter.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{Appendix A: Budget Estimation}{93}{chapter.8}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {8-1}{\ignorespaces Project Budget Breakdown}}{93}{table.caption.85}\protected@file@percent }
-\newlabel{tab:project_budget}{{8-1}{93}{Project Budget Breakdown}{table.caption.85}{}}
-\newlabel{tab:project_budget@cref}{{[table][1][8]8-1}{[1][93][]93}{}{}{}}
-\BKM@entry{id=46,dest={7461626C652E63617074696F6E2E3835},srcline={128}}{5C3337365C3337375C303030415C303030705C303030705C303030655C3030306E5C303030645C303030695C303030785C3030305C3034305C303030425C3030303A5C3030305C3034305C303030475C303030615C3030306E5C303030745C303030745C3030305C3034305C303030435C303030685C303030615C303030725C30303074}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-37}{\ignorespaces Adjacency graph constructed using Multi-Head BFS algorithm}}{88}{figure.caption.76}\protected@file@percent }
+\newlabel{fig:adjacency_graph}{{6-37}{88}{Adjacency graph constructed using Multi-Head BFS algorithm}{figure.caption.76}{}}
+\newlabel{fig:adjacency_graph@cref}{{[figure][37][6]6-37}{[1][87][]88}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.8}Frontend Visualization}{88}{section.6.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-38}{\ignorespaces Digitally Drawn Circuit}}{89}{figure.caption.77}\protected@file@percent }
+\newlabel{fig:digital-circuit-editor}{{6-38}{89}{Digitally Drawn Circuit}{figure.caption.77}{}}
+\newlabel{fig:digital-circuit-editor@cref}{{[figure][38][6]6-38}{[1][88][]89}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-39}{\ignorespaces Example Circuit Simulation Result}}{89}{figure.caption.78}\protected@file@percent }
+\newlabel{fig:simulation-result}{{6-39}{89}{Example Circuit Simulation Result}{figure.caption.78}{}}
+\newlabel{fig:simulation-result@cref}{{[figure][39][6]6-39}{[1][89][]89}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.1}End-to-End Pipeline Demonstration: Voltage Divider Circuit}{89}{subsection.6.8.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-40}{\ignorespaces Skeletonized Image of the Voltage Divider Circuit}}{90}{figure.caption.79}\protected@file@percent }
+\newlabel{fig:vdivider-skeleton}{{6-40}{90}{Skeletonized Image of the Voltage Divider Circuit}{figure.caption.79}{}}
+\newlabel{fig:vdivider-skeleton@cref}{{[figure][40][6]6-40}{[1][89][]90}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-41}{\ignorespaces Skeleton with Detected Endpoints for the Voltage Divider}}{90}{figure.caption.80}\protected@file@percent }
+\newlabel{fig:vdivider-skeleton-endpoints}{{6-41}{90}{Skeleton with Detected Endpoints for the Voltage Divider}{figure.caption.80}{}}
+\newlabel{fig:vdivider-skeleton-endpoints@cref}{{[figure][41][6]6-41}{[1][90][]90}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-42}{\ignorespaces Adjacency Graph of the Voltage Divider Circuit}}{91}{figure.caption.81}\protected@file@percent }
+\newlabel{fig:vdivider-adjacency}{{6-42}{91}{Adjacency Graph of the Voltage Divider Circuit}{figure.caption.81}{}}
+\newlabel{fig:vdivider-adjacency@cref}{{[figure][42][6]6-42}{[1][90][]91}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-43}{\ignorespaces Frontend with All Components Mapped for the Voltage Divider}}{91}{figure.caption.82}\protected@file@percent }
+\newlabel{fig:vdivider-frontend-mapped}{{6-43}{91}{Frontend with All Components Mapped for the Voltage Divider}{figure.caption.82}{}}
+\newlabel{fig:vdivider-frontend-mapped@cref}{{[figure][43][6]6-43}{[1][91][]91}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-44}{\ignorespaces Simulation Result of the Reconstructed Voltage Divider Circuit}}{92}{figure.caption.83}\protected@file@percent }
+\newlabel{fig:vdivider-simulation}{{6-44}{92}{Simulation Result of the Reconstructed Voltage Divider Circuit}{figure.caption.83}{}}
+\newlabel{fig:vdivider-simulation@cref}{{[figure][44][6]6-44}{[1][91][]92}{}{}{}}
+\BKM@entry{id=42,dest={636861707465722E37},srcline={1}}{5C3337365C3337375C303030375C3030305C3034305C303030465C303030555C303030545C303030555C303030525C303030455C3030305C3034305C303030455C3030304E5C303030485C303030415C3030304E5C303030435C303030455C3030304D5C303030455C3030304E5C303030545C30303053}
+\BKM@entry{id=43,dest={73656374696F6E2E372E31},srcline={5}}{5C3337365C3337375C303030375C3030302E5C303030315C3030305C3034305C303030495C3030306D5C303030705C303030725C3030306F5C303030765C303030655C3030306D5C303030655C3030306E5C303030745C3030305C3034305C303030695C3030306E5C3030305C3034305C303030745C303030685C303030655C3030305C3034305C3030304F5C303030435C303030525C3030305C3034305C303030615C303030635C303030635C303030755C303030725C303030615C303030635C30303079}
+\BKM@entry{id=44,dest={73656374696F6E2E372E32},srcline={9}}{5C3337365C3337375C303030375C3030302E5C303030325C3030305C3034305C303030495C3030306E5C303030635C303030725C303030655C3030306D5C303030655C3030306E5C303030745C3030305C3034305C303030695C3030306E5C3030305C3034305C303030745C303030685C303030655C3030305C3034305C3030306E5C303030755C3030306D5C303030625C303030655C303030725C3030305C3034305C3030306F5C303030665C3030305C3034305C303030735C303030755C303030705C303030705C3030306F5C303030725C303030745C303030655C303030645C3030305C3034305C303030635C3030306F5C3030306D5C303030705C3030306F5C3030306E5C303030655C3030306E5C303030745C30303073}
+\BKM@entry{id=45,dest={73656374696F6E2E372E33},srcline={13}}{5C3337365C3337375C303030375C3030302E5C303030335C3030305C3034305C303030415C303030755C303030745C303030685C303030655C3030306E5C303030745C303030695C303030635C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030445C303030615C303030745C303030615C303030625C303030615C303030735C303030655C3030305C3034305C303030465C303030755C3030306E5C303030635C303030745C303030695C3030306F5C3030306E5C303030615C3030306C5C303030695C303030745C303030695C303030655C30303073}
+\BKM@entry{id=46,dest={73656374696F6E2E372E34},srcline={17}}{5C3337365C3337375C303030375C3030302E5C303030345C3030305C3034305C303030495C3030306D5C303030705C303030725C3030306F5C303030765C303030655C3030306D5C303030655C3030306E5C303030745C3030305C3034305C303030695C3030306E5C3030305C3034305C303030745C303030685C303030655C3030305C3034305C303030665C303030725C3030306F5C3030306E5C303030745C303030655C3030306E5C303030655C303030645C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030675C303030655C3030306E5C303030655C303030725C303030615C3030306C5C3030305C3034305C303030755C303030735C303030655C303030725C3030305C3034305C303030655C303030785C303030705C303030655C303030725C303030695C303030655C3030306E5C303030635C30303065}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}FUTURE ENHANCEMENTS}{93}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Improvement in the OCR accuracy}{93}{section.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Increment in the number of supported components}{93}{section.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Authentication and Database Functionalities}{93}{section.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}Improvement in the frontened and general user experience}{93}{section.7.4}\protected@file@percent }
+\BKM@entry{id=47,dest={636861707465722E38},srcline={1}}{5C3337365C3337375C303030385C3030305C3034305C303030435C3030304F5C3030304E5C303030435C3030304C5C303030555C303030535C303030495C3030304F5C3030304E}
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}CONCLUSION}{95}{chapter.8}\protected@file@percent }
+\BKM@entry{id=48,dest={636861707465722E39},srcline={66}}{5C3337365C3337375C303030395C3030305C3034305C303030415C303030505C303030505C303030455C3030304E5C303030445C303030495C303030435C303030455C30303053}
+\BKM@entry{id=49,dest={636861707465722E39},srcline={15}}{5C3337365C3337375C303030415C303030705C303030705C303030655C3030306E5C303030645C303030695C303030785C3030305C3034305C303030415C3030303A5C3030305C3034305C303030505C303030725C3030306F5C3030306A5C303030655C303030635C303030745C3030305C3034305C303030425C303030755C303030645C303030675C303030655C30303074}
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}APPENDICES}{96}{chapter.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{Appendix A: Project Budget}{96}{chapter.9}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9-1}{\ignorespaces Project Budget Breakdown}}{96}{table.caption.84}\protected@file@percent }
+\newlabel{tab:project_budget}{{9-1}{96}{Project Budget Breakdown}{table.caption.84}{}}
+\newlabel{tab:project_budget@cref}{{[table][1][9]9-1}{[1][96][]96}{}{}{}}
+\BKM@entry{id=50,dest={7461626C652E63617074696F6E2E3834},srcline={125}}{5C3337365C3337375C303030415C303030705C303030705C303030655C3030306E5C303030645C303030695C303030785C3030305C3034305C303030425C3030303A5C3030305C3034305C303030475C303030615C3030306E5C303030745C303030745C3030305C3034305C303030435C303030685C303030615C303030725C30303074}
 \bibstyle{IEEEtran}
 \bibdata{references}
-\@writefile{toc}{\contentsline {section}{Appendix B: Gantt Chart}{94}{table.caption.85}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {8-2}{\ignorespaces Project Gantt Chart}}{94}{table.caption.86}\protected@file@percent }
-\newlabel{tab:gantt_chart}{{8-2}{94}{Project Gantt Chart}{table.caption.86}{}}
-\newlabel{tab:gantt_chart@cref}{{[table][2][8]8-2}{[1][94][]94}{}{}{}}
-\BKM@entry{id=47,dest={636861707465722A2E3837},srcline={2}}{5C3337365C3337375C303030525C303030455C303030465C303030455C303030525C303030455C3030304E5C303030435C303030455C30303053}
+\@writefile{toc}{\contentsline {section}{Appendix B: Gantt Chart}{97}{table.caption.84}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9-2}{\ignorespaces Project Gantt Chart}}{97}{table.caption.85}\protected@file@percent }
+\newlabel{tab:gantt_chart}{{9-2}{97}{Project Gantt Chart}{table.caption.85}{}}
+\newlabel{tab:gantt_chart@cref}{{[table][2][9]9-2}{[1][97][]97}{}{}{}}
+\BKM@entry{id=51,dest={636861707465722A2E3836},srcline={2}}{5C3337365C3337375C303030525C303030455C303030465C303030455C303030525C303030455C3030304E5C303030435C303030455C30303053}
 \bibcite{reddy2021handdrawn}{1}
 \bibcite{sertdemir2022img2sim}{2}
 \bibcite{chen2011efficacy}{3}
@@ -547,7 +552,7 @@
 \bibcite{hemker2024schematics}{10}
 \bibcite{kicad2024spice}{11}
 \bibcite{vungarala2024spicepilot}{12}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline REFERENCES}{95}{chapter*.87}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\nonumberline REFERENCES}{98}{chapter*.86}\protected@file@percent }
 \global\@namedef{scr@dte@chapter@lastmaxnumwidth}{10.79993pt}
 \global\@namedef{scr@dte@section@lastmaxnumwidth}{19.79993pt}
 \global\@namedef{scr@dte@table@lastmaxnumwidth}{50.15967pt}
@@ -555,4 +560,4 @@
 \@writefile{toc}{\providecommand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
 \@writefile{lof}{\providecommand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
 \@writefile{lot}{\providecommand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
-\gdef \@abspage@last{110}
+\gdef \@abspage@last{113}

@@ -180,59 +180,6 @@ Final epoch results show \gls{yolo}v7 outperformed \gls{yolo}v5 across all major
 
 Overall, \gls{yolo}v7 showed a clear advantage over \gls{yolo}v5 in our experiments. It not only achieved higher values for precision, recall, and mean average precision but also required fewer epochs to converge. \gls{yolo}v7's confusion matrix reflected better class separation and fewer misclassifications. The improvements in F1 score and overall stability of predictions across confidence thresholds make \gls{yolo}v7 a more robust choice for circuit diagram interpretation.
 
-\section{\gls{ocr} Results}
-
-The out-of-the-box default \gls{easyocr} implementation without fine-tuning was able to detect some of the component values from the circuit; however, the results left a lot to be desired. This made it clear that proper training of the recognition model is absolutely essential for this project.
-
-After training the text recognition model from scratch, results were much improved. Two randomly picked images from the dataset are shown below after passing through the detection (\gls{yolo}v7) and recognition (\gls{ocr}) models.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/text_detection_recognition.png}
-    \caption{Text Detection and Recognition (i)}
-    \label{fig:ocr-result-1}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/text_detection_recognition2.png}
-    \caption{Text Detection and Recognition (ii)}
-    \label{fig:ocr-result-2}
-\end{figure}
-
-It is to be noted that the ``??'' shown in \cref{fig:ocr-result-1} and \cref{fig:ocr-result-2} is a limitation of the picture-rendering library used (OpenCV, Matplotlib), rather than a limitation of the \gls{ocr} model. The \gls{ocr} model accurately identifies symbols like $\mu$ (micro).
-
-\subsection{Training Loss Curve}
-
-% Due to the limitation of unpaid versions of cloud-based services like Google Colab and Lightning \gls{ai}, only 29 training epochs were successfully run. However, the results in those 29 epochs also seem promising as the training loss steadily decreased.
-\cref{fig:ocr-training-loss} shows that the training loss decreases consistently throughout the 50 epochs, indicating the model is effectively memorizing the training data. However, the validation loss only drops until around 15-20 epochs before gradually increasing, indicating overfitting. Overfitting is an issue to be eradicated using extensive training using diverse datasets (either by addition of other datasets in training and/or augmentation). If the performance is considered satisfactory after training for only 15-20 epochs, early stopping may also be used.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/OCR_loss_curve.png}
-    \caption{Training Loss vs Epochs (\gls{ocr})}
-    \label{fig:ocr-training-loss}
-\end{figure}
-
-\subsection{OCR Prediction}
-
-% Due to the limitation of unpaid versions of cloud-based services like Google Colab and Lightning \gls{ai}, only 29 training epochs were successfully run. However, the results in those 29 epochs also seem promising as the training loss steadily decreased.
-The predictions made by the OCR model for a random sample of test data is shown in \cref{fig:ocr-predictions}. The OCR model accurately recognizes the easily discernible text but is fallible in some cases. However, in this random sample of images, all the problem images (i.e. the ones OCR cannot recognize) are indiscernible to human eyes as well. For instance, the input image samples for GT: D5 and GT: 31 are completely black suggesting a preprocessing or cropping bug rather than a fault in the model.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/ocr_test.png}
-    \caption{OCR Model Predictions}
-    \label{fig:ocr-predictions}
-\end{figure}
-
-\subsection{OCR Performance Analysis}
-\cref{fig:ocr-performance-metrics} is a combination of images showing the performance metrics for the OCR model. The accuracy is 65.96\% and while this may seem low, the sample images reveal that accuracy might have taken a hit due to data corruption in the cropping process or preprocessing. Once this bug is somewhat fixed, accuracy is expected to rise. That being said, to improve the accuracy further, the task of refining the model, regardless of data corruption will continue. Likewise, the CER of 0.25 means that on average, 1 out of every 4 characters is predicted incorrectly. However, the histogram shows a notable bump at 1.0 (complete failure) confirming the presence of "garbage" inputs (like black boxes, as seen in the sample images). WER is shown to be 0.34. Its distribution is inherently binary because the model either gets the full component value right (WER being 0) or gets it wrong (WER = 1).
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/cer_wer.png}
-    \caption{OCR Performance Metrics and their Distributions}
-    \label{fig:ocr-performance-metrics}
-\end{figure}
-
 \section{Extended Object Detection: 15-Class Taxonomy and Multi-Architecture Benchmark}
 
 A key finding from the initial 61-class experiments was that many fine-grained component subclasses (e.g., \textit{capacitor.polarized}, \textit{capacitor.unpolarized}) shared near-identical visual features, causing inter-class confusion. To address this, the 61-class taxonomy was consolidated into a 15-class merged taxonomy by grouping visually similar subclasses. This section presents a comprehensive benchmark of four modern detection architectures on the new 15-class dataset, followed by a holistic comparison against the original 61-class results.
@@ -402,6 +349,59 @@ The comprehensive benchmark yields the following insights:
     \item \textbf{YOLOv8 and YOLOv26 underperform.} Both lag behind by $\sim$10\% in \gls{map}@0.5, likely due to differences in feature aggregation strategies and training optimization for this specific domain.
     \item \textbf{Convergence speed.} YOLOv7 and YOLOv11 reach 95\% of their peak \gls{map}@0.5 within 40--50 epochs, while YOLOv8 and YOLOv26 require the full 100 epochs and still plateau at lower values.
 \end{enumerate}
+
+\section{\gls{ocr} Results}
+
+The out-of-the-box default \gls{easyocr} implementation without fine-tuning was able to detect some of the component values from the circuit; however, the results left a lot to be desired. This made it clear that proper training of the recognition model is absolutely essential for this project.
+
+After training the text recognition model from scratch, results were much improved. Two randomly picked images from the dataset are shown below after passing through the detection (\gls{yolo}v7) and recognition (\gls{ocr}) models.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{src/images/figures/text_detection_recognition.png}
+    \caption{Text Detection and Recognition (i)}
+    \label{fig:ocr-result-1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{src/images/figures/text_detection_recognition2.png}
+    \caption{Text Detection and Recognition (ii)}
+    \label{fig:ocr-result-2}
+\end{figure}
+
+It is to be noted that the ``??'' shown in \cref{fig:ocr-result-1} and \cref{fig:ocr-result-2} is a limitation of the picture-rendering library used (OpenCV, Matplotlib), rather than a limitation of the \gls{ocr} model. The \gls{ocr} model accurately identifies symbols like $\mu$ (micro).
+
+\subsection{Training Loss Curve}
+
+% Due to the limitation of unpaid versions of cloud-based services like Google Colab and Lightning \gls{ai}, only 29 training epochs were successfully run. However, the results in those 29 epochs also seem promising as the training loss steadily decreased.
+\cref{fig:ocr-training-loss} shows that the training loss decreases consistently throughout the 50 epochs, indicating the model is effectively memorizing the training data. However, the validation loss only drops until around 15-20 epochs before gradually increasing, indicating overfitting. Overfitting is an issue to be eradicated using extensive training using diverse datasets (either by addition of other datasets in training and/or augmentation). If the performance is considered satisfactory after training for only 15-20 epochs, early stopping may also be used.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{src/images/figures/OCR_loss_curve.png}
+    \caption{Training Loss vs Epochs (\gls{ocr})}
+    \label{fig:ocr-training-loss}
+\end{figure}
+
+\subsection{OCR Prediction}
+
+% Due to the limitation of unpaid versions of cloud-based services like Google Colab and Lightning \gls{ai}, only 29 training epochs were successfully run. However, the results in those 29 epochs also seem promising as the training loss steadily decreased.
+The predictions made by the OCR model for a random sample of test data is shown in \cref{fig:ocr-predictions}. The OCR model accurately recognizes the easily discernible text but is fallible in some cases. However, in this random sample of images, all the problem images (i.e. the ones OCR cannot recognize) are indiscernible to human eyes as well. For instance, the input image samples for GT: D5 and GT: 31 are completely black suggesting a preprocessing or cropping bug rather than a fault in the model.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{src/images/figures/ocr_test.png}
+    \caption{OCR Model Predictions}
+    \label{fig:ocr-predictions}
+\end{figure}
+
+\subsection{OCR Performance Analysis}
+\cref{fig:ocr-performance-metrics} is a combination of images showing the performance metrics for the OCR model. The accuracy is 65.96\% and while this may seem low, the sample images reveal that accuracy might have taken a hit due to data corruption in the cropping process or preprocessing. Once this bug is somewhat fixed, accuracy is expected to rise. That being said, to improve the accuracy further, the task of refining the model, regardless of data corruption will continue. Likewise, the CER of 0.25 means that on average, 1 out of every 4 characters is predicted incorrectly. However, the histogram shows a notable bump at 1.0 (complete failure) confirming the presence of "garbage" inputs (like black boxes, as seen in the sample images). WER is shown to be 0.34. Its distribution is inherently binary because the model either gets the full component value right (WER being 0) or gets it wrong (WER = 1).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{src/images/figures/cer_wer.png}
+    \caption{OCR Performance Metrics and their Distributions}
+    \label{fig:ocr-performance-metrics}
+\end{figure}
 
 \section{Comparative Analysis of \gls{ocr} Models}
 

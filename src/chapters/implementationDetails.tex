@@ -491,7 +491,7 @@ T(n, H, W, r) = O(n \cdot r^2 + n \cdot (H + W)) = O(n \cdot (r^2 + H + W))
 
 \section{Frontend and Backend Implementation}
 
-The frontend system has been realized using React.js, CircuitJS and relevant packages like react-draggable and KiCad Symbol Library. Likewise, the backend of the circuitron system exposes a \gls{restful} \gls{api} that manages the complete lifecycle of circuit simulations. The \gls{api} provides endpoints for submitting \gls{spice} netlists, validating circuit syntax, and executing simulations using different analysis modes such as transient, \gls{ac}, and \gls{dc} analysis. 
+The frontend system has been realized using React.js, CircuitJS and relevant packages like react-draggable and KiCad Symbol Library. Likewise, the backend of the circuitron system exposes a \gls{restful} \gls{api} that manages the complete lifecycle of circuit simulations. The \gls{api} provides endpoints for submitting CircuitJS-compatible text files, validating circuit syntax, and executing simulations using different analysis modes such as transient, \gls{ac}, and \gls{dc} analysis. 
 
 Each simulation request is assigned a unique identifier, enabling asynchronous execution and progress tracking through dedicated status endpoints. The \gls{api} also supports retrieval of detailed simulation results, including time-domain voltage and current data, as well as administrative operations such as stopping running simulations, listing historical simulations, and deleting completed or failed runs. Standard \gls{http} status codes and structured \gls{json} responses are used throughout the \gls{api} to ensure consistency, robust error handling, and seamless integration with the frontend application.
 
@@ -542,7 +542,7 @@ Each simulation request is assigned a unique identifier, enabling asynchronous e
     \label{fig:webapp-interaction}
 \end{figure}
 
-The frontend communicates with the backend through \gls{http} requests to the documented endpoints. User inputs from the editable circuit schematic are converted into \gls{spice} netlists and submitted to the simulation endpoint. The frontend periodically polls the status endpoint to track simulation progress, and upon completion, retrieves and visualizes the results using CircuitJS for graph generation and React components for interactive display.
+The frontend communicates with the backend through \gls{http} requests to the documented endpoints. User inputs from the editable circuit schematic are converted into CircuitJS-compatible text files and submitted to the simulation endpoint. The frontend periodically polls the status endpoint to track simulation progress, and upon completion, retrieves and visualizes the results using CircuitJS for graph generation and React components for interactive display.
 
 \section{Circuit Simulation using CircuitJS}
 
@@ -550,7 +550,7 @@ CircuitJS converts the scanned circuit into matrix-based mathematical equations.
 
 \section{Error Handling}
 
-In any project with a number of individual modules working together, the overall error not only comes from said individual modules but also from their integration due to propagating errors from one module to another. To handle errors in such a case, foremost the errors in the output of the individual modules need to be controlled and only then can the accumulated error be kept in check. The performance metrics tabulated in the previous section are to be strictly adhered to if there's any hope of generating the \gls{spice} netlist (and digital schematic) with nominal errors.
+In any project with a number of individual modules working together, the overall error not only comes from said individual modules but also from their integration due to propagating errors from one module to another. To handle errors in such a case, foremost the errors in the output of the individual modules need to be controlled and only then can the accumulated error be kept in check. The performance metrics tabulated in the previous section are to be strictly adhered to if there's any hope of generating the CircuitJS compatible text file (and digital schematic) with nominal errors.
 
 For the reduction of false matches and \gls{ocr} noise, post-processing techniques such as value format validation, confidence filtering, and text cleanup can be implemented. Value format validation ensures only strings that match known (and appropriate) electrical units, say $10k$, $1\mu F$, $5V$ are retained. Confidence filtering helps discard \gls{ocr} results with low confidence scores, and text cleanup normalizes ambiguous symbols such as converting ``O'' to ``0'', ``$\mu$'' to ``u''.
 

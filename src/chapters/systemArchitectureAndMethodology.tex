@@ -185,7 +185,7 @@ The resulting terminal points form a complete connectivity interface between wir
 
 \subsection{Integration Algorithm}
 
-From the individual outputs from each of the aforementioned modules, the task is now to generate a structured \gls{json} representation of the circuit which will be used to generate a corresponding \gls{spice} netlist and also contribute in the schematic generation further down the line.
+From the individual outputs from each of the aforementioned modules, the task is now to generate a structured \gls{json} representation of the circuit which will be used to generate a corresponding CircuitJS-compatible text file and also contribute in the schematic generation further down the line.
 
 The integration between all these different outputs, in a simplistic form, would consist of the following steps:
 
@@ -201,21 +201,17 @@ The integration between all these different outputs, in a simplistic form, would
     \item Store the accumulated information in a \gls{json} file.
 \end{itemize}
 
-\subsection{SPICE Netlist Generation}
+\subsection{CircuitJS-compatible Text File Generation}
 
-A netlist is a file that describes the connections between components in an electronic circuit. It acts as a blueprint, specifying which components are connected and how, without detailing the physical layout or specific component placement.
+A circuitJS-compatible text filedescribes the connections between components in an electronic circuit. It acts as a blueprint, specifying which components are connected and how, without detailing the physical layout or specific component placement.
 
-A \gls{spice} netlist is a text-based representation of an electrical circuit used for simulation by a \gls{spice} engine. It provides all the necessary information about the components, their connections, and their electrical properties, enabling analysis such as transient response, DC/AC sweep, or frequency domain behavior.
+It is a text-based representation of an electrical circuit used for simulation by the CircuitJS engine. It provides all the necessary information about the components, their connections, and their electrical properties, enabling analysis such as transient response, DC/AC sweep, or frequency domain behavior.
 
-The netlist serves as input to a circuit simulation engine, which then performs numerical computations to evaluate how the circuit behaves under specified conditions.
+The text file serves as input to a circuit simulation engine, which then performs numerical computations to evaluate how the circuit behaves under specified conditions.
 
-For each component, the \gls{spice} netlist contains the information about its name, the nodes it is connected to on either side and the component's parameters or model (if necessary) in the following format:
+For each component, this text file contains the information about its name, the nodes it is connected to on either side and the component's parameters or model (if necessary).
 
-\begin{center}
-\texttt{<Component\_Name> <Node1> <Node2> <Value>}
-\end{center}
-
-After the \gls{json} file with abundant information about the components, their values, and the nodes they are connected to is generated, the next step is to convert said \gls{json} file into a netlist format (a \texttt{.txt} file which follows the appropriate conventions).
+After the \gls{json} file with abundant information about the components, their values, and the nodes they are connected to is generated, the next step is to convert said \gls{json} file into a CircuitJS-compatible file (a \texttt{.txt} file which follows the appropriate conventions).
 
 \subsection{Digital Schematic Generation}
 
@@ -250,7 +246,7 @@ Support for user interaction with the schematic is also handled by the backend. 
 
 \subsection{LLM Integration}
 
-To enhance interaction with the circuit beyond \gls{gui} manipulation, a large language model (\gls{llm}) is to be integrated, facilitated through LangChain and LangGraph. LangChain constructs the agent architecture responsible for handling user queries, such as, ``Explain the purpose of this resistor.'', ``Identify possible errors in this circuit.'', etc. The agent receives contextual data from the backend (such as the circuit's \gls{json} structure or \gls{spice} netlist), formats the prompt, and forwards it to the \gls{llm} through a secure \gls{api}. LangGraph manages the session state, context memory, and branching logic for multi-turn conversations. This enables the system to remember previously discussed components or simulation outputs across queries.
+To enhance interaction with the circuit beyond \gls{gui} manipulation, a large language model (\gls{llm}) is to be integrated, facilitated through LangChain and LangGraph. LangChain constructs the agent architecture responsible for handling user queries, such as, ``Explain the purpose of this resistor.'', ``Identify possible errors in this circuit.'', etc. The agent receives contextual data from the backend (such as the circuit's \gls{json} structure or CircuitJS file), formats the prompt, and forwards it to the \gls{llm} through a secure \gls{api}. LangGraph manages the session state, context memory, and branching logic for multi-turn conversations. This enables the system to remember previously discussed components or simulation outputs across queries.
 
 \section{Wire Detection Methodology}
 
@@ -578,7 +574,7 @@ The use-case diagram in Figure~\ref{fig:use-case-diagram} outlines the CIRCUITRO
 
 Upon submission, CIRCUITRON automatically preprocesses the image to enhance clarity and prepares it for further analysis. The system then detects components (e.g., resistors, capacitors) using YOLOv7 and identifies wires and nodes through techniques like junction-based wire detection. Simultaneously, it extracts text labels (e.g., component values) using \gls{ocr} and maps them to the corresponding components.
 
-Once the circuit structure is parsed, the system generates an editable schematic, allowing the user to manually correct any errors before proceeding. After validation, the system converts the schematic into a SPICE-compatible netlist and runs a simulation using Ngspice/PySpice. The results, including voltage and current graphs, are displayed to the user. Additionally, the system integrates an AI assistant to answer circuit-related questions, enhancing the learning and troubleshooting experience.
+Once the circuit structure is parsed, the system generates an editable schematic, allowing the user to manually correct any errors before proceeding. After validation, the system converts the schematic into a CircuitJS-compatible text file and runs a simulation using CircuitJS. The results, including voltage and current graphs, are displayed to the user. Additionally, the system integrates an AI assistant to answer circuit-related questions, enhancing the learning and troubleshooting experience.
 
 The ``includes'' relationship is used for mandatory sub-tasks like component detection and \gls{ocr}, which must always execute as part of core workflows. The ``extends'' relationship marks optional features like manual corrections or AI Q\&A, which enhance functionality but aren't required for basic operation. The diagram effectively outlines the system's scope, emphasizing its applications (or use-cases).
 
@@ -642,7 +638,7 @@ Terminals define where components connect to wires, which influences circuit str
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{src/images/figures/flowchart.png}
+    \includegraphics[width=0.85\textwidth]{src/images/figures/flowchart.png}
     \caption{System Flowchart}
     \label{fig:system-flowchart}
 \end{figure}

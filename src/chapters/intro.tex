@@ -1,6 +1,6 @@
 \chapter{Introduction}
 
-\noindent ``CIRCUITRON: Circuit Recognition, Transformation, and Analysis'' is a system to convert hand-drawn electrical circuit diagrams into \gls{spice} compatible netlists enabling simulation and graphical analysis along with digital visualization of the circuit in an editable schematic. The system also integrates a prompt-based \gls{ai} assistant to help answer queries related to the relevant circuit.
+\noindent ``CIRCUITRON: Circuit Recognition, Transformation, and Analysis'' is a system to convert hand-drawn electrical circuit diagrams into CircuitJS-compatible text files enabling simulation and graphical analysis along with digital visualization of the circuit in an editable schematic. The system also integrates a prompt-based \gls{ai} assistant (Deepseek v3.1) to help answer queries related to the relevant circuit.
 
 \section{Background Information}
 
@@ -18,12 +18,12 @@ The motivation stems not only from a deep-seated commitment to give the instruct
 
 The \gls{eda} tools currently available do not support the direct transformation of hand-drawn circuit images into simulation-ready schematics. There exist a few nascent prototypes for the same but there seems to be no widely adopted, robust, and user-friendly pipeline that combines component recognition, reliable wire connectivity, schematic generation and simulation, whether by itself or by integration with \gls{spice} simulators. 
 
-``CIRCUITRON: Circuit Recognition, Transformation, and Analysis'' project aims to create an integrated system capable of first, recognizing and digitizing hand-drawn circuits into editable schematics and then allowing the user to analyze those circuits through graphs using \gls{spice}-compatible netlists with an added \gls{ai} assistant to handle related queries.
+``CIRCUITRON: Circuit Recognition, Transformation, and Analysis'' project aims to create an integrated system capable of first, recognizing and digitizing hand-drawn circuits into editable schematics and then allowing the user to analyze those circuits through graphs using \gls{CircuitJS}-compatible text files with an added \gls{ai} assistant to handle related queries.
 
 \section{Project Objectives}
 
 \begin{itemize}
-    \item To automatically convert hand-drawn circuit diagrams into \gls{spice}-compatible netlists for simulation.
+    \item To automatically convert hand-drawn circuit diagrams into CircitJS-compatible text files for simulation.
     \item To visualize the circuit in an editable schematic in addition to an \gls{ai} assistant for handling simple, relevant queries.
 \end{itemize}
 
@@ -31,16 +31,16 @@ The \gls{eda} tools currently available do not support the direct transformation
 
 \subsection{Project Scope}
 
-This project focuses on the development of a software pipeline that accepts scanned or photographed images of hand-drawn electrical circuits and transforms them into \gls{spice}-compatible netlists for simulation as well as editable schematics through an intermediate integrated data structure to facilitate the transformation. The scope includes detecting common circuit components and their values in mentioned units, inferring wire connectivity with junction recognition and generating a circuit diagram with simulation capabilities. Additionally, the system incorporates an \gls{llm}-based query-solving \gls{ai} assistant. The system will support basic circuits and components but will exclude any form of advanced circuit transformation and analysis such as in circuits associated with \gls{rf}, mixed-signal, or \gls{pcb} designs.
+This project focuses on the development of a software pipeline that accepts scanned or photographed images of hand-drawn electrical circuits and transforms them into CircuitJS-compatible netlists for simulation as well as editable schematics through an intermediate integrated data structure to facilitate the transformation. The scope includes detecting common circuit components and their values in mentioned units, inferring wire connectivity with junction recognition and generating a circuit diagram with simulation capabilities. Additionally, the system incorporates an \gls{llm}-based query-solving \gls{ai} assistant. The system will support basic circuits and components but will exclude any form of advanced circuit transformation and analysis such as in circuits associated with \gls{rf}, mixed-signal, or \gls{pcb} designs.
 
 \subsection{Project Applications}
 
 \begin{itemize}
     \item \textbf{Educational utility:} The system is foremost, an educational tool designed to assist students and instructors in conveniently digitizing circuit diagrams and understanding circuit behavior through limited simulation and interactive Q\&A.
-    \item \textbf{Lightweight prototyping:} The project enables rapid comparison of hand-drawn designs with \gls{spice} simulation results early in the design process for quick feedback and validation.
+    \item \textbf{Lightweight prototyping:} The project enables rapid comparison of hand-drawn designs with simulation results early in the design process for quick feedback and validation.
     \item \textbf{Mobile simulation tool:} The project can facilitate quick on-the-go analysis of circuits for students and potentially, field engineers as well.
 \end{itemize}
 
 \subsection{Project Limitations}
 
-Despite its innovative concept, the system is constrained by several factors. First, its accuracy depends heavily on the quality and clarity of input images; low-resolution or messy sketches may lead to recognition errors. The fix for this would obviously be more rigorous training on appropriate training data to chip away at the error but finding the ideal dataset with enough examples for all kinds of components and circuits has proven challenging. Additionally, the system supports only a fixed set of commonly used components and may fail on rare or user-defined symbols. Wire connectivity assumes standard drawing practices however there is no one way to draw a circuit diagram; non-standard or overlapping wires as well as complicated circuits may confuse the parser. Moreover, the system lacks a simulation engine of its own and instead uses an open-source tool like CircuitJS, which not only affects the seamlessness of the user experience but also limits the simulation capabilities to that of CircuitJS. For instance, CircuitJS needs \gls{spice} models to be imported for complicated circuit elements such as \gls{adc}, \gls{dac}, timers, etc. This means even if the system can recognize these hand-drawn circuit elements, it will not be able to simulate their functionality.
+Despite its innovative concept, the system is constrained by several factors. First, its accuracy depends heavily on the quality and clarity of input images; low-resolution or messy sketches may lead to recognition errors. The fix for this would obviously be more rigorous training on appropriate training data to chip away at the error but finding the ideal dataset with enough examples for all kinds of components and circuits has proven challenging. Additionally, the system supports only a fixed set of commonly used components and may fail on rare or user-defined symbols. Wire connectivity assumes standard drawing practices however there is no one way to draw a circuit diagram; non-standard or overlapping wires as well as complicated circuits may confuse the parser. Moreover, the system lacks a simulation engine of its own and instead uses an open-source tool like CircuitJS, which not only affects the seamlessness of the user experience but also limits the simulation capabilities to that of CircuitJS. 

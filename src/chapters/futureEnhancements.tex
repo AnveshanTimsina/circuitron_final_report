@@ -1,0 +1,19 @@
+\chapter{FUTURE ENHANCEMENTS}
+
+The CIRCUITRON system, while fully functional in its current state, has numerous opportunities for future enhancements. One of the objectives of any research-based project is to encourage the scientific community to conduct further studies and experiment on the working principle of the project to either verify the methodology used, or potentially come up with alternate techniques to solve the same probelem. In any case, following are the likely future enhancements that can be implemented in this project:
+
+\section{Improvement in the OCR accuracy}
+
+The system uses two OCR models, at the moment, however the accuracy of both of them (highest of them being around 85\%) has room for improvement. Also, the issue with TrOCR (which is the better of the two) is that it is too slow on account of its large size. The custom OCR pipeline is much faster, but has lower accuracy. Future work can be done to either improve the accuracy of the custom OCR model though rigorous training on different datasets, or to somehow improve TrOCR's speed.
+
+\section{Increment in the number of supported components}
+
+The system currently supports a limited number of components (only 12 after consolidation, minus crossover, junction, and text classes). Pre-consolidation, the system supported 59 components, but the mAP was too low for satisfactory object detection. These 12 components are the most commonly used ones for basic circuit design and simulation, however, there are many more components that can be added to the system to make it more versatile and useful for a wider range of applications. Future work can be done to increase the number of supported components, which would require training the object detection model on a larger and more diverse dataset.
+
+\section{Authentication and Database Functionalities}
+
+The system, in its current form, doesn't allow the user to save their work or to access it later. Moreover, there is no authentication mechanism in place to allow users to have personalized accounts and potentially collaborate on the same projects. This also involves hosting the system online. Future enhancements can include the integration of a database to store user data and circuit designs, as well as offer a library of pre-designed circuits for beginners to play around with.
+
+\section{Improvement in the frontened and general user experience}
+
+While the system is capable of handling diagonal wires and components, when said components are rendered in the frontend, they aren't rendered in the same diagonal manner. This requires the user to step in and manually adjust the orientation of the component. The issue of scale, between the wires and the components also persists, ocassionally requiring manual resizing. Moreover, the frontend of the system involves a lot of user interactions from dragging and resizing, to general drawing and editing of the schematic, which can be made smoother in the future. 

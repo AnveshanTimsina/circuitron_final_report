@@ -1,48 +1,8 @@
 \chapter{CONCLUSION}
 
-%  WRITING GUIDELINES FOR CONCLUSION CHAPTER
-%  ==========================================
- The Conclusion chapter summarizes your project, highlights key achievements, discusses limitations,
- and suggests future work. It should provide closure to your report and leave readers with a clear
- understanding of what you accomplished and its significance.
+The objectives of recognizing a hand-drawn circuit diagram, transforming it into an editable schematic having simulation capabilities, and analyzing said circuit with LLM-powered Q\&A have been successfully achieved. Functional pipelines for each aspect of the project have been designed and implemented effectively. For component detection, YOLOv7 has achieved a mAP@0.5 of 95\% and for text recognition, TrOCR has achieved accuracy of 84.5\%. The wire detection algorithm leverages junction-based geometric inference with adaptive collinear merging, enabling robust extraction of circuit connectivity. The system processes hand-drawn circuit images and extracts components with their values and connections, effectively digitizing a circuit. The project has successfully addressed a significant gap in educational circuit analysis tools by making circuit simulation easier than ever.
 
-%  STRUCTURE TEMPLATE:
- \section{Achievements}
- \section{Limitations}
- \section{Future Work}
- \section{Final Remarks}
+Apart from technical performance, the project also demonstrates successful full-stack integration with a React.js frontend, a FastAPI backend, and an integration with CircuitJS for simulation of the circuit. This modular architecture ensures ease of maintenance and potential extensibility, establishing a solid foundation for future enahncements.
 
-%  SUMMARY OF WORK:
-
-%  KEY ACHIEVEMENTS:
- Highlight major accomplishments:
-  Briefly recap the problem you addressed, your approach, and what you built. This should be
- 1-2 paragraphs summarizing the entire project without going into technical details.
-
- - Whether objectives were met
- - Performance metrics achieved
- - Novel contributions or innovations
- - Successful integration or deployment
- Be specific and quantitative where possible.
-
-%  LIMITATIONS:
- Acknowledge limitations of your work honestly:
- - Technical constraints encountered
- - Performance limitations
- - Scope restrictions
- - Areas where further improvement is needed
-
- FUTURE WORK:
- Suggest concrete directions for extending your project:
- - Additional features that could be implemented
- - Performance improvements that could be made
- - Alternative approaches that could be explored
- - Scaling or deployment in real-world settings
- - Research questions that emerged from your work
-
-%  FINAL REMARKS:
- End with a brief statement about the significance of your work and its potential impact.
-
- LaTeX quick refs:
- - Keep conclusion concise; avoid introducing new results.
- - If referencing key results: point to earlier figures/tables via
+This project also serves as a vehicle for research and experimentation for its authors. The study into different versions of YOLO for component detection, different OCR models for text recognition, as well as multiple ways to solve wire connectivity issues has not only brought this project as close to the best as it could have been, but also infused the authors with the knowledge and technical know-how regarding a variety of topics and cutting-edge scientific research. Circuitron represents a meaningful step towards democratizing ciruit education through the elimination of friction between ideation and analysis. It establishes a replicable and of course, improvable, design pattern for the broader electronics education community. Its potential to improve student engagement while reducing cognitive load makes it a valuable contribution to electrical and electronics education, where traditional circuit simulation tools are expensive or complex. 
+ 

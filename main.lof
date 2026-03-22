@@ -5,49 +5,49 @@
 \contentsline {figure}{\numberline {4-4}{\ignorespaces Architecture of TrOCR}}{19}{figure.caption.19}%
 \contentsline {figure}{\numberline {4-5}{\ignorespaces Use-Case Diagram for CIRCUITRON System}}{33}{figure.caption.20}%
 \contentsline {figure}{\numberline {4-6}{\ignorespaces System Flowchart}}{36}{figure.caption.22}%
-\contentsline {figure}{\numberline {5-1}{\ignorespaces Interaction Diagram for the Web Application}}{51}{figure.caption.28}%
-\contentsline {figure}{\numberline {6-1}{\ignorespaces Loss Curves for YOLOv5}}{54}{figure.caption.29}%
-\contentsline {figure}{\numberline {6-2}{\ignorespaces Loss Curves for YOLOv7}}{55}{figure.caption.30}%
-\contentsline {figure}{\numberline {6-3}{\ignorespaces \gls {map}@0.5 vs Epochs for YOLOv5 and YOLOv7}}{55}{figure.caption.32}%
-\contentsline {figure}{\numberline {6-4}{\ignorespaces \gls {map}@0.5:0.95 vs Epochs for YOLOv5 and YOLOv7}}{56}{figure.caption.33}%
-\contentsline {figure}{\numberline {6-5}{\ignorespaces Precision-Confidence Curve for YOLOv5}}{57}{figure.caption.36}%
-\contentsline {figure}{\numberline {6-6}{\ignorespaces Precision-Confidence Curve for YOLOv7}}{57}{figure.caption.37}%
-\contentsline {figure}{\numberline {6-7}{\ignorespaces Recall-Confidence Curve for YOLOv5}}{58}{figure.caption.39}%
-\contentsline {figure}{\numberline {6-8}{\ignorespaces Recall-Confidence Curve for YOLOv7}}{59}{figure.caption.40}%
-\contentsline {figure}{\numberline {6-9}{\ignorespaces F1 Score-Confidence Curve for YOLOv5}}{60}{figure.caption.42}%
-\contentsline {figure}{\numberline {6-10}{\ignorespaces F1 Score-Confidence Curve for YOLOv7}}{60}{figure.caption.43}%
-\contentsline {figure}{\numberline {6-11}{\ignorespaces Precision-Recall Curve for YOLOv5}}{61}{figure.caption.45}%
-\contentsline {figure}{\numberline {6-12}{\ignorespaces Precision-Recall Curve for YOLOv7}}{62}{figure.caption.46}%
-\contentsline {figure}{\numberline {6-13}{\ignorespaces Confusion Matrix for YOLOv5}}{63}{figure.caption.47}%
-\contentsline {figure}{\numberline {6-14}{\ignorespaces Confusion Matrix for YOLOv7}}{63}{figure.caption.48}%
-\contentsline {figure}{\numberline {6-15}{\ignorespaces Text Detection and Recognition (i)}}{65}{figure.caption.50}%
-\contentsline {figure}{\numberline {6-16}{\ignorespaces Text Detection and Recognition (ii)}}{65}{figure.caption.51}%
-\contentsline {figure}{\numberline {6-17}{\ignorespaces Training Loss vs Epochs (\gls {ocr})}}{66}{figure.caption.52}%
-\contentsline {figure}{\numberline {6-18}{\ignorespaces OCR Model Predictions}}{67}{figure.caption.53}%
-\contentsline {figure}{\numberline {6-19}{\ignorespaces OCR Performance Metrics and their Distributions}}{68}{figure.caption.54}%
-\contentsline {figure}{\numberline {6-20}{\ignorespaces Training curves for four \gls {yolo} architectures on the 15-class dataset: Precision, Recall, \gls {map}@0.5, and \gls {map}@0.5:0.95 vs. epochs}}{70}{figure.caption.55}%
-\contentsline {figure}{\numberline {6-21}{\ignorespaces Training loss comparison (Box, Classification, DFL) across four \gls {yolo} architectures}}{71}{figure.caption.56}%
-\contentsline {figure}{\numberline {6-22}{\ignorespaces Validation loss comparison (Box, Classification, DFL) across four \gls {yolo} architectures}}{71}{figure.caption.57}%
-\contentsline {figure}{\numberline {6-23}{\ignorespaces Final-epoch performance metrics for four \gls {yolo} architectures on the 15-class dataset}}{72}{figure.caption.59}%
-\contentsline {figure}{\numberline {6-24}{\ignorespaces Effect of class taxonomy consolidation on YOLOv7: 61-class vs. 15-class performance}}{73}{figure.caption.61}%
-\contentsline {figure}{\numberline {6-25}{\ignorespaces Grouped bar chart comparing all six detection configurations across Precision, Recall, \gls {map}@0.5, and \gls {map}@0.5:0.95}}{74}{figure.caption.63}%
-\contentsline {figure}{\numberline {6-26}{\ignorespaces Performance evolution of object detection across all configurations showing \gls {map}@0.5 and \gls {map}@0.5:0.95}}{75}{figure.caption.64}%
-\contentsline {figure}{\numberline {6-27}{\ignorespaces Radar chart comparing the three best detection configurations across four performance metrics}}{75}{figure.caption.65}%
-\contentsline {figure}{\numberline {6-28}{\ignorespaces Comparative analysis of Custom \gls {crnn} and Fine-tuned TrOCR: (left) performance metrics; (right) feature comparison}}{77}{figure.caption.67}%
-\contentsline {figure}{\numberline {6-29}{\ignorespaces Otsu's Global Thresholding}}{79}{figure.caption.68}%
-\contentsline {figure}{\numberline {6-30}{\ignorespaces Skeletonization}}{80}{figure.caption.69}%
-\contentsline {figure}{\numberline {6-31}{\ignorespaces Component Removal}}{81}{figure.caption.70}%
-\contentsline {figure}{\numberline {6-32}{\ignorespaces Wire Classification}}{82}{figure.caption.71}%
-\contentsline {figure}{\numberline {6-33}{\ignorespaces Segment Consolidation Through Merging}}{83}{figure.caption.72}%
-\contentsline {figure}{\numberline {6-34}{\ignorespaces Bounding Box Overlay}}{84}{figure.caption.73}%
-\contentsline {figure}{\numberline {6-35}{\ignorespaces Wire-Component Intersection Detection}}{85}{figure.caption.74}%
-\contentsline {figure}{\numberline {6-36}{\ignorespaces Skeletonized image with detected endpoints}}{86}{figure.caption.75}%
-\contentsline {figure}{\numberline {6-37}{\ignorespaces Adjacency graph constructed using Multi-Head BFS algorithm}}{87}{figure.caption.76}%
-\contentsline {figure}{\numberline {6-38}{\ignorespaces Digitally Drawn Circuit}}{88}{figure.caption.77}%
-\contentsline {figure}{\numberline {6-39}{\ignorespaces Example Circuit Simulation Result}}{88}{figure.caption.78}%
-\contentsline {figure}{\numberline {6-40}{\ignorespaces Skeletonized Image of the Voltage Divider Circuit}}{89}{figure.caption.79}%
-\contentsline {figure}{\numberline {6-41}{\ignorespaces Skeleton with Detected Endpoints for the Voltage Divider}}{89}{figure.caption.80}%
-\contentsline {figure}{\numberline {6-42}{\ignorespaces Adjacency Graph of the Voltage Divider Circuit}}{90}{figure.caption.81}%
-\contentsline {figure}{\numberline {6-43}{\ignorespaces Frontend with All Components Mapped for the Voltage Divider}}{90}{figure.caption.82}%
-\contentsline {figure}{\numberline {6-44}{\ignorespaces Simulation Result of the Reconstructed Voltage Divider Circuit}}{91}{figure.caption.83}%
+\contentsline {figure}{\numberline {5-1}{\ignorespaces Interaction Diagram for the Web Application}}{52}{figure.caption.28}%
+\contentsline {figure}{\numberline {6-1}{\ignorespaces Loss Curves for YOLOv5}}{55}{figure.caption.29}%
+\contentsline {figure}{\numberline {6-2}{\ignorespaces Loss Curves for YOLOv7}}{56}{figure.caption.30}%
+\contentsline {figure}{\numberline {6-3}{\ignorespaces \gls {map}@0.5 vs Epochs for YOLOv5 and YOLOv7}}{56}{figure.caption.32}%
+\contentsline {figure}{\numberline {6-4}{\ignorespaces \gls {map}@0.5:0.95 vs Epochs for YOLOv5 and YOLOv7}}{57}{figure.caption.33}%
+\contentsline {figure}{\numberline {6-5}{\ignorespaces Precision-Confidence Curve for YOLOv5}}{58}{figure.caption.36}%
+\contentsline {figure}{\numberline {6-6}{\ignorespaces Precision-Confidence Curve for YOLOv7}}{58}{figure.caption.37}%
+\contentsline {figure}{\numberline {6-7}{\ignorespaces Recall-Confidence Curve for YOLOv5}}{59}{figure.caption.39}%
+\contentsline {figure}{\numberline {6-8}{\ignorespaces Recall-Confidence Curve for YOLOv7}}{60}{figure.caption.40}%
+\contentsline {figure}{\numberline {6-9}{\ignorespaces F1 Score-Confidence Curve for YOLOv5}}{61}{figure.caption.42}%
+\contentsline {figure}{\numberline {6-10}{\ignorespaces F1 Score-Confidence Curve for YOLOv7}}{61}{figure.caption.43}%
+\contentsline {figure}{\numberline {6-11}{\ignorespaces Precision-Recall Curve for YOLOv5}}{62}{figure.caption.45}%
+\contentsline {figure}{\numberline {6-12}{\ignorespaces Precision-Recall Curve for YOLOv7}}{63}{figure.caption.46}%
+\contentsline {figure}{\numberline {6-13}{\ignorespaces Confusion Matrix for YOLOv5}}{64}{figure.caption.47}%
+\contentsline {figure}{\numberline {6-14}{\ignorespaces Confusion Matrix for YOLOv7}}{64}{figure.caption.48}%
+\contentsline {figure}{\numberline {6-15}{\ignorespaces Training curves for four \gls {yolo} architectures on the 15-class dataset: Precision, Recall, \gls {map}@0.5, and \gls {map}@0.5:0.95 vs. epochs}}{67}{figure.caption.50}%
+\contentsline {figure}{\numberline {6-16}{\ignorespaces Training loss comparison (Box, Classification, DFL) across four \gls {yolo} architectures}}{68}{figure.caption.51}%
+\contentsline {figure}{\numberline {6-17}{\ignorespaces Validation loss comparison (Box, Classification, DFL) across four \gls {yolo} architectures}}{68}{figure.caption.52}%
+\contentsline {figure}{\numberline {6-18}{\ignorespaces Final-epoch performance metrics for four \gls {yolo} architectures on the 15-class dataset}}{69}{figure.caption.54}%
+\contentsline {figure}{\numberline {6-19}{\ignorespaces Effect of class taxonomy consolidation on YOLOv7: 61-class vs. 15-class performance}}{70}{figure.caption.56}%
+\contentsline {figure}{\numberline {6-20}{\ignorespaces Grouped bar chart comparing all six detection configurations across Precision, Recall, \gls {map}@0.5, and \gls {map}@0.5:0.95}}{71}{figure.caption.58}%
+\contentsline {figure}{\numberline {6-21}{\ignorespaces Performance evolution of object detection across all configurations showing \gls {map}@0.5 and \gls {map}@0.5:0.95}}{72}{figure.caption.59}%
+\contentsline {figure}{\numberline {6-22}{\ignorespaces Radar chart comparing the three best detection configurations across four performance metrics}}{72}{figure.caption.60}%
+\contentsline {figure}{\numberline {6-23}{\ignorespaces Text Detection and Recognition (i)}}{74}{figure.caption.61}%
+\contentsline {figure}{\numberline {6-24}{\ignorespaces Text Detection and Recognition (ii)}}{74}{figure.caption.62}%
+\contentsline {figure}{\numberline {6-25}{\ignorespaces Training Loss vs Epochs (\gls {ocr})}}{75}{figure.caption.63}%
+\contentsline {figure}{\numberline {6-26}{\ignorespaces OCR Model Predictions}}{76}{figure.caption.64}%
+\contentsline {figure}{\numberline {6-27}{\ignorespaces OCR Performance Metrics and their Distributions}}{77}{figure.caption.65}%
+\contentsline {figure}{\numberline {6-28}{\ignorespaces Comparative analysis of Custom \gls {crnn} and Fine-tuned TrOCR: (left) performance metrics; (right) feature comparison}}{78}{figure.caption.67}%
+\contentsline {figure}{\numberline {6-29}{\ignorespaces Otsu's Global Thresholding}}{80}{figure.caption.68}%
+\contentsline {figure}{\numberline {6-30}{\ignorespaces Skeletonization}}{81}{figure.caption.69}%
+\contentsline {figure}{\numberline {6-31}{\ignorespaces Component Removal}}{82}{figure.caption.70}%
+\contentsline {figure}{\numberline {6-32}{\ignorespaces Wire Classification}}{83}{figure.caption.71}%
+\contentsline {figure}{\numberline {6-33}{\ignorespaces Segment Consolidation Through Merging}}{84}{figure.caption.72}%
+\contentsline {figure}{\numberline {6-34}{\ignorespaces Bounding Box Overlay}}{85}{figure.caption.73}%
+\contentsline {figure}{\numberline {6-35}{\ignorespaces Wire-Component Intersection Detection}}{86}{figure.caption.74}%
+\contentsline {figure}{\numberline {6-36}{\ignorespaces Skeletonized image with detected endpoints}}{87}{figure.caption.75}%
+\contentsline {figure}{\numberline {6-37}{\ignorespaces Adjacency graph constructed using Multi-Head BFS algorithm}}{88}{figure.caption.76}%
+\contentsline {figure}{\numberline {6-38}{\ignorespaces Digitally Drawn Circuit}}{89}{figure.caption.77}%
+\contentsline {figure}{\numberline {6-39}{\ignorespaces Example Circuit Simulation Result}}{89}{figure.caption.78}%
+\contentsline {figure}{\numberline {6-40}{\ignorespaces Skeletonized Image of the Voltage Divider Circuit}}{90}{figure.caption.79}%
+\contentsline {figure}{\numberline {6-41}{\ignorespaces Skeleton with Detected Endpoints for the Voltage Divider}}{90}{figure.caption.80}%
+\contentsline {figure}{\numberline {6-42}{\ignorespaces Adjacency Graph of the Voltage Divider Circuit}}{91}{figure.caption.81}%
+\contentsline {figure}{\numberline {6-43}{\ignorespaces Frontend with All Components Mapped for the Voltage Divider}}{91}{figure.caption.82}%
+\contentsline {figure}{\numberline {6-44}{\ignorespaces Simulation Result of the Reconstructed Voltage Divider Circuit}}{92}{figure.caption.83}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
