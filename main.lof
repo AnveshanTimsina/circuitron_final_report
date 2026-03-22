@@ -8,7 +8,7 @@
 \contentsline {figure}{\numberline {5-1}{\ignorespaces Interaction Diagram for the Web Application}}{48}{figure.caption.28}%
 \contentsline {figure}{\numberline {6-1}{\ignorespaces mAP@0.5 comparison over 100 training epochs.}}{51}{figure.caption.30}%
 \contentsline {figure}{\numberline {6-2}{\ignorespaces Performance metrics comparison: (a) Precision-Recall and (b) F1-Confidence curves.}}{52}{figure.caption.32}%
-\contentsline {figure}{\numberline {6-3}{\ignorespaces Training loss comparison across four \gls {yolo} architectures}}{53}{figure.caption.34}%
+\contentsline {figure}{\numberline {6-3}{\ignorespaces Training loss comparison across four YOLO architectures}}{53}{figure.caption.34}%
 \contentsline {figure}{\numberline {6-4}{\ignorespaces Validation loss comparison across four \gls {yolo} architectures}}{53}{figure.caption.35}%
 \contentsline {figure}{\numberline {6-5}{\ignorespaces Performance metrics vs. epochs for four \gls {yolo} architectures on the 15-class dataset}}{54}{figure.caption.36}%
 \contentsline {figure}{\numberline {6-6}{\ignorespaces Final-epoch performance metrics for four \gls {yolo} architectures on the 15-class dataset}}{55}{figure.caption.38}%
@@ -21,7 +21,7 @@
 \contentsline {figure}{\numberline {6-13}{\ignorespaces Retrained YOLOv7 Result (ii)}}{61}{figure.caption.47}%
 \contentsline {figure}{\numberline {6-14}{\ignorespaces Training Loss vs Epochs (Custom \gls {ocr})}}{62}{figure.caption.48}%
 \contentsline {figure}{\numberline {6-15}{\ignorespaces Custom OCR Performance Metrics and their Distributions}}{63}{figure.caption.49}%
-\contentsline {figure}{\numberline {6-16}{\ignorespaces Performance metrics comparison. Note: CER and WER are represented as percentages (Error Rate $\times $ 100).}}{64}{figure.caption.51}%
+\contentsline {figure}{\numberline {6-16}{\ignorespaces Performance metrics comparison, in percentage}}{64}{figure.caption.51}%
 \contentsline {figure}{\numberline {6-17}{\ignorespaces Text Detection and Recognition using Custom OCR(i)}}{65}{figure.caption.52}%
 \contentsline {figure}{\numberline {6-18}{\ignorespaces Text Detection and Recognition using TrOCR(i)}}{66}{figure.caption.53}%
 \contentsline {figure}{\numberline {6-19}{\ignorespaces Text Detection and Recognition using Custom OCR(ii)}}{66}{figure.caption.54}%

@@ -1,6 +1,7 @@
 {
   "chat.tools.terminal.autoApprove": {
-    "latexmk": true
+    "latexmk": true,
+    "pdflatex": true
   },
   "[latex]": {
     "editor.formatOnSave": false
