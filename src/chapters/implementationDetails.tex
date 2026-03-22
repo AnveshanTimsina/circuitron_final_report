@@ -1,6 +1,6 @@
 \chapter{IMPLEMENTATION DETAILS}
 
-The implementation of the system to convert hand-drawn circuit diagrams into simulation-ready netlists and digital schematics follows a modular approach, aligning with the pipeline described in the architecture and methodology. Some of the methodologies explained in the previous section, that have been implemented are explained in this section.
+The implementation of the system to convert hand-drawn circuit diagrams into simulation-ready netlists and digital schematics follows a modular approach, aligning with the pipeline described in the architecture and methodology.
 
 \section{Dataset Manipulation and Preprocessing}
 
@@ -144,7 +144,7 @@ After necessary conversion, the dataset was ready for being plugged into the req
 
 \subsection{Image Augmentation}
 
-Since the dataset contains handwritten circuit diagrams captured under variable lighting and orientations, several augmentation techniques were applied to improve model generalization including Contrast Enhancement (global) and Adaptive Brightness Adjustment by factors of 0.8 and 1.2. Furthermore, geometric augmentation techniques, like spatial flipping (both horizontally and vertically) and rotation (e.g., $90^\circ$ or random rotation) proved to be unwise operations for this project. For example, if a ``C'' is rotated by $90^\circ$, the ``C'' now resembles a ``U'', and the same applies to flipping (``M'' might look like ``W'', for example). Rather than increasing accuracy, it was realized that using rotation or flipping would simply confuse the model. However, continuous testing with other forms of augmentation will continue in hopes of improving the model.
+Since the dataset contains handwritten circuit diagrams captured under variable lighting and orientations, several augmentation techniques were applied to improve model generalization including Contrast Enhancement (global) and Adaptive Brightness Adjustment by factors of 0.8 and 1.2. Furthermore, geometric augmentation techniques, like spatial flipping (both horizontally and vertically) and rotation (e.g., $90^\circ$ or random rotation) proved to be unwise operations for this project. For example, if a ``C'' is rotated by $90^\circ$, the ``C'' now resembles a ``U'', and the same applies to flipping (``M'' might look like ``W'', for example). Rather than increasing accuracy, it was realized that using rotation or flipping would simply confuse the model. 
 
 \subsection{Fine-tuning YOLOv5 and YOLOv7 for Component Detection}
 
@@ -163,33 +163,39 @@ The training parameters employed are as follows:
     \item \textbf{Augmentations used in training:} Mosaic Augmentation, \gls{hsv} Augmentation, Random rotating/flipping
 \end{itemize}
 
-\subsection{Implementation of Text Recognition (OCR)}
 
-To extract textual information such as resistor values, capacitor labels, and other component annotations from the circuit diagrams, a \gls{crnn}-based custom \gls{ocr} model was chosen, trained and implemented. The input image in cropped form (cropped for each text component) was passed through this model after training, which returned the content of each detected text element. The position of said text element, however, was found using bounding boxes from YOLOv7. This allowed us to localize and read numerical values or labels directly from the circuit.
+\subsection{Class Consolidation and Retraining}
 
-Three different modules, each for feature extraction, sequence modeling, and prediction were trained based on the DTRB framework. Initially, simply fine-tuning \gls{ocr} models like TrOCR and EasyOCR were also attempted; however, these didn't yield usable results, ultimately requiring training from scratch. The training was done for 29 epochs.
+Satisfactory results were not obtained through the initial 61-class approach. To improve the performance, consolidation of 61 classes into 15 was done, and the models were retrained on this new taxonomy. 
 
-\subsection{Fine-tuning TrOCR for Text Recognition}
+\begin{table}[H]
+\centering
+\caption{Consolidation of Original Classes into Unified YOLO Classes}
+\label{tab:class_consolidation}
+\begin{tabular}{@{}clp{8.2cm}@{}}
+\toprule
+\textbf{Class Code} & \textbf{Class Name} & \textbf{Consolidated Classes} \\
+\midrule
+0  & capacitor & capacitor.adjustable, capacitor.polarized, capacitor.unpolarized \\
+1  & crossover & crossover \\
+2  & diode & diode, diode.light\_emitting, diode.thyrector, diode.zener \\
+3  & gnd & gnd \\
+4  & inductor & inductor, inductor.coupled, inductor.ferrite \\
+5  & integrated\_circuit & integrated\_circuit, integrated\_circuit.ne555, integrated\_circuit.voltage\_regulator \\
+6  & junction & junction \\
+7  & operational\_amplifier & operational\_amplifier, operational\_amplifier.schmitt\_trigger \\
+8  & resistor & resistor, resistor.adjustable, resistor.photo \\
+9  & switch & switch \\
+10 & terminal & terminal \\
+11 & text & text \\
+12 & transistor & transistor.bjt, transistor.fet, transistor.photo \\
+13 & voltage & voltage.ac, voltage.battery, voltage.dc \\
+14 & vss & vss \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-Following the initial custom \gls{crnn} approach, a second \gls{ocr} model was implemented using Microsoft's TrOCR-small-printed architecture. TrOCR employs a Vision Transformer (ViT) encoder to process input image patches and a Transformer decoder to auto-regressively generate the output character sequence. Unlike the \gls{crnn} model which was trained from scratch, TrOCR was fine-tuned from pre-trained weights, leveraging transfer learning from large-scale printed text datasets.
-
-The fine-tuning was performed on cleaned text crops extracted from the \gls{cghd} dataset for 3 epochs. The key implementation details are:
-
-\begin{itemize}
-    \item \textbf{Base model:} Microsoft TrOCR-small-printed (pre-trained)
-    \item \textbf{Fine-tuning epochs:} 3
-    \item \textbf{Checkpoint:} Epoch 2 (best validation performance)
-    \item \textbf{Inference precision:} float16 (half-precision for GPU acceleration)
-    \item \textbf{Maximum output tokens:} 16 (sufficient for values like ``10k$\Omega$'', ``100$\mu$F'')
-    \item \textbf{Batch processing:} All text crops from a single image are processed in one forward pass
-    \item \textbf{Confidence scoring:} Per-token log-probability averaged across the generated sequence
-\end{itemize}
-
-The TrOCR model is integrated into the pipeline through a singleton service that lazy-loads the processor and model weights on first invocation, ensuring efficient memory usage. A comparative analysis of \gls{crnn} and TrOCR performance is presented in the Results chapter.
-
-\subsection{Retraining on the 15-Class Merged Taxonomy}
-
-To mitigate inter-class confusion observed in the 61-class experiments, the class taxonomy was consolidated into 15 merged classes. A merge mapping was applied to the original annotations, grouping visually similar subclasses (e.g., \textit{capacitor.polarized} and \textit{capacitor.unpolarized} into \textit{capacitor}). Four \gls{yolo} architectures were then trained on this 15-class dataset for benchmarking:
+A merge mapping was applied to the original annotations, grouping visually similar subclasses (e.g., capacitor.polarized and capacitor.unpolarized into capacitor) as shown in the Table \ref{tab:class_consolidation}. Four \gls{yolo} architectures were then trained on this 15-class dataset for benchmarking:
 
 \begin{itemize}
     \item \textbf{YOLOv7 (retrained):} 100 epochs, batch size 16, image size $640 \times 640$
@@ -198,7 +204,36 @@ To mitigate inter-class confusion observed in the 61-class experiments, the clas
     \item \textbf{YOLOv26:} 100 epochs, batch size 16, image size $640 \times 640$, patience = 20
 \end{itemize}
 
-All models were trained on identical data splits with the same augmentation pipeline, confidence threshold of 0.25, and \gls{iou} threshold of 0.45. Comparative results are presented in the Results chapter.
+All models were trained on identical data splits with the same augmentation pipeline, confidence threshold of 0.25, and \gls{iou} threshold of 0.45. 
+
+\subsection{Implementation of Custom Text Recognition (OCR)}
+
+To extract textual information such as resistor values, capacitor labels, and other component annotations from the circuit diagrams, a \gls{crnn}-based custom \gls{ocr} model was trained, and implemented. The input image in cropped form (cropped for each text component) was passed through this model after training, which returned the content of each detected text element. The position of said text element was found using bounding boxes from YOLOv7. This allowed us to localize and read numerical values or labels directly from the circuit.
+
+Three different modules, each for feature extraction, sequence modeling, and prediction were trained based on the DTRB framework. Initially, simply EasyOCR was also attempted; however, this didn't yield usable results, ultimately requiring training from scratch. The training, which was done for 27 epochs, had early stopping as it's accuracy per epoch failed to achieve even a 0.01\% increase within 5 epochs. Other training details include:
+
+\begin{itemize}
+    \item \textbf{Training epochs:} 27 (with early stopping)
+    \item \textbf{Image Height:} 64px (fixed for all croppings)
+    \item \textbf{Aspect Ratio:} 4:1 (allowing for variable width)
+    \item \textbf{Learning Rate:} 0.01 (initial)
+\end{itemize}
+
+\subsection{Fine-tuning TrOCR for Text Recognition}
+
+Following the initial custom \gls{crnn} approach, a second \gls{ocr} model was implemented using Microsoft's TrOCR-small-printed architecture. Unlike the \gls{crnn} model which was trained from scratch, TrOCR was fine-tuned from pre-trained weights, leveraging transfer learning from large-scale printed text datasets.
+
+The fine-tuning was performed on cleaned text crops extracted from the \gls{cghd} dataset. All text crops from a single image were processed in one forward pass, and per-token log-probability was averaged across the generated sequence with following details:
+
+\begin{itemize}
+    \item \textbf{Base model:} Microsoft TrOCR-small-printed (pre-trained)
+    \item \textbf{Fine-tuning epochs:} 3
+    \item \textbf{Checkpoint:} Epoch 2 (best validation performance)
+    \item \textbf{Inference precision:} float16 (half-precision for GPU acceleration)
+    \item \textbf{Maximum output tokens:} 16 (sufficient for values like ``10k$\Omega$'', ``100$\mu$F'')
+\end{itemize}
+
+The TrOCR model is integrated into the pipeline through a singleton service that lazy-loads the processor and model weights when it is first invoked. This ensures efficient memory usage. 
 
 \subsection{Line Detection Algorithm Implementation}
 
@@ -401,11 +436,9 @@ The final step removes spurious connections between endpoints that belong to the
 \end{algorithmic}
 \end{algorithm}
 
-\subsection{Complexity Analysis}
+\subsection{Complexity of Implemented Algorithm}
 
-This subsection analyzes the computational complexity of the line detection pipeline. Let $H, W$ denote the image dimensions, $n$ the number of nodes (endpoints), $r$ the disk radius for node regions, and $P$ the number of skeleton pixels (typically $P \ll H \times W$).
-
-\textbf{Time Complexity:} Table~\ref{tab:time_complexity} summarizes the time complexity of each operation in the pipeline.
+This section analyzes the computational complexity of the line detection pipeline. Let $H, W$ denote the image dimensions, $n$ the number of nodes (endpoints), $r$ the disk radius for node regions, and $P$ the number of skeleton pixels (typically $P \ll H \times W$).
 
 \begin{table}[H]
 \centering
@@ -425,12 +458,7 @@ Self-Edge Removal & $O(m)$ & $m$ = number of endpoint pairs \\
 \end{tabular}
 \end{table}
 
-For typical skeleton images where $P = O(H + W)$ (linear in image perimeter), the overall complexity is:
-\[
-T(n, H, W, r) = O(n \cdot r^2 + n \cdot (H + W)) = O(n \cdot (r^2 + H + W))
-\]
-
-\textbf{Space Complexity:} Table~\ref{tab:space_complexity} details the memory requirements of the algorithm.
+Table~\ref{tab:time_complexity} summarizes the time complexity of each operation in the pipeline.
 
 \begin{table}[H]
 \centering
@@ -452,12 +480,18 @@ Disk Offsets $\mathcal{D}$ & $O(r^2)$ & Precomputed disk mask \\
 \end{tabular}
 \end{table}
 
-The visited array can be reused across BFS calls with a reset, or alternatively, a hash set can be used for sparse skeletons to reduce visited storage to $O(P)$.
+Table~\ref{tab:space_complexity} details the memory requirements of the algorithm.
 
+
+The visited array can be reused across BFS calls with a reset, or alternatively, a hash set can be used for sparse skeletons to reduce visited storage to $O(P)$.
+For typical skeleton images where $P = O(H + W)$ (linear in image perimeter), the overall complexity is:
+\[
+T(n, H, W, r) = O(n \cdot r^2 + n \cdot (H + W)) = O(n \cdot (r^2 + H + W))
+\]
 
 \section{Frontend and Backend Implementation}
 
-The frontend system has been realized using React.js, Chart.js and relevant packages like react-draggable and KiCad Symbol Library. Likewise, the backend of the \gls{circuitron} system exposes a \gls{restful} \gls{api} that manages the complete lifecycle of circuit simulations. The \gls{api} provides endpoints for submitting \gls{spice} netlists, validating circuit syntax, and executing simulations using different analysis modes such as transient, \gls{ac}, and \gls{dc} analysis. 
+The frontend system has been realized using React.js, CircuitJS and relevant packages like react-draggable and KiCad Symbol Library. Likewise, the backend of the circuitron system exposes a \gls{restful} \gls{api} that manages the complete lifecycle of circuit simulations. The \gls{api} provides endpoints for submitting \gls{spice} netlists, validating circuit syntax, and executing simulations using different analysis modes such as transient, \gls{ac}, and \gls{dc} analysis. 
 
 Each simulation request is assigned a unique identifier, enabling asynchronous execution and progress tracking through dedicated status endpoints. The \gls{api} also supports retrieval of detailed simulation results, including time-domain voltage and current data, as well as administrative operations such as stopping running simulations, listing historical simulations, and deleting completed or failed runs. Standard \gls{http} status codes and structured \gls{json} responses are used throughout the \gls{api} to ensure consistency, robust error handling, and seamless integration with the frontend application.
 
@@ -500,9 +534,6 @@ Each simulation request is assigned a unique identifier, enabling asynchronous e
 %     \end{tabular}
 % \end{table}
 
-
-
-
 \subsection{Frontend-Backend Interaction}
 
 \begin{figure}[H]
@@ -511,35 +542,59 @@ Each simulation request is assigned a unique identifier, enabling asynchronous e
     \label{fig:webapp-interaction}
 \end{figure}
 
-The frontend communicates with the backend through \gls{http} requests to the documented endpoints. User inputs from the editable circuit schematic are converted into \gls{spice} netlists and submitted to the simulation endpoint. The frontend periodically polls the status endpoint to track simulation progress, and upon completion, retrieves and visualizes the results using Chart.js for graph generation and React components for interactive display.
+The frontend communicates with the backend through \gls{http} requests to the documented endpoints. User inputs from the editable circuit schematic are converted into \gls{spice} netlists and submitted to the simulation endpoint. The frontend periodically polls the status endpoint to track simulation progress, and upon completion, retrieves and visualizes the results using CircuitJS for graph generation and React components for interactive display.
 
-\section{Circuit Simulation using PySpice}
+\section{Circuit Simulation using CircuitJS}
 
-\gls{pyspice} is a \gls{python} interface to \gls{ngspice} (an open-source simulation engine) that takes in the netlist of the circuit and returns the data required to visualize graphs related to the circuit. The \gls{pyspice} integration allows the backend to programmatically define circuits, run simulations, and extract result data in a structured format suitable for visualization and analysis.
+CircuitJS converts the scanned circuit into matrix-based mathematical equations. This means instead of drawing wires, internally, it builds a numerical model (network graph) of the circuit for simulation. These matrix-based mathematical equations are solved repeatedly in a loop, which is called time-domain simulation. For non-linear components, iterative methods are used until convergence. The integration of CircuitJS into the frontend enables seamless interaction with the simulation backend, allowing users to design circuits, run simulations (visualized with animation), and analyze results without requiring any additional software installations.
 
-\subsection{Netlist to Simulation Results Conversion}
+\section{Error Handling}
 
-The process of converting a circuit netlist to simulation results involves several key steps: parsing the netlist, initializing the simulation environment, configuring analysis parameters, executing the simulation, and extracting the resulting voltage and current data in a format compatible with the frontend visualization system.
+In any project with a number of individual modules working together, the overall error not only comes from said individual modules but also from their integration due to propagating errors from one module to another. To handle errors in such a case, foremost the errors in the output of the individual modules need to be controlled and only then can the accumulated error be kept in check. The performance metrics tabulated in the previous section are to be strictly adhered to if there's any hope of generating the \gls{spice} netlist (and digital schematic) with nominal errors.
+
+For the reduction of false matches and \gls{ocr} noise, post-processing techniques such as value format validation, confidence filtering, and text cleanup can be implemented. Value format validation ensures only strings that match known (and appropriate) electrical units, say $10k$, $1\mu F$, $5V$ are retained. Confidence filtering helps discard \gls{ocr} results with low confidence scores, and text cleanup normalizes ambiguous symbols such as converting ``O'' to ``0'', ``$\mu$'' to ``u''.
+
+A basic pseudocode for sample value format validation is as follows:
 
 \begin{algorithm}
-\caption{\gls{rc} Circuit Transient Simulation and Data Export}
-\label{algo:rc-transient-simulation}
+\caption{Validation and Filtering of OCR Component Values}
+\label{algo:ocr-validation}
 \begin{algorithmic}
-\Require Supply voltage $V_s$, resistance $R$, capacitance $C$, simulation step $\Delta t$, simulation duration $T$
-\Ensure \gls{csv} file containing transient voltage response
-\State Initialize \gls{spice} circuit named \textit{RC Charging Circuit}
-\State Enable logging for simulation diagnostics
-\State \textbf{Define circuit components}
-\State Add \gls{dc} voltage source of magnitude $V_s$ between input node and ground
-\State Connect resistor $R$ between input node and node $n1$
-\State Connect capacitor $C$ between node $n1$ and ground
-\State Initialize simulator with nominal temperature
-\State Perform transient analysis with step size $\Delta t$ up to time $T$
-\State Extract time vector from transient analysis
-\State Extract voltage waveform at node $n1$
-\State Create data table mapping time to voltage
-\State Export data table to \gls{csv} file
-\State \Return Generated \gls{csv} file
+\Require OCR detected text entries $T$
+\Ensure Filtered list of valid component values $V$
+\State Define regular expression patterns for resistance, capacitance, and voltage
+\State $V \leftarrow \emptyset$
+\For{all text entry $t \in T$}
+    \If{$t.\text{text}$ matches any defined pattern}
+        \State Append $t$ to $V$
+    \EndIf
+\EndFor
+\State \Return $V$
 \end{algorithmic}
 \end{algorithm}
 
+The list of components shown here is in no way meant to be exhaustive; rather it is to show how this pseudocode ensures that only valid electrical component values are used in the final component-to-value mapping and schematic generation.
+
+To prevent propagating error (error from the output of YOLOv7 bleeding into \gls{ocr}, for instance), a combined confidence threshold checking mechanism can be implemented which marks an item as uncertain if the confidence score from YOLOv7 is less than a certain value (e.g., 0.6) and the same from \gls{ocr} is less than a certain value (e.g., 0.85). For more robustness, a human-in-the-loop mechanism can be implemented which prompts the user to manually approve or correct \gls{ocr}-predicted values, fix connection errors, etc. This can be implemented to trigger when the confidence score is below the set threshold or when other error handling mechanisms such as value format validation fail. The pseudocode for this is as follows:
+
+\begin{algorithm}
+\caption{Confidence-Based Error Checking and Validation}
+\label{algo:confidence-validation}
+\begin{algorithmic}
+\Require Module outputs $O$, confidence threshold $\omega$, format validation function $f$
+\Ensure Valid outputs $V$ and uncertain outputs $U$
+\State $V \leftarrow \emptyset$
+\State $U \leftarrow \emptyset$
+\For{all item $o \in O$}
+    \If{$o.\text{confidence} \ge \omega \land f(o.\text{value})$}
+        \State Append $o$ to $V$
+    \Else
+        \State Append $o$ to $U$
+    \EndIf
+\EndFor
+\If{$U \ne \emptyset$}
+    \State Trigger manual override
+\EndIf
+\State \Return $(V, U)$
+\end{algorithmic}
+\end{algorithm}

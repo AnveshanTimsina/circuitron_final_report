@@ -33,9 +33,9 @@ Python Programming Language is the heart of the machine learning aspects of the 
 
 The YOLOv7 model is used to detect and classify circuit components in hand-drawn circuit images. It outputs bounding boxes, class labels, and confidence scores for each detected component. After comparison with other version of YOLO (v5, v8, v11), YOLOv7 is selected due to its superior detection accuracy, efficient training capabilities, and support for multiple object scales through its enhanced architecture, while also being of an appropriate size in regards to speed and training time.
 
-\subsection{DTRB Framework-Based OCR}
+\subsection{OCR models}
 
-A \gls{crnn}-based \gls{ocr} model trained from scratch, following the DTRB design philosophy for recognizing text is vital for the project as it is the core technology which reads and understands the component values and units of circuit elements. This has been chosen for the project because, foremost, other ready-made \gls{ocr} models proved to be either too resource-hungry and/or failed to perform well even after some fine-tuning.
+A \gls{crnn}-based \gls{ocr} model trained from scratch, following the DTRB design philosophy for recognizing text is vital for the project as it is the core technology which reads and understands the component values and units of circuit elements. This has been chosen for the project because, foremost, other ready-made \gls{ocr} models proved to be either too resource-hungry and/or failed to perform well even after some fine-tuning. Additionally, a minimally fine-tuned TrOCR model has also been used. The uses essentially gets to choose between a faster but slightly inferior custom OCR model, or a Microsoft-built robust yet slower TrOCR.
 
 \subsection{KiCad Symbol Library}
 

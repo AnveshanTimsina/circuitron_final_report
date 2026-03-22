@@ -103,7 +103,7 @@ The hand-written text recognition is done using a \gls{crnn}-based \gls{ocr} sys
     \label{fig:text-recognition-pipeline}
 \end{figure}
 
-YOLOv7 outputs (bounding box information) help segregate textual information (class `0' in the used dataset) which are then cropped, resized (to image height as 32) and normalized for compatibility with text recognition module. This is then passed through to a \gls{crnn} architecture composed of a Convolutional Encoder, Sequence Modeling Engine with Linear Projection, and \gls{ctc} Decoder as shown in Figure \ref{fig:text-recognition-pipeline}.
+YOLOv7 outputs (bounding box information) help segregate textual information (class `0' in the used dataset) which are then cropped, resized (to image height as 64) and normalized for compatibility with text recognition module. This is then passed through to a \gls{crnn} architecture composed of a Convolutional Encoder, Sequence Modeling Engine with Linear Projection, and \gls{ctc} Decoder as shown in Figure \ref{fig:text-recognition-pipeline}.
 
 \textbf{Convolutional Encoder (CNN):} A \gls{cnn} stack (e.g., VGG) transforms input image $I$ from multi-dimensional $\mathbb{R}^{H \times W \times C}$ to feature maps:
 
@@ -137,7 +137,7 @@ The \gls{ctc} loss is given by the negative logarithm of $P(z \mid y)$. It enabl
 
 During inference, greedy decoding strategy is used which selects the most-probable character at each time step while removing blank symbols and collapsing consecutive duplicate characters. The recognized text then needs to be mapped to the appropriate circuit component whose value it represents.
 
-This project includes two separate OCR models for character recognition, the second one being TrOCR (TrOCR-base to be exact) developed by Microsoft, specifically for handwritten text. 
+This project includes two separate OCR models for character recognition, the second one being TrOCR (TrOCR-small to be exact) developed by Microsoft, specifically for handwritten text. 
 
 \begin{figure}[H]
     \centering
@@ -638,179 +638,6 @@ Precision measures how many detected terminals (or nodes) are correct whereas re
 
 Terminals define where components connect to wires, which influences circuit structure. High precision ensures the system doesn't falsely identify noise as terminals, avoiding wrong wire mappings. High recall ensures the system doesn't miss valid terminal points, which would cause incomplete circuits. Likewise, missing nodes can create open circuits, and false nodes can misrepresent actual connectivity. So high values of both precision and recall are crucial for both terminal and node detection.
 
-\section{Error Handling}
-
-In any project with a number of individual modules working together, the overall error not only comes from said individual modules but also from their integration due to propagating errors from one module to another. To handle errors in such a case, foremost the errors in the output of the individual modules need to be controlled and only then can the accumulated error be kept in check. The performance metrics tabulated in the previous section are to be strictly adhered to if there's any hope of generating the \gls{spice} netlist (and digital schematic) with nominal errors.
-
-For the reduction of false matches and \gls{ocr} noise, post-processing techniques such as value format validation, confidence filtering, and text cleanup can be implemented. Value format validation ensures only strings that match known (and appropriate) electrical units, say $10k$, $1\mu F$, $5V$ are retained. Confidence filtering helps discard \gls{ocr} results with low confidence scores, and text cleanup normalizes ambiguous symbols such as converting ``O'' to ``0'', ``$\mu$'' to ``u''.
-
-A basic pseudocode for sample value format validation is as follows:
-
-\begin{algorithm}
-\caption{Validation and Filtering of OCR Component Values}
-\label{algo:ocr-validation}
-\begin{algorithmic}
-\Require OCR detected text entries $T$
-\Ensure Filtered list of valid component values $V$
-\State Define regular expression patterns for resistance, capacitance, and voltage
-\State $V \leftarrow \emptyset$
-\For{all text entry $t \in T$}
-    \If{$t.\text{text}$ matches any defined pattern}
-        \State Append $t$ to $V$
-    \EndIf
-\EndFor
-\State \Return $V$
-\end{algorithmic}
-\end{algorithm}
-
-The list of components shown here is in no way meant to be exhaustive; rather it is to show how this pseudocode ensures that only valid electrical component values are used in the final component-to-value mapping and schematic generation.
-
-To prevent propagating error (error from the output of YOLOv7 bleeding into \gls{ocr}, for instance), a combined confidence threshold checking mechanism can be implemented which marks an item as uncertain if the confidence score from YOLOv7 is less than a certain value (e.g., 0.6) and the same from \gls{ocr} is less than a certain value (e.g., 0.85). For more robustness, a human-in-the-loop mechanism can be implemented which prompts the user to manually approve or correct \gls{ocr}-predicted values, fix connection errors, etc. This can be implemented to trigger when the confidence score is below the set threshold or when other error handling mechanisms such as value format validation fail. The pseudocode for this is as follows:
-
-\begin{algorithm}
-\caption{Confidence-Based Error Checking and Validation}
-\label{algo:confidence-validation}
-\begin{algorithmic}
-\Require Module outputs $O$, confidence threshold $\omega$, format validation function $f$
-\Ensure Valid outputs $V$ and uncertain outputs $U$
-\State $V \leftarrow \emptyset$
-\State $U \leftarrow \emptyset$
-\For{all item $o \in O$}
-    \If{$o.\text{confidence} \ge \omega \land f(o.\text{value})$}
-        \State Append $o$ to $V$
-    \Else
-        \State Append $o$ to $U$
-    \EndIf
-\EndFor
-\If{$U \ne \emptyset$}
-    \State Trigger manual override
-\EndIf
-\State \Return $(V, U)$
-\end{algorithmic}
-\end{algorithm}
-
-\subsection{Image Augmentation}
-
-Since the dataset contains handwritten circuit diagrams captured under variable lighting and orientations, several augmentation techniques were applied to improve model generalization including Contrast Enhancement (global) and Adaptive Brightness Adjustment by factors of 0.8 and 1.2. Furthermore, geometric augmentation techniques, like spatial flipping (both horizontally and vertically) and rotation (e.g., $90^\circ$ or random rotation) proved to be unwise operations for this project. For example, if a ``C'' is rotated by $90^\circ$, the ``C'' now resembles a ``U'', and the same applies to flipping (``M'' might look like ``W'', for example). Rather than increasing accuracy, it was realized that using rotation or flipping would simply confuse the model. However, continuous testing with other forms of augmentation will continue in hopes of improving the model.
-
-\subsection{Fine-tuning YOLOv5 and YOLOv7 for Component Detection}
-
-YOLOv5 was initially used for benchmarking, and later upgraded to YOLOv7 for better accuracy and inference speed (comparison shown in the Results section). Training and fine-tuning were done using the \gls{cghd} dataset after converting into \gls{yolo}-compatible format.
-
-The training parameters employed are as follows:
-
-\begin{itemize}
-    \item \textbf{Number of classes:} 61
-    \item \textbf{Training split:} 70\% training, 10\% validation, 20\% testing
-    \item \textbf{Epochs:} 200 (for YOLOv5), 100 (for YOLOv7)
-    \item \textbf{Image size:} $416 \times 416$ pixels
-    \item \textbf{Batch size:} 16 (for YOLOv5), 32 (for YOLOv7)
-    \item \textbf{Optimizer:} \gls{sgd} (Stochastic Gradient Descent)
-    \item \textbf{Learning rate:} 0.01 (initial)
-    \item \textbf{Augmentations used in training:} Mosaic Augmentation, \gls{hsv} Augmentation, Random rotating/flipping
-\end{itemize}
-
-\subsection{Implementation of Text Recognition (OCR)}
-
-To extract textual information such as resistor values, capacitor labels, and other component annotations from the circuit diagrams, a \gls{crnn}-based custom \gls{ocr} model was chosen, trained and implemented. The input image in cropped form (cropped for each text component) was passed through this model after training, which returned the content of each detected text element. The position of said text element, however, was found using bounding boxes from YOLOv7. This allowed us to localize and read numerical values or labels directly from the circuit.
-
-Three different modules, each for feature extraction, sequence modeling, and prediction were trained based on the DTRB framework. Initially, simply fine-tuning \gls{ocr} models like TrOCR and EasyOCR were also attempted; however, these didn't yield usable results, ultimately requiring training from scratch. The training was done for 29 epochs.
-
-\subsection{Line Detection Algorithm Implementation}
-
-The line detection mechanism was engineered to exploit the semantic constraints of circuit diagrams, specifically that wires are predominantly axis-aligned (horizontal or vertical) and connect distinct components. Unlike the Probabilistic Hough Transform (\gls{pht}) which operates purely on pixel gradients, this approach uses the junction points detected by YOLOv7 as anchor nodes to reconstruct the wiring layout geometrically.
-
-First, a pairwise analysis was performed on all junction points identified by the object detection model. The algorithm iterates through every unique pair of junctions to calculate the angle of the vector connecting them. Since hand-drawn circuits contain imperfections, an angular tolerance of $\pm 18^\circ$ was applied to classify connections as either horizontal or vertical. To ensure coordinate consistency across the diagram, the resulting segment coordinates were ``snapped'' to a grid using a 16-pixel quantization.
-
-\begin{algorithm}
-\caption{Wire Classification and Alignment}
-\label{algo:wire-classification}
-\begin{algorithmic}
-\Require Set of junctions $J$, angular tolerance $\omega_{\text{tol}} = 18^\circ$, grid size $g = 16$
-\Ensure Set of raw wire segments $S$
-\State $S \leftarrow \emptyset$
-\For{all pairs $(j_a, j_b) \in \text{Combinations}(J, 2)$}
-    \State $\Delta x \leftarrow j_b.x - j_a.x$
-    \State $\Delta y \leftarrow j_b.y - j_a.y$
-    \State $\theta \leftarrow \text{atan2}(\Delta y, \Delta x)$
-    \If{$|\theta| \le \omega_{\text{tol}} \lor |\theta - 180^\circ| \le \omega_{\text{tol}}$}
-        \State \textbf{Horizontal alignment check}
-        \State $y_{\text{avg}} \leftarrow \frac{j_a.y + j_b.y}{2}$
-        \State $y_{\text{snap}} \leftarrow \text{Round}\left(\frac{y_{\text{avg}}}{g}\right) \times g$
-        \State $S \leftarrow S \cup \{(H, y_{\text{snap}}, \min(j_a.x, j_b.x), \max(j_a.x, j_b.x))\}$
-    \ElsIf{$|\theta - 90^\circ| \le \omega_{\text{tol}} \lor |\theta - 270^\circ| \le \omega_{\text{tol}}$}
-        \State \textbf{Vertical alignment check}
-        \State $x_{\text{avg}} \leftarrow \frac{j_a.x + j_b.x}{2}$
-        \State $x_{\text{snap}} \leftarrow \text{Round}\left(\frac{x_{\text{avg}}}{g}\right) \times g$
-        \State $S \leftarrow S \cup \{(V, x_{\text{snap}}, \min(j_a.y, j_b.y), \max(j_a.y, j_b.y))\}$
-    \EndIf
-\EndFor
-\State \Return $S$
-\end{algorithmic}
-\end{algorithm}
-
-A common issue with the pairwise approach is the generation of redundant, overlapping segments for the same wire. For instance, if three junctions lie on a single line, the algorithm produces three separate segments (A-B, B-C, and A-C). To combat this, a collinear segment merging algorithm was implemented.
-
-The segments were first separated by orientation (horizontal/vertical) and sorted by their primary axis. The merging logic then consolidated overlapping or adjacent segments. Crucially, a length-weighted heuristic was used: when merging, the axis coordinate of the longer segment was preserved, ensuring that larger, more reliable strokes dictated the final geometric alignment.
-
-\begin{algorithm}
-\caption{Collinear Segment Merging}
-\label{algo:segment-merging}
-\begin{algorithmic}
-\Require List of segments $L$, gap tolerance $\omega$
-\Ensure List of merged segments $M$
-\State Sort $L$ by primary axis, then by starting coordinate
-\State $M \leftarrow \emptyset$
-\State $\text{curr} \leftarrow L[0]$
-\For{all $\text{next} \in L[1 \ldots N]$}
-    \If{$|\text{curr.axis} - \text{next.axis}| \le \omega \land \text{next.start} \le \text{curr.end} + \omega$}
-        \State $\text{curr.start} \leftarrow \min(\text{curr.start}, \text{next.start})$
-        \State $\text{curr.end} \leftarrow \max(\text{curr.end}, \text{next.end})$
-        \If{$\text{Length}(\text{next}) > \text{Length}(\text{curr})$}
-            \State \textbf{Preserve axis of the longer segment}
-            \State $\text{curr.axis} \leftarrow \text{next.axis}$
-        \EndIf
-    \Else
-        \State $M \leftarrow M \cup \{\text{curr}\}$
-        \State $\text{curr} \leftarrow \text{next}$
-    \EndIf
-\EndFor
-\State $M \leftarrow M \cup \{\text{curr}\}$
-\State \Return $M$
-\end{algorithmic}
-\end{algorithm}
-
-The wire–component intersection detection algorithm identifies precise connection points between detected wire segments and component bounding boxes. Component regions are first extracted from YOLOv7 annotations and converted into pixel coordinates. Each horizontal and vertical wire is then tested for geometric intersection with the edges of every component box. The resulting intersection points are used to accurately map circuit connectivity and are optionally visualized for verification in the frontend.
-
-\begin{algorithm}
-\caption{Wire–Component Intersection Detection}
-\label{algo:wire-component-intersection}
-\begin{algorithmic}
-\Require Wire segments $W$, \gls{yolo} label file $L$, image width $I_w$, image height $I_h$
-\Ensure Set of intersection points $P$
-\State Parse label file $L$
-\State Convert normalized bounding boxes to pixel coordinates
-\State Discard non-component classes
-\State Store component boxes $B$
-\State \textbf{Detect intersections between wires and components}
-\State $P \leftarrow \emptyset$
-\For{all wire $w \in W$}
-    \For{all box $b \in B$}
-        \If{$w$ is horizontal and crosses left or right edge of $b$}
-            \State Add intersection point to $P$
-        \ElsIf{$w$ is vertical and crosses top or bottom edge of $b$}
-            \State Add intersection point to $P$
-        \EndIf
-    \EndFor
-\EndFor
-\State Draw wires, component boxes, and intersection points on image
-\State Save output visualization
-\State \Return $P$
-\end{algorithmic}
-\end{algorithm}
-
-While detecting terminals, a method to ensure faulty values are not accepted is to count the terminals. Unless a few three-terminal components are used, the number of terminals is likely to be even, so a mismatch in this could potentially indicate an error. In such cases, the detection can be re-run and/or the user can be notified. In case of failure to detect or associate a value, and if other error-handling mechanisms are not triggered, a placeholder can be used (e.g., $R1 = \text{UNKNOWN}$), and the system allows manual user correction before simulation as a last resort.
-
 \section{System Flowchart}
 
 \begin{figure}[H]
@@ -820,7 +647,7 @@ While detecting terminals, a method to ensure faulty values are not accepted is 
     \label{fig:system-flowchart}
 \end{figure}
 
-The key architectural modules involved in the working of the system have been demonstrated by the block diagram in Figure~\ref{fig:block-diagram-circuitron}. Now, the flowchart in Figure~\ref{fig:system-flowchart} demonstrates the motions a user needs to go through to use the final product. First, the user needs to be authenticated (optional). Once the image of a hand-drawn circuit is uploaded, the system processes the image (internally using the techniques explained in the previous sections) and returns an editable schematic. Any necessary update or correction may be performed if necessary and then the schematic can be submitted for simulation and analysis. Relevant graphs are returned after analysis and the result can be saved for later access.
+The key architectural modules involved in the working of the system have been demonstrated by the block diagram in Figure~\ref{fig:block-diagram-circuitron}. Now, the flowchart in Figure~\ref{fig:system-flowchart} demonstrates the motions a user needs to go through to use the final product. Once the image of a hand-drawn circuit is uploaded, the system processes the image (internally using the techniques explained in the previous sections) and returns an editable schematic. Any necessary update or correction may be performed if necessary and then the schematic can be submitted for simulation and analysis. Relevant graphs are returned after analysis.
 
 \section{Dataset Analysis}
 
