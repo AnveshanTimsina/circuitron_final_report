@@ -58,6 +58,7 @@
 \glossaryentry{DOM?\glossentry{dom}|setentrycounter[]{page}"\glsnumberformat}{11}
 \glossaryentry{API?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{11}
 \glossaryentry{Python?\glossentry{python}|setentrycounter[]{page}"\glsnumberformat}{11}
+\glossaryentry{REST?\glossentry{rest}|setentrycounter[]{page}"\glsnumberformat}{11}
 \glossaryentry{API?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{11}
 \glossaryentry{API?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{11}
 \glossaryentry{ASGI?\glossentry{asgi}|setentrycounter[]{page}"\glsnumberformat}{11}
@@ -95,6 +96,7 @@
 \glossaryentry{JSON?\glossentry{json}|setentrycounter[]{page}"\glsnumberformat}{23}
 \glossaryentry{JSON?\glossentry{json}|setentrycounter[]{page}"\glsnumberformat}{23}
 \glossaryentry{ML?\glossentry{ml}|setentrycounter[]{page}"\glsnumberformat}{24}
+\glossaryentry{REST?\glossentry{rest}|setentrycounter[]{page}"\glsnumberformat}{24}
 \glossaryentry{API?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{24}
 \glossaryentry{API?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{24}
 \glossaryentry{API?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{24}
@@ -145,7 +147,7 @@
 \glossaryentry{CGHD?\glossentry{cghd}|setentrycounter[]{page}"\glsnumberformat}{40}
 \glossaryentry{PHT?\glossentry{pht}|setentrycounter[]{page}"\glsnumberformat}{41}
 \glossaryentry{YOLO?\glossentry{yolo}|setentrycounter[]{page}"\glsnumberformat}{43}
-\glossaryentry{RESTful?\glossentry{restful}|setentrycounter[]{page}"\glsnumberformat}{47}
+\glossaryentry{REST?\glossentry{rest}|setentrycounter[]{page}"\glsnumberformat}{47}
 \glossaryentry{API?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{47}
 \glossaryentry{API?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{47}
 \glossaryentry{AC?\glossentry{ac}|setentrycounter[]{page}"\glsnumberformat}{47}
@@ -214,5 +216,5 @@
 \glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{65}
 \glossaryentry{YOLO?\glossentry{yolo}|setentrycounter[]{page}"\glsnumberformat}{65}
 \glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{65}
-\glossaryentry{CIRCUITRON?\glossentry{circuitron}|setentrycounter[]{page}"\glsnumberformat}{73}
+\glossaryentry{CIRCUITRON?\glossentry{circuitron}|setentrycounter[]{page}"\glsnumberformat}{74}
 \glossaryentry{RMS?\glossentry{rms}|setentrycounter[]{page}"\glsnumberformat}{74}

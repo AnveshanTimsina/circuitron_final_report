@@ -1,6 +1,6 @@
 \chapter{Introduction}
 
-\noindent ``CIRCUITRON: Circuit Recognition, Transformation, and Analysis'' is a system to convert hand-drawn electrical circuit diagrams into CircuitJS-compatible text files enabling simulation and graphical analysis along with digital visualization of the circuit in an editable schematic. The system also integrates a prompt-based \gls{ai} assistant (Deepseek v3.1) to help answer queries related to the relevant circuit.
+\noindent ``CIRCUITRON: Circuit Recognition, Transformation, and Analysis'' is a system to convert hand-drawn electrical circuit diagrams into CircuitJS-compatible text files enabling simulation and graphical analysis along with digital visualization of the circuit in an editable schematic. The system also integrates a prompt-based \gls{ai} assistant (DeepSeek v3.1) to help answer queries related to the relevant circuit.
 
 \section{Background Information}
 
@@ -23,7 +23,7 @@ The \gls{eda} tools currently available do not support the direct transformation
 \section{Project Objectives}
 
 \begin{itemize}
-    \item To automatically convert hand-drawn circuit diagrams into CircitJS-compatible text files for simulation.
+    \item To automatically convert hand-drawn circuit diagrams into CircuitJS-compatible text files for simulation.
     \item To visualize the circuit in an editable schematic in addition to an \gls{ai} assistant for handling simple, relevant queries.
 \end{itemize}
 
@@ -31,7 +31,7 @@ The \gls{eda} tools currently available do not support the direct transformation
 
 \subsection{Project Scope}
 
-This project focuses on the development of a software pipeline that accepts scanned or photographed images of hand-drawn electrical circuits and transforms them into CircuitJS-compatible netlists for simulation as well as editable schematics through an intermediate integrated data structure to facilitate the transformation. The scope includes detecting common circuit components and their values in mentioned units, inferring wire connectivity with junction recognition and generating a circuit diagram with simulation capabilities. Additionally, the system incorporates an \gls{llm}-based query-solving \gls{ai} assistant. The system will support basic circuits and components but will exclude any form of advanced circuit transformation and analysis such as in circuits associated with \gls{rf}, mixed-signal, or \gls{pcb} designs.
+This project focuses on the development of a software pipeline that accepts scanned or photographed images of hand-drawn electrical circuits and transforms them into CircuitJS-compatible netlists for simulation as well as editable schematics through an intermediate integrated data structure to facilitate the transformation. The scope includes detecting common circuit components and their values in mentioned units, inferring wire connectivity with junction recognition and generating a circuit diagram with simulation capabilities. Additionally, the system incorporates an \gls{llm}-based query-solving \gls{ai} assistant. The system supports basic circuits and components but excludes any form of advanced circuit transformation and analysis such as in circuits associated with \gls{rf}, mixed-signal, or \gls{pcb} designs.
 
 \subsection{Project Applications}
 

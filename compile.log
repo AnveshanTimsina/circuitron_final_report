@@ -589,14 +589,6 @@ atex/bookmark/bookmark.sty
 atex/bookmark/bkm-pdftex.def))
 (/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
 atex/psnfss/t1ptm.fd) (main.aux)
-Runaway argument?
-{\contentsline {figure}{\numberline {6-3}{\ignorespaces Training loss\ETC.
-! File ended while scanning use of \@writefile.
-<inserted text> 
-                \par 
-l.27 \begin{document}
-                     
-
 (/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
 atex/newtx/omlntxmi.fd)
 (/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
@@ -656,15 +648,25 @@ atex/psnfss/t1phv.fd)) (src/frontmatter/certificate.tex
 [2]) (src/frontmatter/acknow.tex
 [3]) (src/frontmatter/abstract.tex
 [4]) (src/frontmatter/toc.tex
-[5] (main.toc)
-[6] (main.lof)
-[7] (main.lot)
-[8] (main.acr
+[5] (main.toc
+[6])
+[7] (main.lof
+[8])
+[9] (main.lot)
+[10] (main.acr
 Overfull \hbox (8.86247pt too wide) in paragraph at lines 35--35
 []|\T1/ptm/m/n/12 (-20) CIRCUITRON| 
 
-[9])
-[10]) (src/chapters/intro.tex
+Package glossaries Warning: Glossary entry `restful' has not been defined on in
+put line 174.
+
+
+Package glossaries Warning: Glossary entry `restful' has not been defined on in
+put line 174.
+
+
+[11])
+[12]) (src/chapters/intro.tex
 chapter 1.
 
 LaTeX Warning: Citation `reddy2021handdrawn' on page 1 undefined on input line 
@@ -1846,211 +1848,56 @@ chapter 6.
 
 [51]
 [52]
-[53 <./src/images/figures/yolo_15class_train_loss.png>]
-
-LaTeX Warning: Reference `fig:15class-train-loss' on page 1 undefined on input 
-line 197.
-
-
-LaTeX Warning: Reference `fig:15class-val-loss' on page 1 undefined on input li
-ne 197.
-
-
-LaTeX Warning: Reference `fig:15class-training-curves' on page 1 undefined on i
-nput line 208.
-
-
-[54 <./src/images/figures/yolo_15class_val_loss.png> <./src/images/figures/yolo
-_15class_training_curves.png>]
-
-LaTeX Warning: Reference `table:yolo-15class-comparison' on page 1 undefined on
- input line 236.
-
-
-LaTeX Warning: Reference `fig:15class-final-bar' on page 1 undefined on input l
-ine 236.
-
-
+[53 <./src/images/figures/yolo_15class_train_loss.png> <./src/images/figures/yo
+lo_15class_val_loss.png>]
+[54 <./src/images/figures/yolo_15class_training_curves.png>]
 [55 <./src/images/figures/yolo_15class_final_bar.png>]
-
-LaTeX Warning: Reference `fig:class-impact' on page 1 undefined on input line 2
-63.
-
-
-LaTeX Warning: Reference `table:class-impact' on page 1 undefined on input line
- 263.
-
-
-Overfull \hbox (7.59256pt too wide) in paragraph at lines 271--283
+Overfull \hbox (7.59256pt too wide) in paragraph at lines 268--280
  [][] 
 
 [56 <./src/images/figures/yolo_class_impact.png>]
-
-LaTeX Warning: Reference `table:yolo-full-comparison' on page 1 undefined on in
-put line 292.
-
-
-LaTeX Warning: Reference `fig:yolo-full-bar' on page 1 undefined on input line 
-292.
-
-
 [57 <./src/images/figures/yolo_full_comparison_bar.png>]
-
-LaTeX Warning: Reference `fig:yolo-evolution' on page 1 undefined on input line
- 303.
-
-
 [58 <./src/images/figures/yolo_evolution_timeline.png>]
-
-LaTeX Warning: Reference `fig:yolo-radar' on page 1 undefined on input line 314
-.
-
-
 [59 <./src/images/figures/yolo_radar_comparison.png>]
-
-LaTeX Warning: Reference `fig:confusion-matrix-retrained-yolov7' on page 1 unde
-fined on input line 327.
-
-
 [60 <./src/images/figures/confusion_matrix_retrained_yolov7.png>]
-
-LaTeX Warning: Reference `fig:retrained-yolov7-result-1' on page 1 undefined on
- input line 344.
-
-
-LaTeX Warning: Reference `fig:retrained-yolov7-result-2' on page 1 undefined on
- input line 344.
-
-
 [61 <./src/images/figures/retrained_yolov7_result1.png (PNG copy)> <./src/image
 s/figures/retrained_yolov7_result2.png (PNG copy)>]
-
-LaTeX Warning: Reference `fig:custom-ocr-loss-curve' on page 1 undefined on inp
-ut line 356.
-
-
 [62 <./src/images/figures/custom_OCR_loss_curve.png>]
 
-LaTeX Warning: Reference `fig:ocr-performance-metrics' on page 1 undefined on i
-nput line 368.
-
-
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\gls' on input line 372.
+(hyperref)                removing `\gls' on input line 369.
 
 
 [63 <./src/images/figures/cer_wer.png>]
-
-LaTeX Warning: Reference `table:ocr-comparison' on page 1 undefined on input li
-ne 434.
-
-
-LaTeX Warning: Reference `fig:ocr-bar-chart' on page 1 undefined on input line 
-434.
-
-
 [64]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\gls' on input line 436.
+(hyperref)                removing `\gls' on input line 433.
 
 
 [65 <./src/images/figures/custom_ocr_result1.png (PNG copy)>]
 [66 <./src/images/figures/trocr_result1.png (PNG copy)> <./src/images/figures/c
 ustom_ocr_result2.png (PNG copy)>]
-
-LaTeX Warning: Reference `fig:custom-ocr-result-1' on page 1 undefined on input
- line 468.
-
-
-LaTeX Warning: Reference `fig:custom-ocr-result-2' on page 1 undefined on input
- line 468.
-
-
-LaTeX Warning: Reference `fig:trocr-result-1' on page 1 undefined on input line
- 468.
-
-
-LaTeX Warning: Reference `fig:trocr-result-2' on page 1 undefined on input line
- 468.
-
-
 [67 <./src/images/figures/trocr_result2.png (PNG copy)>]
-
-LaTeX Warning: File `src/images/figures/skeletonization.png' not found on input
- line 496.
-
-
-! Package pdftex.def Error: File `src/images/figures/skeletonization.png' not f
-ound: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.496 ...]{src/images/figures/skeletonization.png}
-                                                  
-
 [68 <./src/images/figures/otsu_thresholding.png>]
-[69]
-[70 <./src/images/figures/component_removal.png>]
-[71 <./src/images/figures/wire_classification.png>]
-[72 <./src/images/figures/segment_consolidation.png>]
-[73 <./src/images/figures/bounding_box_overlay.png>]
-
-LaTeX Warning: Reference `fig:skeleton_endpoints' on page 74 undefined on input
- line 570.
-
-
-[74 <./src/images/figures/wire_component_intersection_detection.png>]
-
-LaTeX Warning: Reference `fig:adjacency_graph' on page 75 undefined on input li
-ne 581.
-
-
-[75 <./src/images/figures/skeleton_with_endpoints.png>]
-[76 <./src/images/figures/adjacency_graph.png>]
-
-LaTeX Warning: Reference `fig:vdivider-skeleton' on page 1 undefined on input l
-ine 614.
-
-
-LaTeX Warning: Reference `fig:vdivider-skeleton-endpoints' on page 1 undefined 
-on input line 614.
-
-
-[77 <./src/images/figures/frontend_circuit.png> <./src/images/figures/frontend_
-simulation.png>]
-
-LaTeX Warning: Reference `fig:vdivider-adjacency' on page 1 undefined on input 
-line 630.
-
-
-[78 <./src/images/figures/skeletonvdivider.png> <./src/images/figures/skeletonw
-ithendpointvdivider.png>]
-
-LaTeX Warning: Reference `fig:vdivider-frontend-mapped' on page 1 undefined on 
-input line 639.
-
-
-LaTeX Warning: Reference `fig:vdivider-simulation' on page 1 undefined on input
- line 648.
-
-
-[79 <./src/images/figures/adjancyvdivider.png> <./src/images/figures/frontendal
-lcomponentsmappedvdivider.png>]) (src/chapters/futureEnhancements.tex
-[80 <./src/images/figures/simulatefrontendvdivider.png>]
+[69 <./src/images/figures/bounding_box_overlay.png>]
+[70 <./src/images/figures/skeleton_with_endpoints.png (PNG copy)>]
+[71 <./src/images/figures/adjacency_graph.png>]
+[72 <./src/images/figures/combined_overlay.png (PNG copy)>]
+[73 <./src/images/figures/frontend_circuit.png> <./src/images/figures/frontend_
+screenshot.png>]) (src/chapters/futureEnhancements.tex
+[74]
 chapter 7.
 )
-[81] (src/chapters/conclusion.tex
-[82]
+[75] (src/chapters/conclusion.tex
+[76]
 chapter 8.
 )
-[83]
+[77]
 chapter 9.
 (src/backmatter/back.tex
-[84]) (main.bbl)
-[85 <./src/images/figures/gantt.png>] (main.aux)
+[78]) (main.bbl)
+[79 <./src/images/figures/gantt.png>] (main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -2075,5 +1922,5 @@ ntimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/time
 s/utmri8a.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs
 /install/fonts/type1/public/newtx/ztmb.pfb></Users/anveshantimsina/Library/Appl
 ication Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (97 pages, 12950612 bytes).
+Output written on main.pdf (93 pages, 12076456 bytes).
 Transcript written on main.log.

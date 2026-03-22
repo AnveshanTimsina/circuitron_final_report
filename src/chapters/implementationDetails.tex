@@ -535,7 +535,7 @@ The algorithm evaluates all three possible pairings of the four neighbors and se
 
 \section{Frontend and Backend Implementation}
 
-The frontend system has been realized using React.js, CircuitJS and relevant packages like react-draggable and KiCad Symbol Library. Likewise, the backend of the circuitron system exposes a \gls{restful} \gls{api} that manages the complete lifecycle of circuit simulations. The \gls{api} provides endpoints for submitting CircuitJS-compatible text files, validating circuit syntax, and executing simulations using different analysis modes such as transient, \gls{ac}, and \gls{dc} analysis. 
+The frontend system has been realized using React.js, CircuitJS and relevant packages like react-draggable and KiCad Symbol Library. Likewise, the backend of the circuitron system exposes a \gls{rest} \gls{api} that manages the complete lifecycle of circuit simulations. The \gls{api} provides endpoints for submitting CircuitJS-compatible text files, validating circuit syntax, and executing simulations using different analysis modes such as transient, \gls{ac}, and \gls{dc} analysis. 
 
 Each simulation request is assigned a unique identifier, enabling asynchronous execution and progress tracking through dedicated status endpoints. The \gls{api} also supports retrieval of detailed simulation results, including time-domain voltage and current data, as well as administrative operations such as stopping running simulations, listing historical simulations, and deleting completed or failed runs. Standard \gls{http} status codes and structured \gls{json} responses are used throughout the \gls{api} to ensure consistency, robust error handling, and seamless integration with the frontend application.
 

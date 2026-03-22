@@ -109,5 +109,4 @@
 \contentsline {chapter}{\numberline {9}APPENDICES}{78}{chapter.9}%
 \contentsline {section}{Appendix A: Project Budget}{78}{chapter.9}%
 \contentsline {section}{Appendix B: Gantt Chart}{79}{table.caption.63}%
-\contentsline {chapter}{\nonumberline REFERENCES}{80}{chapter*.65}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

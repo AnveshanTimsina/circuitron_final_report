@@ -185,7 +185,7 @@ The resulting terminal points form a complete connectivity interface between wir
 
 \subsection{Integration Algorithm}
 
-From the individual outputs from each of the aforementioned modules, the task is now to generate a structured \gls{json} representation of the circuit which will be used to generate a corresponding CircuitJS-compatible text file and also contribute in the schematic generation further down the line.
+From the individual outputs from each of the aforementioned modules, the task is now to generate a structured \gls{json} representation of the circuit which has is to be used to generate a corresponding CircuitJS-compatible text file and also contribute in the schematic generation further down the line.
 
 The integration between all these different outputs, in a simplistic form, would consist of the following steps:
 
@@ -238,7 +238,7 @@ The \gls{json} file built by integrating all the information about the hand-draw
 
 \subsection{Backend Development}
 
-The backend has been constructed using Next.js and FastAPI, functioning as the core middleware responsible for routing, and processing the system's \gls{ml} pipeline and user interactions. All endpoints follow a RESTful \gls{api} design, ensuring stateless and scalable communication between the frontend and the server.
+The backend has been constructed using Next.js and FastAPI, functioning as the core middleware responsible for routing, and processing the system's \gls{ml} pipeline and user interactions. All endpoints follow a \gls{rest} \gls{api} design, ensuring stateless and scalable communication between the frontend and the server.
 
 Upon receiving a hand-drawn circuit image through an \gls{api} endpoint like \texttt{/upload}, the image is saved to a temporary storage location. The server invokes the YOLOv7 model (via a Python subprocess or containerized inference \gls{api}) to detect and localize electrical components. Simultaneously, the \gls{ocr} model is invoked to extract nearby textual annotations. The result is a list of components with bounding boxes and a list of recognized texts, each with confidence scores and coordinates.
 
@@ -246,7 +246,7 @@ Support for user interaction with the schematic is also handled by the backend. 
 
 \subsection{LLM Integration}
 
-To enhance interaction with the circuit beyond \gls{gui} manipulation, a large language model (\gls{llm}), Deepseek v3.1 to be exact is integrated. This makes the "analysis" part of the project a reality. It is responsible for handling user queries, such as, ``Explain the purpose of this resistor.'', ``Identify possible errors in this circuit.'', etc. The agent receives contextual data from the backend (such as the circuit's \gls{json} structure or CircuitJS file), formats the prompt, and forwards it to the \gls{llm} through a secure \gls{api}.
+To enhance interaction with the circuit beyond \gls{gui} manipulation, a large language model (\gls{llm}), DeepSeek v3.1 to be exact is integrated. This makes the "analysis" part of the project a reality. It is responsible for handling user queries, such as, ``Explain the purpose of this resistor.'', ``Identify possible errors in this circuit.'', etc. The agent receives contextual data from the backend (such as the circuit's \gls{json} structure or CircuitJS file), formats the prompt, and forwards it to the \gls{llm} through a secure \gls{api}.
 
 \section{Line Detection}
 
@@ -393,7 +393,7 @@ In order to develop the system using the system for automated circuit diagram un
 
 \subsection{Dataset Overview}
 
-The \gls{cghd} dataset comprises 4.99 GB of annotated data spanning over 3,000 raw images. The data is separated into folders named drafters, going from $-1$ through 31, and each drafter folder contains hand-sketches of 12 unique circuit designs, with each circuit drawn twice and captured under four different conditions (varying angles, lighting, and minor distortions), resulting in up to 96 images per drafter. As is convention, the dataset is to be split into (70-20-10)\% of the entire data for training, validation and testing respectively.
+The \gls{cghd} dataset comprises 4.99 GB of annotated data spanning over 3,000 raw images. The data is separated into folders named drafters, going from $-1$ through 31, and each drafter folder contains hand-sketches of 12 unique circuit designs, with each circuit drawn twice and captured under four different conditions (varying angles, lighting, and minor distortions), resulting in up to 96 images per drafter. As is convention, the dataset is to be split into (70-10-20)\% of the entire data for training, validation and testing respectively.
 
 \begin{table}[H]
     \centering
