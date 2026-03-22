@@ -246,7 +246,7 @@ Support for user interaction with the schematic is also handled by the backend. 
 
 \subsection{LLM Integration}
 
-To enhance interaction with the circuit beyond \gls{gui} manipulation, a large language model (\gls{llm}) is to be integrated, facilitated through LangChain and LangGraph. LangChain constructs the agent architecture responsible for handling user queries, such as, ``Explain the purpose of this resistor.'', ``Identify possible errors in this circuit.'', etc. The agent receives contextual data from the backend (such as the circuit's \gls{json} structure or CircuitJS file), formats the prompt, and forwards it to the \gls{llm} through a secure \gls{api}. LangGraph manages the session state, context memory, and branching logic for multi-turn conversations. This enables the system to remember previously discussed components or simulation outputs across queries.
+To enhance interaction with the circuit beyond \gls{gui} manipulation, a large language model (\gls{llm}), Deepseek v3.1 to be exact is integrated. This makes the "analysis" part of the project a reality. It is responsible for handling user queries, such as, ``Explain the purpose of this resistor.'', ``Identify possible errors in this circuit.'', etc. The agent receives contextual data from the backend (such as the circuit's \gls{json} structure or CircuitJS file), formats the prompt, and forwards it to the \gls{llm} through a secure \gls{api}.
 
 \section{Wire Detection Methodology}
 

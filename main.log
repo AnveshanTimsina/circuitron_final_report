@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2026.1.17)  22 MAR 2026 22:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2026.1.17)  22 MAR 2026 22:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2526,7 +2526,7 @@ Package pdftex.def Info: src/images/figures/use_case_diagram.png  used on input
 [33 <./src/images/figures/use_case_diagram.png>]
 
 [34]
-<src/images/figures/flowchart.png, id=595, 440.64626pt x 795.97375pt>
+<src/images/figures/flowchart.png, id=596, 440.64626pt x 795.97375pt>
 File: src/images/figures/flowchart.png Graphic file (type png)
 <use src/images/figures/flowchart.png>
 Package pdftex.def Info: src/images/figures/flowchart.png  used on input line 6
@@ -4032,11 +4032,11 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 60209 strings out of 467875
- 1302692 string characters out of 5404952
- 2062887 words of memory out of 5000000
+ 60206 strings out of 467875
+ 1302665 string characters out of 5404952
+ 2063887 words of memory out of 5000000
  87450 multiletter control sequences out of 15000+600000
- 708569 words of font info for 319 fonts, out of 8000000 for 9000
+ 708442 words of font info for 317 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  122i,20n,131p,11210b,2794s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fon
@@ -4059,7 +4059,7 @@ es/utmr8a.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs
 ication Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/ztmb.pfb></Users
 /anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/
 public/newtx/ztmr.pfb>
-Output written on main.pdf (113 pages, 11939537 bytes).
+Output written on main.pdf (113 pages, 11938677 bytes).
 PDF statistics:
  1452 PDF objects out of 1728 (max. 8388607)
  470 named destinations out of 1000 (max. 500000)
