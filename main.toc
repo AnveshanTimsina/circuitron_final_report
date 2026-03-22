@@ -4,9 +4,9 @@
 \contentsline {chapter}{COPYRIGHT}{iii}{section*.6}%
 \contentsline {chapter}{ACKNOWLEDGEMENT}{iv}{section*.8}%
 \contentsline {chapter}{ABSTRACT}{v}{section*.10}%
-\contentsline {chapter}{\nonumberline LIST OF FIGURES}{viii}{chapter*.12}%
-\contentsline {chapter}{\nonumberline LIST OF TABLES}{x}{chapter*.13}%
-\contentsline {chapter}{LIST OF ABBREVIATIONS}{xi}{chapter*.13}%
+\contentsline {chapter}{\nonumberline LIST OF FIGURES}{vii}{chapter*.12}%
+\contentsline {chapter}{\nonumberline LIST OF TABLES}{viii}{chapter*.13}%
+\contentsline {chapter}{LIST OF ABBREVIATIONS}{ix}{chapter*.13}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Background Information}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Motivation}{2}{section.1.2}%
