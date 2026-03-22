@@ -640,8 +640,17 @@ INPUT ./src/frontmatter/toc.tex
 INPUT src/frontmatter/toc.tex
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/ptmri8t.vf
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT ./main.toc
+INPUT ./main.toc
+INPUT main.toc
 OUTPUT main.toc
+INPUT ./main.lof
+INPUT ./main.lof
+INPUT main.lof
 OUTPUT main.lof
+INPUT ./main.lot
+INPUT ./main.lot
+INPUT main.lot
 OUTPUT main.lot
 INPUT ./main.acr
 INPUT ./main.acr

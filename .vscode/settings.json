@@ -1,5 +1,24 @@
 {
   "chat.tools.terminal.autoApprove": {
     "latexmk": true
-  }
+  },
+  "[latex]": {
+    "editor.formatOnSave": false
+  },
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "-pdf", "main.tex"],
+      "env": {}
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (pdf)",
+      "tools": ["latexmk"]
+    }
+  ],
+  "latex-workshop.view.pdf.viewer": "external",
+  "latex-workshop.latex.autoBuild.run": "onFileChange"
 }

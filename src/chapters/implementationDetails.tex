@@ -409,6 +409,8 @@ This subsection analyzes the computational complexity of the line detection pipe
 
 \begin{table}[H]
 \centering
+\caption{Time complexity breakdown for Multi-Head BFS algorithm}
+\label{tab:time_complexity}
 \begin{tabular}{@{}lll@{}}
 \toprule
 \textbf{Operation} & \textbf{Complexity} & \textbf{Description} \\
@@ -421,8 +423,6 @@ Self-Edge Removal & $O(m)$ & $m$ = number of endpoint pairs \\
 \textbf{Total} & $O(n \cdot r^2 + n \cdot P)$ & Dominated by BFS traversals \\
 \bottomrule
 \end{tabular}
-\caption{Time complexity breakdown for Multi-Head BFS algorithm}
-\label{tab:time_complexity}
 \end{table}
 
 For typical skeleton images where $P = O(H + W)$ (linear in image perimeter), the overall complexity is:
@@ -434,6 +434,8 @@ T(n, H, W, r) = O(n \cdot r^2 + n \cdot (H + W)) = O(n \cdot (r^2 + H + W))
 
 \begin{table}[H]
 \centering
+\caption{Space complexity breakdown for Multi-Head BFS algorithm}
+\label{tab:space_complexity}
 \begin{tabular}{@{}lll@{}}
 \toprule
 \textbf{Data Structure} & \textbf{Space} & \textbf{Description} \\
@@ -448,8 +450,6 @@ Disk Offsets $\mathcal{D}$ & $O(r^2)$ & Precomputed disk mask \\
 \textbf{Total} & $O(H \times W + n + E)$ & Dominated by image arrays \\
 \bottomrule
 \end{tabular}
-\caption{Space complexity breakdown for Multi-Head BFS algorithm}
-\label{tab:space_complexity}
 \end{table}
 
 The visited array can be reused across BFS calls with a reset, or alternatively, a hash set can be used for sparse skeletons to reduce visited storage to $O(P)$.
