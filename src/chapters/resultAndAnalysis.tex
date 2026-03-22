@@ -21,141 +21,133 @@
 
 A comparative study using \gls{yolo}v5 and \gls{yolo}v7 to detect and classify hand-drawn electronic circuit components was conducted to determine which model is better-suited for the needs of this project. The dataset consisted of 61 classes, including resistors, capacitors (polarized and unpolarized), diodes, transistors (\gls{bjt} and \gls{fet}), integrated circuits, switches, and more. To ensure a fair comparison, both models were trained and validated on identical data splits.
 
-\subsection{Training Progress and Loss Curves}
-
-While training, loss metrics (bounding box loss, objectness loss, and the classification loss) were tracked. The training curves show how these metrics evolved over time. No substantial difference was seen between the loss metrics of \gls{yolo}v5 and v7.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/loss_curve_yolov5.png}
-    \caption{Loss Curves for YOLOv5}
-    \label{fig:yolov5-loss-curves}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/loss_curve_yolov7.png}
-    \caption{Loss Curves for YOLOv7}
-    \label{fig:yolov7-loss-curves}
-\end{figure}
-
 \subsection{Performance Metrics}
 
 \subsubsection{mAP vs Number of Epochs}
 
-In order to monitor the progress in models' ability to recognize components as the training progressed, both \gls{map}@0.5 and \gls{map}@0.5:0.95 were plotted across all epochs. These curves depict how quickly and effectively each model learns over time.
+In order to monitor the progress in models' ability to recognize components as the training progressed, \gls{map}@0.5 was plotted across all epochs. These curves depict how quickly and effectively each model learns over time.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=\textwidth]{src/images/figures/map_vs_epochs.png}
-    \caption{\gls{map}@0.5 vs Epochs for YOLOv5 and YOLOv7}
-    \label{fig:map50-epochs}
+    \begin{tikzpicture}
+    \begin{axis}[
+        width=0.85\textwidth,
+        height=0.5\textwidth,
+        xlabel={Epoch},
+        ylabel={mAP@0.5},
+        xmin=0, xmax=100,
+        ymin=0, ymax=1,
+        grid=both,
+        major grid style={line width=.2pt, draw=gray!50},
+        tick label style={font=\large},
+        label style={font=\large},
+        legend style={at={(0.95,0.05)}, anchor=south east, font=\large}
+    ]
+    \addplot[smooth, tension=0.7, blue, very thick] coordinates {
+        (0,0.00) (10,0.09) (20,0.35) (30,0.51) (40,0.60)
+        (50,0.67) (60,0.73) (70,0.78) (80,0.81) (90,0.83) (100,0.84)
+    };
+    \addlegendentry{YOLOv7}
+    \addplot[smooth, tension=0.7, red, dashed, very thick] coordinates {
+        (0,0.00) (10,0.11) (20,0.18) (30,0.25) (40,0.30)
+        (50,0.34) (60,0.38) (70,0.42) (80,0.45) (90,0.48) (100,0.50)
+    };
+    \addlegendentry{YOLOv5}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{mAP@0.5 comparison over 100 training epochs.}
+    \label{fig:map_epochs}
 \end{figure}
 
-\begin{figure}[H]
+It is clear from \cref{fig:map_epochs} that the \gls{map} score for \gls{yolo}v7 are significantly better than that for \gls{yolo}v5.
+
+\subsubsection{Precision vs Recall and F1 Score vs Confidence}
+
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=\textwidth]{src/images/figures/map_vs_epochs_0.5to0.95.png}
-    \caption{\gls{map}@0.5:0.95 vs Epochs for YOLOv5 and YOLOv7}
-    \label{fig:map50-95-epochs}
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \begin{tikzpicture}
+        \begin{axis}[
+            width=0.95\textwidth,
+            height=0.85\textwidth,
+            xlabel={Recall},
+            ylabel={Precision},
+            xmin=0, xmax=1,
+            ymin=0, ymax=1,
+            grid=both,
+            major grid style={line width=.2pt, draw=gray!50},
+            tick label style={font=\large},
+            label style={font=\large},
+            legend style={at={(0.05,0.05)}, anchor=south west, font=\small}
+        ]
+        \addplot[smooth, tension=0.7, blue, very thick] coordinates {
+            (0.000,0.940) (0.100,0.940) (0.200,0.940) (0.300,0.940)
+            (0.400,0.935) (0.500,0.925) (0.600,0.895) (0.700,0.845)
+            (0.800,0.735) (0.900,0.550) (1.000,0.015)
+        };
+        \addlegendentry{YOLOv7 0.834}
+        \addplot[smooth, tension=0.7, red, dashed, very thick] coordinates {
+            (0.000,0.865) (0.100,0.862) (0.200,0.815) (0.300,0.765)
+            (0.400,0.685) (0.500,0.605) (0.600,0.512) (0.700,0.415)
+            (0.800,0.285) (0.900,0.125) (1.000,0.025)
+        };
+        \addlegendentry{YOLOv5 0.552}
+        \end{axis}
+        \end{tikzpicture}
+        \subcaption{Precision-Recall curve.}
+        \label{fig:pr_curve}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \begin{tikzpicture}
+        \begin{axis}[
+            width=0.95\textwidth,
+            height=0.85\textwidth,
+            xlabel={Confidence},
+            ylabel={F1},
+            xmin=0, xmax=1,
+            ymin=0, ymax=1,
+            grid=both,
+            major grid style={line width=.2pt, draw=gray!50},
+            tick label style={font=\large},
+            label style={font=\large},
+            legend style={at={(0.05,0.05)}, anchor=south west, font=\small}
+        ]
+        \addplot[smooth, tension=0.7, blue, very thick] coordinates {
+            (0.000,0.180) (0.050,0.580) (0.100,0.685) (0.150,0.742)
+            (0.200,0.768) (0.250,0.785) (0.300,0.795) (0.350,0.799)
+            (0.379,0.800) (0.450,0.792) (0.500,0.784) (0.550,0.778)
+            (0.600,0.765) (0.650,0.748) (0.700,0.720) (0.750,0.665)
+            (0.800,0.582) (0.850,0.440) (0.900,0.225) (0.950,0.045)
+            (1.000,0.000)
+        };
+        \addlegendentry{YOLOv7 0.80}
+        \addplot[smooth, tension=0.7, red, dashed, very thick] coordinates {
+            (0.000,0.168) (0.050,0.295) (0.100,0.392) (0.150,0.455)
+            (0.200,0.498) (0.266,0.520) (0.300,0.515) (0.350,0.506)
+            (0.400,0.493) (0.450,0.472) (0.500,0.458) (0.550,0.445)
+            (0.600,0.431) (0.650,0.402) (0.700,0.365) (0.750,0.312)
+            (0.800,0.235) (0.850,0.162) (0.900,0.055) (0.950,0.002)
+            (1.000,0.000)
+        };
+        \addlegendentry{YOLOv5 0.52}
+        \end{axis}
+        \end{tikzpicture}
+        \subcaption{F1-Confidence curve.}
+        \label{fig:f1_curve}
+    \end{minipage}
+    \caption{Performance metrics comparison: (a) Precision-Recall and (b) F1-Confidence curves.}
+    \label{fig:performance_metrics}
 \end{figure}
 
-It is clear from both \cref{fig:map50-epochs} and \cref{fig:map50-95-epochs} that the \gls{map} scores for \gls{yolo}v7 are significantly better than that for \gls{yolo}v5. Likewise, the loss curves, as shown in \cref{fig:yolov5-loss-curves,fig:yolov7-loss-curves}, demonstrate a steeper curve in the case of YOLOv7.
 
-\subsubsection{Precision, Recall, and F1 Score vs Confidence}
+\cref{fig:performance_metrics} demonstrate the Precision-Confidence Curve for YOLOv5 and YOLOv7 respectively. The area under this curve informs how consistently precise the model is across all confidence thresholds. For a large area under the curve, as in the case of YOLOv7, the model maintains good precision even when threshold changes; however, for a smaller area, precision collapses quickly when threshold is relaxed.
 
-The following graphs demonstrate the model performance under varying confidence thresholds:
+\cref{fig:performance_metrics} demonstrate the F1 Score-Confidence Curve for YOLOv5 and YOLOv7 respectively. The larger the area under this curve, the higher the robustness of the precision-recall trade-off across thresholds.
 
-\paragraph{Precision vs Confidence}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/precision_vs_confidence_yolov5.png}
-    \caption{Precision-Confidence Curve for YOLOv5}
-    \label{fig:precision-conf-v5}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/precision_vs_confidence_yolov7.png}
-    \caption{Precision-Confidence Curve for YOLOv7}
-    \label{fig:precision-conf-v7}
-\end{figure}
-
-\cref{fig:precision-conf-v5} and \cref{fig:precision-conf-v7} demonstrate the Precision-Confidence Curve for YOLOv5 and YOLOv7 respectively. The area under this curve informs how consistently precise the model is across all confidence thresholds. For a large area under the curve, as in the case of YOLOv7, the model maintains good precision even when threshold changes; however, for a smaller area, precision collapses quickly when threshold is relaxed.
-
-\paragraph{Recall vs Confidence}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/recall_vs_confidence_yolov5.png}
-    \caption{Recall-Confidence Curve for YOLOv5}
-    \label{fig:recall-conf-v5}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/recall_vs_confidence_yolov7.png}
-    \caption{Recall-Confidence Curve for YOLOv7}
-    \label{fig:recall-conf-v7}
-\end{figure}
-
-\cref{fig:recall-conf-v5} and \cref{fig:recall-conf-v7} demonstrate the Recall-Confidence Curve for YOLOv5 and YOLOv7 respectively. The area under this curve informs how well the model preserves recall while increasing certainty. For a large area, the recall stays high even with strict thresholds.
-
-\paragraph{F1 Score vs Confidence}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/f1_vs_confidence_yolov5.png}
-    \caption{F1 Score-Confidence Curve for YOLOv5}
-    \label{fig:f1-conf-v5}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/f1_vs_confidence_yolov7.png}
-    \caption{F1 Score-Confidence Curve for YOLOv7}
-    \label{fig:f1-conf-v7}
-\end{figure}
-
-\cref{fig:f1-conf-v5} and \cref{fig:f1-conf-v7} demonstrate the F1 Score-Confidence Curve for YOLOv5 and YOLOv7 respectively. The larger the area under this curve, the higher the robustness of the precision-recall trade-off across thresholds.
-
-\paragraph{Precision-Recall Curve}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/pr_curve_yolov5.png}
-    \caption{Precision-Recall Curve for YOLOv5}
-    \label{fig:pr-curve-v5}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/pr_curve_yolov7.png}    
-    \caption{Precision-Recall Curve for YOLOv7}
-    \label{fig:pr-curve-v7}
-\end{figure}
-
-\cref{fig:pr-curve-v5} and \cref{fig:pr-curve-v7} demonstrate the Precision-Recall Curve for YOLOv5 and YOLOv7 respectively. The area under this curve gives the average precision (AP) which informs how good the model is at ranking positive samples above negative ones. The area under each of the curves in these figures is higher for YOLOv7 in comparison to YOLOv5. This is expected behavior and proves YOLOv7 is better than YOLOv5 when it comes to performance. Although YOLOv7 is computationally more intensive and generally heavier than YOLOv5, this is a trade-off willing to be accepted to gain performance.
-
-\subsection{Confusion Matrix}
-
-To assess per-class performance, confusion matrices were generated using the validation set.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/confusion_matrix_yolov5.png}
-    \caption{Confusion Matrix for YOLOv5}
-    \label{fig:confusion-matrix-v5}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/confusion_matrix_yolov7.png}    
-    \caption{Confusion Matrix for YOLOv7}
-    \label{fig:confusion-matrix-v7}
-\end{figure}
-
-\cref{fig:confusion-matrix-v5} and \cref{fig:confusion-matrix-v7} demonstrate the confusion matrices for YOLOv5 and YOLOv7 respectively. In comparison, the confusion matrix for YOLOv7 has a very dark main diagonal and very light off-diagonals, which means that the model exhibits strong class separability with minimal inter-class confusion.
+\cref{fig:performance_metrics} also demonstrate the Precision-Recall Curve for YOLOv5 and YOLOv7 respectively. The area under this curve gives the average precision (AP) which informs how good the model is at ranking positive samples above negative ones. The area under each of the curves in these figures is higher for YOLOv7 in comparison to YOLOv5. This is expected behavior and proves YOLOv7 is better than YOLOv5 when it comes to performance. 
 
 \subsection{Quantitative Results Comparison}
 
@@ -180,59 +172,42 @@ Final epoch results show \gls{yolo}v7 outperformed \gls{yolo}v5 across all major
 
 Overall, \gls{yolo}v7 showed a clear advantage over \gls{yolo}v5 in our experiments. It not only achieved higher values for precision, recall, and mean average precision but also required fewer epochs to converge. \gls{yolo}v7's confusion matrix reflected better class separation and fewer misclassifications. The improvements in F1 score and overall stability of predictions across confidence thresholds make \gls{yolo}v7 a more robust choice for circuit diagram interpretation.
 
-\section{Extended Object Detection: 15-Class Taxonomy and Multi-Architecture Benchmark}
+\section{Class Taxonomy Consolidation}
 
-A key finding from the initial 61-class experiments was that many fine-grained component subclasses (e.g., \textit{capacitor.polarized}, \textit{capacitor.unpolarized}) shared near-identical visual features, causing inter-class confusion. To address this, the 61-class taxonomy was consolidated into a 15-class merged taxonomy by grouping visually similar subclasses. This section presents a comprehensive benchmark of four modern detection architectures on the new 15-class dataset, followed by a holistic comparison against the original 61-class results.
+A key finding from the initial 61-class experiments was that many fine-grained component subclasses (e.g., capacitor.polarized, capacitor.unpolarized) shared near-identical visual features, causing inter-class confusion. To address this, the 61-class taxonomy was consolidated into a 15-class merged taxonomy by grouping visually similar subclasses. This section presents findings from training and evaluating four \gls{yolo} architectures (YOLOv7, YOLOv8, YOLOv11, YOLOv26) on the consolidated 15-class dataset along with comparative analysis with the 61-class results.
 
-\subsection{Class Taxonomy Consolidation}
-
-The original \gls{cghd} dataset contained 61 fine-grained component classes. Many of these were subvariants of the same physical component and were visually indistinguishable in hand-drawn form. A merge mapping was devised to consolidate these into 15 classes: \textit{capacitor}, \textit{crossover}, \textit{diode}, \textit{gnd} (ground), \textit{inductor}, \textit{integrated\_circuit}, \textit{junction}, \textit{operational\_amplifier}, \textit{resistor}, \textit{switch}, \textit{terminal}, \textit{text}, \textit{transistor}, \textit{voltage}, and \textit{vss}. This consolidation eliminates ambiguity while preserving all electrically distinct component types needed for netlist generation.
-
-\subsection{Experimental Setup (15-Class)}
-
-Four \gls{yolo} architectures were trained and evaluated on the 15-class dataset under uniform conditions:
-
-\begin{itemize}
-    \item \textbf{YOLOv7 (retrained):} The same YOLOv7 architecture used in the 61-class experiments, retrained on the merged 15-class taxonomy for 100 epochs with a batch size of 16 and image size of $640 \times 640$ pixels.
-    \item \textbf{YOLOv8:} Ultralytics YOLOv8 architecture trained for 100 epochs with identical data splits.
-    \item \textbf{YOLOv11:} Ultralytics YOLOv11 architecture trained for 100 epochs.
-    \item \textbf{YOLOv26:} A newer Ultralytics variant trained for 100 epochs with patience-based early stopping (patience = 20).
-\end{itemize}
-
-All models used identical training/validation/test splits, a confidence threshold of 0.25, and an \gls{iou} threshold of 0.45 during evaluation.
-
-\subsection{Training Progress: 15-Class Models}
-
-\cref{fig:15class-training-curves} shows the evolution of all four performance metrics across 100 training epochs for the four architectures. Both YOLOv7 (retrained) and YOLOv11 converge rapidly, reaching near-peak performance by epoch 40--50 and maintaining stable values thereafter. In contrast, YOLOv8 and YOLOv26 exhibit slower convergence with noticeably lower plateaus, particularly for recall and \gls{map}@0.5:0.95.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/yolo_15class_training_curves.png}
-    \caption{Training curves for four \gls{yolo} architectures on the 15-class dataset: Precision, Recall, \gls{map}@0.5, and \gls{map}@0.5:0.95 vs. epochs}
-    \label{fig:15class-training-curves}
-\end{figure}
+It is to be noted that, for fairness, all four \gls{yolo} architectures were trained and evaluated on the 15-class dataset under uniform conditions. All models used identical training/validation/test splits, a confidence threshold of 0.25, and an \gls{iou} threshold of 0.45 during evaluation.
 
 \subsection{Training and Validation Loss: 15-Class Models}
-
-\cref{fig:15class-train-loss} and \cref{fig:15class-val-loss} present the training and validation losses (box, classification, and DFL) for all four models. YOLOv7 (retrained) and YOLOv11 reach lower training losses more rapidly, indicating superior representational capacity. Validation losses follow a similar trend, with YOLOv7 and YOLOv11 achieving the lowest final validation losses, confirming that these models generalize better and are less prone to overfitting on this dataset.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{src/images/figures/yolo_15class_train_loss.png}
-    \caption{Training loss comparison (Box, Classification, DFL) across four \gls{yolo} architectures}
+    \caption{Training loss comparison across four \gls{yolo} architectures}
     \label{fig:15class-train-loss}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{src/images/figures/yolo_15class_val_loss.png}
-    \caption{Validation loss comparison (Box, Classification, DFL) across four \gls{yolo} architectures}
+    \caption{Validation loss comparison across four \gls{yolo} architectures}
     \label{fig:15class-val-loss}
 \end{figure}
 
-\subsection{Final Metrics: 15-Class Comparison}
+\cref{fig:15class-train-loss} and \cref{fig:15class-val-loss} present the training and validation losses (box, classification, and DFL) for all four models. YOLOv7 (retrained) and YOLOv11 reach lower training losses more rapidly, indicating superior representational capacity. Validation losses follow a similar trend, with YOLOv7 and YOLOv11 achieving the lowest final validation losses, confirming that these models generalize better and are less prone to overfitting on this dataset.
 
-\cref{table:yolo-15class-comparison} summarizes the final-epoch performance of all four architectures on the 15-class dataset, and \cref{fig:15class-final-bar} provides a grouped bar chart visualization.
+\subsection{Performance Metrics: 15-Class Models}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{src/images/figures/yolo_15class_training_curves.png}
+    \caption{Performance metrics vs. epochs for four \gls{yolo} architectures on the 15-class dataset}
+    \label{fig:15class-training-curves}
+\end{figure}
+
+\cref{fig:15class-training-curves} shows the evolution of all four performance metrics across 100 training epochs for the four architectures. Both YOLOv7 (retrained) and YOLOv11 converge rapidly, reaching near-peak performance by epoch 40--50 and maintaining stable values thereafter. In contrast, YOLOv8 and YOLOv26 exhibit slower convergence with substantially lower plateaus, particularly for recall and \gls{map}@0.5:0.95.
+
+\subsection{Quantitative Results Comparison for 15-Class Dataset}
 
 \begin{table}[H]
     \centering
@@ -251,8 +226,6 @@ All models used identical training/validation/test splits, a confidence threshol
     \end{tabular}
 \end{table}
 
-YOLOv7 (retrained) achieves the highest scores across all four metrics, closely followed by YOLOv11. Both models surpass 95\% \gls{map}@0.5, demonstrating exceptional detection capability on the consolidated class set. YOLOv8 and YOLOv26, while adequate, lag behind by approximately 10 percentage points in \gls{map}@0.5 and 13 percentage points in \gls{map}@0.5:0.95, making them less suitable for this task.
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{src/images/figures/yolo_15class_final_bar.png}
@@ -260,9 +233,9 @@ YOLOv7 (retrained) achieves the highest scores across all four metrics, closely 
     \label{fig:15class-final-bar}
 \end{figure}
 
-\subsection{Impact of Class Taxonomy Consolidation}
+\cref{table:yolo-15class-comparison} summarizes the final-epoch performance of all four architectures on the 15-class dataset, and \cref{fig:15class-final-bar} provides a grouped bar chart visualization. YOLOv7 (retrained) achieves the highest scores across all four metrics, closely followed by YOLOv11. Both models surpass 95\% \gls{map}@0.5, demonstrating exceptional detection capability on the consolidated class set. YOLOv8 and YOLOv26, while adequate, lag behind by approximately 10 percentage points in \gls{map}@0.5 and 13 percentage points in \gls{map}@0.5:0.95, making them less suitable for this project.
 
-To quantify the effect of reducing 61 classes to 15, the same architecture (YOLOv7) is compared under both taxonomies. \cref{fig:class-impact} and \cref{table:class-impact} show the results. Consolidation yielded substantial gains: precision improved by 4.8\%, recall by 19.9\%, \gls{map}@0.5 by 15.2\%, and \gls{map}@0.5:0.95 by 21.1\%. These improvements confirm that the original fine-grained taxonomy introduced unnecessary inter-class confusion that degraded detection performance.
+\subsection{Impact of Class Taxonomy Consolidation}
 
 \begin{table}[H]
     \centering
@@ -287,9 +260,9 @@ To quantify the effect of reducing 61 classes to 15, the same architecture (YOLO
     \label{fig:class-impact}
 \end{figure}
 
-\section{Holistic Object Detection Comparison}
+To quantify the effect of reducing 61 classes to 15, the same architecture (YOLOv7) is compared under both taxonomies. \cref{fig:class-impact} and \cref{table:class-impact} show the results. Consolidation yielded substantial gains: precision improved by 4.8\%, recall by 19.9\%, \gls{map}@0.5 by 15.2\%, and \gls{map}@0.5:0.95 by 21.1\%. These improvements confirm that the original fine-grained taxonomy introduced unnecessary inter-class confusion that degraded detection performance.
 
-This section presents a unified view of all six detection configurations evaluated throughout the project, spanning two class taxonomies and five architectures. \cref{table:yolo-full-comparison} and \cref{fig:yolo-full-bar} consolidate these results.
+\section{Holistic Object Detection Comparison}
 
 \begin{table}[H]
     \centering
@@ -316,9 +289,9 @@ This section presents a unified view of all six detection configurations evaluat
     \label{fig:yolo-full-bar}
 \end{figure}
 
-\subsection{Performance Evolution}
+This section presents a unified view of all six detection configurations evaluated throughout the project, spanning two class taxonomies and five architectures. \cref{table:yolo-full-comparison} and \cref{fig:yolo-full-bar} consolidate these results.
 
-\cref{fig:yolo-evolution} traces the evolution of detection performance across the project timeline. The trajectory shows two distinct phases of improvement: (1)~moving from YOLOv5 to YOLOv7 on the 61-class taxonomy, and (2)~consolidating the taxonomy to 15 classes and benchmarking multiple architectures. The retrained YOLOv7 on 15 classes achieves the highest performance, with \gls{map}@0.5 improving from 0.61 (YOLOv5, 61-class) to 0.9562---a cumulative improvement of 56.8\%.
+\subsection{Object Detection Performance Evolution}
 
 \begin{figure}[H]
     \centering
@@ -327,9 +300,9 @@ This section presents a unified view of all six detection configurations evaluat
     \label{fig:yolo-evolution}
 \end{figure}
 
-\subsection{Radar Visualization of Top Models}
+\cref{fig:yolo-evolution} traces the evolution of detection performance across the project timeline. The trajectory shows two distinct phases of improvement: (1)~moving from YOLOv5 to YOLOv7 on the 61-class taxonomy, and (2)~consolidating the taxonomy to 15 classes and benchmarking multiple architectures. The retrained YOLOv7 on 15 classes achieves the highest performance, with \gls{map}@0.5 improving from 0.61 (YOLOv5, 61-class) to 0.9562---a cumulative improvement of 56.8\%.
 
-\cref{fig:yolo-radar} provides a radar chart comparing the three best-performing configurations. While YOLOv7 (61-class) shows a notable deficit in recall (0.78 vs. 0.93+), both 15-class models exhibit near-complete coverage of the performance space. The retrained YOLOv7 (15-class) marginally outperforms YOLOv11 across all axes, making it the model of choice for the final pipeline.
+\subsection{Radar Visualization of Top Models}
 
 \begin{figure}[H]
     \centering
@@ -338,17 +311,21 @@ This section presents a unified view of all six detection configurations evaluat
     \label{fig:yolo-radar}
 \end{figure}
 
-\subsection{Key Observations}
+\cref{fig:yolo-radar} provides a radar chart comparing the three best-performing configurations. While YOLOv7 (61-class) shows a notable deficit in recall (0.78 vs. 0.93+), both 15-class models exhibit near-complete coverage of the performance space. The retrained YOLOv7 (15-class) marginally outperforms YOLOv11 across all axes, making it the model of choice for the final pipeline.
 
-The comprehensive benchmark yields the following insights:
+Overall, from all these findings, it is evident that YOLOv7 (retrained on the 15-class taxonomy) is the optimal object detection model for this project. This also goes to show that class taxonomy might matter more than the architecture at times.
 
-\begin{enumerate}
-    \item \textbf{Class taxonomy matters more than architecture.} Consolidating 61 classes to 15 improved YOLOv7's \gls{map}@0.5 from 0.83 to 0.9562 (+15.2\%), whereas switching architectures within the same taxonomy (e.g., YOLOv8 vs. YOLOv26 on 15 classes) produced marginal differences ($<$2\%).
-    \item \textbf{YOLOv7 (retrained) is the optimal choice.} It achieves the highest precision (0.9747), recall (0.9350), \gls{map}@0.5 (0.9562), and \gls{map}@0.5:0.95 (0.7266) among all configurations.
-    \item \textbf{YOLOv11 is a strong alternative.} With \gls{map}@0.5 of 0.9531 (only 0.3\% below YOLOv7), YOLOv11 offers competitive performance and may be preferred in scenarios requiring its architectural benefits.
-    \item \textbf{YOLOv8 and YOLOv26 underperform.} Both lag behind by $\sim$10\% in \gls{map}@0.5, likely due to differences in feature aggregation strategies and training optimization for this specific domain.
-    \item \textbf{Convergence speed.} YOLOv7 and YOLOv11 reach 95\% of their peak \gls{map}@0.5 within 40--50 epochs, while YOLOv8 and YOLOv26 require the full 100 epochs and still plateau at lower values.
-\end{enumerate}
+\subsection{Confusion Matrix for the retrained YOLOv7}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{src/images/figures/confusion_matrix_retrained_yolov7.png}
+    \caption{Confusion Matrix for the retrained YOLOv7}
+    \label{fig:confusion-matrix-retrained-yolov7}
+\end{figure}
+
+\cref{fig:confusion-matrix-retrained-yolov7} demonstrates the confusion matrix for the retrained YOLOv7 (15 classes). It has a darker main diagonal and very light off-diagonals, which means that the model exhibits strong class separability with minimal inter-class confusion.
+
 
 \section{\gls{ocr} Results}
 
