@@ -207,7 +207,7 @@ A netlist is a file that describes the connections between components in an elec
 
 A \gls{spice} netlist is a text-based representation of an electrical circuit used for simulation by a \gls{spice} engine. It provides all the necessary information about the components, their connections, and their electrical properties, enabling analysis such as transient response, DC/AC sweep, or frequency domain behavior.
 
-The netlist serves as input to a circuit simulation engine (NgSpice), which then performs numerical computations to evaluate how the circuit behaves under specified conditions.
+The netlist serves as input to a circuit simulation engine, which then performs numerical computations to evaluate how the circuit behaves under specified conditions.
 
 For each component, the \gls{spice} netlist contains the information about its name, the nodes it is connected to on either side and the component's parameters or model (if necessary) in the following format:
 
@@ -219,7 +219,7 @@ After the \gls{json} file with abundant information about the components, their 
 
 \subsection{Digital Schematic Generation}
 
-The \gls{json} file built by integrating all the information about the hand-drawn circuit is to be manipulated through different JavaScript libraries to generate a digital, editable schematic of the circuit. As briefly discussed in the Requirements section, Chart.js is to be used to map each component in \gls{json} to a visual block (a symbol for the component as given by the KiCad symbol library). For each component, a graphical symbol needs to be rendered at a certain position and connection lines need to be drawn between the terminals and node positions. A rough pseudocode for the same is as follows:
+The \gls{json} file built by integrating all the information about the hand-drawn circuit is to be manipulated through different JavaScript libraries to generate a digital, editable schematic of the circuit. As briefly discussed in the Requirements section, react-draggable is used to map each component in \gls{json} to a visual block (a symbol for the component as given by the KiCad symbol library). For each component, a graphical symbol needs to be rendered at a certain position and connection lines need to be drawn between the terminals and node positions. A rough pseudocode for the same is as follows:
 
 \begin{algorithm}
 \caption{Frontend Circuit Rendering}
@@ -240,15 +240,13 @@ The \gls{json} file built by integrating all the information about the hand-draw
 \end{algorithmic}
 \end{algorithm}
 
-In order to make the schematic editable, Chart.js allows for draggable elements using inbuilt functions like \texttt{onDrag}, transformation handles for resizing and rotating, with added functions (and work-arounds in some cases) for integration of editing features like editing component value, delete/add components, etc. Changes can be saved by updating the \gls{json} structure on every interaction.
-
 \subsection{Backend Development}
 
-The backend is to be constructed using Next.js and FastAPI, functioning as the core middleware responsible for routing, processing, and orchestrating the system's \gls{ml} pipeline and user interactions. All endpoints follow a RESTful \gls{api} design, ensuring stateless and scalable communication between the frontend and the server.
+The backend has been constructed using Next.js and FastAPI, functioning as the core middleware responsible for routing, and processing the system's \gls{ml} pipeline and user interactions. All endpoints follow a RESTful \gls{api} design, ensuring stateless and scalable communication between the frontend and the server.
 
 Upon receiving a hand-drawn circuit image through an \gls{api} endpoint like \texttt{/upload}, the image is saved to a temporary storage location. The server invokes the YOLOv7 model (via a Python subprocess or containerized inference \gls{api}) to detect and localize electrical components. Simultaneously, the \gls{ocr} model is invoked to extract nearby textual annotations. The result is a list of components with bounding boxes and a list of recognized texts, each with confidence scores and coordinates.
 
-Support for user interaction with the schematic is also handled by the backend. Operations such as component deletion, repositioning, wire addition, and modification of values are processed through specific \gls{api} endpoints. Each update is stored in the database, maintaining a real-time editable circuit representation. This allows the frontend to continuously reflect changes without direct manipulation of the database, ensuring security and stability of the system.
+Support for user interaction with the schematic is also handled by the backend. Operations such as component deletion, repositioning, wire addition, and modification of values are processed through specific \gls{api} endpoints. Each update is stored in a temporary database, maintaining a real-time editable circuit representation. 
 
 \subsection{LLM Integration}
 
@@ -540,7 +538,7 @@ The detected intersection points serve as terminal connection points in the circ
 
 \section{Line Detection via Path Finding}
 
-This work presents a pipeline for detecting lines in skeletonized circuit images by identifying endpoints and constructing a graph representation using a Multi-Head Breadth-First Search (BFS) algorithm. The methodology consists of two primary stages: endpoint detection from object detection bounding boxes, and graph construction via skeleton traversal.
+This pipeline for detecting lines in skeletonized circuit images by identifying endpoints and constructing a graph representation uses a Multi-Head Breadth-First Search (BFS) algorithm. The methodology consists of two primary stages: endpoint detection from object detection bounding boxes, and graph construction via skeleton traversal.
 
 \subsection{Endpoint Detection}
 
@@ -569,6 +567,13 @@ For each source node $i$, all pixels within the source node's disk are marked as
 
 \section{Use-Case Diagram}
 
+\begin{figure}[H]
+    \centering
+     \includegraphics[width=\textwidth]{src/images/figures/use_case_diagram.png}
+    \caption{Use-Case Diagram for CIRCUITRON System}
+    \label{fig:use-case-diagram}
+\end{figure}
+
 The use-case diagram in Figure~\ref{fig:use-case-diagram} outlines the CIRCUITRON system's functionality depicting the interactions between users and the system. The primary actor is the user, who can be a student, instructor, or engineer. The system begins with the user uploading a hand-drawn circuit image.
 
 Upon submission, CIRCUITRON automatically preprocesses the image to enhance clarity and prepares it for further analysis. The system then detects components (e.g., resistors, capacitors) using YOLOv7 and identifies wires and nodes through techniques like junction-based wire detection. Simultaneously, it extracts text labels (e.g., component values) using \gls{ocr} and maps them to the corresponding components.
@@ -576,13 +581,6 @@ Upon submission, CIRCUITRON automatically preprocesses the image to enhance clar
 Once the circuit structure is parsed, the system generates an editable schematic, allowing the user to manually correct any errors before proceeding. After validation, the system converts the schematic into a SPICE-compatible netlist and runs a simulation using Ngspice/PySpice. The results, including voltage and current graphs, are displayed to the user. Additionally, the system integrates an AI assistant to answer circuit-related questions, enhancing the learning and troubleshooting experience.
 
 The ``includes'' relationship is used for mandatory sub-tasks like component detection and \gls{ocr}, which must always execute as part of core workflows. The ``extends'' relationship marks optional features like manual corrections or AI Q\&A, which enhance functionality but aren't required for basic operation. The diagram effectively outlines the system's scope, emphasizing its applications (or use-cases).
-
-\begin{figure}[H]
-    \centering
-     \includegraphics[width=\textwidth]{src/images/figures/use_case_diagram.png}
-    \caption{Use-Case Diagram for CIRCUITRON System}
-    \label{fig:use-case-diagram}
-\end{figure}
 
 \section{Performance Metrics Expectation}
 
@@ -596,15 +594,15 @@ No matter how rigorously the models are trained and fine-tuned, there is always 
         \toprule
         \textbf{Pipeline Stage} & \textbf{Performance Metric} & \textbf{Target Value/Expectation} \\
         \midrule
-        Component Detection & mAP@0.5 & 0.90 \\
-        Text Recognition & Character Accuracy & 0.75 \\
+        Component Detection & mAP@0.5 & 0.95 \\
+        Text Recognition & Character Accuracy & 0.65 \\
         \bottomrule
     \end{tabular}
 \end{table}
 
 \subsection{Component Detection Metric}
 
-mAP@0.5 (mean Average Precision at IoU threshold of 0.5) evaluates how well the model detects components with correct class labels and bounding boxes. It calculates the Average Precision (\gls{ap}) for each class and then takes the mean across all classes. An \gls{iou} (Intersection over Union) threshold of 0.5 means a predicted bounding box is considered a correct match if it overlaps with the ground truth box by at least 50\%.
+mAP@0.5 (mean Average Precision at IoU threshold of 0.5) evaluates how well the model detects components with correct class labels and bounding boxes. It calculates the \gls{ap} for each class and then takes the mean across all classes. An \gls{iou} threshold of 0.5 means a predicted bounding box is considered a correct match if it overlaps with the ground truth box by at least 50\%.
 
 \begin{equation}
 \text{IoU} = \frac{\text{Area of Overlap}}{\text{Area of Union}}
