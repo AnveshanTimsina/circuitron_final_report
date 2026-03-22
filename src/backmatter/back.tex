@@ -26,6 +26,8 @@ The project has been completed with a total budget of NPR 41,160. This budget co
 
 \begin{table}[htbp]
 \centering
+\caption{Project Timeline (Gantt Chart)}
+\label{tab:gantt}
 \resizebox{\textwidth}{!}{%
 \begin{tikzpicture}[x=1.1cm, y=1cm]
     % --- Configuration ---
@@ -66,28 +68,21 @@ The project has been completed with a total budget of NPR 41,160. This budget co
     }
 
     % --- Gantt Bars ---
-    % Pre-calculating values for clean coordinates
-    \def\barHeight{0.6}
-    \pgfmathsetmacro{\topPadding}{(1-\barHeight)/2}
-    \pgfmathsetmacro{\bottomPadding}{\topPadding + \barHeight}
-
     % Task 1: Research (May to Mid-Feb)
-    \fill[black] (\colW, {1 * \rowH + \topPadding * \rowH}) rectangle ({\colW + 9.5 * \monthW}, {1 * \rowH + \bottomPadding * \rowH});
+    \fill[black] (\colW, {1 * \rowH + 0.2 * \rowH}) rectangle ({\colW + 9.5 * \monthW}, {1 * \rowH + 0.8 * \rowH});
 
     % Task 2: Implementation (Jun to Mid-Feb)
-    \fill[black] ({\colW + 1 * \monthW}, {2 * \rowH + \topPadding * \rowH}) rectangle ({\colW + 9.5 * \monthW}, {2 * \rowH + \bottomPadding * \rowH});
+    \fill[black] ({\colW + 1 * \monthW}, {2 * \rowH + 0.2 * \rowH}) rectangle ({\colW + 9.5 * \monthW}, {2 * \rowH + 0.8 * \rowH});
 
     % Task 3: Testing (Jul to Mid-Feb)
-    \fill[black] ({\colW + 1.5 * \monthW}, {3 * \rowH + \topPadding * \rowH}) rectangle ({\colW + 9.5 * \monthW}, {3 * \rowH + \bottomPadding * \rowH});
+    \fill[black] ({\colW + 1.5 * \monthW}, {3 * \rowH + 0.2 * \rowH}) rectangle ({\colW + 9.5 * \monthW}, {3 * \rowH + 0.8 * \rowH});
 
     % Task 4: Documentation (May to End-Mar)
-    \fill[black] ({\colW + 0.3 * \monthW}, {4 * \rowH + \topPadding * \rowH}) rectangle ({\colW + 11 * \monthW}, {4 * \rowH + \bottomPadding * \rowH});
+    \fill[black] ({\colW + 0.3 * \monthW}, {4 * \rowH + 0.2 * \rowH}) rectangle ({\colW + 11 * \monthW}, {4 * \rowH + 0.8 * \rowH});
 
     % Task 5: Final Submission (Mid-Feb to End-Mar)
-    \fill[black] ({\colW + 9.5 * \monthW}, {5 * \rowH + \topPadding * \rowH}) rectangle ({\colW + 11 * \monthW}, {5 * \rowH + \bottomPadding * \rowH});
+    \fill[black] ({\colW + 9.5 * \monthW}, {5 * \rowH + 0.2 * \rowH}) rectangle ({\colW + 11 * \monthW}, {5 * \rowH + 0.8 * \rowH});
 
 \end{tikzpicture}%
 }
-\caption{Project Timeline (Gantt Chart)}
-\label{tab:gantt}
 \end{table}

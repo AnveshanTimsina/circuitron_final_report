@@ -1,7 +1,8 @@
 {
   "chat.tools.terminal.autoApprove": {
     "latexmk": true,
-    "pdflatex": true
+    "pdflatex": true,
+    "bibtex": true
   },
   "[latex]": {
     "editor.formatOnSave": false
@@ -10,7 +11,13 @@
     {
       "name": "latexmk",
       "command": "latexmk",
-      "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "-pdf", "main.tex"],
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "main.tex"
+      ],
       "env": {}
     }
   ],

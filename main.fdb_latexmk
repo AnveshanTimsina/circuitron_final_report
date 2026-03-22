@@ -1,13 +1,11 @@
 # Fdb version 4
-["bibtex main"] 1774221112.62214 "main.aux" "main.bbl" "main" 1774221212.2534 0
-  "./references.bib" 1774218824.865 7590 e7801912336dc79058a8f5c5b4448662 ""
-  "/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/bibtex/bst/ieeetran/IEEEtran.bst" 1774078891.66506 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1774221210.0462 62155 08a3bf99125414e3a8ffb94aa14525ed "pdflatex"
+["bibtex main"] 1774221540.45886 "main.aux" "main.bbl" "main" 1774221575.83736 0
+  "main.aux" 1774221573.91095 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1774221183.43031 "main.tex" "main.pdf" "main" 1774221212.25388 2
+["pdflatex"] 1774221541.21028 "main.tex" "main.pdf" "main" 1774221575.83788 2
   "/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1774079223.70068 122874 9195f0588e30cb644cb9f8108da0b71a ""
   "/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1768644024.74444 13346815 ea5cfc7a4706f69c6d8365e5c1253d21 ""
   "/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc" 1765952635.77294 4993 1194fb36dfcb11d9ae9802f2b00b60a3 ""
@@ -378,13 +376,10 @@
   "/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/latex/xkeyval/xkeyval.sty" 1765952670.57236 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/latex/xpatch/xpatch.sty" 1774078919.30568 8510 9829c50ab36366d4da41fdc87e7d0699 ""
   "main.acr" 1774166229.14699 11353 3b7c20c004a3d234a8266f237329aabe ""
-  "main.aux" 1774221210.0462 62155 08a3bf99125414e3a8ffb94aa14525ed "pdflatex"
-  "main.bbl" 1774221113.39339 4006 ab786d5efcf7bb62b42367aa29c7927b "bibtex main"
-  "main.lof" 1774221210.08171 4669 de4eb5d726a3395f5a18097b8102a996 "pdflatex"
-  "main.lot" 1774221210.08182 1815 94d618da9879d8e7befdc1d835b04af6 "pdflatex"
+  "main.aux" 1774221573.91095 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.bbl" 1774221541.00361 4006 ab786d5efcf7bb62b42367aa29c7927b "bibtex main"
   "main.tex" 1774210795.81243 1739 3cee562419215036804b13716e52be68 ""
-  "main.toc" 1774221210.08163 10282 7d2e3a060a0fad5e7350b6a7cd6db1ef "pdflatex"
-  "src/backmatter/back.tex" 1774219163.06715 3858 8a2bdec67fb177a03c4e44039ba3949f ""
+  "src/backmatter/back.tex" 1774221519.69366 3571 98e1f4019431559558a9530401f7b8c7 ""
   "src/chapters/conclusion.tex" 1774217885.84981 2217 d5bb592ba55d327ee7464b18925cd80c ""
   "src/chapters/futureEnhancements.tex" 1774195286.15166 2959 a94ab866dd42be0306615e6afb80115a ""
   "src/chapters/implementationDetails.tex" 1774216960.85669 35837 10be30cde0785b36e3511dc15a942729 ""
@@ -420,7 +415,7 @@
   "src/images/figures/retrained_yolov7_result1.png" 1774207256.03128 840037 32ef924ae76884a43bfcccb6253dde56 ""
   "src/images/figures/retrained_yolov7_result2.png" 1774207255.93505 1163179 bed89fcf2e100e4da7b42ffafbb378aa ""
   "src/images/figures/skeleton_with_endpoints.png" 1774214276.78016 29247 f6202a20c27ae5c90cac850bf13002fb ""
-  "src/images/figures/trocr.png" 0 -1 0 ""
+  "src/images/figures/trocr.png" 1774217100.34544 6243509 11ac5a30cfd93baba96c0a208a728795 ""
   "src/images/figures/trocr_result1.png" 1774209911.23231 1367327 8dcf8a82ca200daf4576cc37c8fca986 ""
   "src/images/figures/trocr_result2.png" 1774209911.49389 1218455 90fd0337aadd44eff29a2059f1ef45b9 ""
   "src/images/figures/use_case_diagram.png" 1774194778.72886 143726 639639900cdcd050ba6ef40a4f9da1e8 ""
@@ -440,10 +435,7 @@
   "main.acn"
   "main.aux"
   "main.ist"
-  "main.lof"
   "main.log"
-  "main.lot"
   "main.pdf"
   "main.slo"
-  "main.toc"
   (rewritten before read)
