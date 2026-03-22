@@ -201,7 +201,7 @@ A merge mapping was applied to the original annotations, grouping visually simil
     \item \textbf{YOLOv7 (retrained):} 100 epochs, batch size 16, image size $640 \times 640$
     \item \textbf{YOLOv8:} 100 epochs, batch size 16, image size $640 \times 640$
     \item \textbf{YOLOv11:} 100 epochs, batch size 16, image size $640 \times 640$
-    \item \textbf{YOLOv26:} 100 epochs, batch size 16, image size $640 \times 640$, patience = 20
+    \item \textbf{YOLOv26:} 100 epochs, batch size 16, image size $640 \times 640$
 \end{itemize}
 
 All models were trained on identical data splits with the same augmentation pipeline, confidence threshold of 0.25, and \gls{iou} threshold of 0.45. 
@@ -488,6 +488,50 @@ For typical skeleton images where $P = O(H + W)$ (linear in image perimeter), th
 \[
 T(n, H, W, r) = O(n \cdot r^2 + n \cdot (H + W)) = O(n \cdot (r^2 + H + W))
 \]
+
+\subsection{Crossover Dissolution}
+
+After the adjacency graph is constructed by Multi-Head BFS, crossover nodes must be resolved into their true topology. A crossover represents two wires crossing without connecting, and is initially represented as a single graph node with four neighbors. The dissolution algorithm identifies these nodes and replaces each with two direct through-connections, removing the node from the electrical topology.
+
+\begin{algorithm}[H]
+\caption{Crossover Dissolution Algorithm}
+\label{algo:crossover-dissolution}
+\begin{algorithmic}[1]
+\Require Adjacency graph $\mathcal{G}$, node positions $\mathbf{p}$, detection results $\mathcal{R}$
+\Ensure Modified graph $\mathcal{G}$ with crossovers dissolved
+
+\For{each detection $r \in \mathcal{R}$ with $r.\mathrm{cls} = 1$}
+    \State $a \gets$ node index of $r$'s endpoint in $\mathbf{p}$
+    \If{$a = -1$ \textbf{or} $|\mathcal{G}[a]| \neq 4$}
+        \State \textbf{continue}
+    \EndIf
+    \State $\{n_1, n_2, n_3, n_4\} \gets \mathcal{G}[a]$
+    \For{each neighbor $n_k$}
+        \State $\hat{\mathbf{d}}_k \gets \dfrac{\mathbf{p}[n_k] - \mathbf{p}[a]}{\|\mathbf{p}[n_k] - \mathbf{p}[a]\|}$
+    \EndFor
+    \State $S^* \gets +\infty$, \; $\Pi^* \gets \varnothing$
+    \For{each pairing $\Pi = \{(n_i, n_j), (n_k, n_l)\}$ of the 4 neighbors into 2 pairs}
+        \State $S \gets \hat{\mathbf{d}}_i \cdot \hat{\mathbf{d}}_j + \hat{\mathbf{d}}_k \cdot \hat{\mathbf{d}}_l$
+        \If{$S < S^*$}
+            \State $S^* \gets S$, \; $\Pi^* \gets \Pi$
+        \EndIf
+    \EndFor
+    \State $\{(n_a, n_b), (n_c, n_d)\} \gets \Pi^*$
+    \If{$\hat{\mathbf{d}}_a \cdot \hat{\mathbf{d}}_b > -0.7$ \textbf{or} $\hat{\mathbf{d}}_c \cdot \hat{\mathbf{d}}_d > -0.7$}
+        \State \textbf{continue}
+    \EndIf
+    \For{each neighbor $n_k \in \{n_a, n_b, n_c, n_d\}$}
+        \State $\mathcal{G}[n_k] \gets \mathcal{G}[n_k] \setminus \{a\}$
+    \EndFor
+    \State Remove $a$ from $\mathcal{G}$
+    \State Add edges $(n_a, n_b)$ and $(n_c, n_d)$ to $\mathcal{G}$
+\EndFor
+
+\State \Return $\mathcal{G}$
+\end{algorithmic}
+\end{algorithm}
+
+The algorithm evaluates all three possible pairings of the four neighbors and selects the one that minimizes the sum of dot products, ensuring paired neighbors are maximally opposite. The threshold of $-0.7$ (corresponding to approximately $45^\circ$ from direct opposition) validates that the pairing represents a genuine crossing geometry. Crossover nodes that fail validation (fewer than 4 neighbors or non-opposing geometry) are retained as regular junctions.
 
 \section{Frontend and Backend Implementation}
 

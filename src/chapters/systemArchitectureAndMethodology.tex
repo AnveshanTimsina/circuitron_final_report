@@ -141,7 +141,7 @@ This project includes two separate OCR models for character recognition, the sec
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{src/images/figures/trocr_architecture.png}
+    \includegraphics[width=\textwidth]{src/images/figures/trocr.png}
     \caption{Architecture of TrOCR}
     \label{fig:trocr-architecture}
 \end{figure}
@@ -248,318 +248,60 @@ Support for user interaction with the schematic is also handled by the backend. 
 
 To enhance interaction with the circuit beyond \gls{gui} manipulation, a large language model (\gls{llm}), Deepseek v3.1 to be exact is integrated. This makes the "analysis" part of the project a reality. It is responsible for handling user queries, such as, ``Explain the purpose of this resistor.'', ``Identify possible errors in this circuit.'', etc. The agent receives contextual data from the backend (such as the circuit's \gls{json} structure or CircuitJS file), formats the prompt, and forwards it to the \gls{llm} through a secure \gls{api}.
 
-\section{Wire Detection Methodology}
+\section{Line Detection}
 
-The detection of wires in circuit diagrams requires a systematic approach that leverages geometric constraints inherent to electrical schematics. This section presents a comprehensive methodology for wire detection and terminal point analysis based on junction points detected by the YOLOv7 object detection framework. The fundamental assumption underlying this work is that circuit wires are predominantly axis-aligned, meaning they run either horizontally or vertically with respect to the image coordinate system.
+Two approaches to line (wire) detection were developed and evaluated in this project. The first uses junction-point geometry with horizontal and vertical classification, while the second uses skeleton-based path finding with Multi-Head BFS. Both methods are compared in the results chapter; however, the BFS-based path-finding approach was adopted for the final frontend system due to its superior accuracy and robustness.
 
-The image domain is defined as the discrete set $\Omega = \{(x,y) \in \mathbb{Z} : 0 \le x < W, 0 \le y < H\}$ where $W$ and $H$ represent the image width and height in pixels respectively. The \gls{yolo} detection framework operates in a normalized coordinate space $\mathcal{U} = [0,1]^2$, necessitating a transformation to pixel coordinates for subsequent geometric analysis.
+\subsection{Line Detection via Horizontal and Vertical Classification}
 
-\subsection{Coordinate Denormalization}
+This approach detects wires by analyzing junction points identified by YOLOv7. The YOLO detection coordinates are first denormalized from the unit square $[0,1]^2$ to pixel space using the affine map $\mathcal{N}^{-1}(x_n, y_n) = (W \cdot x_n,\; H \cdot y_n)$. The algorithm then performs pairwise analysis of all detected junction points: for each pair $(\mathbf{j}_i, \mathbf{j}_k)$, the displacement vector $\mathbf{d} = \mathbf{j}_k - \mathbf{j}_i$ is computed, and its angular orientation $\tilde{\theta}$ is obtained via the four-quadrant arctangent.
 
-The \gls{yolo} object detection framework produces detection tuples in normalized form. Each detection is represented as a quintuple $d = (c, x_n, y_n, w_n, h_n)$ where $c \in \mathbb{N}$ denotes the class label, $(x_n, y_n) \in [0,1]^2$ represents the normalized bounding box center, and $(w_n, h_n)$ specifies the normalized dimensions. For wire detection, only junction points are relevant, identified by class label $c = 1$.
+Junction pairs are classified using an $18^\circ$ tolerance zone:
+\begin{itemize}
+    \item \textbf{Horizontal:} $\tilde{\theta} \in [0^\circ, 18^\circ] \cup [162^\circ, 198^\circ] \cup [342^\circ, 360^\circ]$
+    \item \textbf{Vertical:} $\tilde{\theta} \in [72^\circ, 108^\circ] \cup [252^\circ, 288^\circ]$
+    \item \textbf{Diagonal (rejected):} all remaining angles (60\% of angular space)
+\end{itemize}
 
-The denormalization operator transforms normalized coordinates to pixel space through the affine map $\mathcal{N}^{-1} : \mathcal{U} \to \mathbb{R}^2$ defined as:
+Valid axis-aligned pairs are projected onto perfectly horizontal or vertical lines by averaging the appropriate coordinate, then quantized to a 16-pixel grid. Overlapping collinear segments are consolidated via a merge algorithm that combines segments sharing the same orientation and lying within the grid tolerance.
 
+Terminal detection under this approach identifies where wires connect to components by computing intersections between detected wire segments and component bounding boxes. For each wire-box pair, intersection conditions are evaluated at the relevant box edges (left/right for horizontal wires, top/bottom for vertical wires), yielding at most two intersection points per pair.
+
+\textbf{Shortcomings:} This method has $O(n^2)$ pairwise complexity that scales poorly with junction count. The strict axis-alignment assumption rejects 60\% of angular space, making it unable to handle angled or curved hand-drawn wires. Grid quantization introduces up to 11.3 pixels of positional error, and the consolidation heuristic can merge segments belonging to distinct wires in dense regions. Most critically, the method infers connections purely from junction positions with no knowledge of actual wire paths, producing spurious connections between unrelated axis-aligned junctions. The terminal detection inherits these errors, as inaccurate wire segments directly produce false terminal points.
+
+\subsection{Line Detection via Path Finding}
+\label{sec:line-detection-pathfinding}
+
+To address the limitations of the geometric approach, a skeleton-based path-finding method was developed. This pipeline operates directly on skeletonized circuit images, tracing actual wire paths rather than inferring connections from junction positions. It uses a Multi-Head Breadth-First Search (BFS) algorithm and consists of two stages: endpoint detection and graph construction.
+
+\textbf{Endpoint Detection:} The strategy differs by object class. For junction points (class 1), a single endpoint is computed by snapping the bounding box center $(x_c, y_c)$ to the nearest skeleton pixel within an expanded search region (margin = 8 pixels). For components (class 2+), two endpoints are computed by identifying skeleton pixels on or near the bounding box border, preferring true topological endpoints (degree = 1), and selecting the farthest pair.
+
+\textbf{Graph Construction via Multi-Head BFS:} The algorithm constructs a graph where nodes are detected endpoints and edges represent skeleton connectivity. Each node occupies a disk of radius $r$, and a \texttt{node\_id\_map} is precomputed to associate each pixel with its owning node (or $-1$). For each source node, the BFS queue is initialized with skeleton pixels at the disk boundary and traverses along the skeleton using 8-connectivity. When a pixel belonging to another node $j$ is encountered, the edge $(i, j)$ is recorded and that branch terminates. After graph construction, self-edges (connecting endpoints of the same bounding box) are removed to ensure only inter-object connections remain.
+
+\textbf{Advantages over horizontal/vertical classification:} The path-finding method traces actual wire paths in the image, eliminating spurious connections. It works regardless of wire orientation---horizontal, vertical, or diagonal. It unifies wire detection and terminal detection into a single graph-construction step, and scales linearly with the number of skeleton pixels rather than quadratically with junction count. Due to these advantages, this approach was adopted for the final deployed system.
+
+\subsection{Crossover Dissolution Algorithm}
+
+In hand-drawn circuit diagrams, a \textit{crossover} represents two wires that cross each other without making an electrical connection, as opposed to a \textit{junction} where wires meet and connect. Correctly distinguishing crossovers from junctions is critical for accurate circuit reconstruction. The YOLOv7 model detects crossovers as a dedicated class, and the Multi-Head BFS (Section~\ref{sec:line-detection-pathfinding}) initially treats them as single-point graph nodes---typically connected to four neighboring endpoints corresponding to the two crossing wire segments. The crossover dissolution algorithm resolves these nodes into their true topology.
+
+\textbf{Candidate Identification:} Only crossover nodes with exactly four neighbors qualify for dissolution. Nodes with fewer neighbors are retained as regular junctions, gracefully handling cases where the detector misclassifies a junction as a crossover or where a wire terminates at the crossing point.
+
+\textbf{Direction Vector Computation:} For each of the four neighbors $\mathbf{n}_k$ of a crossover node at position $\mathbf{p}$, a unit direction vector is computed as:
 \begin{equation}
-\mathcal{N}^{-1}(x_n, y_n) = \begin{pmatrix} W \cdot x_n \\ H \cdot y_n \end{pmatrix}
-\label{eq:denormalization}
+    \hat{\mathbf{d}}_k = \frac{\mathbf{n}_k - \mathbf{p}}{\|\mathbf{n}_k - \mathbf{p}\|}
 \end{equation}
 
-This transformation constitutes a diagonal linear map with matrix representation $\text{diag}(W, H)$. The operator is bijective with determinant $WH \neq 0$, admitting the inverse $\mathcal{N}(x, y) = (x/W, y/H)$. The pixel-space junction set is thus constructed as $J = \{\mathbf{j} = \mathcal{N}^{-1}(x_n^{(d)}, y_n^{(d)}) : d \in \mathcal{J}\}$ where $\mathcal{J}$ denotes the subset of detections with class label unity.
-
-\subsection{Pairwise Junction Analysis}
-
-The wire detection algorithm operates by examining all possible pairs of junction points. For a junction set of cardinality $n = |J|$, the number of distinct unordered pairs requiring analysis is $\binom{n}{2} = n(n-1)/2$. Each pair $(\mathbf{j}_i, \mathbf{j}_k)$ with $i < k$ generates a displacement vector:
-
+\textbf{Optimal Pairing via Dot Product:} The algorithm evaluates all three possible ways to partition the four neighbors into two pairs. For each candidate pairing $\{(\mathbf{n}_a, \mathbf{n}_b),\; (\mathbf{n}_c, \mathbf{n}_d)\}$, a score is computed as the sum of dot products within each pair:
 \begin{equation}
-\mathbf{d}^{\leftrightarrow} = \mathbf{j}_k - \mathbf{j}_i = \begin{pmatrix} \Delta x \\ \Delta y \end{pmatrix}
-\label{eq:displacement-vector}
+    S = \hat{\mathbf{d}}_a \cdot \hat{\mathbf{d}}_b + \hat{\mathbf{d}}_c \cdot \hat{\mathbf{d}}_d
 \end{equation}
+The pairing with the minimum (most negative) score $S$ is selected, as this maximizes the geometric opposition of paired neighbors---i.e., paired nodes lie on roughly opposite sides of the crossover.
 
-where $\Delta x = j_{k,x} - j_{i,x}$ and $\Delta y = j_{k,y} - j_{i,y}$ represent the horizontal and vertical displacements respectively. The magnitude of this displacement vector, given by $\|\mathbf{d}^{\leftrightarrow}\| = \sqrt{\Delta x^2 + \Delta y^2}$, represents the Euclidean distance between the junction pair.
+\textbf{Geometric Validation:} The selected pairing is validated by checking that both dot products satisfy $\hat{\mathbf{d}}_a \cdot \hat{\mathbf{d}}_b < -0.7$, confirming that each pair of neighbors is within approximately $45^\circ$ of being directly opposite through the crossover center.
 
-\subsection{Angular Orientation Computation}
+\textbf{Graph Transformation:} If validation passes, the crossover node is removed from the adjacency graph and two new direct edges are created---one connecting each pair of opposite neighbors. This transforms a four-way junction into two independent through-connections, correctly representing two wires that cross without connecting. If validation fails, the node is preserved as a junction, maintaining electrical connectivity.
 
-The orientation of the displacement vector is computed using the four-quadrant arctangent function, which correctly resolves the angle in all quadrants of the Cartesian plane. The signed orientation angle $\theta \in (-\pi, \pi]$ is defined as:
-
-\begin{equation}
-\theta = \text{atan2}(\Delta y, \Delta x)
-\label{eq:angular-orientation}
-\end{equation}
-
-The \texttt{atan2} function is defined piecewise to handle all possible combinations of signs for its arguments. When $\Delta x > 0$, the angle equals $\arctan(\Delta y / \Delta x)$. When $\Delta x < 0$ and $\Delta y \ge 0$, a correction of $+\pi$ is applied. When $\Delta x < 0$ and $\Delta y < 0$, a correction of $-\pi$ is applied. The degenerate cases where $\Delta x = 0$ yield $\pm\pi/2$ depending on the sign of $\Delta y$.
-
-For classification purposes, the angle is converted to a positive representation in degrees using the transformation $\tilde{\theta} = (180\theta / \pi) \mod 360$, yielding values in the range $[0^\circ, 360^\circ)$.
-
-\subsection{Horizontal and Vertical Line Classification}
-
-The classification of junction pairs as horizontal, vertical, or diagonal is accomplished through angular tolerance zones. The tolerance parameter $\epsilon = 18^\circ$ represents 10\% of the half-circle, providing sufficient margin to accommodate minor deviations from perfect alignment while maintaining classification accuracy.
-
-\textbf{Horizontal Acceptance Region:} The set of angles classified as horizontal is defined as the union:
-
-\begin{equation}
-\Theta_H = [0^\circ, 18^\circ] \cup [162^\circ, 198^\circ] \cup [342^\circ, 360^\circ]
-\label{eq:horizontal-region}
-\end{equation}
-
-This region captures angles within $\pm 18^\circ$ of the positive $x$-axis ($0^\circ$ and $360^\circ$) and within $\pm 18^\circ$ of the negative $x$-axis ($180^\circ$).
-
-\textbf{Vertical Acceptance Region:} The set of angles classified as vertical is defined as:
-
-\begin{equation}
-\Theta_V = [72^\circ, 108^\circ] \cup [252^\circ, 288^\circ]
-\label{eq:vertical-region}
-\end{equation}
-
-This region captures angles within $\pm 18^\circ$ of the positive $y$-axis ($90^\circ$) and within $\pm 18^\circ$ of the negative $y$-axis ($270^\circ$).
-
-\textbf{Diagonal Rejection Region:} The complement of the horizontal and vertical regions constitutes the diagonal rejection region:
-
-\begin{equation}
-\Theta_D = [0^\circ, 360^\circ) \setminus (\Theta_H \cup \Theta_V)
-\label{eq:diagonal-region}
-\end{equation}
-
-Junction pairs whose orientation falls within $\Theta_D$ are rejected as they do not represent valid axis-aligned wires.
-
-The classification function $\mathcal{O} : [0^\circ, 360^\circ) \to \{H, V, \varnothing\}$ maps each angle to its corresponding orientation category. The total angular coverage of valid classifications is $(|\Theta_H| + |\Theta_V|)/360^\circ = 144^\circ/360^\circ = 40\%$, indicating that 40\% of angular space is accepted as orthogonal while 60\% is rejected as diagonal.
-
-\subsection{Orthogonal Projection and Axis Alignment}
-
-For junction pairs with valid orthogonal classification, the detected endpoints must be projected onto perfectly axis-aligned lines to ensure strict horizontal or vertical wire representation. This projection compensates for minor deviations from perfect alignment that fall within the tolerance zone.
-
-\textbf{Horizontal Wire Projection:} For a junction pair $(\mathbf{j}_i, \mathbf{j}_k)$ with classification $\mathcal{O}(\tilde{\theta}) = \text{HORIZONTAL}$, the aligned wire is constructed by computing the mean $y$-coordinate:
-
-\begin{equation}
-\bar{y} = \frac{j_{i,y} + j_{k,y}}{2}
-\label{eq:horizontal-projection}
-\end{equation}
-
-The projected wire endpoints are then defined as $\mathbf{s} = (j_{i,x}, \bar{y})$ and $\mathbf{e} = (j_{k,x}, \bar{y})$. Both endpoints share the same $y$-coordinate, ensuring perfect horizontal alignment.
-
-\textbf{Vertical Wire Projection:} For a junction pair with classification $\mathcal{O}(\tilde{\theta}) = \text{VERTICAL}$, the aligned wire is constructed by computing the mean $x$-coordinate:
-
-\begin{equation}
-\bar{x} = \frac{j_{i,x} + j_{k,x}}{2}
-\label{eq:vertical-projection}
-\end{equation}
-
-The projected wire endpoints are $\mathbf{s} = (\bar{x}, j_{i,y})$ and $\mathbf{e} = (\bar{x}, j_{k,y})$. Both endpoints share the same $x$-coordinate, ensuring perfect vertical alignment.
-
-\textbf{Projection Error Bound:} For a junction pair with orientation angle $\tilde{\theta} \in [0^\circ, \epsilon]$ and inter-junction distance $L = \|\mathbf{d}^{\leftrightarrow}\|$, the maximum perpendicular displacement of any endpoint from its original position is bounded by:
-
-\begin{equation}
-\delta = \frac{|\Delta y|}{2} \le \frac{L \sin(\epsilon)}{2}
-\label{eq:projection-error}
-\end{equation}
-
-For the tolerance $\epsilon = 18^\circ$ with $\sin(18^\circ) \approx 0.309$, this yields $\delta \approx 0.155L$. Thus, for a 100-pixel wire, the maximum projection displacement is approximately 15.5 pixels.
-
-\subsection{Grid Quantization}
-
-To ensure coordinate consistency and facilitate subsequent merging operations, all wire endpoints are quantized to a uniform grid. The grid structure is defined by the integer lattice $\mathcal{G} = g\mathbb{Z} \times g\mathbb{Z}$ where $g \in \mathbb{N}^+$ is the grid resolution, set to $g = 16$ pixels in this implementation.
-
-\textbf{Snap Function:} The scalar quantization operator $\text{snap} : \mathbb{R} \to g\mathbb{Z}$ is defined as:
-
-\begin{equation}
-\text{snap}(v) = g \cdot \text{round}\left(\frac{v}{g}\right) = g \cdot \left\lfloor \frac{v}{g} + \frac{1}{2} \right\rfloor
-\label{eq:snap-function}
-\end{equation}
-
-The vectorized extension $\text{Snap} : \mathbb{R}^2 \to \mathcal{G}$ applies the scalar operator component-wise, yielding $\text{Snap}(\mathbf{p}) = (\text{snap}(p_x), \text{snap}(p_y))$.
-
-\textbf{Quantization Error Bounds:} For any scalar value $v \in \mathbb{R}$, the quantization error satisfies $|v - \text{snap}(v)| \le g/2$. For any vector $\mathbf{p} \in \mathbb{R}^2$, the error bounds are:
-
-\begin{equation}
-\|\mathbf{p} - \text{Snap}(\mathbf{p})\|_\infty \le \frac{g}{2}, \quad \|\mathbf{p} - \text{Snap}(\mathbf{p})\|_2 \le \frac{g\sqrt{2}}{2}
-\label{eq:quantization-error}
-\end{equation}
-
-For $g = 16$ pixels, the maximum coordinate error is 8 pixels and the maximum Euclidean error is approximately 11.3 pixels.
-
-\subsection{Wire Segment Consolidation}
-
-The pairwise analysis of junctions frequently generates multiple overlapping wire segments that represent the same physical wire. The consolidation algorithm merges collinear segments within a tolerance threshold to produce a minimal set of non-redundant wires.
-
-\textbf{Canonical Axis-Aligned Representation:} Each wire segment is transformed to a canonical form $\sigma = (a, \ell_{\min}, \ell_{\max}, \omega)$ where $a$ denotes the fixed axis coordinate ($y$-coordinate for horizontal wires, $x$-coordinate for vertical wires), $[\ell_{\min}, \ell_{\max}]$ specifies the extent along the variable axis, and $\omega \in \{H, V\}$ indicates the orientation.
-
-For a horizontal wire $w = (\mathbf{s}, \mathbf{e}, H)$, the canonical form is $\sigma(w) = (s_y, \min(s_x, e_x), \max(s_x, e_x), H)$. For a vertical wire, the transformation is $\sigma(w) = (s_x, \min(s_y, e_y), \max(s_y, e_y), V)$. The segment length is defined as $L(\sigma) = \ell_{\max} - \ell_{\min}$.
-
-\textbf{Mergeability Relation:} Two segments $\sigma_1$ and $\sigma_2$ with identical orientation are mergeable, denoted $\sigma_1 \sim \sigma_2$, if and only if:
-
-\begin{equation}
-|a_1 - a_2| \le \tau \land \ell_{\min}(\sigma_2) \le \ell_{\max}(\sigma_1) + \tau
-\label{eq:mergeability}
-\end{equation}
-
-where $\tau = g$ is the grid tolerance and the segments are ordered such that $\ell_{\min}(\sigma_1) \le \ell_{\min}(\sigma_2)$. The first condition ensures proximity along the fixed axis, while the second condition requires overlap or near-touching along the variable axis.
-
-\textbf{Merge Operator:} For mergeable segments $\sigma_1 \sim \sigma_2$, the merge operation produces a consolidated segment $\sigma_1 \oplus \sigma_2 = (a_{\text{merged}}, \ell_{\text{merged,min}}, \ell_{\text{merged,max}}, \omega)$ where:
-
-\begin{equation}
-a_{\text{merged}} = \begin{cases} a_1 & \text{if } L(\sigma_1) > L(\sigma_2) \\ a_2 & \text{otherwise} \end{cases}
-\label{eq:merge-axis}
-\end{equation}
-
-\begin{equation}
-\ell_{\text{merged,min}} = \min(\ell_{\min}(\sigma_1), \ell_{\min}(\sigma_2)), \quad \ell_{\text{merged,max}} = \max(\ell_{\max}(\sigma_1), \ell_{\max}(\sigma_2))
-\label{eq:merge-extent}
-\end{equation}
-
-The length-weighted axis selection preserves the axis coordinate of the longer segment, which is assumed to be more geometrically accurate. The extent bounds are computed as the union of the individual extents.
-
-\textbf{Merge Monotonicity:} The merge operation is length-non-decreasing, satisfying:
-
-\begin{equation}
-L(\sigma_1 \oplus \sigma_2) \ge \max(L(\sigma_1), L(\sigma_2))
-\label{eq:merge-monotonicity}
-\end{equation}
-
-The proof follows from the observation that $L(\sigma_1 \oplus \sigma_2) = \max(\ell_{\max}(\sigma_1), \ell_{\max}(\sigma_2)) - \min(\ell_{\min}(\sigma_1), \ell_{\min}(\sigma_2))$. In the containment case where one segment contains the other, the merged length equals the longer segment. In the overlapping case, the merged length exceeds both individual lengths.
-
-The consolidation algorithm proceeds by first separating segments by orientation, then sorting each group by axis coordinate and extent minimum. A linear scan merges consecutive mergeable segments, producing the final consolidated wire set.
-
-\section{Terminal Detection}
-
-Terminal detection refers to the identification of connection points between wire segments and circuit components. These intersection points are critical for establishing the circuit topology and enabling subsequent netlist extraction. This section presents the mathematical framework for detecting wire-component intersections based on axis-aligned bounding box geometry.
-
-\subsection{Component Bounding Box Representation}
-
-Circuit components detected by YOLOv7 are represented as axis-aligned bounding boxes (AABBs). For a detection tuple $d = (c, x_n, y_n, w_n, h_n)$ where $c \notin \{0, 1\}$ (excluding text and junction classes), the pixel-space bounding box is defined as:
-
-\begin{equation}
-\mathcal{B} = [x_{\min}, x_{\max}] \times [y_{\min}, y_{\max}]
-\label{eq:bounding-box}
-\end{equation}
-
-The corner coordinates are computed from the normalized detection parameters as:
-
-\begin{equation}
-x_{\min} = \left(x_n - \frac{w_n}{2}\right) W, \quad x_{\max} = \left(x_n + \frac{w_n}{2}\right) W
-\end{equation}
-
-\begin{equation}
-y_{\min} = \left(y_n - \frac{h_n}{2}\right) H, \quad y_{\max} = \left(y_n + \frac{h_n}{2}\right) H
-\label{eq:box-corners}
-\end{equation}
-
-The boundary of the bounding box $\partial \mathcal{B}$ consists of four edges: the left edge at $x = x_{\min}$, the right edge at $x = x_{\max}$, the top edge at $y = y_{\min}$, and the bottom edge at $y = y_{\max}$.
-
-\subsection{Wire Component Intersection Analysis}
-
-Consolidated wire segments are represented in parametric form for intersection analysis. A horizontal wire with $y$-coordinate $y_w$ and $x$-extent $[x_{\min}, x_{\max}]$ defines the line segment:
-
-\begin{equation}
-\mathcal{L}_H = \{(x, y_w) : x \in [x_{\min}, x_{\max}]\}
-\label{eq:horizontal-wire}
-\end{equation}
-
-Similarly, a vertical wire with $x$-coordinate $x_w$ and $y$-extent $[y_{\min}, y_{\max}]$ defines:
-
-\begin{equation}
-\mathcal{L}_V = \{(x_w, y) : y \in [y_{\min}, y_{\max}]\}
-\label{eq:vertical-wire}
-\end{equation}
-
-\subsection{Horizontal Wire Intersection Conditions}
-
-The intersection of a horizontal wire with a component bounding box can occur at either the left edge or the right edge of the box. The intersection conditions are derived from the geometric constraints of axis-aligned segments.
-
-\textbf{Horizontal Wire–Left Edge Intersection:} The horizontal wire $\mathcal{L}_H$ with parameters $(y_w, x_{\min}, x_{\max})$ intersects the left edge of bounding box $\mathcal{B} = [x_{\min}, x_{\max}] \times [y_{\min}, y_{\max}]$ at point $(x_{\min}, y_w)$ if and only if:
-
-\begin{equation}
-\Phi_L(\mathcal{L}_H, \mathcal{B}) = (y_{\min} \le y_w \le y_{\max}) \land (x_{\min} \le x_{\min} \le x_{\max})
-\label{eq:horizontal-left-intersection}
-\end{equation}
-
-The first condition $(y_{\min} \le y_w \le y_{\max})$ ensures vertical alignment, requiring that the wire's $y$-coordinate falls within the vertical extent of the box. The second condition $(x_{\min} \le x_{\min} \le x_{\max})$ ensures horizontal overlap, requiring that the left edge $x$-coordinate falls within the horizontal extent of the wire.
-
-The proof of necessity follows from the observation that if an intersection exists at $(x_{\min}, y_w)$, then this point must simultaneously lie on the wire (requiring $y = y_w$ and $x \in [x_{\min}, x_{\max}]$) and on the left edge (requiring $x = x_{\min}$ and $y \in [y_{\min}, y_{\max}]$). Sufficiency is established by verifying that when both conditions hold, the point $(x_{\min}, y_w)$ belongs to both the wire segment and the box boundary.
-
-\textbf{Horizontal Wire–Right Edge Intersection:} The horizontal wire $\mathcal{L}_H$ intersects the right edge of $\mathcal{B}$ at point $(x_{\max}, y_w)$ if and only if:
-
-\begin{equation}
-\Phi_R(\mathcal{L}_H, \mathcal{B}) = (y_{\min} \le y_w \le y_{\max}) \land (x_{\min} \le x_{\max} \le x_{\max})
-\label{eq:horizontal-right-intersection}
-\end{equation}
-
-The structure mirrors that of the left edge intersection, with $x_{\max}$ replacing $x_{\min}$ in the horizontal overlap condition.
-
-\subsection{Vertical Wire Intersection Conditions}
-
-The intersection of a vertical wire with a component bounding box can occur at either the top edge or the bottom edge of the box.
-
-\textbf{Vertical Wire–Top Edge Intersection:} The vertical wire $\mathcal{L}_V$ with parameters $(x_w, y_{\min}, y_{\max})$ intersects the top edge of bounding box $\mathcal{B}$ at point $(x_w, y_{\min})$ if and only if:
-
-\begin{equation}
-\Phi_T(\mathcal{L}_V, \mathcal{B}) = (x_{\min} \le x_w \le x_{\max}) \land (y_{\min} \le y_{\min} \le y_{\max})
-\label{eq:vertical-top-intersection}
-\end{equation}
-
-The first condition $(x_{\min} \le x_w \le x_{\max})$ ensures horizontal alignment, requiring that the wire's $x$-coordinate falls within the horizontal extent of the box. The second condition $(y_{\min} \le y_{\min} \le y_{\max})$ ensures vertical overlap, requiring that the top edge $y$-coordinate falls within the vertical extent of the wire.
-
-\textbf{Vertical Wire–Bottom Edge Intersection:} The vertical wire $\mathcal{L}_V$ intersects the bottom edge of $\mathcal{B}$ at point $(x_w, y_{\max})$ if and only if:
-
-\begin{equation}
-\Phi_B(\mathcal{L}_V, \mathcal{B}) = (x_{\min} \le x_w \le x_{\max}) \land (y_{\min} \le y_{\max} \le y_{\max})
-\label{eq:vertical-bottom-intersection}
-\end{equation}
-
-\subsection{Complete Intersection Set Construction}
-
-The intersection set for a single wire-box pair aggregates all valid intersections across the relevant edges.
-
-\textbf{Wire-Box Intersection Set:} For wire $w$ with orientation $\omega$ and bounding box $\mathcal{B}$, the intersection set is defined as:
-
-\begin{equation}
-\mathcal{I}(w, \mathcal{B}) = \begin{cases}
-\{(x_{\min}, y_w) : \Phi_L\} \cup \{(x_{\max}, y_w) : \Phi_R\} & \text{if } \omega = H \\
-\{(x_w, y_{\min}) : \Phi_T\} \cup \{(x_w, y_{\max}) : \Phi_B\} & \text{if } \omega = V
-\end{cases}
-\label{eq:wire-box-intersection-set}
-\end{equation}
-
-\textbf{Intersection Cardinality Bound:} For each wire-box pair, the cardinality of the intersection set is bounded by $|\mathcal{I}(w, \mathcal{B})| \le 2$. This bound reflects the geometric reality that a straight axis-aligned wire can enter a rectangular box through one edge and exit through the opposite edge, yielding at most two intersection points.
-
-The global intersection set aggregates all wire-box intersections across the complete wire set $\mathcal{W}$ and component box set $\mathcal{C}$:
-
-\begin{equation}
-\mathcal{I}_{\text{total}} = \bigcup_{w \in \mathcal{W}} \bigcup_{\mathcal{B} \in \mathcal{C}} \mathcal{I}(w, \mathcal{B})
-\label{eq:global-intersection-set}
-\end{equation}
-
-\subsection{Terminal Point Significance}
-
-The detected intersection points serve as terminal connection points in the circuit topology. Each intersection $(x, y) \in \mathcal{I}_{\text{total}}$ indicates a location where a wire connects to a component, enabling the construction of a circuit graph where components are nodes and wires are edges. This representation facilitates subsequent circuit analysis tasks including netlist generation, connectivity verification, and schematic reconstruction.
-
-\section{Line Detection via Path Finding}
-
-This pipeline for detecting lines in skeletonized circuit images by identifying endpoints and constructing a graph representation uses a Multi-Head Breadth-First Search (BFS) algorithm. The methodology consists of two primary stages: endpoint detection from object detection bounding boxes, and graph construction via skeleton traversal.
-
-\subsection{Endpoint Detection}
-
-The endpoint detection strategy differs based on the object class detected by the upstream object detector:
-
-\textbf{Class 1 Objects (Junction Points):} For junction points, a single endpoint is computed by calculating the bounding box center $(x_c, y_c)$ and snapping to the nearest skeleton pixel within an expanded search region (margin = 8 pixels). The closest skeleton point is returned as the endpoint.
-
-\textbf{Class 2+ Objects (Line Segments):} For line segments, two endpoints are computed using bounding box border intersection. Skeleton pixels that lie on or near the bounding box border (within tolerance) are identified. Among these border hits, true topological endpoints (degree = 1) are preferred. The farthest pair of points is selected as the two endpoints.
-
-\subsection{Graph Construction via Multi-Head BFS}
-
-The Multi-Head BFS algorithm constructs a graph where nodes represent detected endpoints and edges represent skeleton connectivity between endpoints.
-
-Each node occupies a disk region of radius $r$ centered at the endpoint. A \texttt{node\_id\_map} is precomputed where each pixel stores:
-\[
-\text{node\_id\_map}[y][x] = 
-\begin{cases}
-i & \text{if pixel is within radius } r \text{ of node } i \\
--1 & \text{otherwise}
-\end{cases}
-\]
-
-For each source node $i$, all pixels within the source node's disk are marked as visited. The BFS queue is initialized with skeleton pixels at the disk boundary. The algorithm traverses along skeleton pixels using 8-connectivity. When encountering a pixel belonging to another node $j$, the edge $(i, j)$ is recorded and that branch stops. This continues until all reachable skeleton paths are explored.
-
-\textbf{Self-Edge Removal:} After constructing the adjacency graph, edges connecting endpoints that belong to the same detected object (i.e., endpoint pairs from the same bounding box) are removed. This ensures the graph represents only inter-object connections.
+The dissolved graph is then used for final circuit assembly, where nodes represent component terminals, junctions, and wire endpoints, and edges represent the true wire paths---with crossover points absent from the electrical topology.
 
 \section{Use-Case Diagram}
 
