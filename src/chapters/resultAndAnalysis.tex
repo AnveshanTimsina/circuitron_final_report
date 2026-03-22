@@ -142,9 +142,6 @@ It is clear from \cref{fig:map_epochs} that the \gls{map} score for \gls{yolo}v7
     \label{fig:performance_metrics}
 \end{figure}
 
-
-\cref{fig:performance_metrics} demonstrate the Precision-Confidence Curve for YOLOv5 and YOLOv7 respectively. The area under this curve informs how consistently precise the model is across all confidence thresholds. For a large area under the curve, as in the case of YOLOv7, the model maintains good precision even when threshold changes; however, for a smaller area, precision collapses quickly when threshold is relaxed.
-
 \cref{fig:performance_metrics} demonstrate the F1 Score-Confidence Curve for YOLOv5 and YOLOv7 respectively. The larger the area under this curve, the higher the robustness of the precision-recall trade-off across thresholds.
 
 \cref{fig:performance_metrics} also demonstrate the Precision-Recall Curve for YOLOv5 and YOLOv7 respectively. The area under this curve gives the average precision (AP) which informs how good the model is at ranking positive samples above negative ones. The area under each of the curves in these figures is higher for YOLOv7 in comparison to YOLOv5. This is expected behavior and proves YOLOv7 is better than YOLOv5 when it comes to performance. 
@@ -326,73 +323,54 @@ Overall, from all these findings, it is evident that YOLOv7 (retrained on the 15
 
 \cref{fig:confusion-matrix-retrained-yolov7} demonstrates the confusion matrix for the retrained YOLOv7 (15 classes). It has a darker main diagonal and very light off-diagonals, which means that the model exhibits strong class separability with minimal inter-class confusion.
 
-
-\section{\gls{ocr} Results}
-
-The out-of-the-box default \gls{easyocr} implementation without fine-tuning was able to detect some of the component values from the circuit; however, the results left a lot to be desired. This made it clear that proper training of the recognition model is absolutely essential for this project.
-
-After training the text recognition model from scratch, results were much improved. Two randomly picked images from the dataset are shown below after passing through the detection (\gls{yolo}v7) and recognition (\gls{ocr}) models.
-
+\section{Retrained YOLOv7 Demonstration}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{src/images/figures/text_detection_recognition.png}
-    \caption{Text Detection and Recognition (i)}
-    \label{fig:ocr-result-1}
+    \includegraphics[width=\textwidth]{src/images/figures/retrained_yolov7_result1.png}
+    \caption{Retrained YOLOv7 Result (i)}
+    \label{fig:retrained-yolov7-result-1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{src/images/figures/text_detection_recognition2.png}
-    \caption{Text Detection and Recognition (ii)}
-    \label{fig:ocr-result-2}
+    \includegraphics[width=\textwidth]{src/images/figures/retrained_yolov7_result2.png}
+    \caption{Retrained YOLOv7 Result (ii)}
+    \label{fig:retrained-yolov7-result-2}
 \end{figure}
 
-It is to be noted that the ``??'' shown in \cref{fig:ocr-result-1} and \cref{fig:ocr-result-2} is a limitation of the picture-rendering library used (OpenCV, Matplotlib), rather than a limitation of the \gls{ocr} model. The \gls{ocr} model accurately identifies symbols like $\mu$ (micro).
+\cref{fig:retrained-yolov7-result-1} and \cref{fig:retrained-yolov7-result-2} show the results of the retrained YOLOv7 on two random test images. The model successfully detects and classifies all components in both images with high confidence scores. These results visually confirm the quantitative metrics and demonstrate the model's effectiveness in real-world scenarios.
 
-\subsection{Training Loss Curve}
+\section{Custom OCR Results and Analysis}
+\subsection{Custom OCR Training Loss Curve}
 
-% Due to the limitation of unpaid versions of cloud-based services like Google Colab and Lightning \gls{ai}, only 29 training epochs were successfully run. However, the results in those 29 epochs also seem promising as the training loss steadily decreased.
-\cref{fig:ocr-training-loss} shows that the training loss decreases consistently throughout the 50 epochs, indicating the model is effectively memorizing the training data. However, the validation loss only drops until around 15-20 epochs before gradually increasing, indicating overfitting. Overfitting is an issue to be eradicated using extensive training using diverse datasets (either by addition of other datasets in training and/or augmentation). If the performance is considered satisfactory after training for only 15-20 epochs, early stopping may also be used.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{src/images/figures/OCR_loss_curve.png}
-    \caption{Training Loss vs Epochs (\gls{ocr})}
-    \label{fig:ocr-training-loss}
+    \includegraphics[width=\textwidth]{src/images/figures/custom_OCR_loss_curve.png}
+    \caption{Training Loss vs Epochs (Custom \gls{ocr})}
+    \label{fig:custom-ocr-loss-curve}
 \end{figure}
 
-\subsection{OCR Prediction}
+\cref{fig:custom-ocr-loss-curve} shows that the training loss decreases consistently throughout the 27 epochs, indicating the model is effectively memorizing the training data. There seems to be the slightest uptick in the validation loss, though, at 26 epoch indicating a hint of potential overfitting. The training was stopped at 27 epochs due to early stopping criteria being met.
 
-% Due to the limitation of unpaid versions of cloud-based services like Google Colab and Lightning \gls{ai}, only 29 training epochs were successfully run. However, the results in those 29 epochs also seem promising as the training loss steadily decreased.
-The predictions made by the OCR model for a random sample of test data is shown in \cref{fig:ocr-predictions}. The OCR model accurately recognizes the easily discernible text but is fallible in some cases. However, in this random sample of images, all the problem images (i.e. the ones OCR cannot recognize) are indiscernible to human eyes as well. For instance, the input image samples for GT: D5 and GT: 31 are completely black suggesting a preprocessing or cropping bug rather than a fault in the model.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/ocr_test.png}
-    \caption{OCR Model Predictions}
-    \label{fig:ocr-predictions}
-\end{figure}
 
-\subsection{OCR Performance Analysis}
-\cref{fig:ocr-performance-metrics} is a combination of images showing the performance metrics for the OCR model. The accuracy is 65.96\% and while this may seem low, the sample images reveal that accuracy might have taken a hit due to data corruption in the cropping process or preprocessing. Once this bug is somewhat fixed, accuracy is expected to rise. That being said, to improve the accuracy further, the task of refining the model, regardless of data corruption will continue. Likewise, the CER of 0.25 means that on average, 1 out of every 4 characters is predicted incorrectly. However, the histogram shows a notable bump at 1.0 (complete failure) confirming the presence of "garbage" inputs (like black boxes, as seen in the sample images). WER is shown to be 0.34. Its distribution is inherently binary because the model either gets the full component value right (WER being 0) or gets it wrong (WER = 1).
+\subsection{Custom OCR Performance Analysis}
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{src/images/figures/cer_wer.png}
-    \caption{OCR Performance Metrics and their Distributions}
+    \caption{Custom OCR Performance Metrics and their Distributions}
     \label{fig:ocr-performance-metrics}
 \end{figure}
 
+\cref{fig:ocr-performance-metrics} is a combination of images showing the performance metrics for the custom OCR model. The accuracy is 66.77\%. Likewise, the CER of approximately 0.25 means that on average, 1 out of every 4 characters is predicted incorrectly. However, the histogram shows a notable bump at 1.0 (complete failure) confirming the presence of "garbage" inputs which can be fixed by the use of data cleaning techniques. WER is shown to be 0.33. Its distribution is inherently binary because the model either gets the full component value right (WER being 0) or gets it wrong (WER = 1).
+
+The performance metrics indicate that while the custom OCR model has learned to recognize some component values, there is significant room for improvement. This sets the stage for TrOCR which is expected to have much better performance due to its pre-trained weights and more advanced architecture. 
+
 \section{Comparative Analysis of \gls{ocr} Models}
 
-Two distinct \gls{ocr} architectures were evaluated for extracting component values (e.g., ``10k$\Omega$'', ``100$\mu$F'') from detected text regions: the custom \gls{crnn}-based model trained from scratch, and a fine-tuned TrOCR-small model based on the Vision Transformer architecture.
-
-\subsection{Architecture Comparison}
-
-The custom \gls{crnn} model follows a three-stage pipeline: a \gls{cnn} encoder extracts visual features from the text crop, a bidirectional \gls{lstm} models sequential dependencies, and a \gls{ctc} decoder produces the final character sequence. This model was trained from scratch for 50 epochs using the DTRB framework.
-
-TrOCR-small employs a fundamentally different approach: a Vision Transformer (ViT) encoder processes the input image as a sequence of patches, and a Transformer decoder auto-regressively generates the output text. The pre-trained model (Microsoft's TrOCR-small-printed) was fine-tuned on the circuit text dataset for 3 epochs only, leveraging transfer learning from large-scale printed text recognition.
+Two distinct \gls{ocr} architectures were evaluated for extracting component values (e.g., ``10k$\Omega$'', ``100$\mu$F'') from detected text regions: the custom \gls{crnn}-based model trained from scratch, and a fine-tuned TrOCR-small model based on the Vision Transformer architecture as mentioned in previous sections.
 
 \subsection{Quantitative Comparison}
-
-\cref{table:ocr-comparison} summarizes the performance of both \gls{ocr} models, and \cref{fig:ocr-comparison} provides a visual comparison.
 
 \begin{table}[H]
     \centering
@@ -402,45 +380,91 @@ TrOCR-small employs a fundamentally different approach: a Vision Transformer (Vi
         \toprule
         \textbf{Metric} & \textbf{Custom CRNN} & \textbf{Fine-tuned TrOCR} \\
         \midrule
-        Accuracy (\%)         & 65.96 & \textbf{84.50} \\
+        Accuracy (\%)         & 66.77 & \textbf{84.50} \\
         \gls{cer}             & 0.25  & \textbf{0.12} \\
-        WER                   & 0.34  & \textbf{0.18} \\
-        Training Epochs       & 50    & 3 \\
+        WER                   & 0.33  & \textbf{0.18} \\
+        Training Epochs       & 27    & 3 \\
         Batch Inference       & Sequential & Parallel (GPU) \\
         Precision (float)     & float32 & float16 \\
         \bottomrule
     \end{tabular}
 \end{table}
 
-\begin{figure}[H]
+\begin{figure}[ht]
     \centering
-    \includegraphics[width=\textwidth]{src/images/figures/ocr_model_comparison.png}
-    \caption{Comparative analysis of Custom \gls{crnn} and Fine-tuned TrOCR: (left) performance metrics; (right) feature comparison}
-    \label{fig:ocr-comparison}
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            enlarge x limits=0.25,
+            legend style={at={(0.5,-0.2)},
+              anchor=north,legend columns=-1},
+            ylabel={Percentage (\%)},
+            symbolic x coords={Accuracy, CER, WER},
+            xtick=data,
+            nodes near coords,
+            nodes near coords align={vertical},
+            ymin=0, ymax=100,
+            bar width=25pt,
+            width=10cm,
+            height=8cm,
+            title={OCR Model Performance Comparison},
+            % Ensure 12pt style for labels
+            label style={font=\large},
+            tick label style={font=\large},
+            legend style={font=\large}
+        ]
+            % Custom CRNN Data
+            % CER (0.25 -> 25) and WER (0.33 -> 33)
+            \addplot [fill=blue!30] coordinates {(Accuracy,66.77) (CER,25) (WER,33)};
+            
+            % Fine-tuned TrOCR Data
+            % CER (0.12 -> 12) and WER (0.18 -> 18)
+            \addplot [fill=red!30] coordinates {(Accuracy,84.50) (CER,12) (WER,18)};
+            
+            \legend{Custom OCR, Fine-tuned TrOCR}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Performance metrics comparison. Note: CER and WER are represented as percentages (Error Rate $\times$ 100).}
+    \label{fig:ocr-bar-chart}
 \end{figure}
 
-\subsection{Analysis}
+\cref{table:ocr-comparison} summarizes the performance of both \gls{ocr} models, and \cref{fig:ocr-bar-chart} provides a visual comparison. The fine-tuned TrOCR model outperforms the custom \gls{crnn} across all metrics despite requiring only 3 training epochs compared to 27. The \gls{cer} reduction from 0.25 to 0.12 indicates that TrOCR makes half as many character-level errors, directly improving the accuracy of extracted component values. It is noted that the custom \gls{crnn}'s lower accuracy (66.77\%) was partly attributed to data corruption during preprocessing. Regardless, the architectural advantages of the Transformer-based approach make TrOCR the superior choice for this pipeline. However, the inference speed of TrOCR has found to be 4 times slower than the custom OCR model. This implies there is inherently a trade-off between accuracy and inference speed when choosing between the custom OCR and TrOCR models for this project. Keeping this in mind, both models are retained in the codebase and can be switched based on user preference.
 
-The fine-tuned TrOCR model outperforms the custom \gls{crnn} across all metrics despite requiring only 3 training epochs compared to 50. Key factors contributing to TrOCR's superiority include:
+\section{\gls{ocr} Demonstration}
 
-\begin{enumerate}
-    \item \textbf{Transfer learning:} TrOCR leverages pre-trained weights from large-scale text recognition datasets, providing strong initial feature representations that generalize well to circuit component text.
-    \item \textbf{Attention mechanism:} The Transformer decoder's self-attention captures long-range dependencies more effectively than the \gls{lstm}-based sequential decoding in \gls{crnn}, particularly for multi-character component values.
-    \item \textbf{Batch inference:} TrOCR processes all text crops from a single image in one forward pass using GPU parallelism with float16 precision, whereas the \gls{crnn} model processes crops sequentially. This results in significantly faster inference in practice.
-    \item \textbf{Robustness:} The \gls{cer} reduction from 0.25 to 0.12 indicates that TrOCR makes half as many character-level errors, directly improving the accuracy of extracted component values for netlist generation.
-\end{enumerate}
+Two randomly picked images from the dataset are shown below after passing through the detection (\gls{yolo}v7) and recognition (\gls{ocr}) models.
 
-It is noted that the custom \gls{crnn}'s lower accuracy (65.96\%) was partly attributed to data corruption during preprocessing (as discussed in \cref{fig:ocr-performance-metrics}), where some training crops were entirely black. The TrOCR model, being fine-tuned on cleaned data, did not suffer from this issue. Regardless, the architectural advantages of the Transformer-based approach make TrOCR the superior choice for this pipeline, and it is adopted as the final \gls{ocr} model in the production system.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{src/images/figures/custom_ocr_result1.png}
+    \caption{Text Detection and Recognition using Custom OCR(i)}
+    \label{fig:custom-ocr-result-1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{src/images/figures/trocr_result1.png}
+    \caption{Text Detection and Recognition using TrOCR(i)}
+    \label{fig:trocr-result-1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{src/images/figures/custom_ocr_result2.png}
+    \caption{Text Detection and Recognition using Custom OCR(ii)}
+    \label{fig:custom-ocr-result-2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{src/images/figures/trocr_result2.png}
+    \caption{Text Detection and Recognition using TrOCR(ii)}
+    \label{fig:trocr-result-2}
+\end{figure}
+
+\cref{fig:custom-ocr-result-1} and \cref{fig:custom-ocr-result-2} show the results of the custom OCR model on two random test images. The model successfully detects text regions and extracts component values, albeit with many errors. In contrast, \cref{fig:trocr-result-1} and \cref{fig:trocr-result-2} demonstrate the superior performance of the fine-tuned TrOCR model, which correctly recognizes most component values.
 
 \section{Junction-Based Wire Detection}
-
-This section presents the experimental results obtained from the proposed junction-based wire detection pipeline applied to circuit diagram images. Each processing stage is evaluated independently and supported with quantitative measurements and visual evidence.
-
-\subsection{Input Image and Preprocessing}
-
-The experiment begins with a high-resolution scanned circuit diagram used as the input image. The original image dimensions are reported in terms of width and height in pixels to establish spatial scale consistency throughout the pipeline.
-
-To enhance structural features and suppress background noise, the input image is converted to grayscale. Otsu's global thresholding method is then applied to automatically compute an optimal threshold value that separates foreground circuit elements from the background. The resulting binary image preserves wires, junctions, and components while eliminating illumination variations.
 
 \begin{figure}[H]
     \centering
@@ -449,61 +473,9 @@ To enhance structural features and suppress background noise, the input image is
     \label{fig:otsu-thresholding}
 \end{figure}
 
-\subsection{Skeletonization}
+This section presents the experimental results obtained from the junction-based wire detection pipeline applied to circuit diagram images. A high-resolution scanned circuit diagram is used as the input image. The original image dimensions are reported in terms of width and height in pixels to establish spatial scale consistency throughout the pipeline. To enhance structural features and suppress background noise, the input image is converted to grayscale. Otsu's global thresholding method is then applied to automatically compute an optimal threshold value that separates foreground circuit elements from the background. The resulting binary image preserves wires, junctions, and components while eliminating illumination variations as shown in \cref{fig:otsu-thresholding}.
 
-Morphological skeletonization is applied to the binary image to reduce all wire segments to single pixel-wide centerlines. This transformation significantly reduces the number of foreground pixels while preserving the topological connectivity of the circuit network.
-
-The reduction in foreground pixel count before and after skeletonization is recorded to quantify structural simplification. Despite aggressive thinning, wire continuity and junction connectivity remain intact, making the skeleton suitable for graph-based analysis.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/skelotonization.png}
-    \caption{Skeletonization}
-    \label{fig:skeletonization}
-\end{figure}
-
-\subsection{Component Removal and Junction Isolation}
-
-Object detection is performed using a trained \gls{yolo} model to identify and localize elements in the circuit diagram. Detected objects are classified as follows: Class 0 corresponds to text annotations, Class 1 corresponds to junctions, and all remaining classes correspond to circuit components.
-
-The total number of detected objects per class is reported. To isolate only the wire network, bounding boxes associated with non-junction classes are removed from the skeleton image. This step eliminates component shapes while preserving junction points and interconnecting wires.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/component_removal.png}
-    \caption{Component Removal}
-    \label{fig:component-removal}
-\end{figure}
-
-\subsection{Junction Extraction and Wire Classification}
-
-All detected junctions belonging to Class 1 (junctions) are extracted and their coordinates are converted from normalized \gls{yolo} format to pixel coordinates.
-
-Each junction pair is classified based on geometric alignment. Pairs aligned horizontally are labeled as horizontal wires, pairs aligned vertically are labeled as vertical wires, and diagonally aligned pairs are rejected. The total number of accepted and rejected pairs is reported. Sample coordinate transformations from normalized values to pixel coordinates are also presented.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/wire_classification.png}
-    \caption{Wire Classification}
-    \label{fig:wire-classification}
-\end{figure}
-
-\subsection{Segment Consolidation Through Merging}
-
-Initial wire detection may produce fragmented segments representing portions of the same physical wire. To address this, a merging algorithm is applied based on axis alignment tolerance of 16 pixels and overlapping or adjacent segment conditions.
-
-The total number of raw wire segments before merging and the consolidated count after merging are reported.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/segment_consolidation.png}
-    \caption{Segment Consolidation Through Merging}
-    \label{fig:segment-consolidation}
-\end{figure}
-
-\subsection{Component Bounding Box Overlay}
-
-To enhance visualization and verify correct detection, component bounding boxes detected by \gls{yolo} are overlaid on the original circuit diagram. This overlay confirms that all circuit elements have been properly identified and localized, with bounding boxes accurately delineating component boundaries.
+Morphological skeletonization is performed on the binary image to reduce all lines to a single-pixel width while maintaining connectivity. This process simplifies the subsequent analysis of wire paths and junctions. The skeletonized image is then overlaid with bounding boxes obtained from the object detection stage (i.e, YOLOv7) to identify potential endpoints where wires intersect component boundaries. Detected endpoints are marked on the skeleton, and their spatial coordinates are recorded for further processing.
 
 \begin{figure}[H]
     \centering
@@ -512,26 +484,13 @@ To enhance visualization and verify correct detection, component bounding boxes 
     \label{fig:bbox-overlay}
 \end{figure}
 
-\subsection{Wire-Component Intersection Detection}
+\cref{fig:bbox-overlay} shows the skeletonized image with bounding boxes overlaid. Intersection points between wires and component bounding box edges are computed to identify electrical connectivity. The total number of intersection points is reported along with a directional breakdown for horizontal and vertical wires intersecting specific component edges. These intersections form the basis for reconstructing circuit connectivity graphs and CircuitJS-compatible text files.
 
-Intersection points between wires and component bounding box edges are computed to identify electrical connectivity. The total number of intersection points is reported along with a directional breakdown for horizontal and vertical wires intersecting specific component edges.
-
-These intersections form the basis for reconstructing circuit connectivity graphs and netlists.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/wire_component_intersection_detection.png}
-    \caption{Wire-Component Intersection Detection}
-    \label{fig:wire-component-intersection}
-\end{figure}
+However, this junction-based method has a very important shortcoming: it fails to handle diagonal lines. This is because the bounding box intersection method relies on the assumption that wires will intersect component boundaries along horizontal or vertical axes. Diagonal wires may not intersect the bounding box edges in a predictable manner, leading to missed connections and incomplete graph construction. Therefore, this method is rejected in favor of a more robust path-finding approach that can handle arbitrary wire orientations and junction configurations.
 
 \section{Line Detection via Path Finding Visualization}
 
-The algorithm produces visual outputs that demonstrate the effectiveness of the endpoint detection and graph construction pipeline. The following subsections present the key visualizations obtained from applying the Multi-Head BFS algorithm to the skeletonized circuit image.
-
 \subsection{Skeletonized Image with Detected Endpoints}
-
-Figure~\ref{fig:skeleton_endpoints} displays the skeletonized image with all detected endpoints overlaid. The skeleton representation captures the one-pixel-wide structure of the circuit lines after morphological processing. Red circles indicate the detected endpoints, which were identified using the bounding box intersection method for line segments and center-snapping for junction points. Green rectangles show the original YOLO bounding boxes used for endpoint localization. This visualization confirms that the endpoint detection algorithm successfully identifies connection points at the boundaries of detected objects.
 
 \begin{figure}[H]
     \centering
@@ -540,9 +499,9 @@ Figure~\ref{fig:skeleton_endpoints} displays the skeletonized image with all det
     \label{fig:skeleton_endpoints}
 \end{figure}
 
-\subsection{Adjacency Graph Visualization}
+\cref{fig:skeleton_endpoints} displays the skeletonized image with all detected endpoints overlaid. The skeleton representation captures the one-pixel-wide structure of the circuit lines after morphological processing. Blue dots indicate the detected endpoints, which were identified using the bounding box intersection method for line segments and center-snapping for junction points. The blue rectangles show the original YOLO bounding boxes used for endpoint localization. This visualization confirms that the endpoint detection algorithm successfully identifies connection points at the boundaries of detected objects.
 
-Figure~\ref{fig:adjacency_graph} presents the final adjacency graph constructed using the Multi-Head BFS algorithm. Each node corresponds to a detected endpoint from the previous stage. Blue lines connecting the nodes represent edges in the graph, indicating skeleton connectivity between endpoints. The graph has been processed to remove self-edges (connections between endpoints belonging to the same detected object), ensuring that only meaningful inter-component connections are preserved. This graph structure enables downstream applications such as circuit topology analysis and netlist extraction.
+\subsection{Adjacency Graph Visualization}
 
 \begin{figure}[H]
     \centering
@@ -551,11 +510,20 @@ Figure~\ref{fig:adjacency_graph} presents the final adjacency graph constructed 
     \label{fig:adjacency_graph}
 \end{figure}
 
+\cref{fig:adjacency_graph} presents the final adjacency graph constructed using the Multi-Head BFS algorithm. Each node corresponds to a detected endpoint from the previous stage. Blue lines connecting the nodes represent edges in the graph, indicating skeleton connectivity between endpoints. The graph has been processed to remove self-edges (connections between endpoints belonging to the same detected object), ensuring that only meaningful inter-component connections are preserved. This graph structure enables downstream applications such as circuit topology analysis and netlist extraction.
+
+\section{Combined Overlay of YOLOv7, TrOCR, and Line Detection Results}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{src/images/figures/combined_overlay.png}
+    \caption{Combined overlay of YOLOv7, TrOCR, and line detection results}
+    \label{fig:combined_overlay}
+\end{figure}
+
+\cref{fig:combined_overlay} shows a comprehensive overlay of the results from the object detection (YOLOv7), text recognition (TrOCR), and line detection (adjacency graph) stages. The original circuit diagram is displayed in the background, with YOLOv7 bounding boxes highlighted in green, TrOCR-extracted component values annotated in blue text, and detected connections between components represented as red lines. This integrated visualization confirms that the pipeline successfully identifies components, extracts their values, and reconstructs connectivity, providing a holistic view of the circuit diagram interpretation process.
+
 \section{Frontend Visualization}
-
-The frontend of the \gls{circuitron} web application provides an interactive environment for circuit design, simulation, and analysis. It enables users to construct electrical circuits using a drag-and-drop schematic editor with grid-based alignment, snap-to-grid functionality, and real-time wire routing. Components such as passive elements, active devices, and sources can be configured through a properties panel that allows precise control over electrical parameters and placement. 
-
-The system integrates simulation controls for transient analysis, allowing users to define time parameters, execute simulations, and visualize results through dynamically rendered voltage-time plots. Measurement probes support real-time signal monitoring with automated computation of key metrics, including maximum, minimum, peak-to-peak range, and \gls{rms} values. Additionally, the frontend supports exporting simulation data and visualizations in standard formats, enabling seamless documentation and further offline analysis.
 
 \begin{figure}[H]
     \centering
@@ -571,49 +539,9 @@ The system integrates simulation controls for transient analysis, allowing users
     \label{fig:simulation-result}
 \end{figure}
 
-\subsection{End-to-End Pipeline Demonstration: Voltage Divider Circuit}
+The frontend of the \gls{circuitron} web application provides an interactive environment for circuit design, simulation, and analysis. It enables users to construct electrical circuits using a drag-and-drop schematic editor with grid-based alignment, snap-to-grid functionality, and real-time wire routing. Components such as passive elements, active devices, and sources can be configured through a properties panel that allows precise control over electrical parameters and placement. 
 
-To demonstrate the complete pipeline from hand-drawn input to simulation-ready circuit, a voltage divider circuit is traced through each processing stage. The following figures illustrate the intermediate and final outputs at each step.
+The system integrates simulation controls for transient analysis, allowing users to define time parameters, execute simulations, and visualize results through dynamically rendered voltage-time plots. Measurement probes support real-time signal monitoring with automated computation of key metrics, including maximum, minimum, peak-to-peak range, and \gls{rms} values. Additionally, the frontend supports exporting simulation data and visualizations in standard formats, enabling seamless documentation and further offline analysis.
 
-\cref{fig:vdivider-skeleton} shows the morphological skeleton extracted from the preprocessed binary image of the hand-drawn voltage divider. The skeleton reduces all strokes to single-pixel-wide centerlines while preserving the circuit topology. \cref{fig:vdivider-skeleton-endpoints} overlays the detected endpoints on the skeleton, where red markers indicate connection points identified at bounding box intersections and junction centers.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\textwidth]{src/images/figures/skeletonvdivider.png}
-    \caption{Skeletonized Image of the Voltage Divider Circuit}
-    \label{fig:vdivider-skeleton}
-\end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\textwidth]{src/images/figures/skeletonwithendpointvdivider.png}
-    \caption{Skeleton with Detected Endpoints for the Voltage Divider}
-    \label{fig:vdivider-skeleton-endpoints}
-\end{figure}
-
-\cref{fig:vdivider-adjacency} presents the connectivity graph constructed from the detected endpoints using the Multi-Head BFS algorithm. Nodes represent component terminals and junction points, while edges denote verified electrical connections along the skeleton paths. This graph forms the basis for netlist extraction.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\textwidth]{src/images/figures/adjancyvdivider.png}
-    \caption{Adjacency Graph of the Voltage Divider Circuit}
-    \label{fig:vdivider-adjacency}
-\end{figure}
-
-\cref{fig:vdivider-frontend-mapped} shows the frontend interface with all detected components mapped onto the schematic editor. Each component is placed at its corresponding position with recognized values and types, demonstrating successful translation from hand-drawn input to a structured digital representation.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/frontendallcomponentsmappedvdivider.png}
-    \caption{Frontend with All Components Mapped for the Voltage Divider}
-    \label{fig:vdivider-frontend-mapped}
-\end{figure}
-
-\cref{fig:vdivider-simulation} displays the final simulation output of the reconstructed voltage divider circuit within the frontend. The transient analysis plot confirms correct circuit behavior, validating the end-to-end accuracy of the detection, recognition, connectivity extraction, and netlist generation pipeline.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/simulatefrontendvdivider.png}
-    \caption{Simulation Result of the Reconstructed Voltage Divider Circuit}
-    \label{fig:vdivider-simulation}
-\end{figure}
