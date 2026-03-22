@@ -1,0 +1,69 @@
+575:LaTeX Warning: Citation `reddy2021handdrawn' on page 1 undefined on input line 
+579:LaTeX Warning: Citation `sertdemir2022img2sim' on page 1 undefined on input lin
+583:LaTeX Warning: Citation `chen2011efficacy' on page 1 undefined on input line 9.
+608:LaTeX Warning: Citation `adnan2021cnnbased' on page 5 undefined on input line 3
+612:LaTeX Warning: Citation `edwards2000machine' on page 5 undefined on input line 
+616:LaTeX Warning: Citation `kelly2024digitizing' on page 5 undefined on input line
+620:LaTeX Warning: Citation `yamakaji2023circuit2graph' on page 5 undefined on inpu
+624:LaTeX Warning: Citation `bayer2023instance' on page 5 undefined on input line 1
+628:LaTeX Warning: Citation `abhinav2020electric' on page 5 undefined on input line
+632:LaTeX Warning: Citation `reddy2021handdrawn' on page 5 undefined on input line 
+636:LaTeX Warning: Citation `hemker2024schematics' on page 5 undefined on input lin
+642:LaTeX Warning: Citation `kicad2024spice' on page 6 undefined on input line 16.
+645:LaTeX Warning: Citation `sertdemir2022img2sim' on page 6 undefined on input lin
+649:LaTeX Warning: Citation `vungarala2024spicepilot' on page 6 undefined on input 
+665:LaTeX Warning: Reference `fig:block-diagram-circuitron' on page 14 undefined on
+672:LaTeX Warning: Reference `fig:yolov7-architecture' on page 16 undefined on inpu
+679:LaTeX Warning: Reference `fig:text-recognition-pipeline' on page 18 undefined o
+685:LaTeX Warning: Reference `fig:trocr-architecture' on page 19 undefined on input
+706:LaTeX Warning: Reference `fig:use-case-diagram' on page 33 undefined on input l
+712:LaTeX Warning: Reference `table:performance-metrics' on page 34 undefined on in
+1135:LaTeX Warning: Reference `fig:block-diagram-circuitron' on page 42 undefined on
+1139:LaTeX Warning: Reference `fig:system-flowchart' on page 42 undefined on input l
+1694:LaTeX Warning: Reference `alg:node_id_map' on page 52 undefined on input line 3
+1772:LaTeX Warning: Reference `alg:bfs_node' on page 53 undefined on input line 326.
+1887:LaTeX Warning: Reference `alg:remove_self' on page 54 undefined on input line 3
+1953:LaTeX Warning: Reference `tab:time_complexity' on page 55 undefined on input li
+1960:LaTeX Warning: Reference `tab:space_complexity' on page 55 undefined on input l
+2055:LaTeX Warning: Reference `fig:map50-epochs' on page 1 undefined on input line 6
+2059:LaTeX Warning: Reference `fig:map50-95-epochs' on page 1 undefined on input lin
+2063:LaTeX Warning: Reference `fig:yolov7-loss-curves' on page 1 undefined on input 
+2067:LaTeX Warning: Reference `fig:yolov5-loss-curves' on page 1 undefined on input 
+2073:LaTeX Warning: Reference `fig:precision-conf-v5' on page 1 undefined on input l
+2077:LaTeX Warning: Reference `fig:precision-conf-v7' on page 1 undefined on input l
+2099:LaTeX Warning: Reference `fig:recall-conf-v5' on page 1 undefined on input line
+2103:LaTeX Warning: Reference `fig:recall-conf-v7' on page 1 undefined on input line
+2114:LaTeX Warning: Reference `fig:f1-conf-v5' on page 1 undefined on input line 120
+2118:LaTeX Warning: Reference `fig:f1-conf-v7' on page 1 undefined on input line 120
+2139:LaTeX Warning: Reference `fig:pr-curve-v5' on page 1 undefined on input line 13
+2143:LaTeX Warning: Reference `fig:pr-curve-v7' on page 1 undefined on input line 13
+2153:LaTeX Warning: Reference `fig:confusion-matrix-v5' on page 1 undefined on input
+2157:LaTeX Warning: Reference `fig:confusion-matrix-v7' on page 1 undefined on input
+2179:LaTeX Warning: Reference `fig:ocr-result-1' on page 1 undefined on input line 2
+2183:LaTeX Warning: Reference `fig:ocr-result-2' on page 1 undefined on input line 2
+2187:LaTeX Warning: Reference `fig:ocr-training-loss' on page 1 undefined on input l
+2194:LaTeX Warning: Reference `fig:ocr-predictions' on page 1 undefined on input lin
+2200:LaTeX Warning: Reference `fig:ocr-performance-metrics' on page 1 undefined on i
+2207:LaTeX Warning: Reference `fig:15class-training-curves' on page 1 undefined on i
+2213:LaTeX Warning: Reference `fig:15class-train-loss' on page 1 undefined on input 
+2217:LaTeX Warning: Reference `fig:15class-val-loss' on page 1 undefined on input li
+2223:LaTeX Warning: Reference `table:yolo-15class-comparison' on page 1 undefined on
+2227:LaTeX Warning: Reference `fig:15class-final-bar' on page 1 undefined on input l
+2234:LaTeX Warning: Reference `fig:class-impact' on page 1 undefined on input line 3
+2238:LaTeX Warning: Reference `table:class-impact' on page 1 undefined on input line
+2244:LaTeX Warning: Reference `table:yolo-full-comparison' on page 1 undefined on in
+2248:LaTeX Warning: Reference `fig:yolo-full-bar' on page 1 undefined on input line 
+2257:LaTeX Warning: Reference `fig:yolo-evolution' on page 1 undefined on input line
+2263:LaTeX Warning: Reference `fig:yolo-radar' on page 1 undefined on input line 385
+2274:LaTeX Warning: Reference `table:ocr-comparison' on page 1 undefined on input li
+2278:LaTeX Warning: Reference `fig:ocr-comparison' on page 1 undefined on input line
+2285:LaTeX Warning: Reference `fig:ocr-performance-metrics' on page 1 undefined on i
+2297:LaTeX Warning: Reference `fig:skeleton_endpoints' on page 90 undefined on input
+2303:LaTeX Warning: Reference `fig:adjacency_graph' on page 91 undefined on input li
+2310:LaTeX Warning: Reference `fig:vdivider-skeleton' on page 1 undefined on input l
+2314:LaTeX Warning: Reference `fig:vdivider-skeleton-endpoints' on page 1 undefined 
+2321:LaTeX Warning: Reference `fig:vdivider-adjacency' on page 1 undefined on input 
+2328:LaTeX Warning: Reference `fig:vdivider-frontend-mapped' on page 1 undefined on 
+2332:LaTeX Warning: Reference `fig:vdivider-simulation' on page 1 undefined on input
+2350:LaTeX Warning: There were undefined references.
+2353:LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.

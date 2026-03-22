@@ -15,11 +15,11 @@ The high-level architecture of the CIRCUITRON system is visualized in the block 
 
 \subsection{Preprocessing}
 
-At first, the circuit information (components, component values, units, wire intersection, etc.) needs to be extracted out from the hand-drawn image. Appropriately fine-tuned ML and DL models are to be used for each of these steps which will be elaborated on in later subsections, however, for any sort of detection to happen, the image needs to first be pre-processed. Preprocessing for this not only includes image manipulation tasks but also conversion of the dataset annotations into appropriate formats to maintain compatibility with the component detection and text recognition models. The dataset of choice is in the Pascal VOC format which is incompatible with the models that are intended to be used in the pipeline and hence need to be converted. The code for this conversion with examples will be discussed in the implementation section.
+At first, the circuit information (components, component values, units, wire intersection, etc.) needs to be extracted out from the hand-drawn image. Appropriately fine-tuned ML and DL models are to be used for each of these steps which will be elaborated on in later subsections. However, for any sort of detection to happen, the image needs to first be pre-processed. Preprocessing for this not only includes image manipulation tasks but also conversion of the dataset annotations into appropriate formats to maintain compatibility with the component detection and text recognition models. The dataset of choice is in the Pascal VOC format which is incompatible with the models used in the pipeline and hence need to be converted. 
 
-Furthermore, image preprocessing, which includes steps like denoising, contrast and brightness enhancement (for improved clarity) is a vital step in readying the dataset for training any and all models. However, geometric augmentations, especially rotation, is not appropriate for this project.
+Furthermore, image preprocessing, which includes steps like thresholding, contrast and brightness enhancement (for improved clarity) is a vital step in readying the dataset for training any and all models. However, geometric augmentations, especially rotation, is not appropriate for this project.
 
-Among the various available preprocessing techniques, the ones to use are to be selected with careful consideration of the type of images available in the dataset as well as the models in use. Besides image manipulation using various techniques, preprocessing also includes splitting the dataset into training, validation and testing subsets as appropriate.
+Among the various available preprocessing techniques, the ones have been selected with careful consideration of the type of images available in the dataset as well as the models in use. Besides image manipulation, preprocessing also includes splitting the dataset into training, validation and testing subsets as appropriate.
 
 \subsection{Circuit Component Detection}
 
@@ -41,7 +41,7 @@ Additionally, for each box, class probabilities are predicted as:
 \label{eq:yolo-class-score}
 \end{equation}
 
-This allows the model to classify which object exists in each box and once the predictions are made, non-maximum suppression (\gls{nms}) is applied to discard less-relevant overlapping boxes.
+This allows the model to classify which object exists in each box and once the predictions are made, \gls{nms} is applied to discard less-relevant overlapping boxes.
 
 Based on similar fundamental working principle, several iterations (versions) of YOLO have been introduced and popularized among which YOLOv7 is the YOLO model of choice for this project.
 
@@ -52,20 +52,17 @@ Based on similar fundamental working principle, several iterations (versions) of
     \label{fig:yolov7-architecture}
 \end{figure}
 
-The architecture of the YOLOv7 model is composed of three primary modules: Backbone, Neck, and Head.
+Figure \ref{fig:yolov7-architecture} shows the three primary modules of YOLOv7 architecture: Backbone, Neck, and Head.
 
 \begin{itemize}
-    \item \textbf{Backbone:} YOLOv7 uses an extended version of \gls{elan} (Efficient Layer Aggregation Network) as its backbone. This structure enables deeper network designs without significantly increasing computational cost. The backbone is responsible for extracting hierarchical features from the input image while preserving gradient flow and feature reuse.
+    \item \textbf{Backbone:} YOLOv7 uses an extended version of \gls{elan} as its backbone. This structure enables deeper network designs without significantly increasing computational cost. The backbone is responsible for extracting hierarchical features from the input image while preserving gradient flow and feature reuse.
     
-    \item \textbf{Neck:} The neck in YOLOv7 incorporates a Path Aggregation Network (\gls{pan}) and ELAN-W modules. PAN enhances feature fusion across different scales, improving detection accuracy for both small and large objects. ELAN-W further refines spatial and contextual information during feature aggregation.
+    \item \textbf{Neck:} The neck in YOLOv7 incorporates a \gls{pan} and ELAN-W modules. PAN enhances feature fusion across different scales, improving detection accuracy for both small and large objects. ELAN-W further refines spatial and contextual information during feature aggregation.
     
     \item \textbf{Head:} The head predicts object classes, bounding box coordinates $(x,y,h,w)$, and objectness scores. YOLOv7 uses a decoupled head, which separates classification and regression branches for better convergence and performance. The model outputs predictions at multiple scales to capture objects of varying sizes.
 \end{itemize}
 
-Further features of the model are as follows:
-
-\begin{itemize}
-    \item \textbf{Bounding Box Prediction:} The prediction of bounding box coordinates in YOLOv7 is guided by anchor-based regression, where the final bounding box $B=(x,y,w,h)$ is computed relative to the anchor box using the following formula:
+YOLOv7 introduces various upgrades over previous versions, while maintaining the size and speed advantages. The prediction of bounding box coordinates in YOLOv7 is guided by anchor-based regression, where the final bounding box $B=(x,y,w,h)$ is computed relative to the anchor box using the following formula:
     
     \begin{equation}
     x = \sigma(t_x) + c_x
@@ -89,12 +86,7 @@ Further features of the model are as follows:
     
     where $(t_x, t_y, t_w, t_h)$ are the predicted offsets, $(c_x, c_y)$ is the top-left corner of the grid cell, and $(p_w, p_h)$ are the dimensions of the anchor box.
     
-    \item \textbf{Training Enhancements:} YOLOv7 introduces Coarse-to-Fine Lead Head, Model Scaling, and Auxiliary Heads that help improve gradient flow and stability during training. It supports Label Assignment Strategies such as dynamic-k matching for optimal anchor-label association.
-    
-    \item \textbf{Data Augmentation:} YOLOv7 applies automatic data augmentation during training including mosaic augmentation (combining four images into one), \gls{hsv} color augmentation, and random flipping, cropping, and scaling. These help increase dataset diversity and improve generalization.
-    
-    \item \textbf{Early Stopping and Training Stability:} YOLOv7 supports built-in early stopping based on a patience threshold if validation loss (combining box loss, objectness loss, and classification loss) does not improve for several epochs. This ensures faster convergence and prevents overfitting.
-\end{itemize}
+YOLOv7 also introduces Coarse-to-Fine Lead Head, Model Scaling, and Auxiliary Heads that help improve gradient flow and stability during training. It supports Label Assignment Strategies such as dynamic-k matching for optimal anchor-label association. It applies automatic data augmentation during training including mosaic augmentation (combining four images into one), \gls{hsv} color augmentation, and random flipping, cropping, and scaling. These help increase dataset diversity and improve generalization. Likewise, it supports built-in early stopping based on a patience threshold if validation loss (combining box loss, objectness loss, and classification loss) does not improve for several epochs, ensuring faster convergence and no overfitting.
 
 \subsection{Recognition of Component Values}
 
@@ -111,7 +103,7 @@ The hand-written text recognition is done using a \gls{crnn}-based \gls{ocr} sys
     \label{fig:text-recognition-pipeline}
 \end{figure}
 
-YOLOv7 outputs (bounding box information) help segregate textual information (class `0' in the used dataset) which are then cropped, resized (to image height as 32) and normalized for compatibility with text recognition module. This is then passed through to a \gls{crnn} architecture composed of a Convolutional Encoder, Sequence Modeling Engine with Linear Projection, and \gls{ctc} Decoder.
+YOLOv7 outputs (bounding box information) help segregate textual information (class `0' in the used dataset) which are then cropped, resized (to image height as 32) and normalized for compatibility with text recognition module. This is then passed through to a \gls{crnn} architecture composed of a Convolutional Encoder, Sequence Modeling Engine with Linear Projection, and \gls{ctc} Decoder as shown in Figure \ref{fig:text-recognition-pipeline}.
 
 \textbf{Convolutional Encoder (CNN):} A \gls{cnn} stack (e.g., VGG) transforms input image $I$ from multi-dimensional $\mathbb{R}^{H \times W \times C}$ to feature maps:
 
@@ -144,6 +136,36 @@ P(z \mid y) = \sum_{\pi: B(\pi)=z} \prod_{t=1}^{T} p_{t,\pi_t}
 The \gls{ctc} loss is given by the negative logarithm of $P(z \mid y)$. It enables end-to-end sequence decoding without explicit character bounding boxes.
 
 During inference, greedy decoding strategy is used which selects the most-probable character at each time step while removing blank symbols and collapsing consecutive duplicate characters. The recognized text then needs to be mapped to the appropriate circuit component whose value it represents.
+
+This project includes two separate OCR models for character recognition, the second one being TrOCR (TrOCR-base to be exact) developed by Microsoft, specifically for handwritten text. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{src/images/figures/trocr_architecture.png}
+    \caption{Architecture of TrOCR}
+    \label{fig:trocr-architecture}
+\end{figure}
+
+Figure \ref{fig:trocr-architecture} shows the encoder-decoder model (with pre-trained image transformer as encoder, and pre-trained text transformer as decoder) completing the basic architecture of TrOCR. The image transformer obtains the representaton of image patches, and likewise, with the help of visual features and previous predictions, the text transformer generates the wordpiece sequence.
+
+The process begins with the raw input image, denoted as $x_{img} \in \mathbb{R}^{3 \times H_0 \times W_0}$. The transformer architecture is designed to process sequences rather than raw pixel grids, therefore the image is first resized to a standardized dimension $(H, W)$. 
+
+To format this data for the model, the image is decomposed into a series of $N$ fixed-size square patches. Given a patch side length $P$, the total number of patches is derived as:
+\[
+N = \frac{HW}{P^2}
+\]
+
+Each patch is flattened into a vector and linearly projected into a $D$-dimensional space, where $D$ represents the hidden dimension maintained throughout the transformer layers.
+
+A \texttt{[CLS]} token is added to the start of the sequence to aggregate global representative information. When using pre-trained DeiT models for initialization, a distillation token is also included to facilitate learning from a teacher model. Since transformers lack the inherent spatial inductive bias found in CNNs, learnable 1D position embeddings are added to the patch embeddings to preserve absolute positional context. By treating the image as a sequence of independent patches, the model can dynamically allocate attention to either localized details or the global structure of the image.
+
+The decoder utilizes the standard transformer decoder architecture to generate the final text sequence. While it shares a similar stack of identical layers with the encoder, it introduces an encoder-decoder attention block between the self-attention and the feed-forward networks. In this module, the queries originate from the decoder's internal state, while the keys and values are sourced from the encoder's output. This allows the decoder to selectively focus on relevant visual features during the generation process. 
+
+To prevent the model from accessing future tokens during training, a self-attention mask is applied. This ensures that the output for any position $i$ is conditioned only on the preceding tokens. The decoder's hidden states are projected via a linear layer to the vocabulary size $V$. The final probability distribution over the vocabulary is calculated using the softmax function:
+    \[
+    \sigma(h_{ij}) = \frac{e^{h_{ij}}}{\sum_{k=1}^{V} e^{h_{ik}}}
+    \]
+During inference, the model typically employs beam search to navigate the probability space and identify the most likely character sequence.
 
 \subsection{Wire Detection}
 
@@ -524,13 +546,13 @@ This work presents a pipeline for detecting lines in skeletonized circuit images
 
 The endpoint detection strategy differs based on the object class detected by the upstream object detector:
 
-\textbf{Class 1 Objects (Junction Points):} For junction points, a \textbf{single endpoint} is computed by calculating the bounding box center $(x_c, y_c)$ and snapping to the nearest skeleton pixel within an expanded search region (margin = 8 pixels). The closest skeleton point is returned as the endpoint.
+\textbf{Class 1 Objects (Junction Points):} For junction points, a single endpoint is computed by calculating the bounding box center $(x_c, y_c)$ and snapping to the nearest skeleton pixel within an expanded search region (margin = 8 pixels). The closest skeleton point is returned as the endpoint.
 
-\textbf{Class 2+ Objects (Line Segments):} For line segments, \textbf{two endpoints} are computed using bounding box border intersection. Skeleton pixels that lie on or near the bounding box border (within tolerance) are identified. Among these border hits, true topological endpoints (degree = 1) are preferred. The farthest pair of points is selected as the two endpoints.
+\textbf{Class 2+ Objects (Line Segments):} For line segments, two endpoints are computed using bounding box border intersection. Skeleton pixels that lie on or near the bounding box border (within tolerance) are identified. Among these border hits, true topological endpoints (degree = 1) are preferred. The farthest pair of points is selected as the two endpoints.
 
 \subsection{Graph Construction via Multi-Head BFS}
 
-The Multi-Head BFS algorithm constructs a graph where \textbf{nodes} represent detected endpoints and \textbf{edges} represent skeleton connectivity between endpoints.
+The Multi-Head BFS algorithm constructs a graph where nodes represent detected endpoints and edges represent skeleton connectivity between endpoints.
 
 Each node occupies a disk region of radius $r$ centered at the endpoint. A \texttt{node\_id\_map} is precomputed where each pixel stores:
 \[

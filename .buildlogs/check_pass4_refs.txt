@@ -1,0 +1,15 @@
+1070:LaTeX Warning: Citation `reddy2021handdrawn' on page 1 undefined on input line 
+1074:LaTeX Warning: Citation `sertdemir2022img2sim' on page 1 undefined on input lin
+1078:LaTeX Warning: Citation `chen2011efficacy' on page 1 undefined on input line 9.
+1103:LaTeX Warning: Citation `adnan2021cnnbased' on page 5 undefined on input line 3
+1107:LaTeX Warning: Citation `edwards2000machine' on page 5 undefined on input line 
+1111:LaTeX Warning: Citation `kelly2024digitizing' on page 5 undefined on input line
+1115:LaTeX Warning: Citation `yamakaji2023circuit2graph' on page 5 undefined on inpu
+1119:LaTeX Warning: Citation `bayer2023instance' on page 5 undefined on input line 1
+1123:LaTeX Warning: Citation `abhinav2020electric' on page 5 undefined on input line
+1127:LaTeX Warning: Citation `reddy2021handdrawn' on page 5 undefined on input line 
+1131:LaTeX Warning: Citation `hemker2024schematics' on page 5 undefined on input lin
+1137:LaTeX Warning: Citation `kicad2024spice' on page 6 undefined on input line 16.
+1140:LaTeX Warning: Citation `sertdemir2022img2sim' on page 6 undefined on input lin
+1144:LaTeX Warning: Citation `vungarala2024spicepilot' on page 6 undefined on input 
+2601:LaTeX Warning: There were undefined references.

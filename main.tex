@@ -8,6 +8,11 @@
 \usepackage{float}
 \usetikzlibrary{positioning,shapes,arrows}
 
+% Avoid duplicate hyperref destinations for algorithmic line anchors.
+\makeatletter
+\providecommand*{\theHALG@line}{\thealgorithm.\arabic{ALG@line}}
+\makeatother
+
 % Glossary entries (define once, print later)
 \input{src/frontmatter/abbreviations}
 % \input{src/frontmatter/symbols}
