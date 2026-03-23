@@ -278,11 +278,11 @@ To address the limitations of the geometric approach, a skeleton-based path-find
 
 \textbf{Graph Construction via Multi-Head BFS:} The algorithm constructs a graph where nodes are detected endpoints and edges represent skeleton connectivity. Each node occupies a disk of radius $r$, and a \texttt{node\_id\_map} is precomputed to associate each pixel with its owning node (or $-1$). For each source node, the BFS queue is initialized with skeleton pixels at the disk boundary and traverses along the skeleton using 8-connectivity. When a pixel belonging to another node $j$ is encountered, the edge $(i, j)$ is recorded and that branch terminates. After graph construction, self-edges (connecting endpoints of the same bounding box) are removed to ensure only inter-object connections remain.
 
-\textbf{Advantages over horizontal/vertical classification:} The path-finding method traces actual wire paths in the image, eliminating spurious connections. It works regardless of wire orientation---horizontal, vertical, or diagonal. It unifies wire detection and terminal detection into a single graph-construction step, and scales linearly with the number of skeleton pixels rather than quadratically with junction count. Due to these advantages, this approach was adopted for the final deployed system.
+\textbf{Advantages over horizontal/vertical classification:} The path-finding method traces actual wire paths in the image, eliminating spurious connections. It works regardless of wire orientation (horizontal, vertical, or diagonal). It unifies wire detection and terminal detection into a single graph-construction step, and scales linearly with the number of skeleton pixels rather than quadratically with junction count. Due to these advantages, this approach was adopted for the final deployed system.
 
 \subsection{Crossover Dissolution Algorithm}
 
-In hand-drawn circuit diagrams, a \textit{crossover} represents two wires that cross each other without making an electrical connection, as opposed to a \textit{junction} where wires meet and connect. Correctly distinguishing crossovers from junctions is critical for accurate circuit reconstruction. The YOLOv7 model detects crossovers as a dedicated class, and the Multi-Head BFS (Section~\ref{sec:line-detection-pathfinding}) initially treats them as single-point graph nodes---typically connected to four neighboring endpoints corresponding to the two crossing wire segments. The crossover dissolution algorithm resolves these nodes into their true topology.
+In hand-drawn circuit diagrams, a \textit{crossover} represents two wires that cross each other without making an electrical connection, as opposed to a \textit{junction} where wires meet and connect. Correctly distinguishing crossovers from junctions is critical for accurate circuit reconstruction. The YOLOv7 model detects crossovers as a dedicated class, and the Multi-Head BFS (Section~\ref{sec:line-detection-pathfinding}) initially treats them as single-point graph nodes, typically connected to four neighboring endpoints corresponding to the two crossing wire segments. The crossover dissolution algorithm resolves these nodes into their true topology.
 
 \textbf{Candidate Identification:} Only crossover nodes with exactly four neighbors qualify for dissolution. Nodes with fewer neighbors are retained as regular junctions, gracefully handling cases where the detector misclassifies a junction as a crossover or where a wire terminates at the crossing point.
 
@@ -295,13 +295,13 @@ In hand-drawn circuit diagrams, a \textit{crossover} represents two wires that c
 \begin{equation}
     S = \hat{\mathbf{d}}_a \cdot \hat{\mathbf{d}}_b + \hat{\mathbf{d}}_c \cdot \hat{\mathbf{d}}_d
 \end{equation}
-The pairing with the minimum (most negative) score $S$ is selected, as this maximizes the geometric opposition of paired neighbors---i.e., paired nodes lie on roughly opposite sides of the crossover.
+The pairing with the minimum (most negative) score $S$ is selected, as this maximizes the geometric opposition of paired neighbors, i.e., paired nodes lie on roughly opposite sides of the crossover.
 
 \textbf{Geometric Validation:} The selected pairing is validated by checking that both dot products satisfy $\hat{\mathbf{d}}_a \cdot \hat{\mathbf{d}}_b < -0.7$, confirming that each pair of neighbors is within approximately $45^\circ$ of being directly opposite through the crossover center.
 
-\textbf{Graph Transformation:} If validation passes, the crossover node is removed from the adjacency graph and two new direct edges are created---one connecting each pair of opposite neighbors. This transforms a four-way junction into two independent through-connections, correctly representing two wires that cross without connecting. If validation fails, the node is preserved as a junction, maintaining electrical connectivity.
+\textbf{Graph Transformation:} If validation passes, the crossover node is removed from the adjacency graph and two new direct edges are created, one connecting each pair of opposite neighbors. This transforms a four-way junction into two independent through-connections, correctly representing two wires that cross without connecting. If validation fails, the node is preserved as a junction, maintaining electrical connectivity.
 
-The dissolved graph is then used for final circuit assembly, where nodes represent component terminals, junctions, and wire endpoints, and edges represent the true wire paths---with crossover points absent from the electrical topology.
+The dissolved graph is then used for final circuit assembly, where nodes represent component terminals, junctions, and wire endpoints, and edges represent the true wire paths, with crossover points absent from the electrical topology.
 
 \section{Use-Case Diagram}
 
