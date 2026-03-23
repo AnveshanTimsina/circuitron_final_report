@@ -52,7 +52,7 @@ Based on similar fundamental working principle, several iterations (versions) of
     \label{fig:yolov7-architecture}
 \end{figure}
 
-Figure \ref{fig:yolov7-architecture} shows the three primary modules of YOLOv7 architecture: Backbone, Neck, and Head.
+Figure \ref{fig:yolov7-architecture} \cite{solawetz2024yolov7} shows the three primary modules of YOLOv7 architecture: Backbone, Neck, and Head.
 
 \begin{itemize}
     \item \textbf{Backbone:} YOLOv7 uses an extended version of \gls{elan} as its backbone. This structure enables deeper network designs without significantly increasing computational cost. The backbone is responsible for extracting hierarchical features from the input image while preserving gradient flow and feature reuse.
@@ -146,7 +146,7 @@ This project includes two separate OCR models for character recognition, the sec
     \label{fig:trocr-architecture}
 \end{figure}
 
-Figure \ref{fig:trocr-architecture} shows the encoder-decoder model (with pre-trained image transformer as encoder, and pre-trained text transformer as decoder) completing the basic architecture of TrOCR. The image transformer obtains the representaton of image patches, and likewise, with the help of visual features and previous predictions, the text transformer generates the wordpiece sequence.
+Figure \ref{fig:trocr-architecture} \cite{li2021trocr} shows the encoder-decoder model (with pre-trained image transformer as encoder, and pre-trained text transformer as decoder) completing the basic architecture of TrOCR. The image transformer obtains the representaton of image patches, and likewise, with the help of visual features and previous predictions, the text transformer generates the wordpiece sequence.
 
 The process begins with the raw input image, denoted as $x_{img} \in \mathbb{R}^{3 \times H_0 \times W_0}$. The transformer architecture is designed to process sequences rather than raw pixel grids, therefore the image is first resized to a standardized dimension $(H, W)$. 
 
