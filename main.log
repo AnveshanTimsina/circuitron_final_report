@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2026.1.17)  23 MAR 2026 04:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2025.12.18)  23 MAR 2026 11:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -9,35 +9,35 @@ L3 programming layer <2025-11-06>
 (thapathaliece.cls
 Document Class: thapathaliece 2025/12/15 Thapathali CE report Class
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/koma-script/scrreprt.cls
-Document Class: scrreprt 2025/12/01 v3.49 KOMA-Script document class (report)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/koma-sc
+ript/scrreprt.cls
+Document Class: scrreprt 2025/09/09 v3.48 KOMA-Script document class (report)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/koma-script/scrkbase.sty
-Package: scrkbase 2025/12/01 v3.49 KOMA-Script package (KOMA-Script-dependent b
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/koma-sc
+ript/scrkbase.sty
+Package: scrkbase 2025/09/09 v3.48 KOMA-Script package (KOMA-Script-dependent b
 asics and keyval usage)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/koma-script/scrbase.sty
-Package: scrbase 2025/12/01 v3.49 KOMA-Script package (KOMA-Script-independent 
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/koma-sc
+ript/scrbase.sty
+Package: scrbase 2025/09/09 v3.48 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/koma-script/scrlfile.sty
-Package: scrlfile 2025/12/01 v3.49 KOMA-Script package (file load hooks)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/koma-sc
+ript/scrlfile.sty
+Package: scrlfile 2025/09/09 v3.48 KOMA-Script package (file load hooks)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/koma-script/scrlfile-hook.sty
-Package: scrlfile-hook 2025/12/01 v3.49 KOMA-Script package (using LaTeX hooks)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/koma-sc
+ript/scrlfile-hook.sty
+Package: scrlfile-hook 2025/09/09 v3.48 KOMA-Script package (using LaTeX hooks)
 
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/koma-script/scrlogo.sty
-Package: scrlogo 2025/12/01 v3.49 KOMA-Script package (logo)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/koma-sc
+ript/scrlogo.sty
+Package: scrlogo 2025/09/09 v3.48 KOMA-Script package (logo)
 )))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/graphics/keyval.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphic
+s/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
@@ -45,9 +45,9 @@ Applying: [2021/05/01] Usage of raw or classic option list on input line 254.
 Already applied: [0000/00/00] Usage of raw or classic option list on input line
  370.
 ))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/koma-script/tocbasic.sty
-Package: tocbasic 2025/12/01 v3.49 KOMA-Script package (handling toc-files)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/koma-sc
+ript/tocbasic.sty
+Package: tocbasic 2025/09/09 v3.48 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip49
 \scr@dte@tocline@numbox=\box53
 )
@@ -67,16 +67,16 @@ Class scrreprt Info: You've used standard option `oneside'.
 (scrreprt)           you'd have to use `twoside=false' there
 (scrreprt)           instead of `oneside', too.
 Class scrreprt Info: File `scrsize12pt.clo' used to setup font sizes on input l
-ine 2708.
+ine 2707.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/koma-script/scrsize12pt.clo
-File: scrsize12pt.clo 2025/12/01 v3.49 KOMA-Script font size class option (12pt
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/koma-sc
+ript/scrsize12pt.clo
+File: scrsize12pt.clo 2025/09/09 v3.48 KOMA-Script font size class option (12pt
 )
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/koma-script/typearea.sty
-Package: typearea 2025/12/01 v3.49 KOMA-Script package (type area)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/koma-sc
+ript/typearea.sty
+Package: typearea 2025/09/09 v3.48 KOMA-Script package (type area)
 \ta@bcor=\skip50
 \ta@div=\count275
 \ta@hblk=\skip51
@@ -99,7 +99,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 12.0pt
 (typearea)              \footskip       = 50.75pt
 (typearea)              \baselineskip   = 14.5pt
-(typearea)              on input line 1808.
+(typearea)              on input line 1807.
 )
 \c@part=\count276
 \c@chapter=\count277
@@ -110,53 +110,53 @@ Package typearea Info: These are the values describing the layout:
 \c@subparagraph=\count282
 \scr@dte@chapter@maxnumwidth=\skip55
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\chapter on input line 5926.
+(scrreprt)           for `\chapter on input line 6080.
 \scr@dte@section@maxnumwidth=\skip56
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\section on input line 5937.
+(scrreprt)           for `\section on input line 6091.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\section on input line 5937.
+(scrreprt)           for `\section on input line 6091.
 \scr@dte@part@maxnumwidth=\skip57
 Class scrreprt Info: using compatibility default `afterindent=true'
-(scrreprt)           for `\part on input line 5946.
+(scrreprt)           for `\part on input line 6100.
 \scr@dte@subsection@maxnumwidth=\skip58
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\subsection on input line 5956.
+(scrreprt)           for `\subsection on input line 6110.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\subsection on input line 5956.
+(scrreprt)           for `\subsection on input line 6110.
 \scr@dte@subsubsection@maxnumwidth=\skip59
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\subsubsection on input line 5966.
+(scrreprt)           for `\subsubsection on input line 6120.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\subsubsection on input line 5966.
+(scrreprt)           for `\subsubsection on input line 6120.
 \scr@dte@paragraph@maxnumwidth=\skip60
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\paragraph on input line 5977.
+(scrreprt)           for `\paragraph on input line 6131.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\paragraph on input line 5977.
+(scrreprt)           for `\paragraph on input line 6131.
 \scr@dte@subparagraph@maxnumwidth=\skip61
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\subparagraph on input line 5987.
+(scrreprt)           for `\subparagraph on input line 6141.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\subparagraph on input line 5987.
+(scrreprt)           for `\subparagraph on input line 6141.
 \abovecaptionskip=\skip62
 \belowcaptionskip=\skip63
 \c@pti@nb@sid@b@x=\box54
 Package tocbasic Info: omitting babel extension for `lof'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 7217.
+(tocbasic)             for `lof' on input line 7348.
 \scr@dte@figure@maxnumwidth=\skip64
 \c@figure=\count283
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 7230.
+(tocbasic)             for `lot' on input line 7361.
 \scr@dte@table@maxnumwidth=\skip65
 \c@table=\count284
-Class scrreprt Info: Redefining `\numberline' on input line 7401.
+Class scrreprt Info: Redefining `\numberline' on input line 7532.
 \bibindent=\dimen148
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/babel/babel.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel
+/babel.sty
 Package: babel 2025/11/09 v25.15 The multilingual framework for LuaLaTeX, pdfLa
 TeX and XeLaTeX
 \babel@savecnt=\count285
@@ -175,10 +175,10 @@ on input line 2058.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
 on input line 2083.
 \U@D=\dimen149
-\l@unhyphenated=\language79
+\l@unhyphenated=\language1
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/babel/txtbabel.def)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel
+/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count286
 Package babel Info: Configuration files are deprecated, as
@@ -189,60 +189,54 @@ Package babel Info: Configuration files are deprecated, as
 * Local config file bblopts.cfg used
 *
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/arabi/bblopts.cfg
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/arabi/b
+blopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/babel/locale/en/babel-english.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel
+/locale/en/babel-english.tex)
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 4298.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/babel-english/english.ldf
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/babel-e
+nglish/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
-Package babel Info: Hyphen rules for 'canadian' set to \l@english
-(babel)             (\language0). Reported on input line 102.
-Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language73). Reported on input line 105.
-Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language73). Reported on input line 108.
 ))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/base/fontenc.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/fo
+ntenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/base/inputenc.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/in
+putenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks18
 \inpenc@posthook=\toks19
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/amsmath/amsmath.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath
+/amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip66
 
 For additional information on amsmath, use the `?' option.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/amsmath/amstext.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath
+/amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/amsmath/amsgen.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath
+/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks20
 \ex@=\dimen150
 ))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/amsmath/amsbsy.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath
+/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen151
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/amsmath/amsopn.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath
+/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count287
@@ -293,12 +287,12 @@ LaTeX Info: Redefining \Relbar on input line 970.
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/amsfonts/amssymb.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsfont
+s/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/amsfonts/amsfonts.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsfont
+s/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -306,8 +300,8 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/amscls/amsthm.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amscls/
+amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks25
 \thm@bodyfont=\toks26
@@ -319,70 +313,70 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headsep=\skip71
 \dth@everypar=\toks30
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/xpatch/xpatch.sty
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/l3kernel/expl3.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/xpatch/
+xpatch.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3kerne
+l/expl3.sty
 Package: expl3 2025-11-06 L3 programming layer (loader) 
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/l3backend/l3backend-pdftex.def
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backe
+nd/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count299
 ))
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/l3packages/xparse/xparse.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3packa
+ges/xparse/xparse.sty
 Package: xparse 2025-10-09 L3 Experimental document command parser
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/etoolbox/etoolbox.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/etoolbo
+x/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count300
 ))
 Class scrreprt Info: amsthm's \deferred@thm@head patched.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/psnfss/times.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/
+times.sty
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/newtx/newtxmath.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/newtx/n
+ewtxmath.sty
 Package: newtxmath 2024/09/22 v1.754
 
 `newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/base/ifthen.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/if
+then.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/iftex/iftex.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/iftex
+/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/xkeyval/xkeyval.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/xkeyval
+/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/xkeyval/xkeyval.tex
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/xkeyval/xkvutils.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/xkeyv
+al/xkeyval.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/xkeyv
+al/xkvutils.tex
 \XKV@toks=\toks31
 \XKV@tempa@toks=\toks32
 )
 \XKV@depth=\count301
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/oberdiek/centernot.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/oberdie
+k/centernot.sty
 Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
 )
 \tx@cntz=\count302
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/binhex/binhex.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/binhe
+x/binhex.tex)
 \tx@Isdigit=\count303
 \tx@IsAlNum=\count304
 \tx@tA=\toks33
@@ -491,25 +485,25 @@ LaTeX Info: Redefining \not on input line 2995.
 LaTeX Info: Redefining \textsquare on input line 3025.
 LaTeX Info: Redefining \openbox on input line 3027.
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/microtype/microtype.sty
-Package: microtype 2026/03/01 v3.2d Micro-typographical refinements (RS)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/microty
+pe/microtype.sty
+Package: microtype 2025/07/09 v3.2b Micro-typographical refinements (RS)
 \MT@toks=\toks36
 \MT@tempbox=\box57
 \MT@count=\count305
-LaTeX Info: Redefining \noprotrusionifhmode on input line 1084.
-LaTeX Info: Redefining \leftprotrusion on input line 1085.
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
+LaTeX Info: Redefining \leftprotrusion on input line 1088.
 \MT@prot@toks=\toks37
-LaTeX Info: Redefining \rightprotrusion on input line 1104.
+LaTeX Info: Redefining \rightprotrusion on input line 1107.
 LaTeX Info: Redefining \textls on input line 1449.
 \MT@outer@kern=\dimen159
 LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
 \MT@listname@count=\count306
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/microtype/microtype-pdftex.def
-File: microtype-pdftex.def 2026/03/01 v3.2d Definitions specific to pdftex (RS)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/microty
+pe/microtype-pdftex.def
+File: microtype-pdftex.def 2025/07/09 v3.2b Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 944.
 LaTeX Info: Redefining \lslig on input line 944.
@@ -517,28 +511,28 @@ LaTeX Info: Redefining \lslig on input line 944.
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/microtype/microtype.cfg
-File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/microty
+pe/microtype.cfg
+File: microtype.cfg 2025/07/09 v3.2b microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3065.
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/hyphenat/hyphenat.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyphena
+t/hyphenat.sty
 Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
-\langwohyphens=\language80
+\langwohyphens=\language2
 LaTeX Info: Redefining \_ on input line 43.
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/tools/xspace.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/tools/x
+space.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/geometry/geometry.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/geometr
+y/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/iftex/ifvtex.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/iftex
+/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
 \Gm@cnth=\count307
@@ -554,24 +548,24 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen167
 \Gm@dimlist=\toks38
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/geometry/geometry.cfg))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/xcolor/xcolor.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/geometr
+y/geometry.cfg))
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/xcolor/
+xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/graphics-cfg/color.cfg
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphic
+s-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/graphics-def/pdftex.def
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphic
+s-def/pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/graphics/mathcolor.ltx)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphic
+s/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -582,20 +576,20 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/graphics/graphicx.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphic
+s/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/graphics/graphics.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphic
+s/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/graphics/trig.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphic
+s/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/graphics-cfg/graphics.cfg
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphic
+s-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
@@ -603,22 +597,18 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
 \Gin@req@height=\dimen168
 \Gin@req@width=\dimen169
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/cite/cite.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/cite/ci
+te.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/caption/caption.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/caption
+/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
-Package tocbasic Info: Loading of class-dependent code for package caption3
-(tocbasic)             prevented on line 50.
-
-
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/caption/caption3.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/caption
+/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen170
 \captionmargin=\dimen171
@@ -628,20 +618,31 @@ Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@indent=\dimen175
 \caption@parindent=\dimen176
 \caption@hangindent=\dimen177
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\@abovecaptionbreak \vs
+kip \abovecaptionskip \@abovecaptionbreak \@@makecaption \@firstofone {#1}{#2}\
+@belowcaptionbreak \vskip \belowcaptionskip \@belowcaptionbreak  on input line 
+1175.
 )
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
 \c@caption@flags=\count310
 \c@continuedfloat=\count311
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/caption/subcaption.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/caption
+/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count312
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count313
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/booktabs/booktabs.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/booktab
+s/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen178
 \lightrulewidth=\dimen179
@@ -661,8 +662,8 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count317
 \@thisrulewidth=\dimen190
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/tools/array.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/tools/a
+rray.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen191
 \ar@mcellbox=\box58
@@ -672,8 +673,8 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \backup@length=\skip74
 \ar@cellbox=\box59
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/tools/tabularx.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/tools/t
+abularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@col@width=\dimen193
 \TX@old@table=\dimen194
@@ -683,16 +684,16 @@ Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@cols=\count318
 \TX@ftn=\toks40
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/multirow/multirow.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/multiro
+w/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip75
 \multirow@cntb=\count319
 \multirow@dima=\skip76
 \bigstrutjot=\dimen198
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/listings/listings.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listing
+s/listings.sty
 \lst@mode=\count320
 \lst@gtempboxa=\box60
 \lst@token=\toks41
@@ -706,19 +707,19 @@ atex/listings/listings.sty
 \lst@lineno=\count325
 \lst@maxwidth=\dimen258
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/listings/lstpatch.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listing
+s/lstpatch.sty
 File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/listings/lstmisc.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listing
+s/lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
 \c@lstnumber=\count326
 \lst@skipnumbers=\count327
 \lst@framebox=\box61
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/listings/listings.cfg
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listing
+s/listings.cfg
 File: listings.cfg 2025/11/14 1.11b listings configuration
 ))
 Package: listings 2025/11/14 1.11b (Carsten Heinz)
@@ -730,8 +731,8 @@ Package: listings 2025/11/14 1.11b (Carsten Heinz)
         2025/11/14 1.11b (Carsten Heinz)
     so I'm assuming it got fixed.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/siunitx/siunitx.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/siunitx
+/siunitx.sty
 Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
 \l__siunitx_number_uncert_offset_int=\count328
 \l__siunitx_number_exponent_fixed_int=\count329
@@ -748,22 +749,22 @@ Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
 \l__siunitx_angle_unit_box=\box63
 \l__siunitx_compound_count_int=\count338
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/translations/translations.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/transla
+tions/translations.sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
  (CN)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pdftexcmds/pdftexcmds.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pdfte
+xcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/infwarerr/infwarerr.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/infwa
+rerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/ltxcmds/ltxcmds.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/ltxcm
+ds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -784,8 +785,8 @@ Package pdftexcmds Info: \pdfdraftmode found.
 \l__siunitx_unit_position_int=\count340
 \l__siunitx_unit_total_int=\count341
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/float/float.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/float/f
+loat.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count342
 \float@exts=\toks42
@@ -793,12 +794,12 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks43
 \@floatcapt=\box71
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/pdfpages/pdfpages.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pdfpage
+s/pdfpages.sty
 Package: pdfpages 2025/07/23 v0.6g Insert pages of external PDF documents (AM)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/tools/calc.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/tools/c
+alc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
 \calc@Acount=\count343
 \calc@Bcount=\count344
@@ -811,9 +812,9 @@ LaTeX Info: Redefining \addtolength on input line 87.
 \calc@Ccount=\count345
 \calc@Cskip=\skip79
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/eso-pic/eso-pic.sty
-Package: eso-pic 2025/12/10 v3.0d eso-pic (RN)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/eso-pic
+/eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
 \ESO@tempdima=\dimen266
 \ESO@tempdimb=\dimen267
 )
@@ -821,8 +822,8 @@ Package: eso-pic 2025/12/10 v3.0d eso-pic (RN)
 \AM@pageheight=\dimen269
 \AM@fboxrule=\dimen270
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/pdfpages/pppdftex.def
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pdfpage
+s/pppdftex.def
 File: pppdftex.def 2025/07/23 v0.6g Pdfpages driver for pdfTeX (AM)
 )
 \pdfpages@includegraphics@status=\count346
@@ -834,25 +835,25 @@ File: pppdftex.def 2025/07/23 v0.6g Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count348
 \AM@templatesizebox=\box73
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/graphics/lscape.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphic
+s/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/adjustbox/adjustbox.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/adjustb
+ox/adjustbox.sty
 Package: adjustbox 2025/02/26 v1.3c Adjusting TeX boxes (trim, clip, ...)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/adjustbox/adjcalc.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/adjustb
+ox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
 -ends (calc, etex, pgfmath)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/adjustbox/trimclip.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/adjustb
+ox/trimclip.sty
 Package: trimclip 2025/02/21 v1.2a Trim and clip general TeX material
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/collectbox/collectbox.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/collect
+box/collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \collectedbox=\box74
 )
@@ -862,8 +863,8 @@ Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \tc@ury=\dimen274
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/adjustbox/tc-pdftex.def
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/adjustb
+ox/tc-pdftex.def
 File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen275
@@ -875,13 +876,13 @@ File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
 \adjbox@pdepth=\dimen281
 \adjbox@ptotalheight=\dimen282
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/ifoddpage/ifoddpage.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/ifoddpa
+ge/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
 \c@checkoddpage=\count349
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/varwidth/varwidth.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/varwidt
+h/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box75
 \sift@deathcycles=\count350
@@ -890,8 +891,8 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 )
 ==> First Aid for varwidth.sty applied!
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/graphics/rotating.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphic
+s/rotating.sty
 Package: rotating 2025/01/14 v2.16e rotated objects in LaTeX
 \c@r@tfl@t=\count351
 \rotFPtop=\skip80
@@ -899,10 +900,10 @@ Package: rotating 2025/01/14 v2.16e rotated objects in LaTeX
 \rot@float@box=\box76
 \rot@mess@toks=\toks47
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/lipsum/lipsum.sty
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/l3packages/l3keys2e/l3keys2e.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/lipsum/
+lipsum.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3packa
+ges/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
@@ -910,47 +911,47 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \l__lipsum_a_int=\count353
 \l__lipsum_b_int=\count354
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/lipsum/lipsum.ltd.tex))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/csvsimple/csvsimple.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/lipsum/
+lipsum.ltd.tex))
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/csvsimp
+le/csvsimple.sty
 Package: csvsimple 2024/09/27 v2.7.0 LaTeX CSV file processing
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/csvsimple/csvsimple-legacy.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/csvsimp
+le/csvsimple-legacy.sty
 Package: csvsimple-legacy 2024/09/27 version 2.7.0 LaTeX2e CSV file processing
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/pgf/utilities/pgfrcs.sty
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/utilities/pgfutil-common.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pgf/uti
+lities/pgfrcs.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/u
+tilities/pgfutil-common.tex
 \pgfutil@everybye=\toks48
 \pgfutil@tempdima=\dimen285
 \pgfutil@tempdimb=\dimen286
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/utilities/pgfutil-latex.def
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/u
+tilities/pgfutil-latex.def
 \pgfutil@abb=\box77
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/utilities/pgfrcs.code.tex
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/pgf.revision.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/u
+tilities/pgfrcs.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/p
+gf.revision.tex)
 Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
 ))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/pgf/utilities/pgfkeys.sty
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/utilities/pgfkeys.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pgf/uti
+lities/pgfkeys.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/u
+tilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks49
 \pgfkeys@temptoks=\toks50
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/u
+tilities/pgfkeyslibraryfiltered.code.tex
 \pgfkeys@tmptoks=\toks51
 )))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/tools/shellesc.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/tools/s
+hellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 77.
 )
@@ -960,36 +961,36 @@ Package shellesc Info: Restricted shell escape enabled on input line 77.
 \c@csvcol=\count357
 \csv@out=\write3
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/datetime2/datetime2.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/datetim
+e2/datetime2.sty
 Package: datetime2 2021/03/21 v1.5.7 (NLCT) date and time formats
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/tracklang/tracklang.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/trackla
+ng/tracklang.sty
 Package: tracklang 2025/03/11 v1.6.6 (NLCT) Track Languages
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/tracklang/tracklang.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/track
+lang/tracklang.tex)
 Package tracklang Info: Tracking dialect `english' (language `english') on inpu
 t line 264.
 Package tracklang Info: Tracking dialect `english' (language `english') on inpu
 t line 264.
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/datetime2-english/datetime2-english.ldf
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/datetim
+e2-english/datetime2-english.ldf
 File: datetime2-english.ldf 2019/10/21 v1.05 (NLCT)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/datetime2-english/datetime2-english-base.ldf
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/datetim
+e2-english/datetime2-english-base.ldf
 File: datetime2-english-base.ldf 2019/10/21 v1.05 (NLCT)
 )))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/textcase/textcase.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/textcas
+e/textcase.sty
 Package: textcase 2025/02/16 v1.05 Text only upper/lower case changing (DPC)
 Package textcase Info: Defining Legacy names on input line 20.
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/tools/multicol.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/tools/m
+ulticol.sty
 Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \c@tracingmulticols=\count358
 \mult@box=\box78
@@ -1060,8 +1061,8 @@ Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \mc@col@check@num=\count367
 \g__mc_curr_col_int=\count368
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/enumitem/enumitem.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/enumite
+m/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip84
 \enit@outerparindent=\dimen296
@@ -1070,14 +1071,14 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@count@id=\count369
 \enitdp@description=\count370
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/koma-script/scrlayer-scrpage.sty
-Package: scrlayer-scrpage 2025/12/01 v3.49 KOMA-Script package (end user interf
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/koma-sc
+ript/scrlayer-scrpage.sty
+Package: scrlayer-scrpage 2025/09/09 v3.48 KOMA-Script package (end user interf
 ace for scrlayer)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/koma-script/scrlayer.sty
-Package: scrlayer 2025/12/01 v3.49 KOMA-Script package (defining layers and pag
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/koma-sc
+ript/scrlayer.sty
+Package: scrlayer 2025/09/09 v3.48 KOMA-Script package (defining layers and pag
 e styles)
 Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 217
 9.
@@ -1085,19 +1086,19 @@ Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 217
 Package scrlayer-scrpage Info: Makeing stand-alone element `pagehead' from
 (scrlayer-scrpage)             alias to `pageheadfoot' on input line 1106.
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/algorithms/algorithm.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/algorit
+hms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 \@float@every@algorithm=\toks53
 \c@algorithm=\count371
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/algorithmicx/algpseudocode.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/algorit
+hmicx/algpseudocode.sty
 Package: algpseudocode 
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/algorithmicx/algorithmicx.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/algorit
+hmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
@@ -1114,48 +1115,48 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/scrhack/scrhack.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/scrhack
+/scrhack.sty
 Package: scrhack 2024-09-04 v3.42 scrhack emulation package
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/floatbytocbasic/floatbytocbasic.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/floatby
+tocbasic/floatbytocbasic.sty
 Package: floatbytocbasic 2023-08-16 v1.0 improved float package using tocbasic
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/lscapeenhanced/lscapeenhanced.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/lscapee
+nhanced/lscapeenhanced.sty
 Package: lscapeenhanced 2024-04-16 v1.0 improved lscape package
 Package lscapeenhanced Info: \landscape patched to make \textheight change opti
 onal on input line 72.
 \@lscapeenhanced@textheight=\skip88
 ))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/setspace/setspace.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/setspac
+e/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/setspaceenhanced/setspaceenhanced.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/setspac
+eenhanced/setspaceenhanced.sty
 Package: setspaceenhanced 2024-11-12 v1.04 improved setspace package
 )
 \c@theorem=\count379
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/glossaries/base/glossaries.sty
-Package: glossaries 2026/03/06 v5.0 (NLCT)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/glossar
+ies/base/glossaries.sty
+Package: glossaries 2025/11/09 v4.9 (NLCT)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/mfirstuc/mfirstuc.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/mfirstu
+c/mfirstuc.sty
 Package: mfirstuc 2025/04/03 v2.09 (NLCT)
 \@glsmfirst=\toks54
 \@glsmrest=\toks55
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/xfor/xfor.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/xfor/xf
+or.sty
 Package: xfor 2009/02/05 v1.05 (NLCT)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/datatool/datatool-base.sty
-Package: datatool-base 2025/12/04 v3.4.3 (NLCT)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/datatoo
+l/datatool-base.sty
+Package: datatool-base 2025/11/06 v3.4.2 (NLCT)
 \l__datatool_tmpa_int=\count380
 \l__datatool_tmpb_int=\count381
 \l__datatool_tmpc_int=\count382
@@ -1165,9 +1166,9 @@ Package: datatool-base 2025/12/04 v3.4.3 (NLCT)
 \l__datatool_tmpa_dim=\dimen297
 \l__datatool_tmpb_dim=\dimen298
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/datatool/datatool-l3fp.def
-File: datatool-l3fp.def 2025/12/04 v3.4.3 (NLCT)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/datatoo
+l/datatool-l3fp.def
+File: datatool-l3fp.def 2025/11/06 v3.4.2 (NLCT)
 )
 \@dtl@toks=\toks56
 \@dtl@tmpcount=\count386
@@ -1175,9 +1176,9 @@ File: datatool-l3fp.def 2025/12/04 v3.4.3 (NLCT)
 \l__datatool_measure_box=\box125
 \dtl@sortresult=\count387
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/datatool/datatool-utf8.ldf
-File: datatool-utf8.ldf 2025/12/04 v3.4.3 (NLCT)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/datatoo
+l/datatool-utf8.ldf
+File: datatool-utf8.ldf 2025/11/06 v3.4.2 (NLCT)
 )
 \@dtl@datatype=\count388
 \c_datatool_unknown_int=\count389
@@ -1212,21 +1213,21 @@ t line 9924.
 \glsshorttok=\toks60
 \glslongtok=\toks61
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/glossaries/styles/glossary-hypernav.sty
-Package: glossary-hypernav 2026/03/06 v5.0 (NLCT)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/glossar
+ies/styles/glossary-hypernav.sty
+Package: glossary-hypernav 2025/11/09 v4.9 (NLCT)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/glossaries/styles/glossary-list.sty
-Package: glossary-list 2026/03/06 v5.0 (NLCT)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/glossar
+ies/styles/glossary-list.sty
+Package: glossary-list 2025/11/09 v4.9 (NLCT)
 \glslistdottedwidth=\skip91
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/glossaries/styles/glossary-long.sty
-Package: glossary-long 2026/03/06 v5.0 (NLCT)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/glossar
+ies/styles/glossary-long.sty
+Package: glossary-long 2025/11/09 v4.9 (NLCT)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/tools/longtable.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/tools/l
+ongtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTleft=\skip92
 \LTright=\skip93
@@ -1249,13 +1250,13 @@ Class scrreprt Info: longtable captions redefined on input line 47.
 \glsdescwidth=\skip96
 \glspagelistwidth=\skip97
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/glossaries/styles/glossary-super.sty
-Package: glossary-super 2026/03/06 v5.0 (NLCT)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/glossar
+ies/styles/glossary-super.sty
+Package: glossary-super 2025/11/09 v4.9 (NLCT)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/supertabular/supertabular.sty
-Package: supertabular 2025/06/26 v4.2d the supertabular environment
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/superta
+bular/supertabular.sty
+Package: supertabular 2024/07/20 v4.2c the supertabular environment
 \c@tracingst=\count411
 \ST@wd=\dimen302
 \ST@rightskip=\skip98
@@ -1272,9 +1273,9 @@ Package: supertabular 2025/06/26 v4.2d the supertabular environment
 \ST@dimen=\dimen311
 \ST@pbox=\box131
 ))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/glossaries/styles/glossary-tree.sty
-Package: glossary-tree 2026/03/06 v5.0 (NLCT)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/glossar
+ies/styles/glossary-tree.sty
+Package: glossary-tree 2025/11/09 v4.9 (NLCT)
 \l__glossaries_tree_max_known_level_int=\count412
 \l__glossaries_tree_offset_dim=\dimen312
 \l__glossaries_tree_namewidth_dim=\dimen313
@@ -1298,51 +1299,51 @@ Package glossaries Info: Writing glossary file main.acn on input line 157.
 
 Package glossaries Info: Writing glossary file main.slo on input line 157.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/url/url.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/url/url
+.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/hyperref/hyperref.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperre
+f/hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/kvsetkeys/kvsetkeys.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/kvsetke
+ys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/kvdefinekeys/kvdefinekeys.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/kvdef
+inekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pdfescape/pdfescape.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pdfes
+cape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/hycolor/hycolor.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hycolor
+/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/hyperref/nameref.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperre
+f/nameref.sty
 Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/refcount/refcount.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/refcoun
+t/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/gettitlestring/gettitlestring.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/getti
+tlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/kvoptions/kvoptions.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/kvoptio
+ns/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count414
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/stringenc/stringenc.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/strin
+genc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
@@ -1350,20 +1351,20 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 \Hy@linkcounter=\count415
 \Hy@pagecounter=\count416
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/hyperref/pd1enc.def
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperre
+f/pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/intcalc/intcalc.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/intca
+lc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count417
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/hyperref/puenc.def
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperre
+f/puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -1379,12 +1380,12 @@ Package hyperref Info: Bookmarks ON on input line 4462.
 LaTeX Info: Redefining \url on input line 4801.
 \XeTeXLinkMargin=\dimen322
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/bitset/bitset.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/bitse
+t/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/bigintcalc/bigintcalc.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/bigin
+tcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
@@ -1404,18 +1405,18 @@ Package hyperref Info: PDF/A mode OFF on input line 6108.
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/hyperref/hpdftex.def
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperre
+f/hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
 \Fld@listcount=\count423
 \c@bookmark@seq@number=\count424
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/rerunfilecheck/rerunfilecheck.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/rerunfi
+lecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/uniquecounter/uniquecounter.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/uniqu
+ecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
@@ -1428,8 +1429,8 @@ Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 202.
 
 Package hyperref Info: Option `breaklinks' set `true' on input line 202.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/cleveref/cleveref.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/clevere
+f/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
 LaTeX Info: Redefining \cref on input line 2370.
@@ -1457,26 +1458,26 @@ e 7852.
 )
 ==> First Aid for cleveref.sty applied!
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/listings/lstlang1.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listing
+s/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )) (vars.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/tcolorbox/tcolorbox.sty
-Package: tcolorbox 2025/09/09 version 6.8.0 text color boxes
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/tcolorb
+ox/tcolorbox.sty
+Package: tcolorbox 2025/11/28 version 6.9.0 text color boxes
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/pgf/frontendlayer/tikz.sty
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/pgf/basiclayer/pgf.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pgf/fro
+ntendlayer/tikz.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pgf/bas
+iclayer/pgf.sty
 Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/pgf/basiclayer/pgfcore.sty
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/pgf/systemlayer/pgfsys.sty
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/systemlayer/pgfsys.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pgf/bas
+iclayer/pgfcore.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pgf/sys
+temlayer/pgfsys.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/s
+ystemlayer/pgfsys.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@x=\dimen325
 \pgf@y=\dimen326
@@ -1499,40 +1500,40 @@ Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 \t@pgf@tokc=\toks65
 \pgf@sys@id@count=\count429
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/systemlayer/pgf.cfg
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/s
+ystemlayer/pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/systemlayer/pgfsys-pdftex.def
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/s
+ystemlayer/pgfsys-pdftex.def
 File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/systemlayer/pgfsys-common-pdf.def
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/s
+ystemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 )))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/systemlayer/pgfsyssoftpath.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/s
+ystemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfsyssoftpath@smallbuffer@items=\count430
 \pgfsyssoftpath@bigbuffer@items=\count431
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/systemlayer/pgfsysprotocol.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/s
+ystemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/basiclayer/pgfcore.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/b
+asiclayer/pgfcore.code.tex
 Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/math/pgfmath.code.tex
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/math/pgfmathutil.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/math/pgfmathparser.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+ath/pgfmath.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+ath/pgfmathutil.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+ath/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen335
 \pgfmath@count=\count432
 \pgfmath@box=\box132
@@ -1540,34 +1541,34 @@ eneric/pgf/math/pgfmathparser.code.tex
 \pgfmath@stack@operand=\toks67
 \pgfmath@stack@operation=\toks68
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/math/pgfmathfunctions.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/math/pgfmathfunctions.basic.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/math/pgfmathfunctions.trigonometric.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/math/pgfmathfunctions.random.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/math/pgfmathfunctions.comparison.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/math/pgfmathfunctions.base.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/math/pgfmathfunctions.round.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/math/pgfmathfunctions.misc.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/math/pgfmathfunctions.integerarithmetics.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/math/pgfmathcalc.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/math/pgfmathfloat.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+ath/pgfmathfunctions.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+ath/pgfmathfunctions.basic.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+ath/pgfmathfunctions.trigonometric.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+ath/pgfmathfunctions.random.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+ath/pgfmathfunctions.comparison.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+ath/pgfmathfunctions.base.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+ath/pgfmathfunctions.round.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+ath/pgfmathfunctions.misc.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+ath/pgfmathfunctions.integerarithmetics.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+ath/pgfmathcalc.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+ath/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count433
 ))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/math/pgfint.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/basiclayer/pgfcorepoints.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+ath/pgfint.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/b
+asiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@picminx=\dimen336
 \pgf@picmaxx=\dimen337
@@ -1584,126 +1585,126 @@ File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@zx=\dimen348
 \pgf@zy=\dimen349
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/basiclayer/pgfcorepathconstruct.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/b
+asiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@path@lastx=\dimen350
 \pgf@path@lasty=\dimen351
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/basiclayer/pgfcorepathusage.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/b
+asiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@shorten@end@additional=\dimen352
 \pgf@shorten@start@additional=\dimen353
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/basiclayer/pgfcorescopes.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/b
+asiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfpic=\box133
 \pgf@hbox=\box134
 \pgf@layerbox@main=\box135
 \pgf@picture@serial@count=\count434
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/basiclayer/pgfcoregraphicstate.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/b
+asiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgflinewidth=\dimen354
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/basiclayer/pgfcoretransformations.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/b
+asiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@pt@x=\dimen355
 \pgf@pt@y=\dimen356
 \pgf@pt@temp=\dimen357
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/basiclayer/pgfcorequick.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/b
+asiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/basiclayer/pgfcoreobjects.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/b
+asiclayer/pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/basiclayer/pgfcorepathprocessing.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/b
+asiclayer/pgfcorepathprocessing.code.tex
 File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/basiclayer/pgfcorearrows.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/b
+asiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfarrowsep=\dimen358
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/basiclayer/pgfcoreshade.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/b
+asiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@max=\dimen359
 \pgf@sys@shading@range@num=\count435
 \pgf@shadingcount=\count436
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/basiclayer/pgfcoreimage.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/b
+asiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/basiclayer/pgfcoreexternal.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/b
+asiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfexternal@startupbox=\box136
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/basiclayer/pgfcorelayers.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/b
+asiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/basiclayer/pgfcoretransparency.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/b
+asiclayer/pgfcoretransparency.code.tex
 File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/basiclayer/pgfcorepatterns.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/b
+asiclayer/pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/basiclayer/pgfcorerdf.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/b
+asiclayer/pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/modules/pgfmoduleshapes.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+odules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfnodeparttextbox=\box137
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/modules/pgfmoduleplot.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+odules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/pgf/compatibility/pgfcomp-version-0-65.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pgf/com
+patibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@nodesepstart=\dimen360
 \pgf@nodesepend=\dimen361
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/pgf/compatibility/pgfcomp-version-1-18.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pgf/com
+patibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 ))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/pgf/utilities/pgffor.sty
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/pgf/math/pgfmath.sty
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/math/pgfmath.code.tex))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/utilities/pgffor.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pgf/uti
+lities/pgffor.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pgf/mat
+h/pgfmath.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+ath/pgfmath.code.tex))
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/u
+tilities/pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
 \pgffor@iter=\dimen362
 \pgffor@skip=\dimen363
 \pgffor@stack=\toks69
 \pgffor@toks=\toks70
 ))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/frontendlayer/tikz/tikz.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/f
+rontendlayer/tikz/tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/libraries/pgflibraryplothandlers.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/l
+ibraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@plot@mark@count=\count437
 \pgfplotmarksize=\dimen364
@@ -1725,8 +1726,8 @@ File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \tikznumberofcurrentchild=\count440
 \tikz@fig@count=\count441
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/modules/pgfmodulematrix.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+odules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfmatrixcurrentrow=\count442
 \pgfmatrixcurrentcolumn=\count443
@@ -1734,23 +1735,23 @@ File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
 \tikz@expandcount=\count445
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/f
+rontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/tools/verbatim.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/tools/v
+erbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks71
 \verbatim@line=\toks72
 \verbatim@in@stream=\read6
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/environ/environ.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/environ
+/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/trimspaces/trimspaces.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/trimspa
+ces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 \tcb@titlebox=\box142
@@ -1767,16 +1768,16 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@temp=\box149
 \tcb@temp=\box150
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/pgfplots/pgfplots.sty
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/pgfplots.revision.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pgfplot
+s/pgfplots.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/pgfplots.revision.tex)
 Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/pgfplots.code.tex
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/pgfplotscore.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/pgfplots.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/pgfplotscore.code.tex
 \t@pgfplots@toka=\toks73
 \t@pgfplots@tokb=\toks74
 \t@pgfplots@tokc=\toks75
@@ -1784,80 +1785,80 @@ eneric/pgfplots/pgfplotscore.code.tex
 \c@pgfplots@coordindex=\count449
 \c@pgfplots@scanlineindex=\count450
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/sys/pgfplotssysgeneric.code.tex))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/libs/pgfplotslibrary.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/libraries/pgflibraryfpu.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/sys/pgfplotssysgeneric.code.tex))
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/libs/pgfplotslibrary.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/l
+ibraries/pgflibraryfpu.code.tex)
 Package pgfplots: loading complementary utilities for your pgf version...
 \t@pgf@toka=\toks76
 \t@pgf@tokb=\toks77
 \t@pgf@tokc=\toks78
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/util/pgfplotsutil.code.tex
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/liststructure/pgfplotsliststructure.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/liststructure/pgfplotsliststructureext.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/liststructure/pgfplotsarray.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex))
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/util/pgfplotsutil.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/liststructure/pgfplotsliststructure.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/liststructure/pgfplotsliststructureext.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/liststructure/pgfplotsarray.code.tex
 \c@pgfplotsarray@tmp=\count451
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/liststructure/pgfplotsmatrix.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/numtable/pgfplotstableshared.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/liststructure/pgfplotsmatrix.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/numtable/pgfplotstableshared.code.tex
 \c@pgfplotstable@counta=\count452
 \t@pgfplotstable@a=\toks79
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/liststructure/pgfplotsdeque.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/util/pgfplotsbinary.code.tex
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/util/pgfplotsbinary.data.code.tex))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/util/pgfplotsutil.verb.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/liststructure/pgfplotsdeque.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/util/pgfplotsbinary.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/util/pgfplotsbinary.data.code.tex))
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/util/pgfplotsutil.verb.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/libs/pgflibrarypgfplots.surfshading.code.tex
 \c@pgfplotslibrarysurf@no=\count453
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def)))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/util/pgfplotscolormap.code.tex
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/util/pgfplotscolor.code.tex))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/pgfplotsstackedplots.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/pgfplotsplothandlers.code.tex
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/pgfplotsmeshplothandler.code.tex
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/pgfplotsmeshplotimage.code.tex)))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/pgfplots.scaling.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/pgfplotscoordprocessing.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/pgfplots.errorbars.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/pgfplots.markers.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/pgfplotsticks.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/pgfplots.paths.code.tex)
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/modules/pgfmoduledecorations.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def)))
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/util/pgfplotscolormap.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/util/pgfplotscolor.code.tex))
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/pgfplotsstackedplots.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/pgfplotsplothandlers.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/pgfplotsmeshplothandler.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/pgfplotsmeshplotimage.code.tex)))
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/pgfplots.scaling.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/pgfplotscoordprocessing.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/pgfplots.errorbars.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/pgfplots.markers.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/pgfplotsticks.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/pgfplots.paths.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/f
+rontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/m
+odules/pgfmoduledecorations.code.tex
 \pgfdecoratedcompleteddistance=\dimen375
 \pgfdecoratedremainingdistance=\dimen376
 \pgfdecoratedinputsegmentcompleteddistance=\dimen377
@@ -1869,19 +1870,16 @@ eneric/pgf/modules/pgfmoduledecorations.code.tex
 )
 \tikz@lib@dec@box=\box151
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.cod
-e.tex
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.co
-de.tex
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex))
-
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex)
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/f
+rontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/l
+ibraries/decorations/pgflibrarydecorations.pathmorphing.code.tex))
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/f
+rontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/l
+ibraries/decorations/pgflibrarydecorations.pathreplacing.code.tex))
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgfpl
+ots/libs/tikzlibrarypgfplots.contourlua.code.tex)
 \pgfplots@numplots=\count455
 \pgfplots@xmin@reg=\dimen382
 \pgfplots@xmax@reg=\dimen383
@@ -1890,64 +1888,64 @@ eneric/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex)
 \pgfplots@zmin@reg=\dimen386
 \pgfplots@zmax@reg=\dimen387
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/f
+rontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
 File: tikzlibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/libraries/pgflibraryplotmarks.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/l
+ibraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/f
+rontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/f
+rontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
 File: tikzlibraryshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/f
+rontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
 File: tikzlibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/l
+ibraries/shapes/pgflibraryshapes.geometric.code.tex
 File: pgflibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/f
+rontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
 File: tikzlibraryshapes.misc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/l
+ibraries/shapes/pgflibraryshapes.misc.code.tex
 File: pgflibraryshapes.misc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/f
+rontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
 File: tikzlibraryshapes.symbols.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/l
+ibraries/shapes/pgflibraryshapes.symbols.code.tex
 File: pgflibraryshapes.symbols.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/f
+rontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
 File: tikzlibraryshapes.arrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/l
+ibraries/shapes/pgflibraryshapes.arrows.code.tex
 File: pgflibraryshapes.arrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/f
+rontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/l
+ibraries/shapes/pgflibraryshapes.callouts.code.tex))
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/f
+rontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
 File: tikzlibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/l
+ibraries/shapes/pgflibraryshapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfnodepartlowerbox=\box152
 \pgfnodeparttwobox=\box153
@@ -1970,16 +1968,15 @@ File: pgflibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfnodepartsixbox=\box170
 \pgfnodepartfivebox=\box171
 )))
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/f
+rontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/g
-eneric/pgf/libraries/pgflibraryarrows.code.tex
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pgf/l
+ibraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \arrowsize=\dimen388
-))
-(src/frontmatter/abbreviations.tex)
+)) (src/frontmatter/abbreviations.tex)
 Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           Using `bookmark' together with `hyperref' is recommended,
 (scrreprt)           because of handling of possible bookmark level gaps.
@@ -1989,12 +1986,12 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)             \usepackage{bookmark}
 (scrreprt)           before \begin{document} on input line 27.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/bookmark/bookmark.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/bookmar
+k/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/bookmark/bkm-pdftex.def
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/bookmar
+k/bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
 )
 \BKM@id=\count456
@@ -2002,8 +1999,8 @@ File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 27
 .
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/psnfss/t1ptm.fd
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/
+t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (main.aux)
 \openout1 = `main.aux'.
@@ -2012,8 +2009,8 @@ LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 27.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line
  27.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/newtx/omlntxmi.fd
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/newtx/o
+mlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
 LaTeX Font Info:    ... okay on input line 27.
@@ -2031,8 +2028,8 @@ LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 27.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
 27.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/newtx/untxexa.fd
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/newtx/u
+ntxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
 LaTeX Font Info:    ... okay on input line 27.
@@ -2040,8 +2037,8 @@ LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 27.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
  27.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/newtx/lmsntxsy.fd
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/newtx/l
+msntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
 LaTeX Font Info:    ... okay on input line 27.
@@ -2049,8 +2046,8 @@ LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 27.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
 e 27.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/newtx/lmxntxexx.fd
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/newtx/l
+mxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
 LaTeX Font Info:    ... okay on input line 27.
@@ -2092,8 +2089,8 @@ Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/microtype/mt-ptm.cfg
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/microty
+pe/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 *geometry* driver: auto-detecting
@@ -2131,8 +2128,8 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/c
-ontext/base/mkii/supp-pdf.mkii
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/context/base/
+mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count457
 \scratchdimen=\dimen391
@@ -2146,14 +2143,14 @@ ontext/base/mkii/supp-pdf.mkii
 \makeMPintoPDFobject=\count462
 \everyMPtoPDFconversion=\toks81
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/epstopdf-pkg/epstopdf-base.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/epstopd
+f-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/00miktex/epstopdf-sys.cfg
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/00mikte
+x/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package caption Info: Begin \AtBeginDocument code.
@@ -2162,8 +2159,8 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/caption/ltcaption.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/caption
+/ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
@@ -2173,20 +2170,20 @@ Package caption Info: End \AtBeginDocument code.
 Package tocbasic Info: setting babel extension for `lol' on input line 27.
 \scr@dte@lstlisting@maxnumwidth=\skip103
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/translations/dicts/translations-basic-dictionary-english.trsl
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/transla
+tions/dicts/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 27.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/pdflscape/pdflscape.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pdflsca
+pe/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/pdflscape/pdflscape-nometadata.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pdflsca
+pe/pdflscape-nometadata.sty
 Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
 F (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
@@ -2237,8 +2234,8 @@ Package pdftex.def Info: src/images/logo.png  used on input line 5.
 LaTeX Font Info:    Trying to load font information for OT1+minntx on input lin
 e 16.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/newtx/ot1minntx.fd
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/newtx/o
+t1minntx.fd
 File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
 )
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
@@ -2272,30 +2269,30 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
 LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
 
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/amsfonts/umsa.fd
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsfont
+s/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/microtype/mt-msa.cfg
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/microty
+pe/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
 
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/amsfonts/umsb.fd
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsfont
+s/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/microtype/mt-msb.cfg
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/microty
+pe/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
 16.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/newtx/untxmia.fd
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/newtx/u
+ntxmia.fd
 File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
@@ -2307,8 +2304,8 @@ LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
 16.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/newtx/untxsym.fd
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/newtx/u
+ntxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
@@ -2320,8 +2317,8 @@ LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
 16.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/newtx/untxsyc.fd
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/newtx/u
+ntxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
@@ -2345,9 +2342,8 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 
 
 
-{/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/data/fonts/ma
-p/pdftex/pdftex.map} <./src/images/logo.png>])
-(src/frontmatter/_coverWithSupervisors.tex
+{/Users/mac/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdf
+tex.map} <./src/images/logo.png>]) (src/frontmatter/_coverWithSupervisors.tex
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -2394,8 +2390,8 @@ Package pdftex.def Info: src/images/logo.png  used on input line 5.
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 2.
 
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/psnfss/t1phv.fd
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/
+t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -2547,8 +2543,8 @@ l.14
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
 6.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/psnfss/ts1ptm.fd
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/
+ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
@@ -2571,9 +2567,75 @@ chapter 2.
 
 ]
 
-[6]) (src/chapters/requirements.tex
+[6]
 
 [7]
+
+[8]
+
+[9]
+
+[10]
+
+[11]
+
+[12]
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 10.95pt on input line 148.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 8.0pt on input line 148.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 6.1pt on input line 148.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 10.95pt on input line 148.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 8.0pt on input line 148.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 6.1pt on input line 148.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 10.95pt on input line 148.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 8.0pt on input line 148.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 6.1pt on input line 148.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 10.95pt on input line 148.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 8.0pt on input line 148.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 6.1pt on input line 148.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 10.95pt on input line 148.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 8.0pt on input line 148.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 6.1pt on input line 148.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 10.95pt on input line 148.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 8.0pt on input line 148.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 6.1pt on input line 148.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 10.95pt on input line 148.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 8.0pt on input line 148.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 6.1pt on input line 148.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 10.95pt on input line 148.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 8.0pt on input line 148.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 6.1pt on input line 148.
+
+Overfull \hbox (7.95908pt too wide) in paragraph at lines 148--174
+ [][] 
+ []
+
+) (src/chapters/requirements.tex
+
+[13]
 chapter 3.
 
 ! Package glossaries Error: Glossary entry `python' has not been defined.
@@ -2613,7 +2675,7 @@ You need to define a glossary entry before you can use it.
 
 
 
-[8
+[14
 
 ]
 
@@ -2630,7 +2692,7 @@ You need to define a glossary entry before you can use it.
 
 
 
-[9]
+[15]
 
 ! Package glossaries Error: Glossary entry `python' has not been defined.
 
@@ -2645,7 +2707,7 @@ You need to define a glossary entry before you can use it.
 
 
 
-[10]
+[16]
 
 ! Package glossaries Error: Glossary entry `python' has not been defined.
 
@@ -2696,13 +2758,13 @@ You need to define a glossary entry before you can use it.
 
 
 
-[11]
+[17]
 
-[12]) (src/chapters/systemArchitectureAndMethodology.tex
+[18]) (src/chapters/systemArchitectureAndMethodology.tex
 
-[13]
+[19]
 chapter 4.
-<src/images/figures/block_diagram.png, id=382, 1124.2pt x 729.72626pt>
+<src/images/figures/block_diagram.png, id=516, 1124.2pt x 729.72626pt>
 File: src/images/figures/block_diagram.png Graphic file (type png)
 <use src/images/figures/block_diagram.png>
 Package pdftex.def Info: src/images/figures/block_diagram.png  used on input li
@@ -2710,12 +2772,12 @@ ne 9.
 (pdftex.def)             Requested size: 416.83289pt x 270.56236pt.
 
 
-[14
+[20
 
  <./src/images/figures/block_diagram.png>]
 
-[15]
-<src/images/figures/yolov7_architecture.png, id=399, 1003.75pt x 538.01pt>
+[21]
+<src/images/figures/yolov7_architecture.png, id=530, 1003.75pt x 538.01pt>
 File: src/images/figures/yolov7_architecture.png Graphic file (type png)
 <use src/images/figures/yolov7_architecture.png>
 Package pdftex.def Info: src/images/figures/yolov7_architecture.png  used on in
@@ -2723,10 +2785,10 @@ put line 50.
 (pdftex.def)             Requested size: 416.83289pt x 223.42596pt.
 
 
-[16 <./src/images/figures/yolov7_architecture.png>]
+[22 <./src/images/figures/yolov7_architecture.png>]
 
-[17]
-<src/images/figures/easyocr_architecture.png, id=417, 1221.81468pt x 560.8453pt
+[23]
+<src/images/figures/easyocr_architecture.png, id=548, 1221.81468pt x 560.8453pt
 >
 File: src/images/figures/easyocr_architecture.png Graphic file (type png)
 <use src/images/figures/easyocr_architecture.png>
@@ -2735,7 +2797,7 @@ nput line 101.
 (pdftex.def)             Requested size: 416.83289pt x 191.33527pt.
 
 
-[18 <./src/images/figures/easyocr_architecture.png>]
+[24 <./src/images/figures/easyocr_architecture.png>]
 
 LaTeX Warning: File `src/images/figures/trocr.png' not found on input line 144.
 
@@ -2756,8 +2818,8 @@ If that doesn't work, type  X <return>  to quit.
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 14
 4.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/psnfss/t1pcr.fd
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/
+t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -2766,18 +2828,18 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[19]
+[25]
 
-[20]
+[26]
 
-[21]
+[27]
 
-[22]
+[28]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 221.
 
 
-[23]
+[29]
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
 (Font)              scaled to size 12.0pt on input line 257.
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
@@ -2786,12 +2848,12 @@ LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
 (Font)              scaled to size 6.6pt on input line 257.
 
 
-[24]
+[30]
 
-[25]
+[31]
 
-[26]
-<src/images/figures/use_case_diagram.png, id=490, 1126.2075pt x 779.91376pt>
+[32]
+<src/images/figures/use_case_diagram.png, id=621, 1126.2075pt x 779.91376pt>
 File: src/images/figures/use_case_diagram.png Graphic file (type png)
 <use src/images/figures/use_case_diagram.png>
 Package pdftex.def Info: src/images/figures/use_case_diagram.png  used on input
@@ -2799,12 +2861,12 @@ Package pdftex.def Info: src/images/figures/use_case_diagram.png  used on input
 (pdftex.def)             Requested size: 416.83289pt x 288.65878pt.
 
 
-[27]
+[33]
 
-[28 <./src/images/figures/use_case_diagram.png>]
+[34 <./src/images/figures/use_case_diagram.png>]
 
-[29]
-<src/images/figures/flowchart.png, id=511, 440.64626pt x 795.97375pt>
+[35]
+<src/images/figures/flowchart.png, id=642, 440.64626pt x 795.97375pt>
 File: src/images/figures/flowchart.png Graphic file (type png)
 <use src/images/figures/flowchart.png>
 Package pdftex.def Info: src/images/figures/flowchart.png  used on input line 3
@@ -2812,27 +2874,27 @@ Package pdftex.def Info: src/images/figures/flowchart.png  used on input line 3
 (pdftex.def)             Requested size: 354.31049pt x 640.04703pt.
 
 
-[30]
+[36]
 
-[31 <./src/images/figures/flowchart.png>]
+[37 <./src/images/figures/flowchart.png>]
 
-[32]
+[38]
 
-[33]) (src/chapters/implementationDetails.tex
+[39]) (src/chapters/implementationDetails.tex
 
-[34]
+[40]
 chapter 5.
 
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/listings/lstlang1.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listing
+s/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
-(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
-atex/listings/lstmisc.sty
+(/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listing
+s/lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
 )
 
-[35
+[41
 
 ]
 
@@ -2910,7 +2972,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
 l.66     \State
                 Convert VOC coordinates to normalized YOLO format
 
-[36]
+[42]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
 has been already used, duplicate ignored
 <to be read again> 
@@ -3009,18 +3071,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16})
 l.126 \State
              \Return \gls{lmdb} environment
 
-[37]
+[43]
 Overfull \hbox (0.79776pt too wide) in paragraph at lines 175--196
  [][] 
  []
 
 
 
-[38]
+[44]
 
-[39]
+[45]
 
-[40]
+[46]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
 has been already used, duplicate ignored
 <to be read again> 
@@ -3235,7 +3297,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17})
 l.297 \State
              $M \leftarrow M \cup \{\text{curr}\}$
 
-[41]
+[47]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
 has been already used, duplicate ignored
 <to be read again> 
@@ -3417,7 +3479,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12})
 l.357 \State
              \Return $M$
 
-[42
+[48
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -3534,7 +3596,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18})
 l.389         \EndIf
                     
 
-[43]
+[49]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
 has been already used, duplicate ignored
 <to be read again> 
@@ -3596,14 +3658,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
 l.435 \State
              \Return $\mathcal{G}'$
 
-[44]
+[50]
 Overfull \hbox (10.83952pt too wide) in paragraph at lines 447--459
  [][] 
  []
 
 
 
-[45]
+[51]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
 has been already used, duplicate ignored
 <to be read again> 
@@ -3771,8 +3833,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.27})
 l.530 \State
              \Return $\mathcal{G}$
 
-[46]
-<src/images/figures/backend_req_res.png, id=679, 1562.83875pt x 941.76843pt>
+[52]
+<src/images/figures/backend_req_res.png, id=810, 1562.83875pt x 941.76843pt>
 File: src/images/figures/backend_req_res.png Graphic file (type png)
 <use src/images/figures/backend_req_res.png>
 Package pdftex.def Info: src/images/figures/backend_req_res.png  used on input 
@@ -3780,9 +3842,9 @@ line 585.
 (pdftex.def)             Requested size: 416.83289pt x 251.17691pt.
 
 
-[47]
+[53]
 
-[48 <./src/images/figures/backend_req_res.png>]
+[54 <./src/images/figures/backend_req_res.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
 has been already used, duplicate ignored
 <to be read again> 
@@ -3911,9 +3973,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13})
 l.642 \State
              \Return $(V, U)$) (src/chapters/resultAndAnalysis.tex
 
-[49]
+[55]
 
-[50]
+[56]
 chapter 6.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
 (Font)              scaled to size 14.4pt on input line 56.
@@ -3971,19 +4033,19 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 7.9pt on input line 56.
 
 
-[51
+[57
 
 ]
 
-[52]
-<src/images/figures/yolo_15class_train_loss.png, id=716, 833.0322pt x 255.354pt
+[58]
+<src/images/figures/yolo_15class_train_loss.png, id=849, 833.0322pt x 255.354pt
 >
 File: src/images/figures/yolo_15class_train_loss.png Graphic file (type png)
 <use src/images/figures/yolo_15class_train_loss.png>
 Package pdftex.def Info: src/images/figures/yolo_15class_train_loss.png  used o
 n input line 182.
 (pdftex.def)             Requested size: 416.83289pt x 127.77798pt.
-<src/images/figures/yolo_15class_val_loss.png, id=717, 833.0322pt x 255.354pt>
+<src/images/figures/yolo_15class_val_loss.png, id=850, 833.0322pt x 255.354pt>
 File: src/images/figures/yolo_15class_val_loss.png Graphic file (type png)
 <use src/images/figures/yolo_15class_val_loss.png>
 Package pdftex.def Info: src/images/figures/yolo_15class_val_loss.png  used on 
@@ -3991,9 +4053,9 @@ input line 189.
 (pdftex.def)             Requested size: 416.83289pt x 127.77798pt.
 
 
-[53 <./src/images/figures/yolo_15class_train_loss.png> <./src/images/figures/yo
+[59 <./src/images/figures/yolo_15class_train_loss.png> <./src/images/figures/yo
 lo_15class_val_loss.png>]
-<src/images/figures/yolo_15class_training_curves.png, id=728, 688.4922pt x 544.
+<src/images/figures/yolo_15class_training_curves.png, id=861, 688.4922pt x 544.
 434pt>
 File: src/images/figures/yolo_15class_training_curves.png Graphic file (type pn
 g)
@@ -4003,8 +4065,8 @@ sed on input line 200.
 (pdftex.def)             Requested size: 416.83289pt x 329.62035pt.
 
 
-[54 <./src/images/figures/yolo_15class_training_curves.png>]
-<src/images/figures/yolo_15class_final_bar.png, id=736, 610.4406pt x 349.305pt>
+[60 <./src/images/figures/yolo_15class_training_curves.png>]
+<src/images/figures/yolo_15class_final_bar.png, id=869, 610.4406pt x 349.305pt>
 
 File: src/images/figures/yolo_15class_final_bar.png Graphic file (type png)
 <use src/images/figures/yolo_15class_final_bar.png>
@@ -4013,8 +4075,8 @@ Package pdftex.def Info: src/images/figures/yolo_15class_final_bar.png  used on
 (pdftex.def)             Requested size: 416.83289pt x 238.51563pt.
 
 
-[55 <./src/images/figures/yolo_15class_final_bar.png>]
-<src/images/figures/yolo_class_impact.png, id=745, 442.2924pt x 309.7974pt>
+[61 <./src/images/figures/yolo_15class_final_bar.png>]
+<src/images/figures/yolo_class_impact.png, id=878, 442.2924pt x 309.7974pt>
 File: src/images/figures/yolo_class_impact.png Graphic file (type png)
 <use src/images/figures/yolo_class_impact.png>
 Package pdftex.def Info: src/images/figures/yolo_class_impact.png  used on inpu
@@ -4027,15 +4089,15 @@ Overfull \hbox (7.59256pt too wide) in paragraph at lines 268--280
 
 
 
-[56 <./src/images/figures/yolo_class_impact.png>]
-<src/images/figures/yolo_full_comparison_bar.png, id=754, 722.4591pt x 401.8212
+[62 <./src/images/figures/yolo_class_impact.png>]
+<src/images/figures/yolo_full_comparison_bar.png, id=887, 722.4591pt x 401.8212
 pt>
 File: src/images/figures/yolo_full_comparison_bar.png Graphic file (type png)
 <use src/images/figures/yolo_full_comparison_bar.png>
 Package pdftex.def Info: src/images/figures/yolo_full_comparison_bar.png  used 
 on input line 284.
 (pdftex.def)             Requested size: 416.83289pt x 231.84245pt.
-<src/images/figures/yolo_evolution_timeline.png, id=757, 672.5928pt x 371.2269p
+<src/images/figures/yolo_evolution_timeline.png, id=890, 672.5928pt x 371.2269p
 t>
 File: src/images/figures/yolo_evolution_timeline.png Graphic file (type png)
 <use src/images/figures/yolo_evolution_timeline.png>
@@ -4044,8 +4106,8 @@ n input line 295.
 (pdftex.def)             Requested size: 416.83289pt x 230.07332pt.
 
 
-[57 <./src/images/figures/yolo_full_comparison_bar.png>]
-<src/images/figures/yolo_radar_comparison.png, id=764, 479.1501pt x 412.4208pt>
+[63 <./src/images/figures/yolo_full_comparison_bar.png>]
+<src/images/figures/yolo_radar_comparison.png, id=897, 479.1501pt x 412.4208pt>
 
 File: src/images/figures/yolo_radar_comparison.png Graphic file (type png)
 <use src/images/figures/yolo_radar_comparison.png>
@@ -4054,8 +4116,8 @@ input line 306.
 (pdftex.def)             Requested size: 270.93883pt x 233.21326pt.
 
 
-[58 <./src/images/figures/yolo_evolution_timeline.png>]
-<src/images/figures/confusion_matrix_retrained_yolov7.png, id=772, 867.24pt x 6
+[64 <./src/images/figures/yolo_evolution_timeline.png>]
+<src/images/figures/confusion_matrix_retrained_yolov7.png, id=905, 867.24pt x 6
 50.43pt>
 File: src/images/figures/confusion_matrix_retrained_yolov7.png Graphic file (ty
 pe png)
@@ -4065,8 +4127,8 @@ ng  used on input line 319.
 (pdftex.def)             Requested size: 416.83289pt x 312.62961pt.
 
 
-[59 <./src/images/figures/yolo_radar_comparison.png>]
-<src/images/figures/retrained_yolov7_result1.png, id=781, 1387.1825pt x 1051.93
+[65 <./src/images/figures/yolo_radar_comparison.png>]
+<src/images/figures/retrained_yolov7_result1.png, id=914, 1387.1825pt x 1051.93
 pt>
 File: src/images/figures/retrained_yolov7_result1.png Graphic file (type png)
 <use src/images/figures/retrained_yolov7_result1.png>
@@ -4075,8 +4137,8 @@ on input line 329.
 (pdftex.def)             Requested size: 416.83289pt x 316.09506pt.
 
 
-[60 <./src/images/figures/confusion_matrix_retrained_yolov7.png>]
-<src/images/figures/retrained_yolov7_result2.png, id=788, 2067.725pt x 1104.125
+[66 <./src/images/figures/confusion_matrix_retrained_yolov7.png>]
+<src/images/figures/retrained_yolov7_result2.png, id=921, 2067.725pt x 1104.125
 pt>
 File: src/images/figures/retrained_yolov7_result2.png Graphic file (type png)
 <use src/images/figures/retrained_yolov7_result2.png>
@@ -4085,15 +4147,15 @@ on input line 336.
 (pdftex.def)             Requested size: 416.83289pt x 222.57323pt.
 
 
-[61 <./src/images/figures/retrained_yolov7_result1.png (PNG copy)> <./src/image
+[67 <./src/images/figures/retrained_yolov7_result1.png (PNG copy)> <./src/image
 s/figures/retrained_yolov7_result2.png (PNG copy)>]
-<src/images/figures/custom_OCR_loss_curve.png, id=795, 714.7503pt x 426.393pt>
+<src/images/figures/custom_OCR_loss_curve.png, id=928, 714.7503pt x 426.393pt>
 File: src/images/figures/custom_OCR_loss_curve.png Graphic file (type png)
 <use src/images/figures/custom_OCR_loss_curve.png>
 Package pdftex.def Info: src/images/figures/custom_OCR_loss_curve.png  used on 
 input line 348.
 (pdftex.def)             Requested size: 416.83289pt x 248.67441pt.
-<src/images/figures/cer_wer.png, id=797, 1003.8303pt x 715.473pt>
+<src/images/figures/cer_wer.png, id=930, 1003.8303pt x 715.473pt>
 File: src/images/figures/cer_wer.png Graphic file (type png)
 <use src/images/figures/cer_wer.png>
 Package pdftex.def Info: src/images/figures/cer_wer.png  used on input line 360
@@ -4101,30 +4163,30 @@ Package pdftex.def Info: src/images/figures/cer_wer.png  used on input line 360
 (pdftex.def)             Requested size: 416.83289pt x 297.09044pt.
 
 
-[62 <./src/images/figures/custom_OCR_loss_curve.png>]
+[68 <./src/images/figures/custom_OCR_loss_curve.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\gls' on input line 369.
 
 
 
-[63 <./src/images/figures/cer_wer.png>]
+[69 <./src/images/figures/cer_wer.png>]
 Package pgfplots info on input line 415: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
 
 
-[64]
+[70]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\gls' on input line 433.
 
-<src/images/figures/custom_ocr_result1.png, id=818, 1620.0525pt x 1076.02pt>
+<src/images/figures/custom_ocr_result1.png, id=951, 1620.0525pt x 1076.02pt>
 File: src/images/figures/custom_ocr_result1.png Graphic file (type png)
 <use src/images/figures/custom_ocr_result1.png>
 Package pdftex.def Info: src/images/figures/custom_ocr_result1.png  used on inp
 ut line 439.
 (pdftex.def)             Requested size: 416.83289pt x 276.8525pt.
-<src/images/figures/trocr_result1.png, id=819, 1620.0525pt x 1076.02pt>
+<src/images/figures/trocr_result1.png, id=952, 1620.0525pt x 1076.02pt>
 File: src/images/figures/trocr_result1.png Graphic file (type png)
 <use src/images/figures/trocr_result1.png>
 Package pdftex.def Info: src/images/figures/trocr_result1.png  used on input li
@@ -4132,14 +4194,14 @@ ne 446.
 (pdftex.def)             Requested size: 416.83289pt x 276.8525pt.
 
 
-[65 <./src/images/figures/custom_ocr_result1.png (PNG copy)>]
-<src/images/figures/custom_ocr_result2.png, id=825, 1686.3pt x 1088.065pt>
+[71 <./src/images/figures/custom_ocr_result1.png (PNG copy)>]
+<src/images/figures/custom_ocr_result2.png, id=958, 1686.3pt x 1088.065pt>
 File: src/images/figures/custom_ocr_result2.png Graphic file (type png)
 <use src/images/figures/custom_ocr_result2.png>
 Package pdftex.def Info: src/images/figures/custom_ocr_result2.png  used on inp
 ut line 453.
 (pdftex.def)             Requested size: 416.83289pt x 268.94412pt.
-<src/images/figures/trocr_result2.png, id=826, 1686.3pt x 1088.065pt>
+<src/images/figures/trocr_result2.png, id=959, 1686.3pt x 1088.065pt>
 File: src/images/figures/trocr_result2.png Graphic file (type png)
 <use src/images/figures/trocr_result2.png>
 Package pdftex.def Info: src/images/figures/trocr_result2.png  used on input li
@@ -4147,9 +4209,9 @@ ne 460.
 (pdftex.def)             Requested size: 416.83289pt x 268.94412pt.
 
 
-[66 <./src/images/figures/trocr_result1.png (PNG copy)> <./src/images/figures/c
+[72 <./src/images/figures/trocr_result1.png (PNG copy)> <./src/images/figures/c
 ustom_ocr_result2.png (PNG copy)>]
-<src/images/figures/otsu_thresholding.png, id=835, 341.275pt x 259.97125pt>
+<src/images/figures/otsu_thresholding.png, id=968, 341.275pt x 259.97125pt>
 File: src/images/figures/otsu_thresholding.png Graphic file (type png)
 <use src/images/figures/otsu_thresholding.png>
 Package pdftex.def Info: src/images/figures/otsu_thresholding.png  used on inpu
@@ -4157,8 +4219,8 @@ t line 471.
 (pdftex.def)             Requested size: 416.83289pt x 317.54924pt.
 
 
-[67 <./src/images/figures/trocr_result2.png (PNG copy)>]
-<src/images/figures/bounding_box_overlay.png, id=841, 417.195pt x 282.51pt>
+[73 <./src/images/figures/trocr_result2.png (PNG copy)>]
+<src/images/figures/bounding_box_overlay.png, id=974, 417.195pt x 282.51pt>
 File: src/images/figures/bounding_box_overlay.png Graphic file (type png)
 <use src/images/figures/bounding_box_overlay.png>
 Package pdftex.def Info: src/images/figures/bounding_box_overlay.png  used on i
@@ -4166,8 +4228,8 @@ nput line 482.
 (pdftex.def)             Requested size: 416.83289pt x 282.2679pt.
 
 
-[68 <./src/images/figures/otsu_thresholding.png>]
-<src/images/figures/skeleton_with_endpoints.png, id=848, 1387.1825pt x 1051.93p
+[74 <./src/images/figures/otsu_thresholding.png>]
+<src/images/figures/skeleton_with_endpoints.png, id=981, 1387.1825pt x 1051.93p
 t>
 File: src/images/figures/skeleton_with_endpoints.png Graphic file (type png)
 <use src/images/figures/skeleton_with_endpoints.png>
@@ -4176,8 +4238,8 @@ n input line 497.
 (pdftex.def)             Requested size: 333.46758pt x 252.86963pt.
 
 
-[69 <./src/images/figures/bounding_box_overlay.png>]
-<src/images/figures/adjacency_graph.png, id=855, 714.9912pt x 554.5518pt>
+[75 <./src/images/figures/bounding_box_overlay.png>]
+<src/images/figures/adjacency_graph.png, id=988, 714.9912pt x 554.5518pt>
 File: src/images/figures/adjacency_graph.png Graphic file (type png)
 <use src/images/figures/adjacency_graph.png>
 Package pdftex.def Info: src/images/figures/adjacency_graph.png  used on input 
@@ -4185,8 +4247,8 @@ line 508.
 (pdftex.def)             Requested size: 291.78174pt x 226.30998pt.
 
 
-[70 <./src/images/figures/skeleton_with_endpoints.png (PNG copy)>]
-<src/images/figures/combined_overlay.png, id=862, 1387.1825pt x 1051.93pt>
+[76 <./src/images/figures/skeleton_with_endpoints.png (PNG copy)>]
+<src/images/figures/combined_overlay.png, id=995, 1387.1825pt x 1051.93pt>
 File: src/images/figures/combined_overlay.png Graphic file (type png)
 <use src/images/figures/combined_overlay.png>
 Package pdftex.def Info: src/images/figures/combined_overlay.png  used on input
@@ -4194,8 +4256,8 @@ Package pdftex.def Info: src/images/figures/combined_overlay.png  used on input
 (pdftex.def)             Requested size: 291.78174pt x 221.26494pt.
 
 
-[71 <./src/images/figures/adjacency_graph.png>]
-<src/images/figures/frontend_circuit.png, id=871, 1595.9625pt x 1304.875pt>
+[77 <./src/images/figures/adjacency_graph.png>]
+<src/images/figures/frontend_circuit.png, id=1004, 1595.9625pt x 1304.875pt>
 File: src/images/figures/frontend_circuit.png Graphic file (type png)
 <use src/images/figures/frontend_circuit.png>
 Package pdftex.def Info: src/images/figures/frontend_circuit.png  used on input
@@ -4203,8 +4265,8 @@ Package pdftex.def Info: src/images/figures/frontend_circuit.png  used on input
 (pdftex.def)             Requested size: 416.83289pt x 340.79263pt.
 
 
-[72 <./src/images/figures/combined_overlay.png (PNG copy)>]
-<src/images/figures/frontend_screenshot.png, id=876, 1405.25pt x 800.9925pt>
+[78 <./src/images/figures/combined_overlay.png (PNG copy)>]
+<src/images/figures/frontend_screenshot.png, id=1009, 1405.25pt x 800.9925pt>
 File: src/images/figures/frontend_screenshot.png Graphic file (type png)
 <use src/images/figures/frontend_screenshot.png>
 Package pdftex.def Info: src/images/figures/frontend_screenshot.png  used on in
@@ -4212,134 +4274,92 @@ put line 537.
 (pdftex.def)             Requested size: 416.83289pt x 237.59851pt.
 
 
-[73 <./src/images/figures/frontend_circuit.png> <./src/images/figures/frontend_
+[79 <./src/images/figures/frontend_circuit.png> <./src/images/figures/frontend_
 screenshot.png>]) (src/chapters/futureEnhancements.tex
 
-[74]
+[80]
 chapter 7.
 )
 
-[75
+[81
 
 ] (src/chapters/conclusion.tex
 
-[76]
+[82]
 chapter 8.
 )
 
-[77
+[83
 
 ]
 chapter 9.
 (src/backmatter/back.tex
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 10.95pt on input line 9.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 8.0pt on input line 9.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 6.1pt on input line 9.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 10.95pt on input line 9.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 8.0pt on input line 9.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 6.1pt on input line 9.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 10.95pt on input line 9.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 8.0pt on input line 9.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.1pt on input line 9.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 10.95pt on input line 9.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 8.0pt on input line 9.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.1pt on input line 9.
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
 (Font)              scaled to size 10.95pt on input line 9.
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
 (Font)              scaled to size 8.0pt on input line 9.
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 6.1pt on input line 9.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 10.95pt on input line 9.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 8.0pt on input line 9.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.1pt on input line 9.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.95pt on input line 9.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 8.0pt on input line 9.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.1pt on input line 9.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.95pt on input line 9.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 8.0pt on input line 9.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.1pt on input line 9.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.95pt on input line 9.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 8.0pt on input line 9.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 6.1pt on input line 9.
 
 
-[78
+[84
 
 
 ]) (main.bbl
 
-[79
+[85
 
 ]
 chapter without number
 
+Overfull \hbox (1.45912pt too wide) in paragraph at lines 84--88
+\T1/ptm/m/n/12 (-20) ``SSD: Single shot multibox detector,'' in \T1/ptm/m/it/12
+ (-20) Proc. European Conf. Comput. Vis. (ECCV)\T1/ptm/m/n/12 (-20) .
+ []
 
-[80
 
-])
 
-[81] (main.aux)
+[86
+
+]
+
+[87])
+
+[88] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 70426 strings out of 467875
- 1650355 string characters out of 5404952
- 2488802 words of memory out of 5000000
- 97627 multiletter control sequences out of 15000+600000
- 728044 words of font info for 352 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 122i,21n,131p,11210b,2794s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fon
-ts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/Users/anveshantimsina/Library/Application 
-Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc}</Users/anveshantimsi
-na/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/N
-ewTXMI.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/in
-stall/fonts/type1/public/newtx/NewTXMI7.pfb></Users/anveshantimsina/Library/App
-lication Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/txexs.pfb></Use
-rs/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type
-1/public/newtx/txmiaX.pfb></Users/anveshantimsina/Library/Application Support/M
-iKTeX/texmfs/install/fonts/type1/public/newtx/txsym.pfb></Users/anveshantimsina
-/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/txs
-ys.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/instal
-l/fonts/type1/urw/courier/ucrr8a.pfb></Users/anveshantimsina/Library/Applicatio
-n Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmb8a.pfb></Users/anvesh
-antimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/tim
-es/utmr8a.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs
-/install/fonts/type1/urw/times/utmri8a.pfb></Users/anveshantimsina/Library/Appl
-ication Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/ztmb.pfb></Users
-/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/
-public/newtx/ztmr.pfb>
-Output written on main.pdf (95 pages, 12048102 bytes).
+ 70573 strings out of 469811
+ 1644519 string characters out of 5468259
+ 2483148 words of memory out of 5000000
+ 97450 multiletter control sequences out of 15000+600000
+ 729109 words of font info for 364 fonts, out of 8000000 for 9000
+ 0 hyphenation exceptions out of 8191
+ 122i,21n,131p,11210b,2798s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/Users/mac/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips
+/newtx/ntx-ot1-tlf.enc}{/Users/mac/Library/Application Support/MiKTeX/texmfs/in
+stall/fonts/enc/dvips/base/8r.enc}</Users/mac/Library/Application Support/MiKTe
+X/texmfs/install/fonts/type1/public/newtx/NewTXMI.pfb></Users/mac/Library/Appli
+cation Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/NewTXMI7.pfb></Us
+ers/mac/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/ne
+wtx/txexs.pfb></Users/mac/Library/Application Support/MiKTeX/texmfs/install/fon
+ts/type1/public/newtx/txmiaX.pfb></Users/mac/Library/Application Support/MiKTeX
+/texmfs/install/fonts/type1/public/newtx/txsym.pfb></Users/mac/Library/Applicat
+ion Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/txsys.pfb></Users/ma
+c/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/courier/ucr
+r8a.pfb></Users/mac/Library/Application Support/MiKTeX/texmfs/install/fonts/typ
+e1/urw/times/utmb8a.pfb></Users/mac/Library/Application Support/MiKTeX/texmfs/i
+nstall/fonts/type1/urw/times/utmr8a.pfb></Users/mac/Library/Application Support
+/MiKTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb></Users/mac/Library/Ap
+plication Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/ztmb.pfb></Use
+rs/mac/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/new
+tx/ztmr.pfb>
+Output written on main.pdf (102 pages, 12095499 bytes).
 PDF statistics:
- 1219 PDF objects out of 1440 (max. 8388607)
- 376 named destinations out of 1000 (max. 500000)
- 56408 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 1401 PDF objects out of 1440 (max. 8388607)
+ 440 named destinations out of 1000 (max. 500000)
+ 56480 words of extra memory for PDF output out of 61914 (max. 10000000)
 

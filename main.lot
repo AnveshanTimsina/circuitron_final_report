@@ -1,15 +1,16 @@
 \babel@toc {english}{}\relax 
-\contentsline {table}{\numberline {4-1}{\ignorespaces Expected Performance Metric Values for Individual Modules}}{29}{table.caption.21}%
-\contentsline {table}{\numberline {4-2}{\ignorespaces Summary of Data in the CGHD Dataset}}{32}{table.caption.23}%
-\contentsline {table}{\numberline {4-3}{\ignorespaces Frequency of Each Class with its Code in the CGHD Dataset}}{34}{table.caption.24}%
-\contentsline {table}{\numberline {5-1}{\ignorespaces Consolidation of Original Classes into Unified YOLO Classes}}{39}{table.caption.25}%
-\contentsline {table}{\numberline {5-2}{\ignorespaces Time complexity breakdown for Multi-Head BFS algorithm}}{45}{table.caption.26}%
-\contentsline {table}{\numberline {5-3}{\ignorespaces Space complexity breakdown for Multi-Head BFS algorithm}}{45}{table.caption.27}%
-\contentsline {table}{\numberline {6-1}{\ignorespaces Comparison of Performance Metrics for YOLOv5 and YOLOv7}}{52}{table.caption.33}%
-\contentsline {table}{\numberline {6-2}{\ignorespaces Performance comparison of four \gls {yolo} architectures on the 15-class dataset (final epoch)}}{55}{table.caption.37}%
-\contentsline {table}{\numberline {6-3}{\ignorespaces Impact of class taxonomy consolidation on YOLOv7 performance}}{56}{table.caption.39}%
-\contentsline {table}{\numberline {6-4}{\ignorespaces Unified comparison of all object detection configurations}}{57}{table.caption.41}%
-\contentsline {table}{\numberline {6-5}{\ignorespaces Performance comparison of \gls {ocr} models}}{64}{table.caption.50}%
-\contentsline {table}{\numberline {9-1}{\ignorespaces Project Budget Breakdown}}{78}{table.caption.63}%
-\contentsline {table}{\numberline {9-2}{\ignorespaces Project Timeline (Gantt Chart)}}{79}{table.caption.64}%
+\contentsline {table}{\numberline {2-1}{\ignorespaces Comparison of Existing Circuit Recognition Systems}}{13}{table.caption.16}%
+\contentsline {table}{\numberline {4-1}{\ignorespaces Expected Performance Metric Values for Individual Modules}}{35}{table.caption.22}%
+\contentsline {table}{\numberline {4-2}{\ignorespaces Summary of Data in the CGHD Dataset}}{38}{table.caption.24}%
+\contentsline {table}{\numberline {4-3}{\ignorespaces Frequency of Each Class with its Code in the CGHD Dataset}}{40}{table.caption.25}%
+\contentsline {table}{\numberline {5-1}{\ignorespaces Consolidation of Original Classes into Unified YOLO Classes}}{45}{table.caption.26}%
+\contentsline {table}{\numberline {5-2}{\ignorespaces Time complexity breakdown for Multi-Head BFS algorithm}}{51}{table.caption.27}%
+\contentsline {table}{\numberline {5-3}{\ignorespaces Space complexity breakdown for Multi-Head BFS algorithm}}{51}{table.caption.28}%
+\contentsline {table}{\numberline {6-1}{\ignorespaces Comparison of Performance Metrics for YOLOv5 and YOLOv7}}{58}{table.caption.36}%
+\contentsline {table}{\numberline {6-2}{\ignorespaces Performance comparison of four \gls {yolo} architectures on the 15-class dataset (final epoch)}}{61}{table.caption.40}%
+\contentsline {table}{\numberline {6-3}{\ignorespaces Impact of class taxonomy consolidation on YOLOv7 performance}}{62}{table.caption.42}%
+\contentsline {table}{\numberline {6-4}{\ignorespaces Unified comparison of all object detection configurations}}{63}{table.caption.44}%
+\contentsline {table}{\numberline {6-5}{\ignorespaces Performance comparison of \gls {ocr} models}}{70}{table.caption.53}%
+\contentsline {table}{\numberline {9-1}{\ignorespaces Project Budget Breakdown}}{84}{table.caption.67}%
+\contentsline {table}{\numberline {9-2}{\ignorespaces Project Timeline (Gantt Chart)}}{85}{table.caption.69}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
