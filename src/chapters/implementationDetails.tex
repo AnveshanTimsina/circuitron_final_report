@@ -195,7 +195,7 @@ Satisfactory results were not obtained through the initial 61-class approach. To
 \end{tabular}
 \end{table}
 
-A merge mapping was applied to the original annotations, grouping visually similar subclasses (e.g., capacitor.polarized and capacitor.unpolarized into capacitor) as shown in the Table \ref{tab:class_consolidation}. Four \gls{yolo} architectures were then trained on this 15-class dataset for benchmarking:
+A merge mapping was applied to the original annotations, grouping visually similar subclasses (e.g., capacitor.polarized and capacitor.unpolarized into capacitor) as shown in the Table \ref{tab:class_consolidation}. This consolidation is done not only considering visual similarity but also based on the usage i.e, the resulting 15 classes make up the majority of basic-level circuits Four \gls{yolo} architectures were then trained on this 15-class dataset for benchmarking:
 
 \begin{itemize}
     \item \textbf{YOLOv7 (retrained):} 100 epochs, batch size 16, image size $640 \times 640$
@@ -488,6 +488,7 @@ For typical skeleton images where $P = O(H + W)$ (linear in image perimeter), th
 \[
 T(n, H, W, r) = O(n \cdot r^2 + n \cdot (H + W)) = O(n \cdot (r^2 + H + W))
 \]
+In the real world, this approach can be considered efficient because it scales with the number of nodes, but it is bound by the physical resolution of the image sensor.
 
 \subsection{Crossover Dissolution}
 
