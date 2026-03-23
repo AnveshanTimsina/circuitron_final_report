@@ -360,22 +360,6 @@ Character Accuracy measures how many characters in the predicted text match the 
 
 In circuit diagrams, values like $10k$, $100\Omega$, $1\mu F$ are crucial. \gls{ocr} must correctly read these values, since even a small error (e.g., mistaking `k' as `1') leads to incorrect simulation behavior. A high character accuracy ensures value-to-component mapping is reliable.
 
-\subsection{Terminal and Node Detection Metrics}
-
-Precision measures how many detected terminals (or nodes) are correct whereas recall measures how many actual terminals (or nodes) were correctly detected:
-
-\begin{equation}
-\text{Precision} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Positives}}
-\label{eq:precision}
-\end{equation}
-
-\begin{equation}
-\text{Recall} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}}
-\label{eq:recall}
-\end{equation}
-
-Terminals define where components connect to wires, which influences circuit structure. High precision ensures the system doesn't falsely identify noise as terminals, avoiding wrong wire mappings. High recall ensures the system doesn't miss valid terminal points, which would cause incomplete circuits. Likewise, missing nodes can create open circuits, and false nodes can misrepresent actual connectivity. So high values of both precision and recall are crucial for both terminal and node detection.
-
 \section{System Flowchart}
 
 \begin{figure}[H]

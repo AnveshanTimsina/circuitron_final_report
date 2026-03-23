@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1774250912.92758 "main.aux" "main.bbl" "main" 1774250952.97298 0
+["bibtex main"] 1774253209.00744 "main.aux" "main.bbl" "main" 1774253209.43164 2
   "./references.bib" 1774250442.23986 14668 1d19f3d41d4caa7965fecd1350897aff ""
   "/Users/mac/Library/Application Support/MiKTeX/texmfs/install/bibtex/bst/ieeetran/IEEEtran.bst" 1765817250.24059 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1774250950.28743 62944 2d18fc3a03be5b0396f5b711698dfd92 "pdflatex"
+  "main.aux" 1774253201.00087 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1774250931.25749 "/Users/mac/Downloads/cktnaneshanreport/circuitron_final_report/main.tex" "main.pdf" "main" 1774250952.97442 2
+["pdflatex"] 1774253191.35625 "/Users/mac/Downloads/cktnaneshanreport/circuitron_final_report/main.tex" "main.pdf" "main" 1774253208.23518 2
   "/Users/mac/Downloads/cktnaneshanreport/circuitron_final_report/main.tex" 1774250486.5287 2124 4536c78baf15b362324bf0d362dd90f0 ""
   "/Users/mac/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1774218214.56984 120445 455a5e11f6f6f0cb99510015af28fd20 ""
   "/Users/mac/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1766079046.27503 10134691 0df494ed7ff9f8d2715c5914587f99d4 ""
@@ -378,13 +378,13 @@
   "/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/xfor/xfor.sty" 1766078551.984 2689 44855b72da58344b1c1d9b3087bce6ca ""
   "/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/xkeyval/xkeyval.sty" 1765816784.05601 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/xpatch/xpatch.sty" 1770187125.87631 8510 9829c50ab36366d4da41fdc87e7d0699 ""
-  "main.acr" 1774244529.01366 11353 3b7c20c004a3d234a8266f237329aabe ""
-  "main.aux" 1774250950.28743 62944 2d18fc3a03be5b0396f5b711698dfd92 "pdflatex"
-  "main.bbl" 1774250942.48759 0 d41d8cd98f00b204e9800998ecf8427e "bibtex main"
-  "main.lof" 1774250950.30815 4669 3022094f1a98cd43ee70be4866c445a5 "pdflatex"
-  "main.lot" 1774250950.30823 1944 e5960846ae78d9890b9dbe43f8105e24 "pdflatex"
+  "main.acr" 1774253189.73787 11106 82dbdc7a8479bde0f170eada6f59b9ed ""
+  "main.aux" 1774253201.00087 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "main.bbl" 1774253209.35417 0 d41d8cd98f00b204e9800998ecf8427e "bibtex main"
+  "main.lof" 0 -1 0 "pdflatex"
+  "main.lot" 0 -1 0 "pdflatex"
   "main.tex" 1774250486.5287 2124 4536c78baf15b362324bf0d362dd90f0 ""
-  "main.toc" 1774250950.30809 10213 7ea8b3c64c5b9d36d14600d6caa06a82 "pdflatex"
+  "main.toc" 0 -1 0 "pdflatex"
   "src/backmatter/back.tex" 1774249978.85982 3571 98e1f4019431559558a9530401f7b8c7 ""
   "src/chapters/conclusion.tex" 1774244529.07907 2217 d5bb592ba55d327ee7464b18925cd80c ""
   "src/chapters/futureEnhancements.tex" 1774244529.07985 2959 a94ab866dd42be0306615e6afb80115a ""
@@ -393,7 +393,7 @@
   "src/chapters/literatureReview.tex" 1774250920.10896 13037 70c0c766e3054d83faf8586c342336a1 ""
   "src/chapters/requirements.tex" 1774244529.08118 16225 cd197d2e4bff72cb5028534a0053d432 ""
   "src/chapters/resultAndAnalysis.tex" 1774250920.10898 32814 d61c384f2e7be3fdb30fc6d17bcc98b7 ""
-  "src/chapters/systemArchitectureAndMethodology.tex" 1774250920.10886 40178 1f6e8e95c6f24d00d1e7f4d7f7d1b34f ""
+  "src/chapters/systemArchitectureAndMethodology.tex" 1774253135.26577 39175 ce9c21483fc5f643eb3f36afc0977b4a ""
   "src/frontmatter/_coverBase.tex" 1774244529.08197 846 072b9f628c09dbd134296863d2b3fca4 ""
   "src/frontmatter/_coverWithSupervisors.tex" 1774244529.08248 1137 b3223d2e457a739c1da6d1f348bae06e ""
   "src/frontmatter/abbreviations.tex" 1774250275.58777 3558 245bfc2632424ed2b00352b8823ccfa5 ""
