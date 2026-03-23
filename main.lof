@@ -1,0 +1,36 @@
+\babel@toc {english}{}\relax 
+\contentsline {figure}{\numberline {4-1}{\ignorespaces Block Diagram of the CIRCUITRON System}}{15}{figure.caption.17}%
+\contentsline {figure}{\numberline {4-2}{\ignorespaces Architecture of YOLOv7}}{17}{figure.caption.18}%
+\contentsline {figure}{\numberline {4-3}{\ignorespaces Text Detection and Recognition Pipeline}}{19}{figure.caption.19}%
+\contentsline {figure}{\numberline {4-4}{\ignorespaces Architecture of TrOCR}}{20}{figure.caption.20}%
+\contentsline {figure}{\numberline {4-5}{\ignorespaces Use-Case Diagram for CIRCUITRON System}}{28}{figure.caption.21}%
+\contentsline {figure}{\numberline {4-6}{\ignorespaces System Flowchart}}{31}{figure.caption.23}%
+\contentsline {figure}{\numberline {5-1}{\ignorespaces Interaction Diagram for the Web Application}}{48}{figure.caption.29}%
+\contentsline {figure}{\numberline {6-1}{\ignorespaces mAP@0.5 comparison over 100 training epochs.}}{51}{figure.caption.32}%
+\contentsline {figure}{\numberline {6-2}{\ignorespaces Performance metrics comparison: (a) Precision-Recall and (b) F1-Confidence curves.}}{52}{figure.caption.35}%
+\contentsline {figure}{\numberline {6-3}{\ignorespaces Training loss comparison across four YOLO architectures}}{53}{figure.caption.37}%
+\contentsline {figure}{\numberline {6-4}{\ignorespaces Validation loss comparison across four \gls {yolo} architectures}}{53}{figure.caption.38}%
+\contentsline {figure}{\numberline {6-5}{\ignorespaces Performance metrics vs. epochs for four \gls {yolo} architectures on the 15-class dataset}}{54}{figure.caption.39}%
+\contentsline {figure}{\numberline {6-6}{\ignorespaces Final-epoch performance metrics for four \gls {yolo} architectures on the 15-class dataset}}{55}{figure.caption.41}%
+\contentsline {figure}{\numberline {6-7}{\ignorespaces Effect of class taxonomy consolidation on YOLOv7: 61-class vs. 15-class performance}}{56}{figure.caption.43}%
+\contentsline {figure}{\numberline {6-8}{\ignorespaces Grouped bar chart comparing all six detection configurations across Precision, Recall, \gls {map}@0.5, and \gls {map}@0.5:0.95}}{57}{figure.caption.45}%
+\contentsline {figure}{\numberline {6-9}{\ignorespaces Performance evolution of object detection across all configurations showing \gls {map}@0.5 and \gls {map}@0.5:0.95}}{58}{figure.caption.46}%
+\contentsline {figure}{\numberline {6-10}{\ignorespaces Radar chart comparing the three best detection configurations across four performance metrics}}{59}{figure.caption.47}%
+\contentsline {figure}{\numberline {6-11}{\ignorespaces Confusion Matrix for the retrained YOLOv7}}{60}{figure.caption.48}%
+\contentsline {figure}{\numberline {6-12}{\ignorespaces Retrained YOLOv7 Result (i)}}{61}{figure.caption.49}%
+\contentsline {figure}{\numberline {6-13}{\ignorespaces Retrained YOLOv7 Result (ii)}}{61}{figure.caption.50}%
+\contentsline {figure}{\numberline {6-14}{\ignorespaces Training Loss vs Epochs (Custom \gls {ocr})}}{62}{figure.caption.51}%
+\contentsline {figure}{\numberline {6-15}{\ignorespaces Custom OCR Performance Metrics and their Distributions}}{63}{figure.caption.52}%
+\contentsline {figure}{\numberline {6-16}{\ignorespaces Performance metrics comparison, in percentage}}{64}{figure.caption.54}%
+\contentsline {figure}{\numberline {6-17}{\ignorespaces Text Detection and Recognition using Custom OCR(i)}}{65}{figure.caption.55}%
+\contentsline {figure}{\numberline {6-18}{\ignorespaces Text Detection and Recognition using TrOCR(i)}}{66}{figure.caption.56}%
+\contentsline {figure}{\numberline {6-19}{\ignorespaces Text Detection and Recognition using Custom OCR(ii)}}{66}{figure.caption.57}%
+\contentsline {figure}{\numberline {6-20}{\ignorespaces Text Detection and Recognition using TrOCR(ii)}}{67}{figure.caption.58}%
+\contentsline {figure}{\numberline {6-21}{\ignorespaces Otsu's Global Thresholding}}{68}{figure.caption.59}%
+\contentsline {figure}{\numberline {6-22}{\ignorespaces Bounding Box Overlay}}{69}{figure.caption.60}%
+\contentsline {figure}{\numberline {6-23}{\ignorespaces Skeletonized image with detected endpoints}}{70}{figure.caption.61}%
+\contentsline {figure}{\numberline {6-24}{\ignorespaces Adjacency graph constructed using Multi-Head BFS algorithm}}{71}{figure.caption.62}%
+\contentsline {figure}{\numberline {6-25}{\ignorespaces Combined overlay of YOLOv7, TrOCR, and line detection results}}{72}{figure.caption.63}%
+\contentsline {figure}{\numberline {6-26}{\ignorespaces Digitally Drawn Circuit (Color Inverted)}}{73}{figure.caption.64}%
+\contentsline {figure}{\numberline {6-27}{\ignorespaces Fullscreen Capture of the Frontend}}{73}{figure.caption.65}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

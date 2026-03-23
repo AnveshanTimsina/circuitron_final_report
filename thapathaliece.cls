@@ -165,7 +165,7 @@
             {\end{longtable}}%
     \renewcommand*{\glossaryheader}{}%
     \renewcommand*{\glsgroupheading}[1]{}%
-    \renewcommand*{\glsgroupskip}{\relax}%
+    \renewcommand*{\glsgroupskip}{}%
     \renewcommand{\glossentry}[2]{%
         \glsentryitem{##1}\glstarget{##1}{\glossentryname{##1}} &
         \glossentrydesc{##1}\tabularnewline
