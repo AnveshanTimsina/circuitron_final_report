@@ -18,121 +18,97 @@
 \contentsline {subsection}{\numberline {1.5.3}Project Limitations}{3}{subsection.1.5.3}%
 \contentsline {section}{\numberline {1.6}Report Organization}{4}{section.1.6}%
 \contentsline {chapter}{\numberline {2}LITERATURE REVIEW}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Early Work in Circuit Diagram Recognition}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Object Detection for Component Recognition}{6}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Region-Based Detectors}{6}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Single-Shot Detectors}{6}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Application to Circuit Components}{7}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Optical Character Recognition for Circuit Diagrams}{7}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}CRNN-Based Text Recognition}{7}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Attention-Based and Transformer Models}{8}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}Wire and Connectivity Detection}{8}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Classical Approaches}{8}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Learning-Based Approaches}{9}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Path-Finding and Graph-Based Wire Tracing}{9}{subsection.2.4.3}%
-\contentsline {section}{\numberline {2.5}Graph-Based Circuit Representation}{9}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Graph Neural Networks for Circuit Analysis}{10}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Instance Segmentation and Graph Extraction}{10}{subsection.2.5.2}%
-\contentsline {section}{\numberline {2.6}Netlist Generation and Circuit Simulation}{10}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Traditional EDA Tools}{10}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Image-to-Netlist Pipelines}{10}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}Simulation Engines}{11}{subsection.2.6.3}%
-\contentsline {section}{\numberline {2.7}Large Language Models in Circuit Analysis}{11}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Visual Question Answering for Circuits}{11}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}LLM-Based Circuit Assistance}{11}{subsection.2.7.2}%
-\contentsline {section}{\numberline {2.8}Educational Applications of Circuit Simulation}{12}{section.2.8}%
-\contentsline {section}{\numberline {2.9}Research Gap and Motivation}{12}{section.2.9}%
-\contentsline {chapter}{\numberline {3}REQUIREMENTS ANALYSIS}{14}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Software Requirements}{14}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Python Libraries}{14}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}YOLOv7}{15}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}OCR models}{15}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}KiCad Symbol Library}{16}{subsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}Coding and Training Platforms}{16}{subsection.3.1.5}%
-\contentsline {subsection}{\numberline {3.1.6}Web Development}{17}{subsection.3.1.6}%
-\contentsline {section}{\numberline {3.2}Feasibility Study}{18}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Technical Feasibility}{18}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Economic Feasibility}{18}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Operational Feasibility}{18}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Time Feasibility}{19}{subsection.3.2.4}%
-\contentsline {chapter}{\numberline {4}SYSTEM ARCHITECTURE AND METHODOLOGY}{20}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Block Diagram}{20}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Preprocessing}{20}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Circuit Component Detection}{21}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Recognition of Component Values}{23}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Wire Detection}{27}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Terminal Point Detection}{28}{subsection.4.1.5}%
-\contentsline {subsection}{\numberline {4.1.6}Integration Algorithm}{28}{subsection.4.1.6}%
-\contentsline {subsection}{\numberline {4.1.7}CircuitJS-compatible Text File Generation}{29}{subsection.4.1.7}%
-\contentsline {subsection}{\numberline {4.1.8}Digital Schematic Generation}{29}{subsection.4.1.8}%
-\contentsline {subsection}{\numberline {4.1.9}Backend Development}{30}{subsection.4.1.9}%
-\contentsline {subsection}{\numberline {4.1.10}LLM Integration}{30}{subsection.4.1.10}%
-\contentsline {section}{\numberline {4.2}Line Detection}{30}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Line Detection via Horizontal and Vertical Classification}{30}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Line Detection via Path Finding}{31}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Crossover Dissolution Algorithm}{32}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Use-Case Diagram}{34}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Performance Metrics Expectation}{35}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Component Detection Metric}{35}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Text Recognition Metric}{35}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Terminal and Node Detection Metrics}{36}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}System Flowchart}{37}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Dataset Analysis}{38}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Dataset Overview}{38}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Class-wise Data Statistics}{40}{subsection.4.6.2}%
-\contentsline {chapter}{\numberline {5}IMPLEMENTATION DETAILS}{41}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Dataset Manipulation and Preprocessing}{41}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Conversion of Annotation Formats}{41}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Image Augmentation}{44}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Fine-tuning YOLOv5 and YOLOv7 for Component Detection}{44}{subsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.1.4}Class Consolidation and Retraining}{44}{subsection.5.1.4}%
-\contentsline {subsection}{\numberline {5.1.5}Implementation of Custom Text Recognition (OCR)}{45}{subsection.5.1.5}%
-\contentsline {subsection}{\numberline {5.1.6}Fine-tuning TrOCR for Text Recognition}{46}{subsection.5.1.6}%
-\contentsline {subsection}{\numberline {5.1.7}Line Detection Algorithm Implementation}{46}{subsection.5.1.7}%
-\contentsline {section}{\numberline {5.2}Line Detection via Path Finding}{48}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Complexity of Implemented Algorithm}{51}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Crossover Dissolution}{52}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}Frontend and Backend Implementation}{53}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Frontend-Backend Interaction}{54}{subsection.5.3.1}%
-\contentsline {section}{\numberline {5.4}Circuit Simulation using CircuitJS}{54}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Error Handling}{54}{section.5.5}%
-\contentsline {chapter}{\numberline {6}RESULTS AND ANALYSIS}{57}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Comparative Analysis of Object Detection using YOLOv5 and YOLOv7}{57}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Experimental Setup}{57}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Performance Metrics}{57}{subsection.6.1.2}%
-\contentsline {subsubsection}{\nonumberline mAP vs Number of Epochs}{57}{subsubsection*.31}%
-\contentsline {subsubsection}{\nonumberline Precision vs Recall and F1 Score vs Confidence}{57}{subsubsection*.34}%
-\contentsline {subsection}{\numberline {6.1.3}Quantitative Results Comparison}{58}{subsection.6.1.3}%
-\contentsline {section}{\numberline {6.2}Class Taxonomy Consolidation}{59}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Training and Validation Loss: 15-Class Models}{59}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Performance Metrics: 15-Class Models}{60}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Quantitative Results Comparison for 15-Class Dataset}{61}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Impact of Class Taxonomy Consolidation}{62}{subsection.6.2.4}%
-\contentsline {section}{\numberline {6.3}Holistic Object Detection Comparison}{63}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Object Detection Performance Evolution}{64}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Radar Visualization of Top Models}{65}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Confusion Matrix for the retrained YOLOv7}{66}{subsection.6.3.3}%
-\contentsline {section}{\numberline {6.4}Retrained YOLOv7 Demonstration}{67}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Custom OCR Results and Analysis}{68}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Custom OCR Training Loss Curve}{68}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Custom OCR Performance Analysis}{69}{subsection.6.5.2}%
-\contentsline {section}{\numberline {6.6}Comparative Analysis of \gls {ocr} Models}{69}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}Quantitative Comparison}{70}{subsection.6.6.1}%
-\contentsline {section}{\numberline {6.7}\gls {ocr} Demonstration}{71}{section.6.7}%
-\contentsline {section}{\numberline {6.8}Junction-Based Wire Detection}{74}{section.6.8}%
-\contentsline {section}{\numberline {6.9}Line Detection via Path Finding Visualization}{76}{section.6.9}%
-\contentsline {subsection}{\numberline {6.9.1}Skeletonized Image with Detected Endpoints}{76}{subsection.6.9.1}%
-\contentsline {subsection}{\numberline {6.9.2}Adjacency Graph Visualization}{77}{subsection.6.9.2}%
-\contentsline {section}{\numberline {6.10}Combined Overlay of YOLOv7, TrOCR, and Line Detection Results}{78}{section.6.10}%
-\contentsline {section}{\numberline {6.11}Frontend Visualization}{79}{section.6.11}%
-\contentsline {chapter}{\numberline {7}FUTURE ENHANCEMENTS}{81}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Improvement in the OCR accuracy}{81}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Increment in the number of supported components}{81}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Authentication and Database Functionalities}{81}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Improvement in the frontened and general user experience}{81}{section.7.4}%
-\contentsline {chapter}{\numberline {8}CONCLUSION}{83}{chapter.8}%
-\contentsline {chapter}{\numberline {9}APPENDICES}{84}{chapter.9}%
-\contentsline {section}{Appendix A: Project Budget}{84}{section*.66}%
-\contentsline {section}{Appendix B: Gantt Chart}{85}{section*.68}%
-\contentsline {chapter}{\nonumberline REFERENCES}{86}{chapter*.70}%
+\contentsline {chapter}{\numberline {3}REQUIREMENTS ANALYSIS}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Software Requirements}{9}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Python Libraries}{9}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}YOLOv7}{10}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}OCR models}{10}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}KiCad Symbol Library}{11}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Coding and Training Platforms}{11}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Web Development}{12}{subsection.3.1.6}%
+\contentsline {section}{\numberline {3.2}Feasibility Study}{13}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Technical Feasibility}{13}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Economic Feasibility}{13}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Operational Feasibility}{13}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Time Feasibility}{14}{subsection.3.2.4}%
+\contentsline {chapter}{\numberline {4}SYSTEM ARCHITECTURE AND METHODOLOGY}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Block Diagram}{15}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Preprocessing}{15}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Circuit Component Detection}{16}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Recognition of Component Values}{18}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Wire Detection}{22}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Terminal Point Detection}{23}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Integration Algorithm}{23}{subsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.1.7}CircuitJS-compatible Text File Generation}{24}{subsection.4.1.7}%
+\contentsline {subsection}{\numberline {4.1.8}Digital Schematic Generation}{24}{subsection.4.1.8}%
+\contentsline {subsection}{\numberline {4.1.9}Backend Development}{25}{subsection.4.1.9}%
+\contentsline {subsection}{\numberline {4.1.10}LLM Integration}{25}{subsection.4.1.10}%
+\contentsline {section}{\numberline {4.2}Line Detection}{25}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Line Detection via Horizontal and Vertical Classification}{25}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Line Detection via Path Finding}{26}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Crossover Dissolution Algorithm}{27}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Use-Case Diagram}{29}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Performance Metrics Expectation}{30}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Component Detection Metric}{30}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Text Recognition Metric}{30}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Terminal and Node Detection Metrics}{31}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}System Flowchart}{32}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Dataset Analysis}{33}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Dataset Overview}{33}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Class-wise Data Statistics}{35}{subsection.4.6.2}%
+\contentsline {chapter}{\numberline {5}IMPLEMENTATION DETAILS}{36}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Dataset Manipulation and Preprocessing}{36}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Conversion of Annotation Formats}{36}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Image Augmentation}{39}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Fine-tuning YOLOv5 and YOLOv7 for Component Detection}{39}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Class Consolidation and Retraining}{39}{subsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.1.5}Implementation of Custom Text Recognition (OCR)}{40}{subsection.5.1.5}%
+\contentsline {subsection}{\numberline {5.1.6}Fine-tuning TrOCR for Text Recognition}{41}{subsection.5.1.6}%
+\contentsline {subsection}{\numberline {5.1.7}Line Detection Algorithm Implementation}{41}{subsection.5.1.7}%
+\contentsline {section}{\numberline {5.2}Line Detection via Path Finding}{43}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Complexity of Implemented Algorithm}{46}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Crossover Dissolution}{47}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Frontend and Backend Implementation}{48}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Frontend-Backend Interaction}{49}{subsection.5.3.1}%
+\contentsline {section}{\numberline {5.4}Circuit Simulation using CircuitJS}{49}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Error Handling}{49}{section.5.5}%
+\contentsline {chapter}{\numberline {6}RESULTS AND ANALYSIS}{52}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Comparative Analysis of Object Detection using YOLOv5 and YOLOv7}{52}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Experimental Setup}{52}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Performance Metrics}{52}{subsection.6.1.2}%
+\contentsline {subsubsection}{\nonumberline mAP vs Number of Epochs}{52}{subsubsection*.31}%
+\contentsline {subsubsection}{\nonumberline Precision vs Recall and F1 Score vs Confidence}{52}{subsubsection*.34}%
+\contentsline {subsection}{\numberline {6.1.3}Quantitative Results Comparison}{53}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.2}Class Taxonomy Consolidation}{54}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Training and Validation Loss: 15-Class Models}{54}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Performance Metrics: 15-Class Models}{55}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Quantitative Results Comparison for 15-Class Dataset}{56}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Impact of Class Taxonomy Consolidation}{57}{subsection.6.2.4}%
+\contentsline {section}{\numberline {6.3}Holistic Object Detection Comparison}{58}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Object Detection Performance Evolution}{59}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Radar Visualization of Top Models}{60}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Confusion Matrix for the retrained YOLOv7}{61}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Retrained YOLOv7 Demonstration}{62}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Custom OCR Results and Analysis}{63}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Custom OCR Training Loss Curve}{63}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Custom OCR Performance Analysis}{64}{subsection.6.5.2}%
+\contentsline {section}{\numberline {6.6}Comparative Analysis of \gls {ocr} Models}{64}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Quantitative Comparison}{65}{subsection.6.6.1}%
+\contentsline {section}{\numberline {6.7}\gls {ocr} Demonstration}{66}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Junction-Based Wire Detection}{69}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Line Detection via Path Finding Visualization}{71}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Skeletonized Image with Detected Endpoints}{71}{subsection.6.9.1}%
+\contentsline {subsection}{\numberline {6.9.2}Adjacency Graph Visualization}{72}{subsection.6.9.2}%
+\contentsline {section}{\numberline {6.10}Combined Overlay of YOLOv7, TrOCR, and Line Detection Results}{73}{section.6.10}%
+\contentsline {section}{\numberline {6.11}Frontend Visualization}{74}{section.6.11}%
+\contentsline {chapter}{\numberline {7}FUTURE ENHANCEMENTS}{76}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Improvement in the OCR accuracy}{76}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Increment in the number of supported components}{76}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Authentication and Database Functionalities}{76}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Improvement in the frontened and general user experience}{76}{section.7.4}%
+\contentsline {chapter}{\numberline {8}CONCLUSION}{78}{chapter.8}%
+\contentsline {chapter}{\numberline {9}APPENDICES}{79}{chapter.9}%
+\contentsline {section}{Appendix A: Project Budget}{79}{section*.66}%
+\contentsline {section}{Appendix B: Gantt Chart}{80}{section*.68}%
+\contentsline {chapter}{\nonumberline REFERENCES}{81}{chapter*.70}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

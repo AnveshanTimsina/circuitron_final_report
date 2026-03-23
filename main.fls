@@ -540,9 +540,6 @@ INPUT /Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psn
 INPUT /Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/t1ptm.fd
 INPUT /Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/t1ptm.fd
 INPUT /Users/mac/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmr8t.tfm
-INPUT ./main.aux
-INPUT ./main.aux
-INPUT main.aux
 OUTPUT main.aux
 INPUT /Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/newtx/omlntxmi.fd
 INPUT /Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/newtx/omlntxmi.fd
@@ -698,17 +695,8 @@ INPUT ./src/frontmatter/toc.tex
 INPUT src/frontmatter/toc.tex
 INPUT /Users/mac/Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/ptmri8t.vf
 INPUT /Users/mac/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmri8r.tfm
-INPUT ./main.toc
-INPUT ./main.toc
-INPUT main.toc
 OUTPUT main.toc
-INPUT ./main.lof
-INPUT ./main.lof
-INPUT main.lof
 OUTPUT main.lof
-INPUT ./main.lot
-INPUT ./main.lot
-INPUT main.lot
 OUTPUT main.lot
 INPUT ./main.acr
 INPUT ./main.acr

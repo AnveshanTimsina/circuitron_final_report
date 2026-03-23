@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1774245677.99208 "main.aux" "main.bbl" "main" 1774245704.17369 0
+["bibtex main"] 1774246216.35494 "main.aux" "main.bbl" "main" 1774246229.8226 2
   "./references.bib" 1774245677.18725 14588 fe3f6f5a164e471dfe1a069aa65843d0 ""
   "/Users/mac/Library/Application Support/MiKTeX/texmfs/install/bibtex/bst/ieeetran/IEEEtran.bst" 1765817250.24059 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1774245702.83638 72562 d9d980916fa4eaed4903ac48efc3d12f "pdflatex"
+  "main.aux" 1774246229.8041 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1774245691.93223 "/Users/mac/Downloads/cktnaneshanreport/circuitron_final_report/main.tex" "main.pdf" "main" 1774245704.17413 2
+["pdflatex"] 1774246217.7781 "/Users/mac/Downloads/cktnaneshanreport/circuitron_final_report/main.tex" "main.pdf" "main" 1774246229.82299 2
   "/Users/mac/Downloads/cktnaneshanreport/circuitron_final_report/main.tex" 1774244529.07807 1739 3cee562419215036804b13716e52be68 ""
   "/Users/mac/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1774218214.56984 120445 455a5e11f6f6f0cb99510015af28fd20 ""
   "/Users/mac/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1766079046.27503 10134691 0df494ed7ff9f8d2715c5914587f99d4 ""
@@ -379,18 +379,15 @@
   "/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/xkeyval/xkeyval.sty" 1765816784.05601 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/xpatch/xpatch.sty" 1770187125.87631 8510 9829c50ab36366d4da41fdc87e7d0699 ""
   "main.acr" 1774244529.01366 11353 3b7c20c004a3d234a8266f237329aabe ""
-  "main.aux" 1774245702.83638 72562 d9d980916fa4eaed4903ac48efc3d12f "pdflatex"
-  "main.bbl" 1774245678.40362 9011 b0815709aff6b776e840a0bc30547b65 "bibtex main"
-  "main.lof" 1774245702.85241 4669 fbca1c581668b7f03813f1afc5b66631 "pdflatex"
-  "main.lot" 1774245702.85248 1945 11b76d9053f93b53cd9859733a7ef555 "pdflatex"
+  "main.aux" 1774246229.8041 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.bbl" 1774246216.74013 0 d41d8cd98f00b204e9800998ecf8427e "bibtex main"
   "main.tex" 1774244529.07807 1739 3cee562419215036804b13716e52be68 ""
-  "main.toc" 1774245702.85237 12680 c9743f339d66aaff90a8e4394a612a2c "pdflatex"
   "src/backmatter/back.tex" 1774244529.07876 3858 8a2bdec67fb177a03c4e44039ba3949f ""
   "src/chapters/conclusion.tex" 1774244529.07907 2217 d5bb592ba55d327ee7464b18925cd80c ""
   "src/chapters/futureEnhancements.tex" 1774244529.07985 2959 a94ab866dd42be0306615e6afb80115a ""
   "src/chapters/implementationDetails.tex" 1774244529.08041 35837 10be30cde0785b36e3511dc15a942729 ""
   "src/chapters/intro.tex" 1774244529.08094 9563 e93de14dc53b851bb8531e034f35f780 ""
-  "src/chapters/literatureReview.tex" 1774245677.18729 23240 cecafe2c38547fa1601de15a57ea39ea ""
+  "src/chapters/literatureReview.tex" 1774246215.58034 13079 b6cbd8413de5d5a3e5fd32530cc13ead ""
   "src/chapters/requirements.tex" 1774244529.08118 16225 cd197d2e4bff72cb5028534a0053d432 ""
   "src/chapters/resultAndAnalysis.tex" 1774244529.08161 32751 37c2d46fd09a1a21a1e91125418c6eab ""
   "src/chapters/systemArchitectureAndMethodology.tex" 1774244529.08178 40137 f1ce5d966c5ea55d49b018214e605b78 ""
@@ -421,7 +418,6 @@
   "src/images/figures/retrained_yolov7_result1.png" 1774244529.16886 840037 32ef924ae76884a43bfcccb6253dde56 ""
   "src/images/figures/retrained_yolov7_result2.png" 1774244529.17561 1163179 bed89fcf2e100e4da7b42ffafbb378aa ""
   "src/images/figures/skeleton_with_endpoints.png" 1774244529.17837 29247 f6202a20c27ae5c90cac850bf13002fb ""
-  "src/images/figures/trocr.png" 0 -1 0 ""
   "src/images/figures/trocr_result1.png" 1774244529.21574 1367327 8dcf8a82ca200daf4576cc37c8fca986 ""
   "src/images/figures/trocr_result2.png" 1774244529.22051 1218455 90fd0337aadd44eff29a2059f1ef45b9 ""
   "src/images/figures/use_case_diagram.png" 1774244529.22142 143726 639639900cdcd050ba6ef40a4f9da1e8 ""
