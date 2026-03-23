@@ -1,28 +1,174 @@
 \chapter{LITERATURE REVIEW}
 
-Hand-drawn circuit recognition and digitization, while not a vastly researched area, has a few notable examples of its implementation. Most of the study and implementation related to this has been done on classifying the different circuit components (like battery, resistors, inductors, etc.) and there's not much on arguably the more difficult aspect of circuit recognition: node and wire connectivity. For instance, in a 2021 study, 20 different components were classified from self-made hand-drawn circuits with the recognition accuracy of 97.33\% \cite{adnan2021cnnbased}.
+The recognition and digitization of hand-drawn circuit diagrams is a multidisciplinary challenge that intersects computer vision, deep learning, graph theory, and electronic design automation. This chapter reviews the existing literature across the key areas relevant to this project: sketch and symbol recognition, object detection architectures, optical character recognition, wire and connectivity detection, graph-based circuit representation, netlist generation, circuit simulation, and the emerging role of large language models in circuit analysis.
 
 
-In one of the oldest studies on the automatic recognition of hand-drawn circuits, an approach of identifying the components first and then the node segments (taking into consideration their spatial relationship) was implemented, achieving an accuracy of 86\% for components and 92.5\% for the nodes. The node segments were then traced assuming wire between them, considering a variety of hard-coded conditions \cite{edwards2000machine}. In a recent 2024 research, a couple of \gls{uk} engineers were successful in digitizing images of electrical circuit schematics using a novel pattern-recognition methodology and custom-trained \gls{ocr} model achieving respective success rates of 86.4\% and 99.6\% \cite{kelly2024digitizing}. This, however, was trained on printed/computer-made circuit diagrams, not hand-drawn ones and also isn't able to understand the values of the circuit components.
+\section{Early Work in Circuit Diagram Recognition}
+
+The automatic recognition of hand-drawn circuit diagrams has been explored since the early 2000s. In one of the earliest studies, Edwards and Chandran \cite{edwards2000machine} proposed an approach that first identified circuit components and then inferred node segments by considering spatial relationships between them. Their system achieved an accuracy of 86\% for component recognition and 92.5\% for node identification. Wire connections were traced between identified nodes using a set of hard-coded heuristic conditions. While pioneering for its time, this approach was inherently brittle due to its reliance on manually crafted rules and could not generalize to diverse handwriting styles or circuit topologies.
+
+Ramel et al.\ \cite{ramel2000structured} addressed a related problem in the broader domain of technical document recognition. They proposed a structured approach to interpreting hand-drawn diagrams by separating graphical primitives (lines, arcs) from textual annotations, followed by a structural matching step against a library of predefined symbol templates. Although not specific to electrical circuits, their methodology influenced subsequent work by demonstrating that hybrid recognition pipelines---combining low-level image processing with high-level structural analysis---could handle the inherent ambiguity of hand-drawn sketches.
+
+In the following decade, several studies attempted to formalize circuit sketch recognition using template matching and rule-based systems. Belongie et al.\ \cite{belongie2002shape} introduced shape context descriptors for object recognition, which were later adapted for symbol recognition in technical drawings. Their method computed a histogram of relative positions of contour points, providing a rich descriptor invariant to small deformations---a useful property for hand-drawn symbols that exhibit natural variation. While these early methods laid the groundwork, they were limited by their inability to learn discriminative features from data, motivating the shift toward deep learning-based approaches.
 
 
+\section{Object Detection for Component Recognition}
 
-To overcome the limitations of \glspl{cnn} in understanding circuit topology, graph-based methods have gained traction. Circuit2Graph, a pipeline that transforms circuit diagrams into graph structures where nodes represent components and edges denote electrical connections was introduced in 2023. Using \glspl{gnn}, their system achieved 97.9\% accuracy on circuit classification tasks, outperforming traditional methods \cite{yamakaji2023circuit2graph}. This approach demonstrated that \glspl{gnn} can effectively model the global structure of a circuit, even when visual features alone are insufficient. Similarly, Bayer et al.\ \cite{bayer2023instance} used Mask \gls{rcnn} for instance segmentation of components in hand-drawn diagrams, followed by graph extraction techniques to infer connections. Their model achieved around 94\% mask accuracy, but they noted that symbol recognition was ``reasonable, yet incomplete,'' especially in more complex drawings or where handwriting was less consistent. A paper published in the International Research Journal of Engineering and Technology proposed a two-step method for electronic circuit diagram detection and recognition; first detecting and classifying the components present in the circuit and then labeling the classified components to form a string which is then fed to an \gls{fsm} system for circuit recognition \cite{abhinav2020electric}.
+The detection and classification of individual circuit components is a foundational step in any circuit recognition pipeline. Modern approaches rely heavily on deep learning-based object detection architectures.
+
+\subsection{Region-Based Detectors}
+
+The R-\gls{cnn} family of detectors introduced the concept of region proposals for object detection. Girshick et al.\ \cite{girshick2014rich} proposed R-\gls{cnn}, which used selective search to generate candidate regions followed by \gls{cnn}-based feature extraction and classification. This was followed by Fast R-\gls{cnn} \cite{girshick2015fast}, which shared convolutional features across proposals, and Faster R-\gls{cnn} \cite{ren2015faster}, which replaced selective search with a Region Proposal Network (\gls{nn}) to generate proposals directly from feature maps. He et al.\ \cite{he2017mask} extended Faster R-\gls{cnn} with Mask R-\gls{cnn}, adding a parallel branch for instance segmentation that predicts a binary mask for each detected object. In the circuit recognition domain, Bayer et al.\ \cite{bayer2023instance} leveraged Mask R-\gls{cnn} for instance segmentation of components in hand-drawn diagrams, followed by graph extraction techniques to infer connections. Their model achieved approximately 94\% mask accuracy, although they noted that symbol recognition was ``reasonable, yet incomplete,'' particularly in complex drawings or with inconsistent handwriting.
+
+\subsection{Single-Shot Detectors}
+
+Single-shot detectors eliminate the region proposal stage, enabling real-time inference. Liu et al.\ \cite{liu2016ssd} introduced \gls{nn}, which discretized the output space into a set of default bounding boxes at multiple scales and aspect ratios. Each default box is simultaneously classified and refined in a single forward pass, achieving competitive accuracy at significantly higher speeds than two-stage detectors.
+
+The \gls{yolo} family of detectors has been especially influential. Redmon et al.\ \cite{redmon2016yolo} proposed the original \gls{yolo} architecture, which framed detection as a single regression problem from image pixels to bounding box coordinates and class probabilities. YOLOv2 \cite{redmon2017yolo9000} introduced batch normalization, anchor boxes, and multi-scale training to improve accuracy. YOLOv3 \cite{redmon2018yolov3} adopted a feature pyramid approach with predictions at three scales, enabling better detection of small objects. Bochkovskiy et al.\ \cite{bochkovskiy2020yolov4} proposed YOLOv4, incorporating a bag of specials---Mish activation, Cross-Stage Partial connections, and Path Aggregation Network---to push the accuracy-speed trade-off further. YOLOv5 \cite{jocher2020yolov5}, while not published as a formal paper, gained widespread adoption due to its \gls{gpu}-efficient PyTorch implementation and strong community-driven development.
+
+Wang et al.\ \cite{wang2023yolov7} proposed YOLOv7, which introduced the Extended Efficient Layer Aggregation Network (E-\gls{elan}) and model re-parameterization techniques. E-\gls{elan} controls the gradient path to enable deeper networks to learn more effectively, while planned re-parameterization allows the training-time architecture to differ from the inference-time architecture without loss of accuracy. YOLOv7 achieved state-of-the-art results on the MS COCO benchmark, outperforming all prior real-time detectors in both speed and accuracy. This is the architecture employed in the present project for component detection.
+
+\subsection{Application to Circuit Components}
+
+In a 2021 study, Adnan et al.\ \cite{adnan2021cnnbased} developed a two-stage \gls{cnn}-based system for classifying 20 different hand-drawn circuit components, achieving a recognition accuracy of 97.33\%. Their approach demonstrated the feasibility of using deep \glspl{cnn} for this task, though it was limited to classification without localization. Reddy and Panicker \cite{reddy2021handdrawn} combined YOLOv5 for component detection with probabilistic Hough transform-based node recognition, achieving a \gls{map} of 98.2\% in component detection and an overall schematic generation accuracy of 80\%. However, their system did not handle labeled components---that is, the values for batteries, resistances, and other parameters were not written on the circuit. Abhinav et al.\ \cite{abhinav2020electric} proposed a two-step method: first detecting and classifying components, then feeding labeled component strings into an \gls{fsm} for circuit recognition. Their approach was published in the International Research Journal of Engineering and Technology.
 
 
+\section{Optical Character Recognition for Circuit Diagrams}
 
-With the use of YOLOv5 for detection of circuit components and Probabilistic Hough transform-based solution for node recognition and taking in hand-drawn circuits, a couple of Indian engineers were successful in achieving not only a \gls{map} of 98.2\% in component detection but also a near-real time generation of circuit schematic with an accuracy of 80\% \cite{reddy2021handdrawn}. However, their circuits were not labelled which is to say the values for the battery (in volts), resistance (in Ohms), etc.\ were not written in the circuit. Another very recent study suggested a three-step process to detect and identify the circuit and its components with the steps including detection of components, detection of lines and their junctions and then the detection of text placed near the components and then combining the data from these three streams into a \gls{json} format to eventually derive a netlist from \cite{hemker2024schematics}. This is a similar workflow to the one this project intends to use; however, the scope of our project is much larger owing to the fact that an editable schematic is to be delivered on top of taking in hand-written circuit diagrams as opposed to generating a netlist from a digital schematic.
+Extracting component values (e.g., ``10k$\Omega$'', ``5V'') from hand-drawn annotations is critical for generating functionally accurate netlists. This task falls under the broader umbrella of scene text recognition, which differs from traditional document \gls{ocr} due to variable backgrounds, fonts, orientations, and noise.
 
-Netlist generation is also a very critical aspect of this domain. While traditional \gls{eda} tools such as KiCad and \gls{ltspice} support netlist export from manually created schematics, they do not allow direct image-to-netlist conversion \cite{kicad2024spice}. This limitation was addressed with Img2Sim; an artificial neural network-based system that detects components, infers connectivity, and outputs a complete \gls{spice} netlist. Their model reported over 90\% accuracy in topology extraction and represents one of the first functional pipelines to translate a hand-drawn circuit into a ready-to-simulate format \cite{sertdemir2022img2sim}. However, Img2Sim and similar systems typically require clean input images and are limited to a predefined set of components, reducing their robustness in real-world use cases. While the feasibility of such pipelines is now evident, a generalized, accurate, and open-source solution that goes the extra mile to also visualize the circuits digitally remains unavailable.
+\subsection{CRNN-Based Text Recognition}
+
+Shi et al.\ \cite{shi2017crnn} proposed the \gls{crnn} architecture, which integrates convolutional feature extraction, recurrent sequence modeling, and \gls{ctc}-based transcription into a unified framework. The convolutional layers extract per-frame features from the input image, which are then fed into bidirectional \gls{lstm} layers to capture contextual dependencies across the sequence. The \gls{ctc} layer enables alignment-free training by marginalizing over all possible alignments between the input and output sequences. \gls{crnn} has become the de facto standard for scene text recognition and forms the basis of the \gls{ocr} module in the present project.
+
+Graves et al.\ \cite{graves2006ctc} originally introduced the \gls{ctc} loss function for labeling unsegmented sequence data, demonstrating its effectiveness in handwriting recognition and speech recognition. The key advantage of \gls{ctc} is that it does not require pre-segmented training data---critical for handwritten text where character boundaries are ambiguous.
+
+\subsection{Attention-Based and Transformer Models}
+
+Baek et al.\ \cite{baek2019scene} conducted a comprehensive comparison of scene text recognition models, analyzing the contributions of different components (transformation, feature extraction, sequence modeling, and prediction) in a modular framework. Their analysis revealed that attention-based decoders generally outperform \gls{ctc}-based decoders on irregular text, while \gls{ctc} remains competitive on regular text. This finding informed the design decision in the present project to adopt a \gls{ctc}-based \gls{crnn} for circuit text, which tends to be horizontally aligned.
+
+More recently, transformer-based architectures such as TrOCR \cite{li2021trocr} have demonstrated strong performance on handwritten text recognition by leveraging pre-trained vision transformers for feature extraction and language models for text decoding. While these models achieve state-of-the-art accuracy on benchmark datasets, they require substantially more computational resources, making them less suitable for lightweight, deployment-ready systems like the one proposed here.
 
 
+\section{Wire and Connectivity Detection}
 
-Parallel to recognition and netlist generation, visual question answering (\gls{vqa}) for circuits is emerging as a useful educational application. CircuitVQA is a dataset containing more than 115,000 question-image pairs based on 5,725 unique circuits. It covers approximately 70 symbol types and supports the training of transformer-based \gls{vqa} models capable of answering questions like ``What is the function of R1?'' or ``Is this a voltage divider?'' Early experiments demonstrated that models fine-tuned on CircuitVQA outperformed generic \gls{vqa} systems, indicating the importance of domain-specific training. Meanwhile, large language models (\glspl{llm}) such as GPT-4 have also been explored for circuit explanation tasks. For instance, the SPICEPilot framework attempts to generate and interpret \gls{spice} code using GPT-based models \cite{vungarala2024spicepilot}. However, these general-purpose models often fail to respect domain conventions, such as valid W/L ratios or simulation types, resulting in inaccurate outputs.
+Detecting wires and inferring electrical connectivity is arguably the most challenging aspect of circuit diagram recognition. Unlike component detection, which benefits from well-defined visual patterns, wire detection must contend with arbitrary orientations, intersections, crossovers, and junctions.
+
+\subsection{Classical Approaches}
+
+The Hough transform, originally proposed by Duda and Hart \cite{duda1972hough}, is a classical technique for detecting straight lines in images. Its probabilistic variant, the Probabilistic Hough Transform (\gls{pht}), was introduced by Matas et al.\ \cite{matas2000robust} and is more computationally efficient as it operates on a random subset of edge points rather than the entire edge map. Reddy and Panicker \cite{reddy2021handdrawn} used the \gls{pht} for wire detection in hand-drawn circuits, achieving reasonable results on simple topologies but encountering difficulties with curved or overlapping wires.
+
+Morphological operations such as skeletonization and thinning have also been employed for wire extraction. Zhang and Suen \cite{zhang1984thinning} proposed a widely used parallel thinning algorithm that reduces binary regions to single-pixel-wide skeletons while preserving topological connectivity. These skeletons can then be analyzed to extract wire paths and junction points.
+
+\subsection{Learning-Based Approaches}
+
+More recent work has explored learning-based methods for wire detection. Hemker et al.\ \cite{hemker2024schematics} proposed a three-stream approach: one stream for component detection, one for line and junction detection, and one for text recognition. The outputs from all three streams are combined into a \gls{json} representation from which a netlist is derived. Their wire detection stream used a segmentation-based approach trained on annotated wire masks, achieving improved robustness over classical methods. This workflow is similar to the one adopted in the present project, although the scope of CIRCUITRON extends to generating editable digital schematics rather than only netlists.
+
+Kelly and Cole \cite{kelly2024digitizing} addressed wire detection in printed circuit schematics through a pattern-recognition methodology that achieved a 86.4\% success rate for circuit digitization and 99.6\% for their custom-trained \gls{ocr} model. However, their system was trained exclusively on computer-generated circuit diagrams and thus cannot handle the variability inherent in hand-drawn inputs.
+
+\subsection{Path-Finding and Graph-Based Wire Tracing}
+
+An alternative to detecting wires directly from pixel data is to formulate wire tracing as a graph search problem. In this formulation, the binarized circuit image is treated as a grid graph where foreground pixels represent traversable nodes. Breadth-first search (\gls{nn}) or $A^{*}$ algorithms can then be used to find paths between component terminals. This approach is inherently robust to noise and minor discontinuities in hand-drawn wires, as it operates on the connected-component structure of the binarized image rather than on edge detection outputs. The present project adopts this path-finding approach after initial experiments with Hough transform-based methods proved inadequate for the variability encountered in hand-drawn circuits.
 
 
+\section{Graph-Based Circuit Representation}
 
-Finally, simulation integration plays a vital role in validating and interacting with generated circuits. Ngspice, an open-source simulation engine, is widely used in research and is natively supported in KiCad. It enables \gls{dc}, \gls{ac}, and transient analysis, making it suitable for most educational and prototyping needs. In contrast, commercial tools like Simulink and PSpice provide broader capabilities but are cost-prohibitive. Some research efforts, including Img2Sim, have leveraged open standards to generate \gls{spice} files compatible with tools like Ngspice or PSpice. Other projects utilize Python-based libraries such as PySpice to enable automated simulation directly within a code-driven environment as well as the web-based CircuitJS \cite{falstad2026}, which is exactly how this project intends to fulfil its simulation needs.
+Representing circuits as graphs---where nodes correspond to components or connection points and edges represent electrical connections---is a natural formalization that enables topological reasoning and downstream simulation.
+
+\subsection{Graph Neural Networks for Circuit Analysis}
+
+Kipf and Welling \cite{kipf2017gcn} introduced Graph Convolutional Networks (GCNs), which generalize convolutions to graph-structured data by aggregating features from a node's neighborhood. This architecture has been widely adopted for tasks involving relational data, including circuit analysis. Yamakaji et al.\ \cite{yamakaji2023circuit2graph} developed Circuit2Graph, a pipeline that transforms circuit diagrams into graph structures where nodes represent components and edges denote electrical connections. Using \glspl{gnn}, their system achieved 97.9\% accuracy on circuit classification tasks, demonstrating that \glspl{gnn} can effectively model the global structure of a circuit even when visual features alone are insufficient.
+
+\subsection{Instance Segmentation and Graph Extraction}
+
+Bayer et al.\ \cite{bayer2023instance} combined Mask R-\gls{cnn}-based instance segmentation with graph extraction techniques. After segmenting individual components, they constructed a circuit graph by analyzing the spatial relationships between component masks and detected wire segments. While their mask accuracy reached approximately 94\%, the graph extraction step remained sensitive to segmentation errors, particularly at junction points where multiple wires converge.
 
 
+\section{Netlist Generation and Circuit Simulation}
 
-While significant progress has been made in component recognition and value comprehension, connectivity inference, netlist generation, and interactive Q\&A, existing systems remain fragmented or limited in scope. An end-to-end system that combines all these elements into a user-friendly platform remains a critical need for both educational and practical applications.
+The ultimate goal of many circuit recognition systems is to produce a netlist---a formal description of the circuit's components and their interconnections---that can drive simulation or further analysis.
+
+\subsection{Traditional EDA Tools}
+
+Traditional \gls{eda} tools such as KiCad and \gls{ltspice} support netlist export from manually created schematics but do not allow direct image-to-netlist conversion \cite{kicad2024spice}. These tools require users to manually redraw circuits in their schematic editors, a process that is both time-consuming and error-prone. The gap between hand-drawn circuit images and simulation-ready netlists is precisely what automated recognition systems aim to bridge.
+
+\subsection{Image-to-Netlist Pipelines}
+
+Sertdemir et al.\ \cite{sertdemir2022img2sim} developed Img2Sim, an artificial neural network-based system that detects components, infers connectivity, and outputs a complete \gls{spice} netlist. Their model reported over 90\% accuracy in topology extraction and represents one of the first functional pipelines to translate a hand-drawn circuit into a ready-to-simulate format. However, Img2Sim requires clean input images and is limited to a predefined set of components, reducing its robustness in real-world use cases.
+
+Hemker et al.\ \cite{hemker2024schematics} proposed a more modular approach, decomposing the recognition problem into three parallel streams (components, lines, and text) whose outputs are merged into a unified \gls{json} representation before netlist generation. This modularity allows each stream to be independently optimized and evaluated, offering a more scalable architecture than monolithic end-to-end systems.
+
+\subsection{Simulation Engines}
+
+Nagel and Pederson \cite{nagel1973spice} developed \gls{spice} at the University of California, Berkeley, establishing the standard for circuit simulation that persists to this day. Modern derivatives include Ngspice, an open-source implementation that supports \gls{dc}, \gls{ac}, and transient analysis, and commercial tools such as PSpice and Simulink that offer broader capabilities at higher cost. CircuitJS \cite{falstad2026}, a web-based interactive circuit simulator, provides real-time visualization of voltage, current, and waveform behavior directly in a browser. Its open format and accessibility make it particularly suitable for educational applications, and it is the simulation platform adopted by the present project.
+
+
+\section{Large Language Models in Circuit Analysis}
+
+The emergence of \glspl{llm} has opened new possibilities for circuit understanding and explanation. These models can interpret circuit topologies, generate simulation code, and answer domain-specific questions.
+
+\subsection{Visual Question Answering for Circuits}
+
+Visual question answering (\gls{vqa}) for circuits is an emerging educational application. The CircuitVQA dataset contains more than 115,000 question-image pairs based on 5,725 unique circuits, covering approximately 70 symbol types \cite{li2024circuitvqa}. It supports the training of transformer-based \gls{vqa} models capable of answering questions such as ``What is the function of R1?'' or ``Is this a voltage divider?'' Experiments have demonstrated that models fine-tuned on CircuitVQA outperform generic \gls{vqa} systems, highlighting the importance of domain-specific training data.
+
+\subsection{LLM-Based Circuit Assistance}
+
+Vungarala et al.\ \cite{vungarala2024spicepilot} developed SPICEPilot, a framework that leverages GPT-based models to generate and interpret \gls{spice} code. While SPICEPilot demonstrated the potential of \glspl{llm} for automating circuit design workflows, it also revealed significant limitations: general-purpose models often fail to respect domain conventions such as valid W/L ratios or appropriate simulation types, resulting in inaccurate outputs. This underscores the need for domain-adapted or fine-tuned models when applying \glspl{llm} to circuit analysis tasks.
+
+The present project integrates DeepSeek as an \gls{llm}-based assistant for answering circuit-related queries, providing users with an interactive channel for understanding the behavior and characteristics of their recognized circuits.
+
+
+\section{Educational Applications of Circuit Simulation}
+
+Chen et al.\ \cite{chen2011efficacy} studied the efficacy of simulation-based learning in electronics education, finding that interactive circuit simulations significantly improved student comprehension of abstract electrical concepts compared to traditional lecture-based instruction. Their research demonstrated that visualization and direct manipulation of circuit parameters led to deeper conceptual understanding, particularly for complex phenomena such as transient behavior and frequency response.
+
+These findings motivate the design of CIRCUITRON as not merely a recognition tool but an educational platform. By bridging the gap between a hand-drawn sketch and an interactive simulation, the system enables students and instructors to rapidly validate circuit behavior without the overhead of manual schematic entry.
+
+
+\section{Research Gap and Motivation}
+
+Table~\ref{tab:litreview_comparison} summarizes the key systems reviewed and their capabilities. While substantial progress has been made in individual areas---component recognition, value extraction, connectivity inference, netlist generation, and interactive Q\&A---existing systems remain fragmented or limited in scope. The principal gaps identified are:
+
+\begin{enumerate}
+    \item \textbf{Lack of end-to-end integration:} Most systems address only one or two stages of the recognition pipeline. Few attempt to combine component detection, value extraction, connectivity inference, and simulation in a single platform.
+    \item \textbf{Limited handling of hand-drawn input:} Several systems \cite{kelly2024digitizing, hemker2024schematics} were designed for printed or computer-generated schematics and do not generalize to hand-drawn circuits.
+    \item \textbf{Absence of editable digital output:} Existing pipelines typically produce netlists or static images. None generate an editable, interactive schematic that users can modify and simulate.
+    \item \textbf{No integrated AI assistance:} While \gls{vqa} and \gls{llm}-based tools exist independently, they have not been integrated into a circuit recognition pipeline to provide contextual explanations.
+    \item \textbf{Component value extraction:} Many systems \cite{reddy2021handdrawn, bayer2023instance} do not extract or interpret handwritten component values, limiting the functional completeness of the generated output.
+\end{enumerate}
+
+CIRCUITRON addresses these gaps by providing a unified, end-to-end pipeline that takes a hand-drawn circuit image as input and produces an editable, simulation-ready digital schematic with integrated \gls{llm}-based assistance.
+
+\begin{table}[htbp]
+\centering
+\caption{Comparison of Existing Circuit Recognition Systems}
+\label{tab:litreview_comparison}
+\renewcommand{\arraystretch}{1.2}
+\small
+\begin{tabular}{|p{2.8cm}|c|c|c|c|c|c|}
+\hline
+\textbf{System} & \textbf{Hand-} & \textbf{Component} & \textbf{Value} & \textbf{Wire} & \textbf{Netlist/} & \textbf{AI} \\
+& \textbf{drawn} & \textbf{Detection} & \textbf{Extraction} & \textbf{Detection} & \textbf{Simulation} & \textbf{Assist} \\
+\hline
+Edwards \cite{edwards2000machine} & Yes & Yes & No & Yes & No & No \\
+\hline
+Adnan et al.\ \cite{adnan2021cnnbased} & Yes & Yes & No & No & No & No \\
+\hline
+Kelly \& Cole \cite{kelly2024digitizing} & No & Yes & Yes & Yes & No & No \\
+\hline
+Reddy \& Panicker \cite{reddy2021handdrawn} & Yes & Yes & No & Yes & Yes & No \\
+\hline
+Bayer et al.\ \cite{bayer2023instance} & Yes & Yes & No & Yes & No & No \\
+\hline
+Hemker et al.\ \cite{hemker2024schematics} & No & Yes & Yes & Yes & Yes & No \\
+\hline
+Img2Sim \cite{sertdemir2022img2sim} & Yes & Yes & No & Yes & Yes & No \\
+\hline
+Circuit2Graph \cite{yamakaji2023circuit2graph} & No & Yes & No & No & No & No \\
+\hline
+SPICEPilot \cite{vungarala2024spicepilot} & No & No & No & No & Yes & Yes \\
+\hline
+\textbf{CIRCUITRON} & \textbf{Yes} & \textbf{Yes} & \textbf{Yes} & \textbf{Yes} & \textbf{Yes} & \textbf{Yes} \\
+\hline
+\end{tabular}
+\end{table}
