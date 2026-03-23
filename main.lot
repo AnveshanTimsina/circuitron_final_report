@@ -6,11 +6,11 @@
 \contentsline {table}{\numberline {5-1}{\ignorespaces Consolidation of Original Classes into Unified YOLO Classes}}{39}{table.caption.26}%
 \contentsline {table}{\numberline {5-2}{\ignorespaces Time complexity breakdown for Multi-Head BFS algorithm}}{45}{table.caption.27}%
 \contentsline {table}{\numberline {5-3}{\ignorespaces Space complexity breakdown for Multi-Head BFS algorithm}}{45}{table.caption.28}%
-\contentsline {table}{\numberline {6-1}{\ignorespaces Comparison of Performance Metrics for YOLOv5 and YOLOv7}}{52}{table.caption.34}%
-\contentsline {table}{\numberline {6-2}{\ignorespaces Performance comparison of four \gls {yolo} architectures on the 15-class dataset (final epoch)}}{55}{table.caption.38}%
-\contentsline {table}{\numberline {6-3}{\ignorespaces Impact of class taxonomy consolidation on YOLOv7 performance}}{56}{table.caption.40}%
-\contentsline {table}{\numberline {6-4}{\ignorespaces Unified comparison of all object detection configurations}}{57}{table.caption.42}%
-\contentsline {table}{\numberline {6-5}{\ignorespaces Performance comparison of \gls {ocr} models}}{64}{table.caption.51}%
-\contentsline {table}{\numberline {9-1}{\ignorespaces Project Budget Breakdown}}{78}{table.caption.64}%
-\contentsline {table}{\numberline {9-2}{\ignorespaces Project Timeline (Gantt Chart)}}{79}{table.caption.65}%
+\contentsline {table}{\numberline {6-1}{\ignorespaces Comparison of Performance Metrics for YOLOv5 and YOLOv7}}{52}{table.caption.36}%
+\contentsline {table}{\numberline {6-2}{\ignorespaces Performance comparison of four \gls {yolo} architectures on the 15-class dataset (final epoch)}}{55}{table.caption.40}%
+\contentsline {table}{\numberline {6-3}{\ignorespaces Impact of class taxonomy consolidation on YOLOv7 performance}}{56}{table.caption.42}%
+\contentsline {table}{\numberline {6-4}{\ignorespaces Unified comparison of all object detection configurations}}{57}{table.caption.44}%
+\contentsline {table}{\numberline {6-5}{\ignorespaces Performance comparison of \gls {ocr} models}}{64}{table.caption.53}%
+\contentsline {table}{\numberline {9-1}{\ignorespaces Project Budget Breakdown}}{78}{table.caption.67}%
+\contentsline {table}{\numberline {9-2}{\ignorespaces Project Timeline (Gantt Chart)}}{79}{table.caption.69}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
