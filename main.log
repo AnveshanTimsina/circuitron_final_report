@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2025.12.18)  23 MAR 2026 13:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2025.12.18)  23 MAR 2026 13:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1984,7 +1984,7 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 27.
+(scrreprt)           before \begin{document} on input line 37.
 
 (/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/bookmar
 k/bookmark.sty
@@ -1996,7 +1996,7 @@ File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
 )
 \BKM@id=\count456
 ))
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 27
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 37
 .
 
 (/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/
@@ -2005,79 +2005,79 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 27.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 37.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line
- 27.
+ 37.
 
 (/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/newtx/o
 mlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 37.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
-27.
+37.
 
 (/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/newtx/u
 ntxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 37.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
- 27.
+ 37.
 
 (/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/newtx/l
 msntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 37.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
-e 27.
+e 37.
 
 (/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/newtx/l
 mxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-Package scrbase Info: activating english \abstractname on input line 27.
-Package scrbase Info: activating english \partname on input line 27.
-Package scrbase Info: activating english \chaptername on input line 27.
-Package scrbase Info: activating english \appendixname on input line 27.
-Package scrbase Info: activating english \figurename on input line 27.
-Package scrbase Info: activating english \tablename on input line 27.
-Package scrbase Info: activating english \contentsname on input line 27.
-Package scrbase Info: activating english \listfigurename on input line 27.
-Package scrbase Info: activating english \listtablename on input line 27.
-Package scrbase Info: activating english \bibname on input line 27.
-Package scrbase Info: activating english \indexname on input line 27.
-LaTeX Info: Command `\dddot' is already robust on input line 27.
-LaTeX Info: Command `\ddddot' is already robust on input line 27.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+Package scrbase Info: activating english \abstractname on input line 37.
+Package scrbase Info: activating english \partname on input line 37.
+Package scrbase Info: activating english \chaptername on input line 37.
+Package scrbase Info: activating english \appendixname on input line 37.
+Package scrbase Info: activating english \figurename on input line 37.
+Package scrbase Info: activating english \tablename on input line 37.
+Package scrbase Info: activating english \contentsname on input line 37.
+Package scrbase Info: activating english \listfigurename on input line 37.
+Package scrbase Info: activating english \listtablename on input line 37.
+Package scrbase Info: activating english \bibname on input line 37.
+Package scrbase Info: activating english \indexname on input line 37.
+LaTeX Info: Command `\dddot' is already robust on input line 37.
+LaTeX Info: Command `\ddddot' is already robust on input line 37.
 Package microtype Info: Patching varwidth to enable character protrusion.
 \MT@vwid@leftmargin=\dimen389
 \MT@vwid@rightmargin=\dimen390
-LaTeX Info: Redefining \microtypecontext on input line 27.
-Package microtype Info: Applying patch `item' on input line 27.
-Package microtype Info: Applying patch `toc' on input line 27.
-Package microtype Info: Applying patch `eqnum' on input line 27.
-Package microtype Info: Applying patch `footnote' on input line 27.
-Package microtype Info: Applying patch `verbatim' on input line 27.
-LaTeX Info: Redefining \microtypesetup on input line 27.
+LaTeX Info: Redefining \microtypecontext on input line 37.
+Package microtype Info: Applying patch `item' on input line 37.
+Package microtype Info: Applying patch `toc' on input line 37.
+Package microtype Info: Applying patch `eqnum' on input line 37.
+Package microtype Info: Applying patch `footnote' on input line 37.
+Package microtype Info: Applying patch `verbatim' on input line 37.
+LaTeX Info: Redefining \microtypesetup on input line 37.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -2167,7 +2167,7 @@ Package caption Info: rotating package is loaded.
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count463
-Package tocbasic Info: setting babel extension for `lol' on input line 27.
+Package tocbasic Info: setting babel extension for `lol' on input line 37.
 \scr@dte@lstlisting@maxnumwidth=\skip103
 
 (/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/transla
@@ -2176,7 +2176,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 27.
+or `english'. on input line 37.
 
 (/Users/mac/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pdflsca
 pe/pdflscape.sty
@@ -2188,7 +2188,7 @@ Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
 F (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-Package hyperref Info: Link coloring OFF on input line 27.
+Package hyperref Info: Link coloring OFF on input line 37.
 
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
@@ -4179,10 +4179,10 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 70525 strings out of 469811
- 1643497 string characters out of 5468259
- 2483400 words of memory out of 5000000
- 97438 multiletter control sequences out of 15000+600000
+ 70527 strings out of 469811
+ 1643518 string characters out of 5468259
+ 2483459 words of memory out of 5000000
+ 97440 multiletter control sequences out of 15000+600000
  728982 words of font info for 362 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  122i,21n,131p,11210b,2798s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -4204,7 +4204,7 @@ nstall/fonts/type1/urw/times/utmr8a.pfb></Users/mac/Library/Application Support
 plication Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/ztmb.pfb></Use
 rs/mac/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/new
 tx/ztmr.pfb>
-Output written on main.pdf (97 pages, 16235808 bytes).
+Output written on main.pdf (97 pages, 16235809 bytes).
 PDF statistics:
  1313 PDF objects out of 1440 (max. 8388607)
  407 named destinations out of 1000 (max. 500000)

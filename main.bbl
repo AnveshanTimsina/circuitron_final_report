@@ -97,8 +97,8 @@ J.~Redmon and A.~Farhadi, ``{YOLO9000}: Better, faster, stronger,'' in
   6517--6525.
 
 \bibitem{redmon2018yolov3}
-------, ``{YOLOv3}: An incremental improvement,'' \emph{arXiv preprint
-  arXiv:1804.02767}, 2018.
+J.~Redmon and A.~Farhadi, ``{YOLOv3}: An incremental improvement,'' \emph{arXiv
+  preprint arXiv:1804.02767}, 2018.
 
 \bibitem{bochkovskiy2020yolov4}
 A.~Bochkovskiy, C.-Y. Wang, and H.-Y.~M. Liao, ``{YOLOv4}: Optimal speed and
