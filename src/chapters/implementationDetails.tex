@@ -237,9 +237,9 @@ The TrOCR model is integrated into the pipeline through a singleton service that
 
 \subsection{Line Detection Algorithm Implementation}
 
-The line detection mechanism was engineered to exploit the semantic constraints of circuit diagrams, specifically that wires are predominantly axis-aligned (horizontal or vertical) and connect distinct components. Unlike the Probabilistic Hough Transform (\gls{pht}) which operates purely on pixel gradients, this approach uses the junction points detected by YOLOv7 as anchor nodes to reconstruct the wiring layout geometrically.
+Circuit diagrams carry an inherent geometric regularity: wires tend to run either horizontally or vertically, and each wire bridges two distinct components. The line detection algorithm leans on that regularity. Where the Probabilistic Hough Transform (\gls{pht}) works solely off pixel gradients, this method instead takes the junction points that YOLOv7 has already picked up and treats them as anchor nodes for rebuilding the wiring layout through geometry.
 
-First, a pairwise analysis was performed on all junction points identified by the object detection model. The algorithm iterates through every unique pair of junctions to calculate the angle of the vector connecting them. Since hand-drawn circuits contain imperfections, an angular tolerance of $\pm 18^\circ$ was applied to classify connections as either horizontal or vertical. To ensure coordinate consistency across the diagram, the resulting segment coordinates were ``snapped'' to a grid using a 16-pixel quantization.
+Every unique pair of junctions coming out of the object detection model gets examined. For each pair, the angle of the connecting vector is calculated. Hand-drawn circuits are rarely pristine, so an angular tolerance of $\pm 18^\circ$ was baked in to sort connections into horizontal or vertical buckets. Segment coordinates were then ``snapped'' onto a 16-pixel grid to keep the whole diagram geometrically consistent.
 
 \begin{algorithm}
 \caption{Wire Classification and Alignment}
@@ -268,9 +268,9 @@ First, a pairwise analysis was performed on all junction points identified by th
 \end{algorithmic}
 \end{algorithm}
 
-A common issue with the pairwise approach is the generation of redundant, overlapping segments for the same wire. For instance, if three junctions lie on a single line, the algorithm produces three separate segments (A-B, B-C, and A-C). To combat this, a collinear segment merging algorithm was implemented.
+Pairwise comparison has a predictable side effect: redundant overlapping segments pile up for the same wire. Three junctions sitting on one line, for example, yield three separate segments (A-B, B-C, and A-C) when really only one continuous wire exists. A collinear segment merging step was added to clean this up.
 
-The segments were first separated by orientation (horizontal/vertical) and sorted by their primary axis. The merging logic then consolidated overlapping or adjacent segments. Crucially, a length-weighted heuristic was used: when merging, the axis coordinate of the longer segment was preserved, ensuring that larger, more reliable strokes dictated the final geometric alignment.
+Segments are first split by orientation (horizontal versus vertical) and sorted along their primary axis. Overlapping or neighboring segments then get folded together. During each merge, the axis coordinate of whichever segment is longer takes priority, since a longer stroke is a more trustworthy indicator of where the wire actually runs.
 
 \begin{algorithm}
 \caption{Collinear Segment Merging}
@@ -299,7 +299,7 @@ The segments were first separated by orientation (horizontal/vertical) and sorte
 \end{algorithmic}
 \end{algorithm}
 
-The wire–component intersection detection algorithm identifies precise connection points between detected wire segments and component bounding boxes. Component regions are first extracted from YOLOv7 annotations and converted into pixel coordinates. Each horizontal and vertical wire is then tested for geometric intersection with the edges of every component box. The resulting intersection points are used to accurately map circuit connectivity and are optionally visualized for verification in the frontend.
+The wire–component intersection detection algorithm pinpoints where detected wire segments meet component bounding boxes. YOLOv7 annotations supply the component regions, which then get translated into pixel coordinates. Every horizontal or vertical wire is checked against each component box's edges for geometric intersection. Those intersection points pin down how the circuit is actually wired together, and the frontend can optionally render them for visual verification.
 
 \begin{algorithm}
 \caption{Wire–Component Intersection Detection}
@@ -330,9 +330,9 @@ The wire–component intersection detection algorithm identifies precise connect
 
 \section{Line Detection via Path Finding}
 
-This section presents the algorithmic implementation of the line detection pipeline. The approach involves three key procedures: constructing a spatial mapping of node regions, performing multi-head BFS traversal to discover connectivity, and filtering out spurious self-edges.
+The algorithm behind the path-finding line detection pipeline first splits the work into a handful of stages. First, a spatial map of node regions is assembled. Multi-head BFS traversal then crawls through skeleton pixels to uncover which nodes connect to which. Spurious self-edges get pruned in a final cleanup pass.
 
-The first step in the pipeline is building a node identification map. This data structure enables constant-time lookup to determine whether a given pixel belongs to a node region. For each detected endpoint, a circular disk of radius $r$ is marked in the map, associating all pixels within that disk with the corresponding node index. Algorithm~\ref{alg:node_id_map} formalizes this construction.
+Building a node identification map kicks off the whole process. The map gives constant-time answers to a simple question: does this pixel sit inside a node region? A circular disk of radius $r$ is stamped around every detected endpoint, and each pixel under that disk is tagged with the owning node's index. Algorithm~\ref{alg:node_id_map} lays out the formal construction.
 
 \begin{algorithm}[H]
 \caption{Build Node ID Map}
@@ -358,7 +358,7 @@ The first step in the pipeline is building a node identification map. This data 
 \end{algorithmic}
 \end{algorithm}
 
-Once the node ID map is constructed, the algorithm performs a breadth-first search from each node to discover its neighbors along the skeleton. The BFS starts from the boundary of each node's disk region and traverses skeleton pixels using 8-connectivity. When the traversal encounters a pixel belonging to a different node, that node is recorded as a neighbor and the branch terminates. This ensures that each skeleton path is followed until it reaches another endpoint. Algorithm~\ref{alg:bfs_node} describes this procedure.
+Once the node ID map is constructed, the algorithm performs a breadth-first search from each node to discover its neighbors along the skeleton. The BFS starts from the boundary of each node's disk region and traverses skeleton pixels using 8-connectivity. When this BFS traversal meets a pixel belonging to a different node, that node is recorded as a neighbor which terminates the branch. This ensures that each skeleton path is followed until it reaches another endpoint. Algorithm~\ref{alg:bfs_node} describes this procedure.
 
 \begin{algorithm}[H]
 \caption{BFS Neighbors for Node}
@@ -492,7 +492,7 @@ In the real world, this approach can be considered efficient because it scales w
 
 \subsection{Crossover Dissolution}
 
-After the adjacency graph is constructed by Multi-Head BFS, crossover nodes must be resolved into their true topology. A crossover represents two wires crossing without connecting, and is initially represented as a single graph node with four neighbors. The dissolution algorithm identifies these nodes and replaces each with two direct through-connections, removing the node from the electrical topology.
+After the adjacency graph is constructed by Multi-Head BFS, crossover nodes must be resolved into their true topology. A crossover represents two wires crossing without connecting, and is initially represented as a single graph node with four neighbors. After identifying these nodes, the dissolution algorithm replaces every node with two direct connections. This removes the crossover from the electrical topology.
 
 \begin{algorithm}[H]
 \caption{Crossover Dissolution Algorithm}
@@ -532,13 +532,13 @@ After the adjacency graph is constructed by Multi-Head BFS, crossover nodes must
 \end{algorithmic}
 \end{algorithm}
 
-The algorithm evaluates all three possible pairings of the four neighbors and selects the one that minimizes the sum of dot products, ensuring paired neighbors are maximally opposite. The threshold of $-0.7$ (corresponding to approximately $45^\circ$ from direct opposition) validates that the pairing represents a genuine crossing geometry. Crossover nodes that fail validation (fewer than 4 neighbors or non-opposing geometry) are retained as regular junctions.
+All three ways of pairing the four neighbors are tried. Whichever pairing yields the smallest summed dot product wins, because that is the arrangement where paired neighbors point most nearly in opposite directions. A dot-product cutoff of $-0.7$ (roughly $45^\circ$ away from perfect opposition) acts as a sanity check on whether the geometry genuinely looks like two wires crossing. Any crossover node that falls short of this bar, whether it has fewer than four neighbors or its geometry is too skewed, simply stays in the graph as an ordinary junction.
 
 \section{Frontend and Backend Implementation}
 
-The frontend system has been realized using React.js, CircuitJS and relevant packages like react-draggable and KiCad Symbol Library. Likewise, the backend of the circuitron system exposes a \gls{rest} \gls{api} that manages the complete lifecycle of circuit simulations. The \gls{api} provides endpoints for submitting CircuitJS-compatible text files, validating circuit syntax, and executing simulations using different analysis modes such as transient, \gls{ac}, and \gls{dc} analysis. 
+The frontend was built on top of React.js alongside CircuitJS, with auxiliary packages like react-draggable and the KiCad Symbol Library pulled in where needed. On the server side, the circuitron backend exposes a \gls{rest} \gls{api} that oversees the full lifecycle of circuit simulations. Through this \gls{api}, users can submit CircuitJS-compatible text files, have the circuit syntax checked, or kick off simulations under transient, \gls{ac}, or \gls{dc} analysis modes.
 
-Each simulation request is assigned a unique identifier, enabling asynchronous execution and progress tracking through dedicated status endpoints. The \gls{api} also supports retrieval of detailed simulation results, including time-domain voltage and current data, as well as administrative operations such as stopping running simulations, listing historical simulations, and deleting completed or failed runs. Standard \gls{http} status codes and structured \gls{json} responses are used throughout the \gls{api} to ensure consistency, robust error handling, and seamless integration with the frontend application.
+Every simulation request receives its own unique identifier. That identifier lets the frontend fire off a job and come back later to check on it, since dedicated status endpoints handle progress tracking asynchronously. Finished simulation data (time-domain voltages, currents, and so on) can be fetched through a separate results endpoint, while administrative tasks like halting a running simulation or wiping old records are covered by their own routes too. The \gls{api} speaks in structured \gls{json} throughout and sticks to standard \gls{http} status codes, which keeps error reporting predictable and makes hooking the frontend up to it straightforward.
 
 % \subsection{API Endpoints}
 
@@ -595,7 +595,7 @@ CircuitJS converts the scanned circuit into matrix-based mathematical equations.
 
 \section{Error Handling}
 
-In any project with a number of individual modules working together, the overall error not only comes from said individual modules but also from their integration due to propagating errors from one module to another. To handle errors in such a case, foremost the errors in the output of the individual modules need to be controlled and only then can the accumulated error be kept in check. The performance metrics tabulated in the previous section are to be strictly adhered to if there's any hope of generating the CircuitJS compatible text file (and digital schematic) with nominal errors.
+The overall error in this project is a summation of errors from the number of individual modules working together. These individual errors propagate from one module to another and accumulate. To handle errors in such a case, foremost the errors in the output of the individual modules need to be controlled and only then can the accumulated error be kept in check. The performance metrics tabulated in the previous section are to be strictly adhered to if there's any hope of generating the CircuitJS compatible text file (and digital schematic) with nominal errors.
 
 For the reduction of false matches and \gls{ocr} noise, post-processing techniques such as value format validation, confidence filtering, and text cleanup can be implemented. Value format validation ensures only strings that match known (and appropriate) electrical units, say $10k$, $1\mu F$, $5V$ are retained. Confidence filtering helps discard \gls{ocr} results with low confidence scores, and text cleanup normalizes ambiguous symbols such as converting ``O'' to ``0'', ``$\mu$'' to ``u''.
 
