@@ -4,9 +4,9 @@
 \contentsline {chapter}{COPYRIGHT}{iii}{section*.6}%
 \contentsline {chapter}{ACKNOWLEDGEMENT}{iv}{section*.8}%
 \contentsline {chapter}{ABSTRACT}{v}{section*.10}%
-\contentsline {chapter}{\nonumberline LIST OF FIGURES}{vii}{chapter*.12}%
-\contentsline {chapter}{\nonumberline LIST OF TABLES}{viii}{chapter*.13}%
-\contentsline {chapter}{LIST OF ABBREVIATIONS}{ix}{chapter*.13}%
+\contentsline {chapter}{\nonumberline LIST OF FIGURES}{viii}{chapter*.12}%
+\contentsline {chapter}{\nonumberline LIST OF TABLES}{x}{chapter*.13}%
+\contentsline {chapter}{LIST OF ABBREVIATIONS}{xi}{chapter*.13}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Background Information}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Motivation}{2}{section.1.2}%
@@ -98,15 +98,16 @@
 \contentsline {section}{\numberline {6.9}Line Detection via Path Finding Visualization}{68}{section.6.9}%
 \contentsline {subsection}{\numberline {6.9.1}Skeletonized Image with Detected Endpoints}{68}{subsection.6.9.1}%
 \contentsline {subsection}{\numberline {6.9.2}Adjacency Graph Visualization}{69}{subsection.6.9.2}%
-\contentsline {section}{\numberline {6.10}Combined Overlay of YOLOv7, TrOCR, and Line Detection Results}{70}{section.6.10}%
-\contentsline {section}{\numberline {6.11}Frontend Visualization}{71}{section.6.11}%
-\contentsline {chapter}{\numberline {7}FUTURE ENHANCEMENTS}{73}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Improvement in the OCR accuracy}{73}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Increment in the number of supported components}{73}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Authentication and Database Functionalities}{73}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Improvement in the frontened and general user experience}{73}{section.7.4}%
-\contentsline {chapter}{\numberline {8}CONCLUSION}{75}{chapter.8}%
-\contentsline {chapter}{\numberline {9}APPENDICES}{76}{chapter.9}%
-\contentsline {section}{Appendix A: Project Budget}{76}{chapter.9}%
-\contentsline {section}{Appendix B: Gantt Chart}{77}{table.caption.64}%
+\contentsline {section}{\numberline {6.10}Combined Overlay of YOLOv7, TrOCR, and Line Detection Results}{69}{section.6.10}%
+\contentsline {section}{\numberline {6.11}Frontend Visualization}{70}{section.6.11}%
+\contentsline {chapter}{\numberline {7}FUTURE ENHANCEMENTS}{72}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Improvement in the OCR accuracy}{72}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Increment in the number of supported components}{72}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Authentication and Database Functionalities}{72}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Improvement in the frontened and general user experience}{72}{section.7.4}%
+\contentsline {chapter}{\numberline {8}CONCLUSION}{74}{chapter.8}%
+\contentsline {chapter}{\numberline {9}APPENDICES}{75}{chapter.9}%
+\contentsline {section}{Appendix A: Project Budget}{75}{chapter.9}%
+\contentsline {section}{Appendix B: Gantt Chart}{76}{table.caption.64}%
+\contentsline {chapter}{\nonumberline REFERENCES}{77}{chapter*.66}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

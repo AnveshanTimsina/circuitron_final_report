@@ -167,13 +167,13 @@ Final epoch results show \gls{yolo}v7 outperformed \gls{yolo}v5 across all major
     \end{tabular}
 \end{table}
 
-Overall, \gls{yolo}v7 showed a clear advantage over \gls{yolo}v5 in our experiments. It not only achieved higher values for precision, recall, and mean average precision but also required fewer epochs to converge. \gls{yolo}v7's confusion matrix reflected better class separation and fewer misclassifications. The improvements in F1 score and overall stability of predictions across confidence thresholds make \gls{yolo}v7 a more robust choice for circuit diagram interpretation.
+Overall, \gls{yolo}v7 showed a clear advantage over \gls{yolo}v5 in our experiments. It showed faster convergence and higher values for precision, recall, mAP@0.5, and mAP@0.5:0.95. It also required fewer epochs for convergence. Additionally, \gls{yolo}v7's confusion matrix also showed better class separation with fewer misclassifications. These improvements make \gls{yolo}v7 a more robust choice for this project's object detection needs.
 
 \section{Class Taxonomy Consolidation}
 
-A key finding from the initial 61-class experiments was that many fine-grained component subclasses (e.g., capacitor.polarized, capacitor.unpolarized) shared near-identical visual features, causing inter-class confusion. To address this, the 61-class taxonomy was consolidated into a 15-class merged taxonomy by grouping visually similar subclasses. This section presents findings from training and evaluating four \gls{yolo} architectures (YOLOv7, YOLOv8, YOLOv11, YOLOv26) on the consolidated 15-class dataset along with comparative analysis with the 61-class results.
+The fine-grained component subclasses like capacitor.polarized and capacitor.unpolarized looked nearly indistinguishable to the detector, which bred persistent inter-class confusion in case of 61-class approach. Merging visually overlapping subclasses brought the taxonomy down to 15 classes. Four \gls{yolo} architectures (YOLOv7, YOLOv8, YOLOv11, YOLOv26) were then trained and benchmarked on this consolidated dataset, and their numbers are contrasted here against the earlier 61-class results.
 
-It is to be noted that, for fairness, all four \gls{yolo} architectures were trained and evaluated on the 15-class dataset under uniform conditions. All models used identical training/validation/test splits, a confidence threshold of 0.25, and an \gls{iou} threshold of 0.45 during evaluation.
+For the sake of a fair comparison, every model was trained and evaluated on the 15-class dataset under identical conditions. The data splits stayed the same across all four architectures, with a confidence threshold fixed at 0.25 and an \gls{iou} threshold of 0.45 during evaluation.
 
 \subsection{Training and Validation Loss: 15-Class Models}
 
@@ -191,7 +191,7 @@ It is to be noted that, for fairness, all four \gls{yolo} architectures were tra
     \label{fig:15class-val-loss}
 \end{figure}
 
-\cref{fig:15class-train-loss} and \cref{fig:15class-val-loss} present the training and validation losses (box, classification, and DFL) for all four models. YOLOv7 (retrained) and YOLOv11 reach lower training losses more rapidly, indicating superior representational capacity. Validation losses follow a similar trend, with YOLOv7 and YOLOv11 achieving the lowest final validation losses, confirming that these models generalize better and are less prone to overfitting on this dataset.
+\cref{fig:15class-train-loss} and \cref{fig:15class-val-loss} lay out the training and validation losses (box, classification, DFL) for all four models. YOLOv7 (retrained) and YOLOv11 drove their training losses down noticeably faster than the other two, which points to stronger representational capacity. On the validation side, those same two architectures settled at the lowest final loss values, suggesting they generalize more reliably and resist overfitting on this particular dataset.
 
 \subsection{Performance Metrics: 15-Class Models}
 
@@ -202,7 +202,7 @@ It is to be noted that, for fairness, all four \gls{yolo} architectures were tra
     \label{fig:15class-training-curves}
 \end{figure}
 
-\cref{fig:15class-training-curves} shows the evolution of all four performance metrics across 100 training epochs for the four architectures. Both YOLOv7 (retrained) and YOLOv11 converge rapidly, reaching near-peak performance by epoch 40--50 and maintaining stable values thereafter. In contrast, YOLOv8 and YOLOv26 exhibit slower convergence with substantially lower plateaus, particularly for recall and \gls{map}@0.5:0.95.
+\cref{fig:15class-training-curves} plots all four performance metrics over 100 training epochs for each architecture. YOLOv7 (retrained) and YOLOv11 climb quickly, hitting near-peak values around epoch 40 to 50 and holding steady from there. YOLOv8 and YOLOv26 converge at a considerably slower pace, plateauing well below the other two, especially in recall and \gls{map}@0.5:0.95.
 
 \subsection{Quantitative Results Comparison for 15-Class Dataset}
 
@@ -230,7 +230,7 @@ It is to be noted that, for fairness, all four \gls{yolo} architectures were tra
     \label{fig:15class-final-bar}
 \end{figure}
 
-\cref{table:yolo-15class-comparison} summarizes the final-epoch performance of all four architectures on the 15-class dataset, and \cref{fig:15class-final-bar} provides a grouped bar chart visualization. YOLOv7 (retrained) achieves the highest scores across all four metrics, closely followed by YOLOv11. Both models surpass 95\% \gls{map}@0.5, demonstrating exceptional detection capability on the consolidated class set. YOLOv8 and YOLOv26, while adequate, lag behind by approximately 10 percentage points in \gls{map}@0.5 and 13 percentage points in \gls{map}@0.5:0.95, making them less suitable for this project.
+\cref{table:yolo-15class-comparison} collects the final-epoch numbers for all four architectures on the 15-class dataset; \cref{fig:15class-final-bar} renders the same data as a grouped bar chart. YOLOv7 (retrained) tops every metric, with YOLOv11 trailing close behind. Both of these models clear the 95\% mark in \gls{map}@0.5, which speaks to their strong detection capability on the merged class set. YOLOv8 and YOLOv26 fall roughly 10 points short in \gls{map}@0.5 and about 13 points short in \gls{map}@0.5:0.95, which makes them a weaker fit for this project's requirements.
 
 \subsection{Impact of Class Taxonomy Consolidation}
 
@@ -257,7 +257,7 @@ It is to be noted that, for fairness, all four \gls{yolo} architectures were tra
     \label{fig:class-impact}
 \end{figure}
 
-To quantify the effect of reducing 61 classes to 15, the same architecture (YOLOv7) is compared under both taxonomies. \cref{fig:class-impact} and \cref{table:class-impact} show the results. Consolidation yielded substantial gains: precision improved by 4.8\%, recall by 19.9\%, \gls{map}@0.5 by 15.2\%, and \gls{map}@0.5:0.95 by 21.1\%. These improvements confirm that the original fine-grained taxonomy introduced unnecessary inter-class confusion that degraded detection performance.
+To put a number on what the taxonomy reduction actually bought, YOLOv7 was compared under both the 61-class and 15-class setups. \cref{fig:class-impact} and \cref{table:class-impact} capture these results. The gains were sizable: precision rose by 4.8\%, recall jumped 19.9\%, \gls{map}@0.5 climbed 15.2\%, and \gls{map}@0.5:0.95 saw the steepest lift at 21.1\%. Taken together, these figures confirm that the original fine-grained taxonomy was injecting avoidable inter-class confusion, dragging detection quality down.
 
 \section{Holistic Object Detection Comparison}
 
@@ -286,7 +286,7 @@ To quantify the effect of reducing 61 classes to 15, the same architecture (YOLO
     \label{fig:yolo-full-bar}
 \end{figure}
 
-This section presents a unified view of all six detection configurations evaluated throughout the project, spanning two class taxonomies and five architectures. \cref{table:yolo-full-comparison} and \cref{fig:yolo-full-bar} consolidate these results.
+All six detection configurations evaluated over the course of this project are brought together in this section, covering two class taxonomies and five architectures. \cref{table:yolo-full-comparison} and \cref{fig:yolo-full-bar} aggregate these results side by side.
 
 \subsection{Object Detection Performance Evolution}
 
@@ -297,7 +297,7 @@ This section presents a unified view of all six detection configurations evaluat
     \label{fig:yolo-evolution}
 \end{figure}
 
-\cref{fig:yolo-evolution} traces the evolution of detection performance across the project timeline. The trajectory shows two distinct phases of improvement: (1)~moving from YOLOv5 to YOLOv7 on the 61-class taxonomy, and (2)~consolidating the taxonomy to 15 classes and benchmarking multiple architectures. The retrained YOLOv7 on 15 classes achieves the highest performance, with \gls{map}@0.5 improving from 0.61 (YOLOv5, 61-class) to 0.9562, a cumulative improvement of 56.8\%.
+\cref{fig:yolo-evolution} maps how detection performance shifted over the project timeline. Improvement came in two waves: first, upgrading from YOLOv5 to YOLOv7 while still on the 61-class taxonomy, and second, shrinking the taxonomy to 15 classes and pitting several architectures against one another. The retrained YOLOv7 on 15 classes sits at the top, with \gls{map}@0.5 climbing from 0.61 (YOLOv5, 61-class) to 0.9562, amounting to a cumulative 56.8\% gain.
 
 \subsection{Radar Visualization of Top Models}
 
@@ -308,7 +308,7 @@ This section presents a unified view of all six detection configurations evaluat
     \label{fig:yolo-radar}
 \end{figure}
 
-\cref{fig:yolo-radar} provides a radar chart comparing the three best-performing configurations. While YOLOv7 (61-class) shows a notable deficit in recall (0.78 vs. 0.93+), both 15-class models exhibit near-complete coverage of the performance space. The retrained YOLOv7 (15-class) marginally outperforms YOLOv11 across all axes, making it the model of choice for the final pipeline.
+\cref{fig:yolo-radar} renders a radar chart of the three strongest configurations. YOLOv7 (61-class) lags visibly in recall (0.78 versus 0.93+), whereas both 15-class models fill out nearly the entire performance envelope. The retrained YOLOv7 (15-class) marginally outperforms YOLOv11 across all axes, making it the model of choice for the final pipeline.
 
 Overall, from all these findings, it is evident that YOLOv7 (retrained on the 15-class taxonomy) is the optimal object detection model for this project. This also goes to show that class taxonomy might matter more than the architecture at times.
 
@@ -462,7 +462,7 @@ Two randomly picked images from the dataset are shown below after passing throug
     \label{fig:trocr-result-2}
 \end{figure}
 
-\cref{fig:custom-ocr-result-1} and \cref{fig:custom-ocr-result-2} show the results of the custom OCR model on two random test images. The model successfully detects text regions and extracts component values, albeit with many errors. In contrast, \cref{fig:trocr-result-1} and \cref{fig:trocr-result-2} demonstrate the superior performance of the fine-tuned TrOCR model, which correctly recognizes most component values.
+\cref{fig:custom-ocr-result-1} and \cref{fig:custom-ocr-result-2} show the results of the custom OCR model on two random test images. The model successfully detects text regions and extracts component values, albeit with many errors. In contrast, \cref{fig:trocr-result-1} and \cref{fig:trocr-result-2} demonstrate the superiority in performance of the fine-tuned TrOCR model, which correctly recognizes more component values.
 
 \section{Junction-Based Wire Detection}
 
@@ -473,9 +473,9 @@ Two randomly picked images from the dataset are shown below after passing throug
     \label{fig:otsu-thresholding}
 \end{figure}
 
-This section presents the experimental results obtained from the junction-based wire detection pipeline applied to circuit diagram images. A high-resolution scanned circuit diagram is used as the input image. The original image dimensions are reported in terms of width and height in pixels to establish spatial scale consistency throughout the pipeline. To enhance structural features and suppress background noise, the input image is converted to grayscale. Otsu's global thresholding method is then applied to automatically compute an optimal threshold value that separates foreground circuit elements from the background. The resulting binary image preserves wires, junctions, and components while eliminating illumination variations as shown in \cref{fig:otsu-thresholding}.
+What follows are the experimental outcomes from running the junction-based wire detection pipeline on circuit diagram images. A high-resolution scanned diagram serves as input, with its pixel dimensions (width and height) recorded upfront so that spatial scale stays consistent across subsequent stages. The raw image is first converted to grayscale to sharpen structural features and tamp down background noise. Otsu's global thresholding then kicks in, computing an optimal cutoff that cleanly separates foreground circuit elements from everything behind them. As \cref{fig:otsu-thresholding} illustrates, the resulting binary image retains wires and junctions while discarding illumination artifacts.
 
-Morphological skeletonization is performed on the binary image to reduce all lines to a single-pixel width while maintaining connectivity. This process simplifies the subsequent analysis of wire paths and junctions. The skeletonized image is then overlaid with bounding boxes obtained from the object detection stage (i.e, YOLOv7) to identify potential endpoints where wires intersect component boundaries. Detected endpoints are marked on the skeleton, and their spatial coordinates are recorded for further processing.
+From the binary image, morphological skeletonization thins every line down to a single pixel in width, preserving connectivity throughout. This simplification makes it far easier to trace wire paths and locate junctions. Bounding boxes from the YOLOv7 object detection stage are then superimposed on the skeleton to pinpoint where wires cross component boundaries. Each detected endpoint gets marked on the skeleton, and its spatial coordinates are logged for the stages that follow.
 
 \begin{figure}[H]
     \centering
@@ -484,9 +484,9 @@ Morphological skeletonization is performed on the binary image to reduce all lin
     \label{fig:bbox-overlay}
 \end{figure}
 
-\cref{fig:bbox-overlay} shows the skeletonized image with bounding boxes overlaid. Intersection points between wires and component bounding box edges are computed to identify electrical connectivity. The total number of intersection points is reported along with a directional breakdown for horizontal and vertical wires intersecting specific component edges. These intersections form the basis for reconstructing circuit connectivity graphs and CircuitJS-compatible text files.
+\cref{fig:bbox-overlay} shows the skeleton with its bounding box overlay. Where wires cross the edges of component bounding boxes, intersection points are calculated to establish electrical connectivity. The total count of such intersections is reported alongside a directional split between horizontal and vertical wire crossings at specific component edges. These crossing points underpin the reconstruction of circuit connectivity graphs and the generation of CircuitJS-compatible text files.
 
-However, this junction-based method has a very important shortcoming: it fails to handle diagonal lines. This is because the bounding box intersection method relies on the assumption that wires will intersect component boundaries along horizontal or vertical axes. Diagonal wires may not intersect the bounding box edges in a predictable manner, leading to missed connections and incomplete graph construction. Therefore, this method is rejected in favor of a more robust path-finding approach that can handle arbitrary wire orientations and junction configurations.
+That said, this junction-based approach carries a serious limitation that the diagonal lines break it. The bounding box intersection logic assumes wires will meet component boundaries along strictly horizontal or vertical axes. When a wire runs at an angle, it may miss the box edges entirely or hit them unpredictably, which leaves connections undetected and the resulting graph incomplete. Because of this weakness, the method was set aside in favor of a path-finding approach capable of handling wires at arbitrary orientations.
 
 \section{Line Detection via Path Finding Visualization}
 
@@ -499,7 +499,7 @@ However, this junction-based method has a very important shortcoming: it fails t
     \label{fig:skeleton_endpoints}
 \end{figure}
 
-\cref{fig:skeleton_endpoints} displays the skeletonized image with all detected endpoints overlaid. The skeleton representation captures the one-pixel-wide structure of the circuit lines after morphological processing. Blue dots indicate the detected endpoints, which were identified using the bounding box intersection method for line segments and center-snapping for junction points. The blue rectangles show the original YOLO bounding boxes used for endpoint localization. This visualization confirms that the endpoint detection algorithm successfully identifies connection points at the boundaries of detected objects.
+\cref{fig:skeleton_endpoints} overlays every detected endpoint on the skeletonized image. The skeleton itself is the one-pixel-wide remnant of the circuit lines after morphological processing. Blue dots mark the endpoints, which were located through bounding box edge intersections for line segments and center-snapping for junctions. Blue rectangles correspond to the original YOLO bounding boxes that guided endpoint localization. The visualization verifies that the detection algorithm is reliably picking up connection points along object boundaries.
 
 \subsection{Adjacency Graph Visualization}
 
@@ -510,7 +510,7 @@ However, this junction-based method has a very important shortcoming: it fails t
     \label{fig:adjacency_graph}
 \end{figure}
 
-\cref{fig:adjacency_graph} presents the final adjacency graph constructed using the Multi-Head BFS algorithm. Each node corresponds to a detected endpoint from the previous stage. Blue lines connecting the nodes represent edges in the graph, indicating skeleton connectivity between endpoints. The graph has been processed to remove self-edges (connections between endpoints belonging to the same detected object), ensuring that only meaningful inter-component connections are preserved. This graph structure enables downstream applications such as circuit topology analysis and netlist extraction.
+\cref{fig:adjacency_graph} shows the adjacency graph that the Multi-Head BFS algorithm produced. Every node maps to one of the endpoints detected in the prior stage, and the blue lines between nodes are graph edges that reflect skeleton-level connectivity. Self-edges, which would falsely link two endpoints belonging to the same detected object, have been pruned away so that only genuine inter-component connections survive. The resulting graph feeds directly into circuit topology analysis and netlist extraction further downstream.
 
 \section{Combined Overlay of YOLOv7, TrOCR, and Line Detection Results}
 
@@ -521,7 +521,7 @@ However, this junction-based method has a very important shortcoming: it fails t
     \label{fig:combined_overlay}
 \end{figure}
 
-\cref{fig:combined_overlay} shows a comprehensive overlay of the results from the object detection (YOLOv7), text recognition (TrOCR), and line detection (adjacency graph) stages. The original circuit diagram is displayed in the background, with YOLOv7 bounding boxes highlighted in green, TrOCR-extracted component values annotated in blue text, and detected connections between components represented as red lines. This integrated visualization confirms that the pipeline successfully identifies components, extracts their values, and reconstructs connectivity, providing a holistic view of the circuit diagram interpretation process.
+\cref{fig:combined_overlay} layers the outputs of object detection (YOLOv7), text recognition (TrOCR), and line detection (adjacency graph) onto a single image. The original circuit diagram sits in the background. Green rectangles are the YOLOv7 bounding boxes, blue annotations are the component values pulled out by TrOCR, and red lines trace the detected wiring between components. Seeing all of these stacked together confirms that the pipeline correctly locates components, reads off their values, and rebuilds the wiring layout.
 
 \section{Frontend Visualization}
 
@@ -541,9 +541,9 @@ However, this junction-based method has a very important shortcoming: it fails t
 
 Figure \ref{fig:digital-circuit-editor} shows an editable, digital circuit auto-generated by the system. This is the output before any manual intervention. Figure \ref{fig:frontend-screenshot} shows the fullscreen capture of the frontend with a sample circuit as well as the Q\&A section using DeepSeek v3.1. 
 
-The frontend of the Circuitron web application provides an interactive environment for circuit design, simulation, and analysis. It enables users to construct electrical circuits using a drag-and-drop schematic editor with grid-based alignment, snap-to-grid functionality, and real-time wire routing. Components such as passive elements, active devices, and sources can be configured through a properties panel that allows precise control over electrical parameters and placement. 
+Circuitron's frontend gives users an interactive workspace for designing and simulating circuits. The schematic editor supports drag-and-drop placement on a snappable grid with live wire routing. Passive elements, active devices, and sources each expose a properties panel where electrical parameters and positioning can be tuned with precision.
 
-The system integrates simulation controls for transient analysis, allowing users to define time parameters, execute simulations, and visualize results through dynamically rendered voltage-time plots. Measurement probes support real-time signal monitoring with automated computation of key metrics, including maximum, minimum, peak-to-peak range, and \gls{rms} values. Additionally, the frontend supports exporting simulation data and visualizations in standard formats, enabling seamless documentation and further offline analysis. 
+Transient analysis controls are built in. Users set their time parameters, fire off a simulation, and watch the results appear as dynamically rendered voltage-time plots. Measurement probes let users monitor signals in real time while the system automatically computes peak-to-peak swing and \gls{rms} values alongside maxima and minima. Simulation data and plots can also be exported in standard formats for offline review or inclusion in documentation. 
 
 
 
