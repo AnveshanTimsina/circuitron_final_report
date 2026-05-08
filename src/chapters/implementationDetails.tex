@@ -587,11 +587,11 @@ Every simulation request receives its own unique identifier. That identifier let
     \label{fig:webapp-interaction}
 \end{figure}
 
-The frontend communicates with the backend through \gls{http} requests to the documented endpoints. User inputs from the editable circuit schematic are converted into CircuitJS-compatible text files and submitted to the simulation endpoint. The frontend periodically polls the status endpoint to track simulation progress, and upon completion, retrieves and visualizes the results using CircuitJS for graph generation and React components for interactive display.
+All communication between the frontend and the backend occurs over \gls{http}, hitting the documented endpoints. When a user modifies the editable circuit schematic, those inputs get translated into CircuitJS-compatible text files and forwarded to the simulation endpoint. Progress is tracked by having the frontend poll the status endpoint at regular intervals. Once the simulation wraps up, the results are fetched and rendered visually through CircuitJS graphs alongside React-based interactive components.
 
 \section{Circuit Simulation using CircuitJS}
 
-CircuitJS converts the scanned circuit into matrix-based mathematical equations. This means instead of drawing wires, internally, it builds a numerical model (network graph) of the circuit for simulation. These matrix-based mathematical equations are solved repeatedly in a loop, which is called time-domain simulation. For non-linear components, iterative methods are used until convergence. The integration of CircuitJS into the frontend enables seamless interaction with the simulation backend, allowing users to design circuits, run simulations (visualized with animation), and analyze results without requiring any additional software installations.
+Internally, CircuitJS translates the scanned circuit into a set of matrix-based mathematical equations rather than treating it as a drawing of wires. What it actually constructs is a numerical model of the circuit, essentially a network graph suited for computation. A time-domain simulation loop then solves these equations over successive iterations. Convergence for non-linear components relies on iterative numerical methods. Because CircuitJS is embedded directly in the frontend, users can design their circuits, run animated simulations, and inspect outputs all within the browser, with no extra software to install.
 
 \section{Error Handling}
 
