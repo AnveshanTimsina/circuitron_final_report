@@ -23,7 +23,7 @@ Among the various available preprocessing techniques, the ones have been selecte
 
 \subsection{Circuit Component Detection}
 
-A critical step in the pipeline is the accurate detection of circuit components from hand-drawn schematic images. This task is addressed using a real-time object detection algorithm capable of identifying and localizing multiple electronic components (like resistors, capacitors, voltage sources, etc.) directly within the image. YOLO algorithm, the YOLOv7 model, specifically, has been selected for the component detection needs of this project. It is to be noted that text, as a generic collection of letters, numbers, and special characters is also considered a component in this context.
+A preliminary yet critical step in the project pipeline is the accurate detection of circuit components from hand-drawn schematic images. This is addressed using a real-time object detection algorithm which is capable of identifying and localizing multiple electronic components (such as resistors, diodes, etc.) directly within the image. YOLO algorithm, the YOLOv7 model, specifically, has been selected for the component detection needs of this project. It is to be noted that text, as a generic collection of letters, numbers, and special characters is also considered a component in this context.
 
 \gls{yolo} (You Only Look Once) is a real-time object detection algorithm known for speed and efficiency. YOLO frames object detection as a single regression problem, straight from image pixels to bounding box coordinates and class probabilities. This model works as follows: first, dividing the image into an $S \times S$ grid. Each grid cell is responsible for detecting objects whose centre falls within it. For each cell, a number of bounding boxes and their corresponding confidence scores (which represents the accuracy of the box and whether the box contains an object) are predicted. Each predicted bounding box includes the coordinates of the box centre relative to grid cell, represented by $(x,y)$, the width and height relative to the whole image, represented by $(w,h)$ and the confidence score $C$ given as:
 
@@ -55,14 +55,14 @@ Based on similar fundamental working principle, several iterations (versions) of
 Figure \ref{fig:yolov7-architecture} \cite{solawetz2024yolov7} shows the three primary modules of YOLOv7 architecture: Backbone, Neck, and Head.
 
 \begin{itemize}
-    \item \textbf{Backbone:} YOLOv7 uses an extended version of \gls{elan} as its backbone. This structure enables deeper network designs without significantly increasing computational cost. The backbone is responsible for extracting hierarchical features from the input image while preserving gradient flow and feature reuse.
+    \item \textbf{Backbone:} An extended variant of \gls{elan} serves as the backbone of YOLOv7. It lets the network go deeper without the computational cost ballooning. Hierarchical features get pulled from the input image through this structure, and gradient flow along with feature reuse stay intact throughout.
     
-    \item \textbf{Neck:} The neck in YOLOv7 incorporates a \gls{pan} and ELAN-W modules. PAN enhances feature fusion across different scales, improving detection accuracy for both small and large objects. ELAN-W further refines spatial and contextual information during feature aggregation.
+    \item \textbf{Neck:} YOLOv7's neck brings together a \gls{pan} and ELAN-W modules. PAN fuses features across scales, which lifts detection accuracy for objects both small and large. ELAN-W then sharpens the spatial and contextual cues while features are being aggregated.
     
-    \item \textbf{Head:} The head predicts object classes, bounding box coordinates $(x,y,h,w)$, and objectness scores. YOLOv7 uses a decoupled head, which separates classification and regression branches for better convergence and performance. The model outputs predictions at multiple scales to capture objects of varying sizes.
+    \item \textbf{Head:} Object classes, bounding box coordinates $(x,y,h,w)$, and objectness scores all come out of the head. Classification and regression are split into separate branches through a decoupled head design, and this split helps convergence. Predictions land at multiple scales so objects of different sizes get picked up.
 \end{itemize}
 
-YOLOv7 introduces various upgrades over previous versions, while maintaining the size and speed advantages. The prediction of bounding box coordinates in YOLOv7 is guided by anchor-based regression, where the final bounding box $B=(x,y,w,h)$ is computed relative to the anchor box using the following formula:
+Several upgrades over earlier YOLO versions ship with YOLOv7, and the model keeps its compact size and fast inference speed. Bounding box coordinates are predicted through anchor-based regression, where the final box $B=(x,y,w,h)$ is worked out relative to the anchor box as follows:
     
     \begin{equation}
     x = \sigma(t_x) + c_x
@@ -86,7 +86,7 @@ YOLOv7 introduces various upgrades over previous versions, while maintaining the
     
     where $(t_x, t_y, t_w, t_h)$ are the predicted offsets, $(c_x, c_y)$ is the top-left corner of the grid cell, and $(p_w, p_h)$ are the dimensions of the anchor box.
     
-YOLOv7 also introduces Coarse-to-Fine Lead Head, Model Scaling, and Auxiliary Heads that help improve gradient flow and stability during training. It supports Label Assignment Strategies such as dynamic-k matching for optimal anchor-label association. It applies automatic data augmentation during training including mosaic augmentation (combining four images into one), \gls{hsv} color augmentation, and random flipping, cropping, and scaling. These help increase dataset diversity and improve generalization. Likewise, it supports built-in early stopping based on a patience threshold if validation loss (combining box loss, objectness loss, and classification loss) does not improve for several epochs, ensuring faster convergence and no overfitting.
+On top of that, YOLOv7 packs in a Coarse-to-Fine Lead Head and Model Scaling, both of which shore up gradient flow and keep training stable. For label assignment, it uses dynamic-k matching to get tighter anchor-label associations. Data augmentation, which includes mosaic augmentation (stitching four images into one), \gls{hsv} color shifts, random flips, crops, and rescaling, runs automatically during training. Together these bulk up dataset variety and push the model to generalize better. Built-in early stopping is also there; if the validation loss (a mix of box loss, objectness loss, and classification loss) plateaus for a set number of epochs, training cuts off on its own to avoid overfitting.
 
 \subsection{Recognition of Component Values}
 
