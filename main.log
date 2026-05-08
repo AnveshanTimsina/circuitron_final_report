@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2026.1.17)  8 MAY 2026 14:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2026.1.17)  8 MAY 2026 15:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1416,12 +1416,13 @@ File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 37.
  (/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-) (main.aux)
+)
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 37.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 37.
- (/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/latex/newtx/omlntxmi.fd
+(/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
 LaTeX Font Info:    ... okay on input line 37.
@@ -1776,329 +1777,37 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 ]
 Package tocbasic Info: character protrusion at toc deactivated on input line 9.
- (main.toc
 
-[6
-
-])
+No file main.toc.
 \tf@toc=\write8
 \openout8 = `main.toc'.
 
 
 
-[7]
-Package tocbasic Info: character protrusion at lof deactivated on input line 12.
- (main.lof
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 50.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 2.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 50.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 3.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 50.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 4.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 50.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 5.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 50.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 6.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 50.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 7.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 50.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 8.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 50.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 9.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 50.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 10.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 50.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 11.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 50.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 12.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 50.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 13.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 50.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 14.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 50.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 15.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 50.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 16.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 50.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 17.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 56.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 18.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 56.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 19.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 56.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 20.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 56.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 21.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 56.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 22.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 56.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 23.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 56.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 24.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 56.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 25.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 56.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 26.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 56.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 27.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 56.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 28.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 56.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 29.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 56.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 30.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 56.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 31.
-
-
-
-[8
-
+[6
 
 ]
+Package tocbasic Info: character protrusion at lof deactivated on input line 12.
 
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 56.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 32.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 56.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 33.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 56.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 34.
-
-
-Package tocbasic Warning: number width of figure toc entries should be increased!
-(tocbasic)                Currently used number width = 56.32764pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 35.
-
-)
+No file main.lof.
 \tf@lof=\write9
 \openout9 = `main.lof'.
 
 
 
-[9]
+[7
+
+
+]
 Package tocbasic Info: character protrusion at lot deactivated on input line 15.
- (main.lot
 
-Package tocbasic Warning: number width of table toc entries should be increased!
-(tocbasic)                Currently used number width = 45.35974pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 2.
-
-
-Package tocbasic Warning: number width of table toc entries should be increased!
-(tocbasic)                Currently used number width = 45.35974pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 3.
-
-
-Package tocbasic Warning: number width of table toc entries should be increased!
-(tocbasic)                Currently used number width = 45.35974pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 4.
-
-
-Package tocbasic Warning: number width of table toc entries should be increased!
-(tocbasic)                Currently used number width = 45.35974pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 5.
-
-
-Package tocbasic Warning: number width of table toc entries should be increased!
-(tocbasic)                Currently used number width = 45.35974pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 6.
-
-
-Package tocbasic Warning: number width of table toc entries should be increased!
-(tocbasic)                Currently used number width = 45.35974pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 7.
-
-
-Package tocbasic Warning: number width of table toc entries should be increased!
-(tocbasic)                Currently used number width = 45.35974pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 8.
-
-
-Package tocbasic Warning: number width of table toc entries should be increased!
-(tocbasic)                Currently used number width = 45.35974pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 9.
-
-
-Package tocbasic Warning: number width of table toc entries should be increased!
-(tocbasic)                Currently used number width = 45.35974pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 10.
-
-
-Package tocbasic Warning: number width of table toc entries should be increased!
-(tocbasic)                Currently used number width = 45.35974pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 11.
-
-
-Package tocbasic Warning: number width of table toc entries should be increased!
-(tocbasic)                Currently used number width = 45.35974pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 12.
-
-
-Package tocbasic Warning: number width of table toc entries should be increased!
-(tocbasic)                Currently used number width = 45.35974pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 13.
-
-
-Package tocbasic Warning: number width of table toc entries should be increased!
-(tocbasic)                Currently used number width = 45.35974pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 14.
-
-
-Package tocbasic Warning: number width of table toc entries should be increased!
-(tocbasic)                Currently used number width = 45.35974pt,
-(tocbasic)                Wanted number separation    = 4.79993pt,
-(tocbasic)                Reserved number width       = 0.0pt on input line 15.
-
-)
+No file main.lot.
 \tf@lot=\write10
 \openout10 = `main.lot'.
 
 
 
-[10
+[8
 
 
 ] (main.acr
@@ -2113,13 +1822,13 @@ Such glue doesn't belong there; but you can safely proceed,
 since the offensive shrinkability has been made finite.
 
 
-[11
+[9
 
 
 
 ])
 
-[12]) (src/chapters/intro.tex
+[10]) (src/chapters/intro.tex
 chapter 1.
 
 LaTeX Warning: Citation `reddy2021handdrawn' on page 1 undefined on input line 9.
@@ -2292,6 +2001,9 @@ LaTeX Warning: Citation `reddy2021handdrawn' on page 8 undefined on input line 1
 
 LaTeX Warning: Citation `bayer2023instance' on page 8 undefined on input line 19.
 
+
+LaTeX Warning: Reference `tab:litreview_comparison' on page 8 undefined on input line 19.
+
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
 (Font)              scaled to size 10.95pt on input line 27.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
@@ -2390,11 +2102,14 @@ chapter 3.
 
 [13]
 chapter 4.
-<src/images/figures/block_diagram.png, id=357, 1124.2pt x 729.72626pt>
+<src/images/figures/block_diagram.png, id=159, 1124.2pt x 729.72626pt>
 File: src/images/figures/block_diagram.png Graphic file (type png)
 <use src/images/figures/block_diagram.png>
 Package pdftex.def Info: src/images/figures/block_diagram.png  used on input line 9.
 (pdftex.def)             Requested size: 416.83289pt x 270.56236pt.
+
+LaTeX Warning: Reference `fig:block-diagram-circuitron' on page 14 undefined on input line 14.
+
 
 
 [14
@@ -2402,11 +2117,14 @@ Package pdftex.def Info: src/images/figures/block_diagram.png  used on input lin
  <./src/images/figures/block_diagram.png>]
 
 [15]
-<src/images/figures/yolov7_architecture.png, id=371, 1003.75pt x 538.01pt>
+<src/images/figures/yolov7_architecture.png, id=175, 1003.75pt x 538.01pt>
 File: src/images/figures/yolov7_architecture.png Graphic file (type png)
 <use src/images/figures/yolov7_architecture.png>
 Package pdftex.def Info: src/images/figures/yolov7_architecture.png  used on input line 50.
 (pdftex.def)             Requested size: 416.83289pt x 223.42596pt.
+
+
+LaTeX Warning: Reference `fig:yolov7-architecture' on page 16 undefined on input line 55.
 
 
 LaTeX Warning: Citation `solawetz2024yolov7' on page 16 undefined on input line 55.
@@ -2416,19 +2134,26 @@ LaTeX Warning: Citation `solawetz2024yolov7' on page 16 undefined on input line 
 [16 <./src/images/figures/yolov7_architecture.png>]
 
 [17]
-<src/images/figures/easyocr_architecture.png, id=389, 1221.81468pt x 560.8453pt>
+<src/images/figures/easyocr_architecture.png, id=192, 1221.81468pt x 560.8453pt>
 File: src/images/figures/easyocr_architecture.png Graphic file (type png)
 <use src/images/figures/easyocr_architecture.png>
 Package pdftex.def Info: src/images/figures/easyocr_architecture.png  used on input line 101.
 (pdftex.def)             Requested size: 416.83289pt x 191.33527pt.
 
 
+LaTeX Warning: Reference `fig:text-recognition-pipeline' on page 18 undefined on input line 106.
+
+
+
 [18 <./src/images/figures/easyocr_architecture.png>]
-<src/images/figures/trocr.png, id=400, 2987.16pt x 1445.4pt>
+<src/images/figures/trocr.png, id=203, 2987.16pt x 1445.4pt>
 File: src/images/figures/trocr.png Graphic file (type png)
 <use src/images/figures/trocr.png>
 Package pdftex.def Info: src/images/figures/trocr.png  used on input line 144.
 (pdftex.def)             Requested size: 416.83289pt x 201.69296pt.
+
+
+LaTeX Warning: Reference `fig:trocr-architecture' on page 19 undefined on input line 149.
 
 
 LaTeX Warning: Citation `li2021trocr' on page 19 undefined on input line 149.
@@ -2465,8 +2190,12 @@ LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
 
 [24]
 
+LaTeX Warning: Reference `sec:line-detection-pathfinding' on page 25 undefined on input line 285.
+
+
+
 [25]
-<src/images/figures/use_case_diagram.png, id=459, 1126.2075pt x 779.91376pt>
+<src/images/figures/use_case_diagram.png, id=263, 1126.2075pt x 779.91376pt>
 File: src/images/figures/use_case_diagram.png Graphic file (type png)
 <use src/images/figures/use_case_diagram.png>
 Package pdftex.def Info: src/images/figures/use_case_diagram.png  used on input line 310.
@@ -2475,25 +2204,37 @@ Package pdftex.def Info: src/images/figures/use_case_diagram.png  used on input 
 
 [26]
 
-[27 <./src/images/figures/use_case_diagram.png>]
+LaTeX Warning: Reference `fig:use-case-diagram' on page 27 undefined on input line 315.
 
-[28]
-<src/images/figures/flowchart.png, id=480, 440.64626pt x 795.97375pt>
+
+LaTeX Warning: Reference `table:performance-metrics' on page 27 undefined on input line 325.
+
+
+
+[27 <./src/images/figures/use_case_diagram.png>]
+<src/images/figures/flowchart.png, id=276, 440.64626pt x 795.97375pt>
 File: src/images/figures/flowchart.png Graphic file (type png)
 <use src/images/figures/flowchart.png>
 Package pdftex.def Info: src/images/figures/flowchart.png  used on input line 367.
 (pdftex.def)             Requested size: 354.31049pt x 640.04703pt.
 
 
-[29]
+[28]
 
-[30 <./src/images/figures/flowchart.png>]
+LaTeX Warning: Reference `fig:block-diagram-circuitron' on page 29 undefined on input line 372.
 
-[31]
 
-[32]) (src/chapters/implementationDetails.tex
+LaTeX Warning: Reference `fig:system-flowchart' on page 29 undefined on input line 372.
 
-[33]
+
+
+[29 <./src/images/figures/flowchart.png>]
+
+[30]
+
+[31]) (src/chapters/implementationDetails.tex
+
+[32]
 chapter 5.
 (/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
@@ -2501,7 +2242,7 @@ File: lstlang1.sty 2025/11/14 1.11b listings language file
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
 )
 
-[34
+[33
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
@@ -2555,7 +2296,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10}) 
 l.66     \State
                 Convert VOC coordinates to normalized YOLO format
 
-[35]
+[34]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2637,18 +2378,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16}) 
 l.126 \State
              \Return \gls{lmdb} environment
 
-[36]
+[35]
 Overfull \hbox (0.79776pt too wide) in paragraph at lines 175--196
  [][] 
  []
 
 
 
+[36]
+
+LaTeX Warning: Reference `tab:class_consolidation' on page 37 undefined on input line 198.
+
+
+
 [37]
 
 [38]
-
-[39]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2820,7 +2565,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17}) 
 l.297 \State
              $M \leftarrow M \cup \{\text{curr}\}$
 
-[40]
+[39]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2911,6 +2656,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18}) 
                    \relax 
 l.327 \State
              \Return $P$
+
+LaTeX Warning: Reference `alg:node_id_map' on page 40 undefined on input line 335.
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2972,12 +2721,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12}) 
 l.357 \State
              \Return $M$
 
-[41
+[40
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.360 
       ]
+
+LaTeX Warning: Reference `alg:bfs_node' on page 41 undefined on input line 361.
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -3069,7 +2822,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18}) 
 l.389         \EndIf
                     
 
-[42]
+[41]
+
+LaTeX Warning: Reference `alg:remove_self' on page 42 undefined on input line 414.
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -3121,14 +2878,20 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10}) 
 l.435 \State
              \Return $\mathcal{G}'$
 
-[43]
+[42]
 Overfull \hbox (10.83952pt too wide) in paragraph at lines 447--459
  [][] 
  []
 
 
+LaTeX Warning: Reference `tab:time_complexity' on page 43 undefined on input line 461.
 
-[44]
+
+LaTeX Warning: Reference `tab:space_complexity' on page 43 undefined on input line 483.
+
+
+
+[43]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -3265,17 +3028,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.27}) 
 l.531 \State
              \Return $\mathcal{G}$
 
-[45]
+[44]
 
-[46]
-<src/images/figures/backend_req_res.png, id=650, 1562.83875pt x 941.76843pt>
+[45]
+<src/images/figures/backend_req_res.png, id=456, 1562.83875pt x 941.76843pt>
 File: src/images/figures/backend_req_res.png Graphic file (type png)
 <use src/images/figures/backend_req_res.png>
 Package pdftex.def Info: src/images/figures/backend_req_res.png  used on input line 586.
 (pdftex.def)             Requested size: 416.83289pt x 251.17691pt.
 
 
-[47 <./src/images/figures/backend_req_res.png>]
+[46 <./src/images/figures/backend_req_res.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -3317,7 +3080,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) h
 l.617 \State
              \Return $V$
 
-[48]
+[47]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -3384,7 +3147,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13}) 
 l.643 \State
              \Return $(V, U)$) (src/chapters/resultAndAnalysis.tex
 
-[49]
+[48]
 chapter 6.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
 (Font)              scaled to size 14.4pt on input line 56.
@@ -3441,93 +3204,34 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 7.9pt on input line 56.
 
+LaTeX Warning: Reference `fig:map_epochs' on page 1 undefined on input line 62.
 
-[50
+
+LaTeX Warning: Reference `fig:performance_metrics' on page 1 undefined on input line 145.
+
+
+LaTeX Warning: Reference `fig:performance_metrics' on page 1 undefined on input line 147.
+
+
+
+[49
 
 ]
 
-[51]
-<src/images/figures/yolo_15class_train_loss.png, id=683, 833.0322pt x 255.354pt>
+[50]
+<src/images/figures/yolo_15class_train_loss.png, id=494, 833.0322pt x 255.354pt>
 File: src/images/figures/yolo_15class_train_loss.png Graphic file (type png)
 <use src/images/figures/yolo_15class_train_loss.png>
 Package pdftex.def Info: src/images/figures/yolo_15class_train_loss.png  used on input line 182.
 (pdftex.def)             Requested size: 416.83289pt x 127.77798pt.
-<src/images/figures/yolo_15class_val_loss.png, id=684, 833.0322pt x 255.354pt>
+<src/images/figures/yolo_15class_val_loss.png, id=495, 833.0322pt x 255.354pt>
 File: src/images/figures/yolo_15class_val_loss.png Graphic file (type png)
 <use src/images/figures/yolo_15class_val_loss.png>
 Package pdftex.def Info: src/images/figures/yolo_15class_val_loss.png  used on input line 189.
 (pdftex.def)             Requested size: 416.83289pt x 127.77798pt.
 
 
-[52 <./src/images/figures/yolo_15class_train_loss.png> <./src/images/figures/yolo_15class_val_loss.png>]
-<src/images/figures/yolo_15class_training_curves.png, id=694, 688.4922pt x 544.434pt>
-File: src/images/figures/yolo_15class_training_curves.png Graphic file (type png)
-<use src/images/figures/yolo_15class_training_curves.png>
-Package pdftex.def Info: src/images/figures/yolo_15class_training_curves.png  used on input line 200.
-(pdftex.def)             Requested size: 416.83289pt x 329.62035pt.
+LaTeX Warning: Reference `fig:15class-train-loss' on page 1 undefined on input line 194.
 
 
-[53 <./src/images/figures/yolo_15class_training_curves.png>]
-<src/images/figures/yolo_15class_final_bar.png, id=703, 610.4406pt x 349.305pt>
-File: src/images/figures/yolo_15class_final_bar.png Graphic file (type png)
-<use src/images/figures/yolo_15class_final_bar.png>
-Package pdftex.def Info: src/images/figures/yolo_15class_final_bar.png  used on input line 228.
-(pdftex.def)             Requested size: 416.83289pt x 238.51563pt.
-
-
-[54 <./src/images/figures/yolo_15class_final_bar.png>]
-<src/images/figures/yolo_class_impact.png, id=712, 442.2924pt x 309.7974pt>
-File: src/images/figures/yolo_class_impact.png Graphic file (type png)
-<use src/images/figures/yolo_class_impact.png>
-Package pdftex.def Info: src/images/figures/yolo_class_impact.png  used on input line 255.
-(pdftex.def)             Requested size: 354.31049pt x 248.17387pt.
-
-Overfull \hbox (7.59256pt too wide) in paragraph at lines 268--280
- [][] 
- []
-
-
-
-[55 <./src/images/figures/yolo_class_impact.png>]
-<src/images/figures/yolo_full_comparison_bar.png, id=721, 722.4591pt x 401.8212pt>
-File: src/images/figures/yolo_full_comparison_bar.png Graphic file (type png)
-<use src/images/figures/yolo_full_comparison_bar.png>
-Package pdftex.def Info: src/images/figures/yolo_full_comparison_bar.png  used on input line 284.
-(pdftex.def)             Requested size: 416.83289pt x 231.84245pt.
-<src/images/figures/yolo_evolution_timeline.png, id=724, 672.5928pt x 371.2269pt>
-File: src/images/figures/yolo_evolution_timeline.png Graphic file (type png)
-<use src/images/figures/yolo_evolution_timeline.png>
-Package pdftex.def Info: src/images/figures/yolo_evolution_timeline.png  used on input line 295.
-(pdftex.def)             Requested size: 416.83289pt x 230.07332pt.
-
-
-[56 <./src/images/figures/yolo_full_comparison_bar.png>]
-<src/images/figures/yolo_radar_comparison.png, id=731, 479.1501pt x 412.4208pt>
-File: src/images/figures/yolo_radar_comparison.png Graphic file (type png)
-<use src/images/figures/yolo_radar_comparison.png>
-Package pdftex.def Info: src/images/figures/yolo_radar_comparison.png  used on input line 306.
-(pdftex.def)             Requested size: 270.93883pt x 233.21326pt.
-
-
-[57 <./src/images/figures/yolo_evolution_timeline.png>]
-<src/images/figures/confusion_matrix_retrained_yolov7.png, id=739, 867.24pt x 650.43pt>
-File: src/images/figures/confusion_matrix_retrained_yolov7.png Graphic file (type png)
-<use src/images/figures/confusion_matrix_retrained_yolov7.png>
-Package pdftex.def Info: src/images/figures/confusion_matrix_retrained_yolov7.png  used on input line 319.
-(pdftex.def)             Requested size: 416.83289pt x 312.62961pt.
-
-
-[58 <./src/images/figures/yolo_radar_comparison.png>]
-<src/images/figures/retrained_yolov7_result1.png, id=747, 1387.1825pt x 1051.93pt>
-File: src/images/figures/retrained_yolov7_result1.png Graphic file (type png)
-<use src/images/figures/retrained_yolov7_result1.png>
-Package pdftex.def Info: src/images/figures/retrained_yolov7_result1.png  used on input line 329.
-(pdftex.def)             Requested size: 416.83289pt x 316.09506pt.
-
-
-[59 <./src/images/figures/confusion_matrix_retrained_yolov7.png>]
-<src/images/figures/retrained_yolov7_result2.png, id=755, 2067.725pt x 1104.125pt>
-File: src/images/figures/retrained_yolov7_result2.png Graphic file (type png)
-<use src/images/figures/retrained_yolov7_result2.png>
-Package pdftex.def Info: src/images/figures/retrained_yolov7_result2.png  used on input line 336.
-(pdftex.def)  
+LaTeX Warning: Reference `fig:15class-val-loss' on page 1 undefin

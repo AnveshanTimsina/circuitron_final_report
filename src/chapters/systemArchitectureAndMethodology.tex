@@ -250,11 +250,11 @@ A large language model (\gls{llm}), DeepSeek v3.1 specifically, is integrated in
 
 \section{Line Detection}
 
-Two approaches to line (wire) detection were developed and evaluated in this project. The first uses junction-point geometry with horizontal and vertical classification, while the second uses skeleton-based path finding with Multi-Head BFS. Both methods are compared in the results chapter; however, the BFS-based path-finding approach was adopted for the final frontend system due to its superior accuracy and robustness.
+Two separate approaches to line (wire) detection were built and tested during this project. One relies on junction-point geometry paired with horizontal and vertical classification. The other traces paths on a skeletonized image using Multi-Head BFS. The results chapter puts both side by side; the BFS-based path-finding approach ended up being adopted for the final frontend system because it proved more accurate and held up better across varied inputs.
 
 \subsection{Line Detection via Horizontal and Vertical Classification}
 
-This approach detects wires by analyzing junction points identified by YOLOv7. The YOLO detection coordinates are first denormalized from the unit square $[0,1]^2$ to pixel space using the affine map $\mathcal{N}^{-1}(x_n, y_n) = (W \cdot x_n,\; H \cdot y_n)$. The algorithm then performs pairwise analysis of all detected junction points: for each pair $(\mathbf{j}_i, \mathbf{j}_k)$, the displacement vector $\mathbf{d} = \mathbf{j}_k - \mathbf{j}_i$ is computed, and its angular orientation $\tilde{\theta}$ is obtained via the four-quadrant arctangent.
+Wire detection under this approach starts from junction points that YOLOv7 has already identified. YOLO's detection coordinates sit in the unit square $[0,1]^2$, so they first need to be denormalized into pixel space through the affine map $\mathcal{N}^{-1}(x_n, y_n) = (W \cdot x_n,\; H \cdot y_n)$. From there, every detected junction point is paired up with every other one. For a given pair $(\mathbf{j}_i, \mathbf{j}_k)$, the displacement vector $\mathbf{d} = \mathbf{j}_k - \mathbf{j}_i$ gets computed and the angular orientation $\tilde{\theta}$ is extracted using the four-quadrant arctangent.
 
 Junction pairs are classified using an $18^\circ$ tolerance zone:
 \begin{itemize}
@@ -263,45 +263,45 @@ Junction pairs are classified using an $18^\circ$ tolerance zone:
     \item \textbf{Diagonal (rejected):} all remaining angles (60\% of angular space)
 \end{itemize}
 
-Valid axis-aligned pairs are projected onto perfectly horizontal or vertical lines by averaging the appropriate coordinate, then quantized to a 16-pixel grid. Overlapping collinear segments are consolidated via a merge algorithm that combines segments sharing the same orientation and lying within the grid tolerance.
+Pairs that survive the filter are projected onto perfectly horizontal or vertical lines by averaging the relevant coordinate, then snapped to a 16-pixel grid. A merge algorithm consolidates overlapping collinear segments when they share the same orientation and fall within the grid tolerance.
 
-Terminal detection under this approach identifies where wires connect to components by computing intersections between detected wire segments and component bounding boxes. For each wire-box pair, intersection conditions are evaluated at the relevant box edges (left/right for horizontal wires, top/bottom for vertical wires), yielding at most two intersection points per pair.
+To figure out where wires physically connect to components, the algorithm computes intersections between each detected wire segment and the component bounding boxes. Intersection conditions get checked at the pertinent box edges (left and right for horizontal wires, top and bottom for vertical ones), and each wire-box pair can yield up to two intersection points.
 
-\textbf{Shortcomings:} This method has $O(n^2)$ pairwise complexity that scales poorly with junction count. The strict axis-alignment assumption rejects 60\% of angular space, making it unable to handle angled or curved hand-drawn wires. Grid quantization introduces up to 11.3 pixels of positional error, and the consolidation heuristic can merge segments belonging to distinct wires in dense regions. Most critically, the method infers connections purely from junction positions with no knowledge of actual wire paths, producing spurious connections between unrelated axis-aligned junctions. The terminal detection inherits these errors, as inaccurate wire segments directly produce false terminal points.
+Pairwise complexity sits at $O(n^2)$, which gets unwieldy as junction count grows. Because only axis-aligned pairs pass the filter, a full 60\% of angular space is thrown away, so angled or curved hand-drawn wires simply cannot be captured. Grid quantization alone introduces up to 11.3 pixels of positional drift. In dense regions, the merging heuristic sometimes fuses segments that belong to completely different wires. The deepest flaw, though, is that connections are guessed purely from where junctions happen to sit, with zero awareness of the actual wire paths in the image. Unrelated junctions that happen to be axis-aligned end up linked by phantom wires. Terminal detection inherits all of these problems since it depends on the wire segments being correct in the first place.
 
 \subsection{Line Detection via Path Finding}
 \label{sec:line-detection-pathfinding}
 
-To address the limitations of the geometric approach, a skeleton-based path-finding method was developed. This pipeline operates directly on skeletonized circuit images, tracing actual wire paths rather than inferring connections from junction positions. It uses a Multi-Head Breadth-First Search (BFS) algorithm and consists of two stages: endpoint detection and graph construction.
+The geometric approach's shortcomings called for something fundamentally different, so a skeleton-based path-finding method was put together. Instead of guessing connections from junction positions, this pipeline works straight on skeletonized circuit images, following the actual wire paths. At its core sits a Multi-Head Breadth-First Search (BFS) algorithm. The whole process splits into two stages, endpoint detection and graph construction.
 
-\textbf{Endpoint Detection:} The strategy differs by object class. For junction points (class 1), a single endpoint is computed by snapping the bounding box center $(x_c, y_c)$ to the nearest skeleton pixel within an expanded search region (margin = 8 pixels). For components (class 2+), two endpoints are computed by identifying skeleton pixels on or near the bounding box border, preferring true topological endpoints (degree = 1), and selecting the farthest pair.
+\textbf{Endpoint Detection:} How endpoints are found depends on what class the object belongs to. Junction points (class 1) get a single endpoint: the bounding box center $(x_c, y_c)$ is snapped to whichever skeleton pixel sits closest within an expanded search region (margin = 8 pixels). Components (class 2+) need two endpoints instead. Skeleton pixels lying on or near the bounding box border are scanned, with preference given to true topological endpoints (degree = 1). The pair with the greatest separation wins.
 
-\textbf{Graph Construction via Multi-Head BFS:} The algorithm constructs a graph where nodes are detected endpoints and edges represent skeleton connectivity. Each node occupies a disk of radius $r$, and a \texttt{node\_id\_map} is precomputed to associate each pixel with its owning node (or $-1$). For each source node, the BFS queue is initialized with skeleton pixels at the disk boundary and traverses along the skeleton using 8-connectivity. When a pixel belonging to another node $j$ is encountered, the edge $(i, j)$ is recorded and that branch terminates. After graph construction, self-edges (connecting endpoints of the same bounding box) are removed to ensure only inter-object connections remain.
+\textbf{Graph Construction via Multi-Head BFS:} A graph gets built with detected endpoints as nodes and skeleton connectivity supplying the edges. Every node claims a disk of radius $r$, and a \texttt{node\_id\_map} is precomputed so that each pixel knows which node owns it (or carries $-1$ if none does). BFS launches from each source node: the queue starts with skeleton pixels sitting at the disk boundary and crawls along the skeleton through 8-connectivity. The moment a pixel owned by some other node $j$ turns up, the edge $(i, j)$ is logged and that particular branch stops. Once the full graph is in place, self-edges get pruned. These are edges connecting two endpoints of the same bounding box, and stripping them out guarantees that only inter-object connections survive.
 
-\textbf{Advantages over horizontal/vertical classification:} The path-finding method traces actual wire paths in the image, eliminating spurious connections. It works regardless of wire orientation (horizontal, vertical, or diagonal). It unifies wire detection and terminal detection into a single graph-construction step, and scales linearly with the number of skeleton pixels rather than quadratically with junction count. Due to these advantages, this approach was adopted for the final deployed system.
+\textbf{Advantages over horizontal/vertical classification:} Because path-finding follows the actual wire paths visible in the image, phantom connections vanish. Wire orientation ceases to matter altogether; horizontal and vertical wires get handled just the same as diagonal ones. Wire detection and terminal detection collapse into one graph-construction step. Scaling is linear with skeleton pixel count instead of quadratic with junction count. For all of these reasons, the final deployed system runs on this approach.
 
 \subsection{Crossover Dissolution Algorithm}
 
-In hand-drawn circuit diagrams, a \textit{crossover} represents two wires that cross each other without making an electrical connection, as opposed to a \textit{junction} where wires meet and connect. Correctly distinguishing crossovers from junctions is critical for accurate circuit reconstruction. The YOLOv7 model detects crossovers as a dedicated class, and the Multi-Head BFS (Section~\ref{sec:line-detection-pathfinding}) initially treats them as single-point graph nodes, typically connected to four neighboring endpoints corresponding to the two crossing wire segments. The crossover dissolution algorithm resolves these nodes into their true topology.
+Hand-drawn circuit diagrams contain two visually similar yet electrically opposite situations i.e, a \textit{crossover}, where two wires pass over each other without any electrical contact, and a \textit{junction}, where wires genuinely meet. Getting the distinction wrong ruins circuit reconstruction entirely. YOLOv7 flags crossovers as their own class. Multi-Head BFS (Section~\ref{sec:line-detection-pathfinding}) then slots each one in as a single-point graph node, usually connected to four neighboring endpoints that correspond to the two wire segments crossing at that spot. The dissolution algorithm's job is to untangle these nodes into the correct topology.
 
-\textbf{Candidate Identification:} Only crossover nodes with exactly four neighbors qualify for dissolution. Nodes with fewer neighbors are retained as regular junctions, gracefully handling cases where the detector misclassifies a junction as a crossover or where a wire terminates at the crossing point.
+\textbf{Candidate Identification:} A crossover node must have exactly four neighbors to be eligible for dissolution. Anything with fewer neighbors stays in the graph as a regular junction. This sidesteps problems where the detector mistakenly labels a junction as a crossover, or where a wire happens to dead-end right at the crossing.
 
-\textbf{Direction Vector Computation:} For each of the four neighbors $\mathbf{n}_k$ of a crossover node at position $\mathbf{p}$, a unit direction vector is computed as:
+\textbf{Direction Vector Computation:} Given a crossover node sitting at position $\mathbf{p}$, a unit direction vector pointing toward each of its four neighbors $\mathbf{n}_k$ is worked out as:
 \begin{equation}
     \hat{\mathbf{d}}_k = \frac{\mathbf{n}_k - \mathbf{p}}{\|\mathbf{n}_k - \mathbf{p}\|}
 \end{equation}
 
-\textbf{Optimal Pairing via Dot Product:} The algorithm evaluates all three possible ways to partition the four neighbors into two pairs. For each candidate pairing $\{(\mathbf{n}_a, \mathbf{n}_b),\; (\mathbf{n}_c, \mathbf{n}_d)\}$, a score is computed as the sum of dot products within each pair:
+\textbf{Optimal Pairing via Dot Product:} Four neighbors can be split into two pairs in exactly three ways. Each candidate pairing $\{(\mathbf{n}_a, \mathbf{n}_b),\; (\mathbf{n}_c, \mathbf{n}_d)\}$ receives a score equal to the sum of dot products within its pairs:
 \begin{equation}
     S = \hat{\mathbf{d}}_a \cdot \hat{\mathbf{d}}_b + \hat{\mathbf{d}}_c \cdot \hat{\mathbf{d}}_d
 \end{equation}
-The pairing with the minimum (most negative) score $S$ is selected, as this maximizes the geometric opposition of paired neighbors, i.e., paired nodes lie on roughly opposite sides of the crossover.
+Whichever pairing yields the most negative $S$ wins. A strongly negative score means the paired neighbors sit on roughly opposite sides of the crossover, which is exactly the geometry expected when two wires cross.
 
-\textbf{Geometric Validation:} The selected pairing is validated by checking that both dot products satisfy $\hat{\mathbf{d}}_a \cdot \hat{\mathbf{d}}_b < -0.7$, confirming that each pair of neighbors is within approximately $45^\circ$ of being directly opposite through the crossover center.
+\textbf{Geometric Validation:} Before anything gets rewired, both dot products in the chosen pairing have to clear a threshold: $\hat{\mathbf{d}}_a \cdot \hat{\mathbf{d}}_b < -0.7$. Passing this check confirms that each paired neighbor lies within roughly $45^\circ$ of being directly across from the other through the crossover center.
 
-\textbf{Graph Transformation:} If validation passes, the crossover node is removed from the adjacency graph and two new direct edges are created, one connecting each pair of opposite neighbors. This transforms a four-way junction into two independent through-connections, correctly representing two wires that cross without connecting. If validation fails, the node is preserved as a junction, maintaining electrical connectivity.
+\textbf{Graph Transformation:} When validation succeeds, the crossover node gets ripped out of the adjacency graph. Two fresh edges take its place, each linking one pair of opposite neighbors directly. What was a four-way junction now becomes two independent through-connections, faithfully modeling two wires that happen to cross paths without touching. Should the validation fail, the node simply remains as a junction so that electrical connectivity is preserved.
 
-The dissolved graph is then used for final circuit assembly, where nodes represent component terminals, junctions, and wire endpoints, and edges represent the true wire paths, with crossover points absent from the electrical topology.
+Once dissolution wraps up, the resulting graph feeds into final circuit assembly. Nodes in this graph stand for component terminals and junctions alongside wire endpoints; edges trace the actual wire paths. Crossover points no longer appear anywhere in the electrical topology.
 
 \section{Use-Case Diagram}
 
@@ -312,17 +312,17 @@ The dissolved graph is then used for final circuit assembly, where nodes represe
     \label{fig:use-case-diagram}
 \end{figure}
 
-The use-case diagram in Figure~\ref{fig:use-case-diagram} outlines the CIRCUITRON system's functionality depicting the interactions between users and the system. The primary actor is the user, who can be a student, instructor, or engineer. The system begins with the user uploading a hand-drawn circuit image.
+Figure~\ref{fig:use-case-diagram} lays out how users interact with the CIRCUITRON system. The primary actor here is the user, whether that happens to be a student, an instructor, or a practicing engineer. Everything kicks off when the user uploads a hand-drawn circuit image.
 
-Upon submission, CIRCUITRON automatically preprocesses the image to enhance clarity and prepares it for further analysis. The system then detects components (e.g., resistors, capacitors) using YOLOv7 and identifies wires and nodes through techniques like junction-based wire detection. Simultaneously, it extracts text labels (e.g., component values) using \gls{ocr} and maps them to the corresponding components.
+As soon as the image lands, CIRCUITRON preprocesses it to sharpen clarity. YOLOv7 then picks out the components (e.g., resistors, capacitors) while junction-based wire detection maps out the wires and nodes. \gls{ocr} runs at the same time, pulling text labels (e.g., component values) off the image and pairing them with the right components.
 
-Once the circuit structure is parsed, the system generates an editable schematic, allowing the user to manually correct any errors before proceeding. After validation, the system converts the schematic into a CircuitJS-compatible text file and runs a simulation using CircuitJS. The results, including voltage and current graphs, are displayed to the user. Additionally, the system integrates an AI assistant to answer circuit-related questions, enhancing the learning and troubleshooting experience.
+From the parsed circuit structure, an editable schematic gets generated. Users can step in at this point and manually fix any mistakes. Once they are satisfied, the schematic is converted into a CircuitJS-compatible text file and fed into CircuitJS for simulation. Voltage and current graphs come back as the output. An AI assistant is included as well for answering circuit-related questions. This may help in simply clearing up circuit-related questions and concepts, or also help in debugging.
 
-The ``includes'' relationship is used for mandatory sub-tasks like component detection and \gls{ocr}, which must always execute as part of core workflows. The ``extends'' relationship marks optional features like manual corrections or AI Q\&A, which enhance functionality but aren't required for basic operation. The diagram effectively outlines the system's scope, emphasizing its applications (or use-cases).
+In the diagram, the ``includes'' relationship flags sub-tasks that have to run every time, like component detection and \gls{ocr}. ``Extends'' covers the optional bits, things like manual corrections or AI Q\&A that add value but are not strictly necessary for the core workflow. Taken together, the diagram captures the full scope of what the system can do.
 
 \section{Performance Metrics Expectation}
 
-No matter how rigorously the models are trained and fine-tuned, there is always room for error due to edge cases like unclear handwriting and similar-looking components. As such, for any project, it is important to define appropriate performance metrics which indicate when the models can be considered ``good-enough'' for the required purpose. Table~\ref{table:performance-metrics} shows the chosen performance metrics and their target values on achieving which, the training may be stopped.
+Even with careful training and fine-tuning, edge cases will slip through. Illegible handwriting or components that look nearly identical can trip up any model. That makes it essential to pin down performance metrics ahead of time so there is a clear threshold for when a model qualifies as ``good-enough.'' Table~\ref{table:performance-metrics} lists the metrics chosen for this project along with the target values; once those targets are hit, training can be halted.
 
 \begin{table}[H]
     \centering
@@ -340,25 +340,25 @@ No matter how rigorously the models are trained and fine-tuned, there is always 
 
 \subsection{Component Detection Metric}
 
-mAP@0.5 (mean Average Precision at IoU threshold of 0.5) evaluates how well the model detects components with correct class labels and bounding boxes. It calculates the \gls{ap} for each class and then takes the mean across all classes. An \gls{iou} threshold of 0.5 means a predicted bounding box is considered a correct match if it overlaps with the ground truth box by at least 50\%.
+mAP@0.5 (mean Average Precision at an IoU threshold of 0.5) gauges how accurately the model spots components while getting both the class label and the bounding box right. \gls{ap} is computed per class first, and then averaged across every class. Setting the \gls{iou} threshold at 0.5 means a predicted box counts as correct only when its overlap with the ground truth box reaches at least 50\%.
 
 \begin{equation}
 \text{IoU} = \frac{\text{Area of Overlap}}{\text{Area of Union}}
 \label{eq:iou-metric}
 \end{equation}
 
-A high mAP@0.5 means detections are both precise and complete, minimizing missed or misclassified components.
+When mAP@0.5 is high, it signals that detections are landing accurately and that few components are being missed or mislabeled.
 
 \subsection{Text Recognition Metric}
 
-Character Accuracy measures how many characters in the predicted text match the actual characters:
+Character Accuracy tallies how many individual characters in the predicted text line up with the ground truth:
 
 \begin{equation}
 \text{Character Accuracy} = \frac{\text{Number of Correct Characters}}{\text{Total Number of Characters in Ground Truth}}
 \label{eq:character-accuracy}
 \end{equation}
 
-In circuit diagrams, values like $10k$, $100\Omega$, $1\mu F$ are crucial. \gls{ocr} must correctly read these values, since even a small error (e.g., mistaking `k' as `1') leads to incorrect simulation behavior. A high character accuracy ensures value-to-component mapping is reliable.
+Component values on circuit diagrams ($10k$, $100\Omega$, $1\mu F$, and so on) leave zero room for misreads. Even one wrong character, say confusing `k' with `1', throws off the entire simulation. \gls{ocr} has to nail these consistently, because reliable value-to-component mapping hinges on high character accuracy.
 
 \section{System Flowchart}
 
@@ -402,13 +402,13 @@ Every image is rigorously annotated and the annotations provided per image inclu
 \begin{itemize}
     \item \textbf{Bounding Boxes (PASCAL VOC format)} for 61 electrical component classes, including resistors, capacitors, transistors, operational amplifiers, and textual elements.
     
-    \item \textbf{Text Labels} capturing component values and identifiers (e.g., ``$10k\Omega$'', ``$C1$'', ``$V$'').
+    \item \textbf{Text Labels} that indicate component values and identifiers (e.g., ``$10k\Omega$'', ``$C1$'', ``$V$'').
     
     \item \textbf{Instance Segmentation Polygons} (LabelMe JSON format) for pixel-level object outlines.
     
-    \item \textbf{Binary Segmentation Maps} distinguishing foreground circuit strokes from background artifacts.
+    \item \textbf{Binary Segmentation Maps} that differentiate circuit strokes (foreground) from background artifacts.
     
-    \item \textbf{Partial Netlist Files} (in \texttt{.asc} format) for selected samples, useful for validating circuit reconstruction.
+    \item \textbf{Partial Netlist Files} (in \texttt{.asc} format) for some samples; useful for validating circuit reconstruction.
 \end{itemize}
 
 The text annotation coverage is extensive, with labels ranging from single characters (like ``$R$'' or ``$R1$'') to full descriptors (like ``Resistor'', ``Variable Resistor'', etc.).
