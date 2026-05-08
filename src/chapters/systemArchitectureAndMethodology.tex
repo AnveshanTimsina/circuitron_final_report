@@ -150,38 +150,38 @@ Figure \ref{fig:trocr-architecture} \cite{li2021trocr} shows the encoder-decoder
 
 The process begins with the raw input image, denoted as $x_{img} \in \mathbb{R}^{3 \times H_0 \times W_0}$. The transformer architecture is designed to process sequences rather than raw pixel grids, therefore the image is first resized to a standardized dimension $(H, W)$. 
 
-To format this data for the model, the image is decomposed into a series of $N$ fixed-size square patches. Given a patch side length $P$, the total number of patches is derived as:
+To format this data for the model, the image is decomposed into a series of $N$ fixed-size square patches. For $P$ as the patch side length, the total number of patches is given as:
 \[
 N = \frac{HW}{P^2}
 \]
 
-Each patch is flattened into a vector and linearly projected into a $D$-dimensional space, where $D$ represents the hidden dimension maintained throughout the transformer layers.
+Every patch gets flattened into a vector and then linearly projected into a $D$-dimensional space; $D$ here is the hidden dimension that stays constant across all transformer layers.
 
-A \texttt{[CLS]} token is added to the start of the sequence to aggregate global representative information. When using pre-trained DeiT models for initialization, a distillation token is also included to facilitate learning from a teacher model. Since transformers lack the inherent spatial inductive bias found in CNNs, learnable 1D position embeddings are added to the patch embeddings to preserve absolute positional context. By treating the image as a sequence of independent patches, the model can dynamically allocate attention to either localized details or the global structure of the image.
+A \texttt{[CLS]} token is prepended to the sequence so that global information can be pooled into a single representation. If pre-trained DeiT models are used for initialization, a distillation token gets tacked on as well to help the model learn from a teacher. Transformers on their own have no built-in sense of where patches sit spatially (unlike CNNs), so learnable 1D position embeddings are summed into the patch embeddings to retain absolute positional cues. Viewing the image as a sequence of standalone patches lets the model spread its attention across fine-grained details or the broader layout as needed.
 
-The decoder utilizes the standard transformer decoder architecture to generate the final text sequence. While it shares a similar stack of identical layers with the encoder, it introduces an encoder-decoder attention block between the self-attention and the feed-forward networks. In this module, the queries originate from the decoder's internal state, while the keys and values are sourced from the encoder's output. This allows the decoder to selectively focus on relevant visual features during the generation process. 
+The decoder follows the standard transformer decoder blueprint for producing the final text sequence. It mirrors the encoder's stacked-layer design, though an encoder-decoder attention block is wedged in between the self-attention and feed-forward portions. Queries in this block come from the decoder's own internal state, and keys along with values are drawn from the encoder output. That arrangement lets the decoder zero in on whichever visual features matter most at each generation step.
 
-To prevent the model from accessing future tokens during training, a self-attention mask is applied. This ensures that the output for any position $i$ is conditioned only on the preceding tokens. The decoder's hidden states are projected via a linear layer to the vocabulary size $V$. The final probability distribution over the vocabulary is calculated using the softmax function:
+A self-attention mask keeps the model from peeking at future tokens while training. The output at any position $i$ therefore depends solely on the tokens before it. Hidden states from the decoder pass through a linear layer sized to the vocabulary $V$, and the resulting probability distribution over the vocabulary comes from the softmax function:
     \[
     \sigma(h_{ij}) = \frac{e^{h_{ij}}}{\sum_{k=1}^{V} e^{h_{ik}}}
     \]
-During inference, the model typically employs beam search to navigate the probability space and identify the most likely character sequence.
+At inference time, beam search is used to explore the probability space and land on the most probable character sequence.
 
 \subsection{Wire Detection}
 
-Wire detection is performed using junction points detected by the object detection model as structural anchors for circuit connectivity. All detected junctions are first transformed from normalized detection space to pixel coordinates to ensure geometric consistency within the image domain. Pairwise combinations of junction points are then analyzed to identify potential wire candidates.
+Junction points picked up by the object detection model act as structural anchors for figuring out how the circuit is wired. These junctions first get converted from normalized detection coordinates into pixel space for geometric consistency. Every possible pair of junctions is then checked for potential wire connections.
 
-For each junction pair, a displacement vector and its orientation angle are computed. Based on a predefined angular tolerance, only near horizontal and near vertical orientations are retained, while diagonal connections are rejected to conform with standard schematic drawing conventions. Valid pairs are projected onto strict axis-aligned representations to form candidate wire segments.
+A displacement vector and orientation angle are computed for each pair. An angular tolerance filter keeps only the near-horizontal and near-vertical pairs, tossing out diagonal ones to stay in line with typical schematic drawing conventions. The surviving pairs are snapped to strict axis-aligned representations, forming candidate wire segments.
 
-To improve robustness against detection noise, wire endpoints are snapped to a uniform grid and collinear segments are consolidated using proximity and overlap criteria. This produces a compact and topologically consistent set of horizontal and vertical wire segments that represent the underlying circuit wiring.
+To guard against detection noise, wire endpoints get quantized to a uniform grid and collinear segments are merged based on proximity and overlap. What comes out is a tidy, topologically consistent collection of horizontal and vertical wire segments that capture the underlying wiring.
 
 \subsection{Terminal Point Detection}
 
-Terminal point detection focuses on identifying meaningful electrical connection points associated with wires and components. Junction detections from the object detection model serve as primary terminal candidates, representing wire endpoints, intersections, and branching locations.
+The goal here is to locate the electrical connection points where wires meet components. Junction detections from the object detection model serve as the starting candidates. These cover wire endpoints and intersections (between wires as well as between wires and components).
 
-Once the final wire set is established, terminal points are refined by analyzing intersections between axis-aligned wire segments and component bounding boxes. Each intersection corresponds to a valid electrical terminal where a wire connects to a component edge. Intersection conditions are evaluated analytically to ensure precise localization of entry and exit points.
+With the final wire set in hand, terminal points are narrowed down by looking at where axis-aligned wire segments cross into component bounding boxes. Each such crossing marks a valid terminal where a wire touches a component edge, and the intersection conditions are solved analytically so that entry and exit points land precisely.
 
-The resulting terminal points form a complete connectivity interface between wires and components, enabling accurate circuit graph construction and frontend mapping. This structured representation supports subsequent tasks such as netlist generation, interactive visualization, and automated circuit understanding.
+The resulting terminals tie wires and components together into a complete connectivity map, which feeds into circuit graph construction and the frontend display. All components of the project (CircuitJS-compatible text file generation, schematic editing, etc.) build on this representation downstream.
 
 \subsection{Integration Algorithm}
 
@@ -238,15 +238,15 @@ The \gls{json} file built by integrating all the information about the hand-draw
 
 \subsection{Backend Development}
 
-The backend has been constructed using Next.js and FastAPI, functioning as the core middleware responsible for routing, and processing the system's \gls{ml} pipeline and user interactions. All endpoints follow a \gls{rest} \gls{api} design, ensuring stateless and scalable communication between the frontend and the server.
+The backend has been constructed using Next.js and FastAPI, functioning as the core middleware responsible for routing, and processing the system's \gls{ml} pipeline and user interactions. Every endpoint follows a \gls{rest} \gls{api} design so that communication between frontend and server stays stateless.
 
-Upon receiving a hand-drawn circuit image through an \gls{api} endpoint like \texttt{/upload}, the image is saved to a temporary storage location. The server invokes the YOLOv7 model (via a Python subprocess or containerized inference \gls{api}) to detect and localize electrical components. Simultaneously, the \gls{ocr} model is invoked to extract nearby textual annotations. The result is a list of components with bounding boxes and a list of recognized texts, each with confidence scores and coordinates.
+When a hand-drawn circuit image arrives at an \gls{api} endpoint like \texttt{/upload}, it first gets saved to temporary storage. From there, the server kicks off the YOLOv7 model (through a Python subprocess or a containerized inference \gls{api}) to spot and localize electrical components. The \gls{ocr} model runs in parallel to pull out textual annotations nearby. What comes back is a list of detected components with their bounding boxes alongside recognized texts carrying confidence scores and coordinates.
 
-Support for user interaction with the schematic is also handled by the backend. Operations such as component deletion, repositioning, wire addition, and modification of values are processed through specific \gls{api} endpoints. Each update is stored in a temporary database, maintaining a real-time editable circuit representation. 
+The backend also handles user interactions with the schematic. Deleting components, moving them around, adding wires, changing values; all of these go through dedicated \gls{api} endpoints. Each edit gets written to a temporary database that keeps the circuit representation editable in real time.
 
 \subsection{LLM Integration}
 
-To enhance interaction with the circuit beyond \gls{gui} manipulation, a large language model (\gls{llm}), DeepSeek v3.1 to be exact is integrated. This makes the "analysis" part of the project a reality. It is responsible for handling user queries, such as, ``Explain the purpose of this resistor.'', ``Identify possible errors in this circuit.'', etc. The agent receives contextual data from the backend (such as the circuit's \gls{json} structure or CircuitJS file), formats the prompt, and forwards it to the \gls{llm} through a secure \gls{api}.
+A large language model (\gls{llm}), DeepSeek v3.1 specifically, is integrated into the system to push circuit interaction beyond just \gls{gui} manipulation. This is what brings the 'analysis' side of the project to life. Users can ask things like ``Explain the purpose of this resistor.'' or ``Identify possible errors in this circuit.'' and get meaningful responses. The agent pulls contextual data from the backend (the circuit's \gls{json} structure or CircuitJS file, for instance), assembles the prompt, and sends it off to the \gls{llm} over a secure \gls{api}.
 
 \section{Line Detection}
 
