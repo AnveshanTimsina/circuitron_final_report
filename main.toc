@@ -29,8 +29,7 @@
 \contentsline {section}{\numberline {3.2}Feasibility Study}{12}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Technical Feasibility}{12}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Economic Feasibility}{13}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Operational Feasibility}{13}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Time Feasibility}{13}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.3}Time Feasibility}{13}{subsection.3.2.3}%
 \contentsline {chapter}{\numberline {4}SYSTEM ARCHITECTURE AND METHODOLOGY}{14}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Block Diagram}{14}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Preprocessing}{14}{subsection.4.1.1}%
