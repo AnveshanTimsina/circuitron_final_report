@@ -530,52 +530,9 @@ After the adjacency graph is constructed by Multi-Head BFS, crossover nodes must
 \end{algorithmic}
 \end{algorithm}
 
-\section{Frontend and Backend Implementation}
+\section{Web App Implementation and Interaction}
 
-The frontend was built on top of React.js alongside CircuitJS, with auxiliary packages like react-draggable and the KiCad Symbol Library pulled in where needed. On the server side, the circuitron backend exposes a \gls{rest} \gls{api} that oversees the full lifecycle of circuit simulations. Through this \gls{api}, users can submit CircuitJS-compatible text files, have the circuit syntax checked, or kick off simulations under transient, \gls{ac}, or \gls{dc} analysis modes.
-
-Every simulation request receives its own unique identifier. That identifier lets the frontend fire off a job and come back later to check on it, since dedicated status endpoints handle progress tracking asynchronously. Finished simulation data (time-domain voltages, currents, and so on) can be fetched through a separate results endpoint, while administrative tasks like halting a running simulation or wiping old records are covered by their own routes too. The \gls{api} speaks in structured \gls{json} throughout and sticks to standard \gls{http} status codes, which keeps error reporting predictable and makes hooking the frontend up to it straightforward.
-
-% \subsection{API Endpoints}
-
-% The following table summarizes the key endpoints exposed by the backend \gls{api}:
-
-% \begin{table}[H]
-%     \centering
-%     \caption{Endpoints Used in the Web Application}
-%     \label{table:api-endpoints}
-%     \footnotesize
-%     \setlength{\tabcolsep}{4pt}
-%     \begin{tabular}{|p{1.2cm}|p{4cm}|p{4cm}|}
-%         \hline
-%         \textbf{HTTP Method} & \textbf{Endpoint} & \textbf{Functionality} \\
-%         \hline
-%         GET & /api/v1/ & Returns basic API information and available documentation links (health check) \\
-%         \hline
-%         POST & /api/v1/simulation/simulate & Submits a SPICE netlist and initiates a circuit simulation \\
-%         \hline
-%         POST & /api/v1/simulation/validate & Validates the syntax and structure of a SPICE netlist without running simulation \\
-%         \hline
-%         GET & /api/v1/simulation/\{simulation\_id\}/status & Retrieves the current status and progress of a specific simulation \\
-%         \hline
-%         GET & /api/v1/simulation/\{simulation\_id\}/results & Fetches completed simulation results including voltage, current, and time data \\
-%         \hline
-%         POST & /api/v1/simulation/\{simulation\_id\}/stop & Stops a currently running simulation \\
-%         \hline
-%         GET & /api/v1/simulation/ & Lists all simulations with their statuses and creation timestamps \\
-%         \hline
-%         DELETE & /api/v1/simulation/\{simulation\_id\} & Deletes a simulation and its associated results \\
-%         \hline
-%         GET & /api/v1/docs & Provides interactive Swagger UI for API exploration \\
-%         \hline
-%         GET & /api/v1/redoc & Provides ReDoc-based API documentation \\
-%         \hline
-%         GET & /api/v1/openapi.json & Returns OpenAPI specification in JSON format \\
-%         \hline
-%     \end{tabular}
-% \end{table}
-
-\subsection{Frontend-Backend Interaction}
+The frontend was built using React.js and Next.js alongside CircuitJS. To bring all the frontend features to life, such as resizing, moving, rotating, renaming, etc. of the circuit elements with proper integration with the backend, additional packages and libraries like react-draggable and the KiCad Symbol Library were used. The backend of the CIRCUITRON system is a bunch of \gls{rest} \gls{api} endpoints that handle all the functions of the system such as uploading the circuit sketch, edit schematics (using temporary storage for changes), generate schematic, correction of values of components, etc.
 
 \begin{figure}[H]
     \centering
@@ -583,15 +540,11 @@ Every simulation request receives its own unique identifier. That identifier let
     \label{fig:webapp-interaction}
 \end{figure}
 
-All communication between the frontend and the backend occurs over \gls{http}, hitting the documented endpoints. When a user modifies the editable circuit schematic, those inputs get translated into CircuitJS-compatible text files and forwarded to the simulation endpoint. Progress is tracked by having the frontend poll the status endpoint at regular intervals. Once the simulation wraps up, the results are fetched and rendered visually through CircuitJS graphs alongside React-based interactive components.
-
-\section{Circuit Simulation using CircuitJS}
-
-Internally, CircuitJS translates the scanned circuit into a set of matrix-based mathematical equations rather than treating it as a drawing of wires. What it actually constructs is a numerical model of the circuit, essentially a network graph suited for computation. A time-domain simulation loop then solves these equations over successive iterations. Convergence for non-linear components relies on iterative numerical methods. Because CircuitJS is embedded directly in the frontend, users can design their circuits, run animated simulations, and inspect outputs all within the browser, with no extra software to install.
+The endpoints defaults to JSON for communication and uses HTTP status codes for error reporting. The edits stored in temporary storage are made permanent through regular polling between backend and frontend (initiated by frontend). The simulation is handled, primarily, using an open source browser-based electronic circuit simulator named CircuitJS. Internally, CircuitJS mathematically models the circuit in the form of matrices, simplifying computations.
 
 \section{Error Handling}
 
-The overall error in this project is a summation of errors from the number of individual modules working together. These individual errors propagate from one module to another and accumulate. To handle errors in such a case, foremost the errors in the output of the individual modules need to be controlled and only then can the accumulated error be kept in check. The performance metrics tabulated in the previous section are to be strictly adhered to if there's any hope of generating the CircuitJS compatible text file (and digital schematic) with nominal errors.
+TTo handle errors in this project, foremost the errors in the output of the individual modules need to be controlled and only then can the accumulated error be kept in check. The performance metrics tabulated in the previous section are to be strictly adhered to if there's any hope of generating the CircuitJS compatible text file (and digital schematic) with nominal errors.
 
 For the reduction of false matches and \gls{ocr} noise, post-processing techniques such as value format validation, confidence filtering, and text cleanup can be implemented. Value format validation ensures only strings that match known (and appropriate) electrical units, say $10k$, $1\mu F$, $5V$ are retained. Confidence filtering helps discard \gls{ocr} results with low confidence scores, and text cleanup normalizes ambiguous symbols such as converting ``O'' to ``0'', ``$\mu$'' to ``u''.
 
