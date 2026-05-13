@@ -237,9 +237,7 @@ The TrOCR model is integrated into the pipeline through a singleton service that
 
 \subsection{Line Detection Algorithm Implementation}
 
-Circuit diagrams carry an inherent geometric regularity: wires tend to run either horizontally or vertically, and each wire bridges two distinct components. The line detection algorithm leans on that regularity. Where the Probabilistic Hough Transform (\gls{pht}) works solely off pixel gradients, this method instead takes the junction points that YOLOv7 has already picked up and treats them as anchor nodes for rebuilding the wiring layout through geometry.
-
-Every unique pair of junctions coming out of the object detection model gets examined. For each pair, the angle of the connecting vector is calculated. Hand-drawn circuits are rarely pristine, so an angular tolerance of $\pm 18^\circ$ was baked in to sort connections into horizontal or vertical buckets. Segment coordinates were then ``snapped'' onto a 16-pixel grid to keep the whole diagram geometrically consistent.
+Any sort of line detection algorithm in service of detecting wires in a circuit diagram exploit the regularity inherent to standard circuit diagrams. This junction-based method takes the junction points that YOLOv7 has already picked up and treats them as anchor nodes for rebuilding the wiring layout through geometry.
 
 \begin{algorithm}
 \caption{Wire Classification and Alignment}
@@ -268,9 +266,9 @@ Every unique pair of junctions coming out of the object detection model gets exa
 \end{algorithmic}
 \end{algorithm}
 
-Pairwise comparison has a predictable side effect: redundant overlapping segments pile up for the same wire. Three junctions sitting on one line, for example, yield three separate segments (A-B, B-C, and A-C) when really only one continuous wire exists. A collinear segment merging step was added to clean this up.
+Pairwise comparison has a predictable side effect: redundant overlapping segments pile up for the same wire. Multiple separate segments are seen for multiple junctions if they are sitting on the same line, but in reality, there exists only one continuous wire. To address this, collinear segment merging is needed.
 
-Segments are first split by orientation (horizontal versus vertical) and sorted along their primary axis. Overlapping or neighboring segments then get folded together. During each merge, the axis coordinate of whichever segment is longer takes priority, since a longer stroke is a more trustworthy indicator of where the wire actually runs.
+After classifying the segments as horizontal or vertical, the overlapping or neighboring line segments get merged together. During each merge, the axis coordinate of whichever segment is longer takes priority, since a longer stroke is a more trustworthy indicator of where the wire actually runs.
 
 \begin{algorithm}
 \caption{Collinear Segment Merging}
@@ -332,7 +330,7 @@ The wire–component intersection detection algorithm pinpoints where detected w
 
 The algorithm behind the path-finding line detection pipeline first splits the work into a handful of stages. First, a spatial map of node regions is assembled. Multi-head BFS traversal then crawls through skeleton pixels to uncover which nodes connect to which. Spurious self-edges get pruned in a final cleanup pass.
 
-Building a node identification map kicks off the whole process. The map gives constant-time answers to a simple question: does this pixel sit inside a node region? A circular disk of radius $r$ is stamped around every detected endpoint, and each pixel under that disk is tagged with the owning node's index. Algorithm~\ref{alg:node_id_map} lays out the formal construction.
+Building a node identification map kicks off the whole process. This map contains information regarding if a particular pixel falls inside a node (node's circuilar disk region) or not. Algorithm~\ref{alg:node_id_map} details the construction of this node id map.
 
 \begin{algorithm}[H]
 \caption{Build Node ID Map}
@@ -492,7 +490,7 @@ In the real world, this approach can be considered efficient because it scales w
 
 \subsection{Crossover Dissolution}
 
-After the adjacency graph is constructed by Multi-Head BFS, crossover nodes must be resolved into their true topology. A crossover represents two wires crossing without connecting, and is initially represented as a single graph node with four neighbors. After identifying these nodes, the dissolution algorithm replaces every node with two direct connections. This removes the crossover from the electrical topology.
+After the adjacency graph is constructed by Multi-Head BFS, crossover nodes must be resolved into their true topology. A crossover represents two wires crossing without connecting, and is initially represented as a single graph node with four neighbors. These crossover nodes are replaced by two direct connections, as described by Algorithm~\ref{algo:crossover-dissolution}.
 
 \begin{algorithm}[H]
 \caption{Crossover Dissolution Algorithm}
@@ -531,8 +529,6 @@ After the adjacency graph is constructed by Multi-Head BFS, crossover nodes must
 \State \Return $\mathcal{G}$
 \end{algorithmic}
 \end{algorithm}
-
-All three ways of pairing the four neighbors are tried. Whichever pairing yields the smallest summed dot product wins, because that is the arrangement where paired neighbors point most nearly in opposite directions. A dot-product cutoff of $-0.7$ (roughly $45^\circ$ away from perfect opposition) acts as a sanity check on whether the geometry genuinely looks like two wires crossing. Any crossover node that falls short of this bar, whether it has fewer than four neighbors or its geometry is too skewed, simply stays in the graph as an ordinary junction.
 
 \section{Frontend and Backend Implementation}
 
