@@ -167,48 +167,48 @@ Final epoch results show \gls{yolo}v7 outperformed \gls{yolo}v5 across all major
     \end{tabular}
 \end{table}
 
-Overall, \gls{yolo}v7 showed a clear advantage over \gls{yolo}v5 in our experiments. It showed faster convergence and higher values for precision, recall, mAP@0.5, and mAP@0.5:0.95. It also required fewer epochs for convergence. Additionally, \gls{yolo}v7's confusion matrix also showed better class separation with fewer misclassifications. These improvements make \gls{yolo}v7 a more robust choice for this project's object detection needs.
+Overall, \gls{yolo}v7 showed a clear advantage over \gls{yolo}v5 in our experiments which is why it was picked for component detection in this project.
 
 \section{Class Taxonomy Consolidation}
 
-The fine-grained component subclasses like capacitor.polarized and capacitor.unpolarized looked nearly indistinguishable to the detector, which bred persistent inter-class confusion in case of 61-class approach. Merging visually overlapping subclasses brought the taxonomy down to 15 classes. Four \gls{yolo} architectures (YOLOv7, YOLOv8, YOLOv11, YOLOv26) were then trained and benchmarked on this consolidated dataset, and their numbers are contrasted here against the earlier 61-class results.
+The CGHD dataset, in its original form, with 61 classes, had classes which looked similar, such as capacitor.polarized and capacitor.unpolarized for instance, and hence were nearly indistinguishable to the component detection model causing frequent inter-class confusion. To prevent this, visually simular classes were merged under the same descriptor, bringing the number of classes down to 15. This consolidated dataset was used to train four \gls{yolo} architectures (YOLOv7, YOLOv8, YOLOv11, YOLOv26) and their results (based on the same performance metrics) were compared with the results amongst themselves as well as with the results from the 61-class dataset.
 
-For the sake of a fair comparison, every model was trained and evaluated on the 15-class dataset under identical conditions. The data splits stayed the same across all four architectures, with a confidence threshold fixed at 0.25 and an \gls{iou} threshold of 0.45 during evaluation.
+To keep this comparison fair, the conditions for training on this consolidated dataset (in case of these four YOLO architectures) were kept identical with identical data splits, and confidence and IoU thresholds of 0.25 and 0.45 respectively during evaluation.
 
 \subsection{Training and Validation Loss: 15-Class Models}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{src/images/figures/yolo_15class_train_loss.png}
-    \caption{Training loss comparison across four YOLO architectures}
+    \caption{Comparison of training loss (four YOLO architectures)}
     \label{fig:15class-train-loss}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{src/images/figures/yolo_15class_val_loss.png}
-    \caption{Validation loss comparison across four \gls{yolo} architectures}
+    \caption{Comparison of validation loss (four YOLO architectures)}
     \label{fig:15class-val-loss}
 \end{figure}
 
-\cref{fig:15class-train-loss} and \cref{fig:15class-val-loss} lay out the training and validation losses (box, classification, DFL) for all four models. YOLOv7 (retrained) and YOLOv11 drove their training losses down noticeably faster than the other two, which points to stronger representational capacity. On the validation side, those same two architectures settled at the lowest final loss values, suggesting they generalize more reliably and resist overfitting on this particular dataset.
+\cref{fig:15class-train-loss} and \cref{fig:15class-val-loss} show the training and validation loss for all four models. The training and validation loss for YOLOv7 (retrained) and YOLOv11 declined sharply and reached the lowest value among the four architectures.
 
 \subsection{Performance Metrics: 15-Class Models}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{src/images/figures/yolo_15class_training_curves.png}
-    \caption{Performance metrics vs. epochs for four \gls{yolo} architectures on the 15-class dataset}
+    \caption{Performance metrics vs epochs on the consolidated dataset}
     \label{fig:15class-training-curves}
 \end{figure}
 
-\cref{fig:15class-training-curves} plots all four performance metrics over 100 training epochs for each architecture. YOLOv7 (retrained) and YOLOv11 climb quickly, hitting near-peak values around epoch 40 to 50 and holding steady from there. YOLOv8 and YOLOv26 converge at a considerably slower pace, plateauing well below the other two, especially in recall and \gls{map}@0.5:0.95.
+\cref{fig:15class-training-curves} plots precision, recall, mAP@0.5, and mAP@0.5:0.95 for 100 epochs for all four YOLO architectures. YOLOv7 (retrained) and YOLOv11 plateau at around epoch 40 to 50 reaching their near-maximum values  for each performance metric, all of which are consistently higher than the other two YOLO architectures. 
 
 \subsection{Quantitative Results Comparison for 15-Class Dataset}
 
 \begin{table}[H]
     \centering
-    \caption{Performance comparison of four \gls{yolo} architectures on the 15-class dataset (final epoch)}
+    \caption{Final epoch performance comparison of four \gls{yolo} architectures on the consolidated dataset}
     \label{table:yolo-15class-comparison}
     \begin{tabular}{lrrrr}
         \toprule
@@ -230,13 +230,13 @@ For the sake of a fair comparison, every model was trained and evaluated on the 
     \label{fig:15class-final-bar}
 \end{figure}
 
-\cref{table:yolo-15class-comparison} collects the final-epoch numbers for all four architectures on the 15-class dataset; \cref{fig:15class-final-bar} renders the same data as a grouped bar chart. YOLOv7 (retrained) tops every metric, with YOLOv11 trailing close behind. Both of these models clear the 95\% mark in \gls{map}@0.5, which speaks to their strong detection capability on the merged class set. YOLOv8 and YOLOv26 fall roughly 10 points short in \gls{map}@0.5 and about 13 points short in \gls{map}@0.5:0.95, which makes them a weaker fit for this project's requirements.
+\cref{table:yolo-15class-comparison} displays the values of performance metrics at the final epoch for all four YOLO architectures. \cref{fig:15class-final-bar} displays the same data in a bar chart. YOLOv7 (retrained) is clearly the best models based on all the mentioned metrics, with YOLOv11 following closely. The target value of mAP@0.5 (0.95) is achieved by both of them.
 
 \subsection{Impact of Class Taxonomy Consolidation}
 
 \begin{table}[H]
     \centering
-    \caption{Impact of class taxonomy consolidation on YOLOv7 performance}
+    \caption{Effect of class consolidation on YOLOv7 performance}
     \label{table:class-impact}
     \begin{tabular}{lrrr}
         \toprule
@@ -253,17 +253,17 @@ For the sake of a fair comparison, every model was trained and evaluated on the 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\textwidth]{src/images/figures/yolo_class_impact.png}
-    \caption{Effect of class taxonomy consolidation on YOLOv7: 61-class vs. 15-class performance}
+    \caption{Effect of class consolidation on YOLOv7 performance}
     \label{fig:class-impact}
 \end{figure}
 
-To put a number on what the taxonomy reduction actually bought, YOLOv7 was compared under both the 61-class and 15-class setups. \cref{fig:class-impact} and \cref{table:class-impact} capture these results. The gains were sizable: precision rose by 4.8\%, recall jumped 19.9\%, \gls{map}@0.5 climbed 15.2\%, and \gls{map}@0.5:0.95 saw the steepest lift at 21.1\%. Taken together, these figures confirm that the original fine-grained taxonomy was injecting avoidable inter-class confusion, dragging detection quality down.
+\cref{fig:class-impact} and \cref{table:class-impact} show the improvement in performance metrics for YOLOv7 due to consolidation of classes from 61 to 15. This shows that the consolidation, although decreased the nuances in different components, ultimately improved the detection performance.
 
 \section{Holistic Object Detection Comparison}
 
 \begin{table}[H]
     \centering
-    \caption{Unified comparison of all object detection configurations}
+    \caption{Comparison of performance of all object detection models}
     \label{table:yolo-full-comparison}
     \begin{tabular}{llrrrr}
         \toprule
@@ -282,22 +282,11 @@ To put a number on what the taxonomy reduction actually bought, YOLOv7 was compa
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{src/images/figures/yolo_full_comparison_bar.png}
-    \caption{Grouped bar chart comparing all six detection configurations across Precision, Recall, \gls{map}@0.5, and \gls{map}@0.5:0.95}
+    \caption{Comparison of performance of all object detection models}
     \label{fig:yolo-full-bar}
 \end{figure}
 
-All six detection configurations evaluated over the course of this project are brought together in this section, covering two class taxonomies and five architectures. \cref{table:yolo-full-comparison} and \cref{fig:yolo-full-bar} aggregate these results side by side.
-
-\subsection{Object Detection Performance Evolution}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{src/images/figures/yolo_evolution_timeline.png}
-    \caption{Performance evolution of object detection across all configurations showing \gls{map}@0.5 and \gls{map}@0.5:0.95}
-    \label{fig:yolo-evolution}
-\end{figure}
-
-\cref{fig:yolo-evolution} maps how detection performance shifted over the project timeline. Improvement came in two waves: first, upgrading from YOLOv5 to YOLOv7 while still on the 61-class taxonomy, and second, shrinking the taxonomy to 15 classes and pitting several architectures against one another. The retrained YOLOv7 on 15 classes sits at the top, with \gls{map}@0.5 climbing from 0.61 (YOLOv5, 61-class) to 0.9562, amounting to a cumulative 56.8\% gain.
+\cref{table:yolo-full-comparison} and \cref{fig:yolo-full-bar} respectively tabulate and display the results based on all selected performance metrics for all architectures and class taxonomies.
 
 \subsection{Radar Visualization of Top Models}
 
@@ -462,7 +451,7 @@ Two randomly picked images from the dataset are shown below after passing throug
     \label{fig:trocr-result-2}
 \end{figure}
 
-\cref{fig:custom-ocr-result-1} and \cref{fig:custom-ocr-result-2} show the results of the custom OCR model on two random test images. The model successfully detects text regions and extracts component values, albeit with many errors. In contrast, \cref{fig:trocr-result-1} and \cref{fig:trocr-result-2} demonstrate the superiority in performance of the fine-tuned TrOCR model, which correctly recognizes more component values.
+\cref{fig:custom-ocr-result-1} and \cref{fig:custom-ocr-result-2} show the results of the custom OCR model on two random test images. The model successfully detects text regions and extracts component values, albeit with many errors. \cref{fig:trocr-result-1} and \cref{fig:trocr-result-2} show the results of the fine-tuned TrOCR model which clearly shows better performance recognizing more component values accurately.
 
 \section{Junction-Based Wire Detection}
 
