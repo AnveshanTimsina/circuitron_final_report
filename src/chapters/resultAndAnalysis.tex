@@ -462,9 +462,7 @@ Two randomly picked images from the dataset are shown below after passing throug
     \label{fig:otsu-thresholding}
 \end{figure}
 
-What follows are the experimental outcomes from running the junction-based wire detection pipeline on circuit diagram images. A high-resolution scanned diagram serves as input, with its pixel dimensions (width and height) recorded upfront so that spatial scale stays consistent across subsequent stages. The raw image is first converted to grayscale to sharpen structural features and tamp down background noise. Otsu's global thresholding then kicks in, computing an optimal cutoff that cleanly separates foreground circuit elements from everything behind them. As \cref{fig:otsu-thresholding} illustrates, the resulting binary image retains wires and junctions while discarding illumination artifacts.
-
-From the binary image, morphological skeletonization thins every line down to a single pixel in width, preserving connectivity throughout. This simplification makes it far easier to trace wire paths and locate junctions. Bounding boxes from the YOLOv7 object detection stage are then superimposed on the skeleton to pinpoint where wires cross component boundaries. Each detected endpoint gets marked on the skeleton, and its spatial coordinates are logged for the stages that follow.
+In the junction-based wire detection pipeline, the uploaded image is first binarized using Otsu's Thresholding as shown in \cref{fig:otsu-thresholding}. This binarized image is skeletonized i.e., the width of every line is thinned down to a single pixel and the component bounding boxes are superimposed into this skeletonized circuit as shown in \cref{fig:bbox-overlay}.
 
 \begin{figure}[H]
     \centering
@@ -473,22 +471,18 @@ From the binary image, morphological skeletonization thins every line down to a 
     \label{fig:bbox-overlay}
 \end{figure}
 
-\cref{fig:bbox-overlay} shows the skeleton with its bounding box overlay. Where wires cross the edges of component bounding boxes, intersection points are calculated to establish electrical connectivity. The total count of such intersections is reported alongside a directional split between horizontal and vertical wire crossings at specific component edges. These crossing points underpin the reconstruction of circuit connectivity graphs and the generation of CircuitJS-compatible text files.
-
-That said, this junction-based approach carries a serious limitation that the diagonal lines break it. The bounding box intersection logic assumes wires will meet component boundaries along strictly horizontal or vertical axes. When a wire runs at an angle, it may miss the box edges entirely or hit them unpredictably, which leaves connections undetected and the resulting graph incomplete. Because of this weakness, the method was set aside in favor of a path-finding approach capable of handling wires at arbitrary orientations.
-
-\section{Line Detection via Path Finding Visualization}
+\section{Visualization of Line Detection via Path Finding}
 
 \subsection{Skeletonized Image with Detected Endpoints}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{src/images/figures/skeleton_with_endpoints.png}
-    \caption{Skeletonized image with detected endpoints}
+    \caption{Skeletonized Image with Detected Endpoints}
     \label{fig:skeleton_endpoints}
 \end{figure}
 
-\cref{fig:skeleton_endpoints} overlays every detected endpoint on the skeletonized image. The skeleton itself is the one-pixel-wide remnant of the circuit lines after morphological processing. Blue dots mark the endpoints, which were located through bounding box edge intersections for line segments and center-snapping for junctions. Blue rectangles correspond to the original YOLO bounding boxes that guided endpoint localization. The visualization verifies that the detection algorithm is reliably picking up connection points along object boundaries.
+Line detection via path finding also requires skeletonization. \cref{fig:skeleton_endpoints} shows the overlay of the bounding boxes in the skeletonized circuit. The blue rectangles signify the bounding boxes as given by the YOLO model, and the blue dots signify the endpoints (used as nodes for BFS).
 
 \subsection{Adjacency Graph Visualization}
 
@@ -499,18 +493,18 @@ That said, this junction-based approach carries a serious limitation that the di
     \label{fig:adjacency_graph}
 \end{figure}
 
-\cref{fig:adjacency_graph} shows the adjacency graph that the Multi-Head BFS algorithm produced. Every node maps to one of the endpoints detected in the prior stage, and the blue lines between nodes are graph edges that reflect skeleton-level connectivity. Self-edges, which would falsely link two endpoints belonging to the same detected object, have been pruned away so that only genuine inter-component connections survive. The resulting graph feeds directly into circuit topology analysis and netlist extraction further downstream.
+\cref{fig:adjacency_graph} shows the adjacency graph produced by the Multi-Head BFS algorithm with blue lines representing the edges between the red nodes (the self edges have been pruned). The empty spaces between some nodes are where the circuit components were situated in the sketch and will later be added in the digital schematic.
 
 \section{Combined Overlay of YOLOv7, TrOCR, and Line Detection Results}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{src/images/figures/combined_overlay.png}
-    \caption{Combined overlay of YOLOv7, TrOCR, and line detection results}
+    \caption{Combined Results of YOLOv7, TrOCR, and Line Detection}
     \label{fig:combined_overlay}
 \end{figure}
 
-\cref{fig:combined_overlay} layers the outputs of object detection (YOLOv7), text recognition (TrOCR), and line detection (adjacency graph) onto a single image. The original circuit diagram sits in the background. Green rectangles are the YOLOv7 bounding boxes, blue annotations are the component values pulled out by TrOCR, and red lines trace the detected wiring between components. Seeing all of these stacked together confirms that the pipeline correctly locates components, reads off their values, and rebuilds the wiring layout.
+\cref{fig:combined_overlay} shows the combined effect of the result from component detection (green bounding boxes), text recognition (blue rectangles with text annotations), and line detection (red wire tracings) overlaid in a Whetstone bridge circuit. 
 
 \section{Frontend Visualization}
 
@@ -528,11 +522,7 @@ That said, this junction-based approach carries a serious limitation that the di
     \label{fig:frontend-screenshot}
 \end{figure}
 
-Figure \ref{fig:digital-circuit-editor} shows an editable, digital circuit auto-generated by the system. This is the output before any manual intervention. Figure \ref{fig:frontend-screenshot} shows the fullscreen capture of the frontend with a sample circuit as well as the Q\&A section using DeepSeek v3.1. 
-
-Circuitron's frontend gives users an interactive workspace for designing and simulating circuits. The schematic editor supports drag-and-drop placement on a snappable grid with live wire routing. Passive elements, active devices, and sources each expose a properties panel where electrical parameters and positioning can be tuned with precision.
-
-Transient analysis controls are built in. Users set their time parameters, fire off a simulation, and watch the results appear as dynamically rendered voltage-time plots. Measurement probes let users monitor signals in real time while the system automatically computes peak-to-peak swing and \gls{rms} values alongside maxima and minima. Simulation data and plots can also be exported in standard formats for offline review or inclusion in documentation. 
+Figure \ref{fig:digital-circuit-editor} shows the digitized version of the hand-drawn circuit fed into the system. This is just the automatically generated schematic before any manual intervention. Figure \ref{fig:frontend-screenshot} shows the full-screen capture of the frontend of the system with a circuit diagram, options to modify this diagram in the menu bar, simulation setting towards the right, and also the LLM-powered Q&A feature. Measurement probes let users monitor signals in real time while the system automatically computes peak-to-peak swing and \gls{rms} values alongside maxima and minima. Simulation data and plots can also be exported in standard formats for offline review or inclusion in documentation. 
 
 
 
