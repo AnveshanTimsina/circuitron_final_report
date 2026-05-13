@@ -224,36 +224,32 @@ The \gls{json} file built by integrating all the information about the hand-draw
 
 \subsection{Backend Development}
 
-The backend has been constructed using Next.js and FastAPI, functioning as the core middleware responsible for routing, and processing the system's \gls{ml} pipeline and user interactions. Every endpoint follows a \gls{rest} \gls{api} design so that communication between frontend and server stays stateless.
+The backend has been constructed using Next.js and FastAPI, functioning as the core middleware responsible for routing, and processing the system's \gls{ml} pipeline and user interactions. All the endpoints are based on REST API which ensures the frontend and backend can communicate statelessly.
 
-When a hand-drawn circuit image arrives at an \gls{api} endpoint like \texttt{/upload}, it first gets saved to temporary storage. From there, the server kicks off the YOLOv7 model (through a Python subprocess or a containerized inference \gls{api}) to spot and localize electrical components. The \gls{ocr} model runs in parallel to pull out textual annotations nearby. What comes back is a list of detected components with their bounding boxes alongside recognized texts carrying confidence scores and coordinates.
-
-The backend also handles user interactions with the schematic. Deleting components, moving them around, adding wires, changing values; all of these go through dedicated \gls{api} endpoints. Each edit gets written to a temporary database that keeps the circuit representation editable in real time.
+When the user uploads a circuit image through the UI, it reaches the upload endpoint (say /upload) which first saves it to temporary storage (may be local storage of browser). From there, a chain of processes which are involved in the project pipeline are executed. The preprocessing steps, for both component detection and text recognition are first executed, and then, in a sequential fashion, the models as well. The tasks like deleting components, adding wires, changing values, resizing, rotating components, etc. are handled by CircuitJS and the role of backend in this case is just to be the facilitator for this, for communication and temporary storage.
 
 \subsection{LLM Integration}
 
-A large language model (\gls{llm}), DeepSeek v3.1 specifically, is integrated into the system to push circuit interaction beyond just \gls{gui} manipulation. This is what brings the 'analysis' side of the project to life. Users can ask things like ``Explain the purpose of this resistor.'' or ``Identify possible errors in this circuit.'' and get meaningful responses. The agent pulls contextual data from the backend (the circuit's \gls{json} structure or CircuitJS file, for instance), assembles the prompt, and sends it off to the \gls{llm} over a secure \gls{api}.
+Using the publicly available Deepseek v3.1 API, the project is elevated from simple circuit manipulation tool to one capable of auto-analysis. The LLM has context about the uploaded image as well as the associated netlist or CircuitJS text file using which it can produce accurate responses to user's queries (prompts) related to their circuit. It can expain the reason for placement of a particular circuit component or why a particular value has been used, and much more.
 
 \section{Line Detection}
 
-Two separate approaches to line (wire) detection were built and tested during this project. One relies on junction-point geometry paired with horizontal and vertical classification. The other traces paths on a skeletonized image using Multi-Head BFS. The results chapter puts both side by side; the BFS-based path-finding approach ended up being adopted for the final frontend system because it proved more accurate and held up better across varied inputs.
+To address the limitations of the junction-based wire detection algorithm which used only horizontal and vertical classification, Multi-Head BFS-based wire detection and generation algorithm was built. However, both approaches were extensively used and tested, and hence both have been explained in upcoming sections. 
 
 \subsection{Line Detection via Horizontal and Vertical Classification}
 
-Wire detection under this approach starts from junction points that YOLOv7 has already identified. YOLO's detection coordinates sit in the unit square $[0,1]^2$, so they first need to be denormalized into pixel space through the affine map $\mathcal{N}^{-1}(x_n, y_n) = (W \cdot x_n,\; H \cdot y_n)$. From there, every detected junction point is paired up with every other one. For a given pair $(\mathbf{j}_i, \mathbf{j}_k)$, the displacement vector $\mathbf{d} = \mathbf{j}_k - \mathbf{j}_i$ gets computed and the angular orientation $\tilde{\theta}$ is extracted using the four-quadrant arctangent.
+For this approach, the junction points detected by the component detection model (YOLOv7 at the end, but also other YOLO models during testing) are needed first. The coordinates given by YOLO falls under the range $[0,1]^2$, so they need to be denormalized into pixel space using $\mathcal{N}^{-1}(x_n, y_n) = (W \cdot x_n,\; H \cdot y_n)$. Then, junction pairs are formed for processing. Every junction is paired up with every other junction. For a given pair $(\mathbf{j}_i, \mathbf{j}_k)$, the displacement between them and angular orientation is needed. For this, we calculate the displacement vector using $\mathbf{d} = \mathbf{j}_k - \mathbf{j}_i$ and the angular orientation $\tilde{\theta}$ using arctangent.
 
-Junction pairs are classified using an $18^\circ$ tolerance zone:
+Using $\tilde{\theta}$, the junction pairs are classified with $18^\circ$ tolerance.
 \begin{itemize}
     \item \textbf{Horizontal:} $\tilde{\theta} \in [0^\circ, 18^\circ] \cup [162^\circ, 198^\circ] \cup [342^\circ, 360^\circ]$
     \item \textbf{Vertical:} $\tilde{\theta} \in [72^\circ, 108^\circ] \cup [252^\circ, 288^\circ]$
-    \item \textbf{Diagonal (rejected):} all remaining angles (60\% of angular space)
+    \item \textbf{Diagonal (rejected):} remaining angles
 \end{itemize}
 
-Pairs that survive the filter are projected onto perfectly horizontal or vertical lines by averaging the relevant coordinate, then snapped to a 16-pixel grid. A merge algorithm consolidates overlapping collinear segments when they share the same orientation and fall within the grid tolerance.
+Those pairs which are not rejected (i.e those with diagonal lines assumed between them) are projected onto perfectly horizontal or vertical lines. This is done since hand-drawn wire lines may be slightly jagged or imperfect in other ways. These lines are then snapped to a 16-pixel grid by consolidating overlapping segments which can be considered collinear (provided that they have the same angular orientation and fall within the grid tolerance). To determine where wires are actually connected to the components, intersection of each bounding box and any horizontal or vertical wire it touches is calculated.
 
-To figure out where wires physically connect to components, the algorithm computes intersections between each detected wire segment and the component bounding boxes. Intersection conditions get checked at the pertinent box edges (left and right for horizontal wires, top and bottom for vertical ones), and each wire-box pair can yield up to two intersection points.
-
-Pairwise complexity sits at $O(n^2)$, which gets unwieldy as junction count grows. Because only axis-aligned pairs pass the filter, a full 60\% of angular space is thrown away, so angled or curved hand-drawn wires simply cannot be captured. Grid quantization alone introduces up to 11.3 pixels of positional drift. In dense regions, the merging heuristic sometimes fuses segments that belong to completely different wires. The deepest flaw, though, is that connections are guessed purely from where junctions happen to sit, with zero awareness of the actual wire paths in the image. Unrelated junctions that happen to be axis-aligned end up linked by phantom wires. Terminal detection inherits all of these problems since it depends on the wire segments being correct in the first place.
+In this approach, the wire connections are simply guessed based on the junction points, without taking into account the actual wire paths in the circuit. Those junction pairs which are completely unrelated but are axis-aligned may end up being connected. All issues in this step are inherited by terminal detection step as well, eventually leading to completely inaccurate results.
 
 \subsection{Line Detection via Path Finding}
 \label{sec:line-detection-pathfinding}
