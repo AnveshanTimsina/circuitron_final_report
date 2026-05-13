@@ -805,16 +805,16 @@ INPUT ./src/images/figures/yolov7_architecture.png
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/vf/public/newtx/ntxmi.vf
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/newtx/NewTXMI.tfm
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/newtx/stxscr.tfm
+INPUT ./src/images/figures/easyocr_architecture.png
+INPUT ./src/images/figures/easyocr_architecture.png
+INPUT ./src/images/figures/easyocr_architecture.png
+INPUT ./src/images/figures/easyocr_architecture.png
+INPUT ./src/images/figures/easyocr_architecture.png
+INPUT ./src/images/figures/easyocr_architecture.png
+INPUT ./src/images/figures/easyocr_architecture.png
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/vf/public/newtx/ntxmi7.vf
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/newtx/NewTXMI7.tfm
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/newtx/stxscr.tfm
-INPUT ./src/images/figures/easyocr_architecture.png
-INPUT ./src/images/figures/easyocr_architecture.png
-INPUT ./src/images/figures/easyocr_architecture.png
-INPUT ./src/images/figures/easyocr_architecture.png
-INPUT ./src/images/figures/easyocr_architecture.png
-INPUT ./src/images/figures/easyocr_architecture.png
-INPUT ./src/images/figures/easyocr_architecture.png
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/ptmr8t.vf
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/vf/public/newtx/ntxsy7.vf
@@ -823,24 +823,24 @@ INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/f
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/vf/public/newtx/ntx-Regular-tlf-ot1.vf
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/newtx/txmiaX.tfm
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1r.tfm
-INPUT ./src/images/figures/trocr.png
-INPUT ./src/images/figures/trocr.png
-INPUT ./src/images/figures/trocr.png
-INPUT ./src/images/figures/trocr.png
-INPUT ./src/images/figures/trocr.png
-INPUT ./src/images/figures/trocr.png
-INPUT ./src/images/figures/trocr.png
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/vf/public/newtx/ntxexx.vf
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/newtx/txexs.tfm
+INPUT ./src/images/figures/trocr.png
+INPUT ./src/images/figures/trocr.png
+INPUT ./src/images/figures/trocr.png
+INPUT ./src/images/figures/trocr.png
+INPUT ./src/images/figures/trocr.png
+INPUT ./src/images/figures/trocr.png
+INPUT ./src/images/figures/trocr.png
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/vf/public/newtx/ntxmia.vf
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/newtx/txmiaSTbb.tfm
+INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/vf/public/newtx/ntx-Regular-tlf-ot1.vf
+INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/newtx/txmiaX.tfm
+INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1r.tfm
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/t1pcr.fd
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/t1pcr.fd
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/t1pcr.fd
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/courier/pcrr8t.tfm
-INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/vf/public/newtx/ntx-Regular-tlf-ot1.vf
-INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/newtx/txmiaX.tfm
-INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1r.tfm
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/courier/pcrr8t.vf
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT /Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/newtx/ntx-Bold-tlf-ot1.tfm

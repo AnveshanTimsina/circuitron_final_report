@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2026.1.17)  12 MAY 2026 13:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2026.1.17)  13 MAY 2026 11:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1958,25 +1958,25 @@ Package pdftex.def Info: src/images/figures/yolov7_architecture.png  used on inp
 
 
 [16 <./src/images/figures/yolov7_architecture.png>]
-
-[17]
-<src/images/figures/easyocr_architecture.png, id=482, 1221.81468pt x 560.8453pt>
+<src/images/figures/easyocr_architecture.png, id=472, 1221.81468pt x 560.8453pt>
 File: src/images/figures/easyocr_architecture.png Graphic file (type png)
 <use src/images/figures/easyocr_architecture.png>
-Package pdftex.def Info: src/images/figures/easyocr_architecture.png  used on input line 101.
+Package pdftex.def Info: src/images/figures/easyocr_architecture.png  used on input line 93.
 (pdftex.def)             Requested size: 416.83289pt x 191.33527pt.
 
 
+[17]
+
 [18 <./src/images/figures/easyocr_architecture.png>]
-<src/images/figures/trocr.png, id=493, 2987.16pt x 1445.4pt>
+<src/images/figures/trocr.png, id=495, 2987.16pt x 1445.4pt>
 File: src/images/figures/trocr.png Graphic file (type png)
 <use src/images/figures/trocr.png>
-Package pdftex.def Info: src/images/figures/trocr.png  used on input line 144.
+Package pdftex.def Info: src/images/figures/trocr.png  used on input line 136.
 (pdftex.def)             Requested size: 416.83289pt x 201.69296pt.
 
 
 [19 <./src/images/figures/trocr.png>]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 160.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 152.
  (/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
@@ -1989,49 +1989,47 @@ Package microtype Info: Loading generic protrusion settings for font family
 [20]
 
 [21]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 221.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 207.
 
 
 [22]
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 12.0pt on input line 241.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 8.8pt on input line 241.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 6.6pt on input line 241.
+
 
 [23]
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 12.0pt on input line 257.
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 8.8pt on input line 257.
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 6.6pt on input line 257.
-
 
 [24]
 
 [25]
-<src/images/figures/use_case_diagram.png, id=553, 1126.2075pt x 779.91376pt>
+<src/images/figures/use_case_diagram.png, id=554, 1126.2075pt x 779.91376pt>
 File: src/images/figures/use_case_diagram.png Graphic file (type png)
 <use src/images/figures/use_case_diagram.png>
-Package pdftex.def Info: src/images/figures/use_case_diagram.png  used on input line 310.
+Package pdftex.def Info: src/images/figures/use_case_diagram.png  used on input line 286.
 (pdftex.def)             Requested size: 416.83289pt x 288.65878pt.
 
 
-[26]
-
-[27 <./src/images/figures/use_case_diagram.png>]
-<src/images/figures/flowchart.png, id=566, 440.64626pt x 795.97375pt>
+[26 <./src/images/figures/use_case_diagram.png>]
+<src/images/figures/flowchart.png, id=561, 440.64626pt x 795.97375pt>
 File: src/images/figures/flowchart.png Graphic file (type png)
 <use src/images/figures/flowchart.png>
-Package pdftex.def Info: src/images/figures/flowchart.png  used on input line 367.
+Package pdftex.def Info: src/images/figures/flowchart.png  used on input line 319.
 (pdftex.def)             Requested size: 354.31049pt x 640.04703pt.
 
 
-[28]
+[27]
 
-[29 <./src/images/figures/flowchart.png>]
+[28 <./src/images/figures/flowchart.png>]
 
-[30]
+[29]
 
-[31]) (src/chapters/implementationDetails.tex
+[30]) (src/chapters/implementationDetails.tex
 
-[32]
+[31]
 chapter 5.
 (/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
@@ -2039,7 +2037,7 @@ File: lstlang1.sty 2025/11/14 1.11b listings language file
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
 )
 
-[33
+[32
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
@@ -2093,7 +2091,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10}) 
 l.66     \State
                 Convert VOC coordinates to normalized YOLO format
 
-[34]
+[33]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2175,18 +2173,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16}) 
 l.126 \State
              \Return \gls{lmdb} environment
 
-[35]
+[34]
 Overfull \hbox (0.79776pt too wide) in paragraph at lines 175--196
  [][] 
  []
 
 
 
+[35]
+
 [36]
 
 [37]
-
-[38]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2358,7 +2356,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17}) 
 l.297 \State
              $M \leftarrow M \cup \{\text{curr}\}$
 
-[39]
+[38]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2510,7 +2508,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12}) 
 l.357 \State
              \Return $M$
 
-[40
+[39
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -2607,7 +2605,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18}) 
 l.389         \EndIf
                     
 
-[41]
+[40]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2659,14 +2657,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10}) 
 l.435 \State
              \Return $\mathcal{G}'$
 
-[42]
+[41]
 Overfull \hbox (10.83952pt too wide) in paragraph at lines 447--459
  [][] 
  []
 
 
 
-[43]
+[42]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2803,17 +2801,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.27}) 
 l.531 \State
              \Return $\mathcal{G}$
 
-[44]
+[43]
 
-[45]
-<src/images/figures/backend_req_res.png, id=740, 1562.83875pt x 941.76843pt>
+[44]
+<src/images/figures/backend_req_res.png, id=731, 1562.83875pt x 941.76843pt>
 File: src/images/figures/backend_req_res.png Graphic file (type png)
 <use src/images/figures/backend_req_res.png>
 Package pdftex.def Info: src/images/figures/backend_req_res.png  used on input line 586.
 (pdftex.def)             Requested size: 416.83289pt x 251.17691pt.
 
 
-[46 <./src/images/figures/backend_req_res.png>]
+[45 <./src/images/figures/backend_req_res.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2855,7 +2853,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) h
 l.617 \State
              \Return $V$
 
-[47]
+[46]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2922,7 +2920,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13}) 
 l.643 \State
              \Return $(V, U)$) (src/chapters/resultAndAnalysis.tex
 
-[48]
+[47]
 chapter 6.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
 (Font)              scaled to size 14.4pt on input line 56.
@@ -2961,292 +2959,4 @@ LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
 (Font)              scaled to size 7.9pt on input line 56.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 14.4pt on input line 56.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.5pt on input line 56.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 7.9pt on input line 56.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 14.4pt on input line 56.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.5pt on input line 56.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 7.9pt on input line 56.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 14.4pt on input line 56.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.5pt on input line 56.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 7.9pt on input line 56.
-
-
-[49
-
-]
-
-[50]
-<src/images/figures/yolo_15class_train_loss.png, id=773, 833.0322pt x 255.354pt>
-File: src/images/figures/yolo_15class_train_loss.png Graphic file (type png)
-<use src/images/figures/yolo_15class_train_loss.png>
-Package pdftex.def Info: src/images/figures/yolo_15class_train_loss.png  used on input line 182.
-(pdftex.def)             Requested size: 416.83289pt x 127.77798pt.
-<src/images/figures/yolo_15class_val_loss.png, id=774, 833.0322pt x 255.354pt>
-File: src/images/figures/yolo_15class_val_loss.png Graphic file (type png)
-<use src/images/figures/yolo_15class_val_loss.png>
-Package pdftex.def Info: src/images/figures/yolo_15class_val_loss.png  used on input line 189.
-(pdftex.def)             Requested size: 416.83289pt x 127.77798pt.
-
-
-[51 <./src/images/figures/yolo_15class_train_loss.png> <./src/images/figures/yolo_15class_val_loss.png>]
-<src/images/figures/yolo_15class_training_curves.png, id=784, 688.4922pt x 544.434pt>
-File: src/images/figures/yolo_15class_training_curves.png Graphic file (type png)
-<use src/images/figures/yolo_15class_training_curves.png>
-Package pdftex.def Info: src/images/figures/yolo_15class_training_curves.png  used on input line 200.
-(pdftex.def)             Requested size: 416.83289pt x 329.62035pt.
-
-
-[52 <./src/images/figures/yolo_15class_training_curves.png>]
-<src/images/figures/yolo_15class_final_bar.png, id=792, 610.4406pt x 349.305pt>
-File: src/images/figures/yolo_15class_final_bar.png Graphic file (type png)
-<use src/images/figures/yolo_15class_final_bar.png>
-Package pdftex.def Info: src/images/figures/yolo_15class_final_bar.png  used on input line 228.
-(pdftex.def)             Requested size: 416.83289pt x 238.51563pt.
-
-
-[53 <./src/images/figures/yolo_15class_final_bar.png>]
-<src/images/figures/yolo_class_impact.png, id=802, 442.2924pt x 309.7974pt>
-File: src/images/figures/yolo_class_impact.png Graphic file (type png)
-<use src/images/figures/yolo_class_impact.png>
-Package pdftex.def Info: src/images/figures/yolo_class_impact.png  used on input line 255.
-(pdftex.def)             Requested size: 354.31049pt x 248.17387pt.
-
-Overfull \hbox (7.59256pt too wide) in paragraph at lines 268--280
- [][] 
- []
-
-
-
-[54 <./src/images/figures/yolo_class_impact.png>]
-<src/images/figures/yolo_full_comparison_bar.png, id=811, 722.4591pt x 401.8212pt>
-File: src/images/figures/yolo_full_comparison_bar.png Graphic file (type png)
-<use src/images/figures/yolo_full_comparison_bar.png>
-Package pdftex.def Info: src/images/figures/yolo_full_comparison_bar.png  used on input line 284.
-(pdftex.def)             Requested size: 416.83289pt x 231.84245pt.
-<src/images/figures/yolo_evolution_timeline.png, id=814, 672.5928pt x 371.2269pt>
-File: src/images/figures/yolo_evolution_timeline.png Graphic file (type png)
-<use src/images/figures/yolo_evolution_timeline.png>
-Package pdftex.def Info: src/images/figures/yolo_evolution_timeline.png  used on input line 295.
-(pdftex.def)             Requested size: 416.83289pt x 230.07332pt.
-
-
-[55 <./src/images/figures/yolo_full_comparison_bar.png>]
-<src/images/figures/yolo_radar_comparison.png, id=821, 479.1501pt x 412.4208pt>
-File: src/images/figures/yolo_radar_comparison.png Graphic file (type png)
-<use src/images/figures/yolo_radar_comparison.png>
-Package pdftex.def Info: src/images/figures/yolo_radar_comparison.png  used on input line 306.
-(pdftex.def)             Requested size: 270.93883pt x 233.21326pt.
-
-
-[56 <./src/images/figures/yolo_evolution_timeline.png>]
-<src/images/figures/confusion_matrix_retrained_yolov7.png, id=829, 867.24pt x 650.43pt>
-File: src/images/figures/confusion_matrix_retrained_yolov7.png Graphic file (type png)
-<use src/images/figures/confusion_matrix_retrained_yolov7.png>
-Package pdftex.def Info: src/images/figures/confusion_matrix_retrained_yolov7.png  used on input line 319.
-(pdftex.def)             Requested size: 416.83289pt x 312.62961pt.
-
-
-[57 <./src/images/figures/yolo_radar_comparison.png>]
-<src/images/figures/retrained_yolov7_result1.png, id=837, 1387.1825pt x 1051.93pt>
-File: src/images/figures/retrained_yolov7_result1.png Graphic file (type png)
-<use src/images/figures/retrained_yolov7_result1.png>
-Package pdftex.def Info: src/images/figures/retrained_yolov7_result1.png  used on input line 329.
-(pdftex.def)             Requested size: 416.83289pt x 316.09506pt.
-
-
-[58 <./src/images/figures/confusion_matrix_retrained_yolov7.png>]
-<src/images/figures/retrained_yolov7_result2.png, id=844, 2067.725pt x 1104.125pt>
-File: src/images/figures/retrained_yolov7_result2.png Graphic file (type png)
-<use src/images/figures/retrained_yolov7_result2.png>
-Package pdftex.def Info: src/images/figures/retrained_yolov7_result2.png  used on input line 336.
-(pdftex.def)             Requested size: 416.83289pt x 222.57323pt.
-
-
-[59 <./src/images/figures/retrained_yolov7_result1.png (PNG copy)> <./src/images/figures/retrained_yolov7_result2.png (PNG copy)>]
-<src/images/figures/custom_OCR_loss_curve.png, id=852, 714.7503pt x 426.393pt>
-File: src/images/figures/custom_OCR_loss_curve.png Graphic file (type png)
-<use src/images/figures/custom_OCR_loss_curve.png>
-Package pdftex.def Info: src/images/figures/custom_OCR_loss_curve.png  used on input line 348.
-(pdftex.def)             Requested size: 416.83289pt x 248.67441pt.
-<src/images/figures/cer_wer.png, id=854, 1003.8303pt x 715.473pt>
-File: src/images/figures/cer_wer.png Graphic file (type png)
-<use src/images/figures/cer_wer.png>
-Package pdftex.def Info: src/images/figures/cer_wer.png  used on input line 360.
-(pdftex.def)             Requested size: 416.83289pt x 297.09044pt.
-
-
-[60 <./src/images/figures/custom_OCR_loss_curve.png>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\gls' on input line 369.
-
-
-
-[61 <./src/images/figures/cer_wer.png>]
-Package pgfplots info on input line 415: Using 'lua backend=false' for axis: x coord trafo unsupported.
-
-
-[62]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\gls' on input line 433.
-
-<src/images/figures/custom_ocr_result1.png, id=875, 1620.0525pt x 1076.02pt>
-File: src/images/figures/custom_ocr_result1.png Graphic file (type png)
-<use src/images/figures/custom_ocr_result1.png>
-Package pdftex.def Info: src/images/figures/custom_ocr_result1.png  used on input line 439.
-(pdftex.def)             Requested size: 416.83289pt x 276.8525pt.
-<src/images/figures/trocr_result1.png, id=876, 1620.0525pt x 1076.02pt>
-File: src/images/figures/trocr_result1.png Graphic file (type png)
-<use src/images/figures/trocr_result1.png>
-Package pdftex.def Info: src/images/figures/trocr_result1.png  used on input line 446.
-(pdftex.def)             Requested size: 416.83289pt x 276.8525pt.
-
-
-[63 <./src/images/figures/custom_ocr_result1.png (PNG copy)>]
-<src/images/figures/custom_ocr_result2.png, id=881, 1686.3pt x 1088.065pt>
-File: src/images/figures/custom_ocr_result2.png Graphic file (type png)
-<use src/images/figures/custom_ocr_result2.png>
-Package pdftex.def Info: src/images/figures/custom_ocr_result2.png  used on input line 453.
-(pdftex.def)             Requested size: 416.83289pt x 268.94412pt.
-<src/images/figures/trocr_result2.png, id=882, 1686.3pt x 1088.065pt>
-File: src/images/figures/trocr_result2.png Graphic file (type png)
-<use src/images/figures/trocr_result2.png>
-Package pdftex.def Info: src/images/figures/trocr_result2.png  used on input line 460.
-(pdftex.def)             Requested size: 416.83289pt x 268.94412pt.
-
-
-[64 <./src/images/figures/trocr_result1.png (PNG copy)> <./src/images/figures/custom_ocr_result2.png (PNG copy)>]
-<src/images/figures/otsu_thresholding.png, id=891, 341.275pt x 259.97125pt>
-File: src/images/figures/otsu_thresholding.png Graphic file (type png)
-<use src/images/figures/otsu_thresholding.png>
-Package pdftex.def Info: src/images/figures/otsu_thresholding.png  used on input line 471.
-(pdftex.def)             Requested size: 416.83289pt x 317.54924pt.
-
-
-[65 <./src/images/figures/trocr_result2.png (PNG copy)>]
-<src/images/figures/bounding_box_overlay.png, id=898, 417.195pt x 282.51pt>
-File: src/images/figures/bounding_box_overlay.png Graphic file (type png)
-<use src/images/figures/bounding_box_overlay.png>
-Package pdftex.def Info: src/images/figures/bounding_box_overlay.png  used on input line 482.
-(pdftex.def)             Requested size: 416.83289pt x 282.2679pt.
-
-
-[66 <./src/images/figures/otsu_thresholding.png>]
-<src/images/figures/skeleton_with_endpoints.png, id=905, 1387.1825pt x 1051.93pt>
-File: src/images/figures/skeleton_with_endpoints.png Graphic file (type png)
-<use src/images/figures/skeleton_with_endpoints.png>
-Package pdftex.def Info: src/images/figures/skeleton_with_endpoints.png  used on input line 497.
-(pdftex.def)             Requested size: 333.46758pt x 252.86963pt.
-
-
-[67 <./src/images/figures/bounding_box_overlay.png>]
-<src/images/figures/adjacency_graph.png, id=912, 714.9912pt x 554.5518pt>
-File: src/images/figures/adjacency_graph.png Graphic file (type png)
-<use src/images/figures/adjacency_graph.png>
-Package pdftex.def Info: src/images/figures/adjacency_graph.png  used on input line 508.
-(pdftex.def)             Requested size: 291.78174pt x 226.30998pt.
-
-
-[68 <./src/images/figures/skeleton_with_endpoints.png (PNG copy)>]
-<src/images/figures/combined_overlay.png, id=919, 1387.1825pt x 1051.93pt>
-File: src/images/figures/combined_overlay.png Graphic file (type png)
-<use src/images/figures/combined_overlay.png>
-Package pdftex.def Info: src/images/figures/combined_overlay.png  used on input line 519.
-(pdftex.def)             Requested size: 291.78174pt x 221.26494pt.
-
-
-[69 <./src/images/figures/adjacency_graph.png> <./src/images/figures/combined_overlay.png (PNG copy)>]
-<src/images/figures/frontend_circuit.png, id=927, 1595.9625pt x 1304.875pt>
-File: src/images/figures/frontend_circuit.png Graphic file (type png)
-<use src/images/figures/frontend_circuit.png>
-Package pdftex.def Info: src/images/figures/frontend_circuit.png  used on input line 530.
-(pdftex.def)             Requested size: 416.83289pt x 340.79263pt.
-<src/images/figures/frontend_screenshot.png, id=928, 1405.25pt x 800.9925pt>
-File: src/images/figures/frontend_screenshot.png Graphic file (type png)
-<use src/images/figures/frontend_screenshot.png>
-Package pdftex.def Info: src/images/figures/frontend_screenshot.png  used on input line 537.
-(pdftex.def)             Requested size: 416.83289pt x 237.59851pt.
-
-
-[70 <./src/images/figures/frontend_circuit.png>]) (src/chapters/futureEnhancements.tex
-
-[71 <./src/images/figures/frontend_screenshot.png>]
-chapter 7.
-)
-
-[72
-
-] (src/chapters/conclusion.tex
-
-[73]
-chapter 8.
-)
-
-[74
-
-]
-chapter 9.
-(src/backmatter/back.tex
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 10.95pt on input line 8.
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 8.0pt on input line 8.
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 6.1pt on input line 8.
-
-
-[75
-
-
-]) (main.bbl
-
-[76
-
-]
-chapter without number
-
-Overfull \hbox (1.45912pt too wide) in paragraph at lines 84--88
-\T1/ptm/m/n/12 (-20) ``SSD: Single shot multibox detector,'' in \T1/ptm/m/it/12 (-20) Proc. European Conf. Comput. Vis. (ECCV)\T1/ptm/m/n/12 (-20) .
- []
-
-
-
-[77
-
-]
-
-[78]
-
-[79])
-
-[80] (main.aux)
- ***********
-LaTeX2e <2025-11-01>
-L3 programming layer <2020/03/25>
- ***********
- ) 
-Here is how much of TeX's memory you used:
- 70498 strings out of 467875
- 1650555 string characters out of 5404952
- 2490051 words of memory out of 5000000
- 97652 multiletter control sequences out of 15000+600000
- 729490 words of font info for 370 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 122i,21n,131p,11210b,2794s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc}</Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/NewTXMI.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/NewTXMI7.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/txexs.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/txmiaX.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/txsym.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/txsys.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/courier/ucrr8a.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmb8a.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmr8a.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/ztmb.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (94 pages, 16230412 bytes).
-PDF statistics:
- 1289 PDF objects out of 1440 (max. 8388607)
- 396 named destinations out of 1000 (max. 500000)
- 56413 words of extra memory for PDF output out of 61914 (max. 10000000)
-
+(Font)              scaled to size 14.4pt on inp
