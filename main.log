@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2026.1.17)  13 MAY 2026 22:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2026.1.17)  14 MAY 2026 12:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -184,6 +184,7 @@ eneric/babel/txtbabel.def)
 Package babel Info: Configuration files are deprecated, as
 (babel)             they can break document portability.
 (babel)             Reported on input line 4175.
+
 *************************************
 * Local config file bblopts.cfg used
 *
@@ -222,6 +223,7 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 atex/amsmath/amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip66
+
 For additional information on amsmath, use the `?' option.
 
 (/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
@@ -386,6 +388,7 @@ eneric/binhex/binhex.tex)
 \tx@tA=\toks33
 \tx@tB=\toks34
 \tx@su=\read3
+
 amsthm NOT loaded
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 402.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -719,6 +722,7 @@ atex/listings/listings.cfg
 File: listings.cfg 2025/11/14 1.11b listings configuration
 ))
 Package: listings 2025/11/14 1.11b (Carsten Heinz)
+
 ==> First Aid for listings.sty no longer applied!
     Expected:
         2024/09/23 1.10c (Carsten Heinz)
@@ -1095,6 +1099,7 @@ Package: algpseudocode
 (/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/tex/l
 atex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \c@ALG@line=\count372
 \c@ALG@rem=\count373
@@ -1189,6 +1194,7 @@ File: datatool-utf8.ldf 2025/12/04 v3.4.3 (NLCT)
 \l__datatool_prefix_int=\count400
 \l__datatool_suffix_int=\count401
 \@dtl@foreach@level=\count402
+
 
 Package tracklang Warning: No `datatool' support for dialect `english'  on inpu
 t line 9924.
@@ -1972,7 +1978,8 @@ File: tikzlibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 eneric/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \arrowsize=\dimen388
-)) (src/frontmatter/abbreviations.tex)
+))
+(src/frontmatter/abbreviations.tex)
 Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           Using `bookmark' together with `hyperref' is recommended,
 (scrreprt)           because of handling of possible bookmark level gaps.
@@ -2185,6 +2192,7 @@ F (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 Package hyperref Info: Link coloring OFF on input line 37.
+
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
 
@@ -2338,8 +2346,8 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 
 
 {/Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs/data/fonts/ma
-p/pdftex/pdftex.map} <./src/images/logo.png>]) (src/frontmatter/_coverWithSuper
-visors.tex
+p/pdftex/pdftex.map} <./src/images/logo.png>])
+(src/frontmatter/_coverWithSupervisors.tex
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -2418,7 +2426,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 ]
 Package tocbasic Info: character protrusion at toc deactivated on input line 9.
 
-(main.toc
+ (main.toc
 
 [6
 
@@ -2431,7 +2439,7 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 9.
 [7]
 Package tocbasic Info: character protrusion at lof deactivated on input line 12
 .
-(main.lof)
+ (main.lof)
 \tf@lof=\write9
 \openout9 = `main.lof'.
 
@@ -2443,7 +2451,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 12
 ]
 Package tocbasic Info: character protrusion at lot deactivated on input line 15
 .
-(main.lot)
+ (main.lot)
 \tf@lot=\write10
 \openout10 = `main.lot'.
 
@@ -4081,7 +4089,7 @@ L3 programming layer <2020/03/25>
 Here is how much of TeX's memory you used:
  70336 strings out of 467875
  1647864 string characters out of 5404952
- 2487469 words of memory out of 5000000
+ 2487595 words of memory out of 5000000
  97554 multiletter control sequences out of 15000+600000
  728073 words of font info for 354 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -4106,7 +4114,7 @@ es/utmr8a.pfb></Users/anveshantimsina/Library/Application Support/MiKTeX/texmfs
 ication Support/MiKTeX/texmfs/install/fonts/type1/public/newtx/ztmb.pfb></Users
 /anveshantimsina/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/
 public/newtx/ztmr.pfb>
-Output written on main.pdf (85 pages, 16026527 bytes).
+Output written on main.pdf (85 pages, 16026602 bytes).
 PDF statistics:
  1156 PDF objects out of 1200 (max. 8388607)
  356 named destinations out of 1000 (max. 500000)
