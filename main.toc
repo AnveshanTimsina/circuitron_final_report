@@ -7,7 +7,7 @@
 \contentsline {chapter}{\nonumberline LIST OF FIGURES}{viii}{chapter*.12}%
 \contentsline {chapter}{\nonumberline LIST OF TABLES}{ix}{chapter*.13}%
 \contentsline {chapter}{LIST OF ABBREVIATIONS}{x}{chapter*.13}%
-\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {1}INTRODUCTION}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Background Information}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Motivation}{2}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Problem Statement}{2}{section.1.3}%
@@ -103,5 +103,7 @@
 \contentsline {chapter}{\numberline {9}APPENDICES}{70}{chapter.9}%
 \contentsline {section}{Appendix A: Project Budget}{70}{chapter.9}%
 \contentsline {section}{Appendix B: Gantt Chart}{71}{table.caption.62}%
-\contentsline {chapter}{\nonumberline REFERENCES}{72}{chapter*.64}%
+\contentsline {section}{Appendix C: Supervisor Consultation Form}{72}{table.caption.63}%
+\contentsline {section}{Appendix D: Plagiarism and AI Writing Analysis}{74}{figure.caption.65}%
+\contentsline {chapter}{\nonumberline REFERENCES}{85}{chapter*.77}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

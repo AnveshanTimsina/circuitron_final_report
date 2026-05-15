@@ -300,7 +300,7 @@ After classifying the segments as horizontal or vertical, the overlapping or nei
 The wire–component intersection detection algorithm pinpoints where detected wire segments meet component bounding boxes. YOLOv7 annotations supply the component regions, which then get translated into pixel coordinates. Every horizontal or vertical wire is checked against each component box's edges for geometric intersection. Those intersection points pin down how the circuit is actually wired together, and the frontend can optionally render them for visual verification.
 
 \begin{algorithm}
-\caption{Wire–Component Intersection Detection}
+\caption{Wire-Component Intersection Detection}
 \label{algo:wire-component-intersection-impl}
 \begin{algorithmic}
 \Require Wire segments $W$, \gls{yolo} label file $L$, image width $I_w$, image height $I_h$
